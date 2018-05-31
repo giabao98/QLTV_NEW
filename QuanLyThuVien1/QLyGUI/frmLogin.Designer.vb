@@ -89,11 +89,11 @@ Partial Class frmLogin
         Me.BunifuTileButton1.ImagePosition = 20
         Me.BunifuTileButton1.ImageZoom = 50
         Me.BunifuTileButton1.LabelPosition = 41
-        Me.BunifuTileButton1.LabelText = "Tile 1"
-        Me.BunifuTileButton1.Location = New System.Drawing.Point(141, 317)
+        Me.BunifuTileButton1.LabelText = "Đăng nhập"
+        Me.BunifuTileButton1.Location = New System.Drawing.Point(131, 333)
         Me.BunifuTileButton1.Margin = New System.Windows.Forms.Padding(6)
         Me.BunifuTileButton1.Name = "BunifuTileButton1"
-        Me.BunifuTileButton1.Size = New System.Drawing.Size(173, 54)
+        Me.BunifuTileButton1.Size = New System.Drawing.Size(173, 43)
         Me.BunifuTileButton1.TabIndex = 10
         '
         'frmLogin

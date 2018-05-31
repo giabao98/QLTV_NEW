@@ -122,5 +122,15 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QLyBUS\QLyBUS.vbproj">
+      <Project>{87c8461c-fcf3-43c1-b7d3-7cd66a251b84}</Project>
+      <Name>QLyBUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLyDTO\QLyDTO.vbproj">
+      <Project>{6db3b006-d0d7-408f-a771-313db88f051c}</Project>
+      <Name>QLyDTO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
