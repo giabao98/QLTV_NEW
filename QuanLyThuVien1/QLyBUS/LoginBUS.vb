@@ -2,6 +2,8 @@
 Imports QLyDAL
 
 Public Class loginBUS
+    Private loginDAL = New loginDAL()
+
     Public Function ValidUserName(login As loginDTO) As Boolean
         If (login.UserName.Length < 1) Then
             Return False
@@ -16,8 +18,9 @@ Public Class loginBUS
         Return True
     End Function
 
-    Public Function CompareAccount(CA As loginDTO)
+    Public Function CompareAccount(CA As loginDTO) As Boolean
 
+        Return loginDAL.CompareAccount(CA)
     End Function
 
 End Class

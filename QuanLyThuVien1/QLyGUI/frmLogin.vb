@@ -13,6 +13,7 @@ Public Class frmLogin
         Login.Password = txbPassword.Text
 
         'Business
+        ValidLogin = New loginBUS()
         If (ValidLogin.ValidUserName(Login) = False) Then
             MessageBox.Show("Ten tai khoan khong hop le ! ")
             txbUserName.Focus()
@@ -24,6 +25,16 @@ Public Class frmLogin
             txbPassword.Focus()
             Return
         End If
+
+        If (ValidLogin.CompareAccount(Login)) Then
+            MessageBox.Show("Thanh cong")
+        Else
+            MessageBox.Show("Code ngu")
+        End If
+
+    End Sub
+
+    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
