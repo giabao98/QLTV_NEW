@@ -16,7 +16,7 @@ Public Class loginBUS
         Return True
     End Function
 
-    Public Function CompareAccount(ac As loginDTO)
+    Public Function CompareAccount(CA As loginDTO)
 
     End Function
 
