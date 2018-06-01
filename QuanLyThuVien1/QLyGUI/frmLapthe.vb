@@ -4,6 +4,11 @@ Imports QLyDTO
 
 Public Class frmLapthe
 
+    Private Sub frmLapthe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+    End Sub
+
     Private Sub btLapthe_Click_1(sender As Object, e As EventArgs) Handles btLapthe.Click
 
         Dim lt As LaptheDTO
@@ -71,9 +76,5 @@ Public Class frmLapthe
         Else
             MessageBox.Show("Them hoc sinh that bai.")
         End If
-    End Sub
-
-    Private Sub frmLapthe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class
