@@ -21,24 +21,43 @@ Public Class frmLapthe
         Dim ltbus As New LaptheBUS
         If (ltbus.ValidReaderName(lt) = False) Then
             MessageBox.Show("Ho ten chua duoc nhap")
-            lt.ReaderName()
+            tbTenDocGia.Focus()
             Return
         End If
 
         If (ltbus.ValidAdress(lt) = False) Then
             MessageBox.Show("Dia chi chua duoc nhap")
-            tbHoTen.Focus()
+            tbDiaChi.Focus()
             Return
         End If
 
-        If (ltbus.isValidClass(lt) = False) Then
-            MessageBox.Show("Lop chua duoc nhap")
-            tbHoTen.Focus()
+        If (ltbus.ValidEmail(lt) = False) Then
+            MessageBox.Show("Email chua duoc nhap")
+            tbEmail.Focus()
             Return
         End If
-        If (ltbus.isValidAddress(lt) = False) Then
-            MessageBox.Show("Dia chi chua duoc nhap")
-            tbHoTen.Focus()
+
+        If (ltbus.ValidReaderCategoryID(lt) = False) Then
+            MessageBox.Show("Ma loai doc gia chua duoc nhap")
+            tbMaDocGia.Focus()
+            Return
+        End If
+
+        If (ltbus.ValidDayOfCard(lt) = False) Then
+            MessageBox.Show("Ngay lap the chua duoc nhap")
+            dtpNgayLapThe.Focus()
+            Return
+        End If
+
+        If (ltbus.ValidBirthday(lt) = False) Then
+            MessageBox.Show("Ngay sinh chua duoc nhap")
+            dtpNgaySinh.Focus()
+            Return
+        End If
+
+        If (ltbus.ValidReaderID(lt) = False) Then
+            MessageBox.Show("Ho ten chua duoc nhap")
+            tbMaDocGia.Focus()
             Return
         End If
 
