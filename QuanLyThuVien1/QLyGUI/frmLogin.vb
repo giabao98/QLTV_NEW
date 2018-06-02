@@ -5,7 +5,7 @@ Public Class frmLogin
 
     Private ValidLogin As loginBUS
 
-    'Bam nut X de dong chuong trinh
+    'Lenh dieu khien nut X
     Private Sub frmLogin_Closing(sender As Object, e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         'Application.Exit()
     End Sub
@@ -38,9 +38,10 @@ Public Class frmLogin
 
         If (ValidLogin.CompareAccount(Login)) Then
             MessageBox.Show("Thanh cong")
+            DialogResult = DialogResult.OK
             Me.Close()
         Else
-            MessageBox.Show("Code ngu")
+            MessageBox.Show("Ten Tai khoan hoac Mat khau sai! ")
             Return
         End If
 
