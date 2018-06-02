@@ -5,6 +5,11 @@ Public Class frmLogin
 
     Private ValidLogin As loginBUS
 
+    'Bam nut X de dong chuong trinh
+    Private Sub frmLogin_Closing(sender As Object, e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        'Application.Exit()
+    End Sub
+
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -17,7 +22,7 @@ Public Class frmLogin
         Login.UserName = txbUserName.Text
         Login.Password = txbPassword.Text
 
-        'Business
+        'BUS kiem tra
         ValidLogin = New loginBUS()
         If (ValidLogin.ValidUserName(Login) = False) Then
             MessageBox.Show("Ten tai khoan khong hop le ! ")
@@ -33,9 +38,18 @@ Public Class frmLogin
 
         If (ValidLogin.CompareAccount(Login)) Then
             MessageBox.Show("Thanh cong")
+            Me.Close()
         Else
             MessageBox.Show("Code ngu")
+            Return
         End If
 
     End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        'button dong chuong trinh
+        Application.Exit()
+    End Sub
+
+
 End Class

@@ -3,7 +3,7 @@
         Dim flogin = New frmLogin()
         Dim lt = New frmLapthe()
         flogin.ShowDialog()
-        lt.ShowDialog()
+        'lt.ShowDialog()
     End Sub
 
 

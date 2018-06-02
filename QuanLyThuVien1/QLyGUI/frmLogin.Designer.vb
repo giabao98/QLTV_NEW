@@ -28,6 +28,7 @@ Partial Class frmLogin
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
+        Me.btnClose = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txbPassword
@@ -35,6 +36,7 @@ Partial Class frmLogin
         Me.txbPassword.Location = New System.Drawing.Point(52, 262)
         Me.txbPassword.Multiline = True
         Me.txbPassword.Name = "txbPassword"
+        Me.txbPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txbPassword.Size = New System.Drawing.Size(318, 33)
         Me.txbPassword.TabIndex = 9
         '
@@ -78,26 +80,40 @@ Partial Class frmLogin
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(140, 332)
+        Me.btnLogin.Location = New System.Drawing.Point(52, 326)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(148, 55)
+        Me.btnLogin.Size = New System.Drawing.Size(174, 55)
         Me.btnLogin.TabIndex = 11
         Me.btnLogin.Text = "Đăng nhập"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
+        'btnClose
+        '
+        Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnClose.Location = New System.Drawing.Point(277, 326)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(92, 54)
+        Me.btnClose.TabIndex = 12
+        Me.btnClose.Text = "Đóng"
+        Me.btnClose.UseVisualStyleBackColor = True
+        '
         'frmLogin
         '
+        Me.AcceptButton = Me.btnLogin
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(435, 432)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txbPassword)
         Me.Controls.Add(Me.txbUserName)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmLogin"
-        Me.Text = "Form1"
+        Me.Text = "Login"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -109,4 +125,5 @@ Partial Class frmLogin
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents btnLogin As Button
+    Friend WithEvents btnClose As Button
 End Class
