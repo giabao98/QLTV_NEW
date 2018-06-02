@@ -29,7 +29,7 @@ Public Class LaptheBUS
     End Function
     Public Function ValidReaderCategoryID(lt As QLyDTO.LaptheDTO) As Boolean
 
-        If (lt.ReaderCategoryID.ToString().Length < 1) Then
+        If (lt.ReaderCategoryID.ToString.Length < 1) Then
             Return False
         End If
 
