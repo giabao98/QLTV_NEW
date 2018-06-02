@@ -17,7 +17,7 @@ Public Class frmLapthe
         '1. Lop GUI control
         lt.ReaderID = tbMaDocGia.Text
         lt.ReaderName = tbTenDocGia.Text
-        lt.ReaderCategoryID = cbLoaiDocGia.Text
+        lt.ReaderCategoryID = Convert.ToInt32(cbLoaiDocGia.SelectedValue)
         lt.Birthday = dtpNgaySinh.Text
         lt.Adress = tbDiaChi.Text
         lt.DayOfCard = dtpNgayLapThe.Text
