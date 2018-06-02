@@ -110,6 +110,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="frmTiepnhanSach.Designer.vb">
+      <DependentUpon>frmTiepnhanSach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTiepnhanSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmLapthe.resx">
@@ -126,6 +132,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTiepnhanSach.resx">
+      <DependentUpon>frmTiepnhanSach.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
