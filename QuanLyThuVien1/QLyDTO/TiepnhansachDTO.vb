@@ -1,64 +1,65 @@
 ﻿Public Class TiepnhansachDTO
-    Private strTheNameOfBook As String
-    Private strBookID As String
-    Private strTheKindOfBook As String
-    Private strAuthor As String
-    Private intPublishingDate As Integer
-    Private strPublishingHouse As String
+    Private strBookName As String
+    Private strBookID As Integer
+    Private strBookKindID As Integer
+    Private strAuthorID As Integer
+    Private intPublishingDate As Date
+    Private strPublishingHouseID As Integer
     Private intReceiptDate As Date
     Private intValue As Integer
+    Private intStatusID As Integer
 
-    Public Property TheNameOfBook As String
+    Public Property BookName As String
         Get
-            Return strTheNameOfBook
+            Return strBookName
         End Get
         Set(value As String)
-            strTheNameOfBook = value
+            strBookName = value
         End Set
     End Property
 
-    Public Property BookID As String
+    Public Property BookID As Integer
         Get
             Return strBookID
         End Get
-        Set(value As String)
+        Set(value As Integer)
             strBookID = value
         End Set
     End Property
 
-    Public Property TheKindOfBook As String
+    Public Property BookKindID As Integer
         Get
-            Return strTheKindOfBook
+            Return strBookKindID
         End Get
-        Set(value As String)
-            strTheKindOfBook = value
+        Set(value As Integer)
+            strBookKindID = value
         End Set
     End Property
 
-    Public Property Author As String
+    Public Property AuthorID As Integer
         Get
-            Return strAuthor
+            Return strAuthorID
         End Get
-        Set(value As String)
-            strAuthor = value
+        Set(value As Integer)
+            strAuthorID = value
         End Set
     End Property
 
-    Public Property PublishingDate As Integer
+    Public Property PublishingDate As Date
         Get
             Return intPublishingDate
         End Get
-        Set(value As Integer)
+        Set(value As Date)
             intPublishingDate = value
         End Set
     End Property
 
-    Public Property PublishingHouse As String
+    Public Property PublishingHouseID As Integer
         Get
-            Return strPublishingHouse
+            Return strPublishingHouseID
         End Get
-        Set(value As String)
-            strPublishingHouse = value
+        Set(value As Integer)
+            strPublishingHouseID = value
         End Set
     End Property
 
@@ -77,6 +78,15 @@
         End Get
         Set(value As Integer)
             intValue = value
+        End Set
+    End Property
+
+    Public Property StatusID As Integer
+        Get
+            Return intStatusID
+        End Get
+        Set(value As Integer)
+            intStatusID = value
         End Set
     End Property
 End Class
