@@ -33,7 +33,7 @@ Partial Class frmTiepnhanSach
         Me.cbBookKindID = New System.Windows.Forms.ComboBox()
         Me.cbAuthorID = New System.Windows.Forms.ComboBox()
         Me.txbPublishingYear = New System.Windows.Forms.TextBox()
-        Me.tbValue = New System.Windows.Forms.TextBox()
+        Me.txbValue = New System.Windows.Forms.TextBox()
         Me.dtpReceiptDate = New System.Windows.Forms.DateTimePicker()
         Me.btThemSach = New System.Windows.Forms.Button()
         Me.lbMaSach = New System.Windows.Forms.Label()
@@ -136,12 +136,12 @@ Partial Class frmTiepnhanSach
         Me.txbPublishingYear.Size = New System.Drawing.Size(200, 20)
         Me.txbPublishingYear.TabIndex = 11
         '
-        'tbValue
+        'txbValue
         '
-        Me.tbValue.Location = New System.Drawing.Point(140, 368)
-        Me.tbValue.Name = "tbValue"
-        Me.tbValue.Size = New System.Drawing.Size(200, 20)
-        Me.tbValue.TabIndex = 13
+        Me.txbValue.Location = New System.Drawing.Point(140, 368)
+        Me.txbValue.Name = "txbValue"
+        Me.txbValue.Size = New System.Drawing.Size(200, 20)
+        Me.txbValue.TabIndex = 13
         '
         'dtpReceiptDate
         '
@@ -213,7 +213,7 @@ Partial Class frmTiepnhanSach
         Me.Controls.Add(Me.lbMaSach)
         Me.Controls.Add(Me.btThemSach)
         Me.Controls.Add(Me.dtpReceiptDate)
-        Me.Controls.Add(Me.tbValue)
+        Me.Controls.Add(Me.txbValue)
         Me.Controls.Add(Me.txbPublishingYear)
         Me.Controls.Add(Me.cbAuthorID)
         Me.Controls.Add(Me.cbBookKindID)
@@ -243,7 +243,7 @@ Partial Class frmTiepnhanSach
     Friend WithEvents cbBookKindID As ComboBox
     Friend WithEvents cbAuthorID As ComboBox
     Friend WithEvents txbPublishingYear As TextBox
-    Friend WithEvents tbValue As TextBox
+    Friend WithEvents txbValue As TextBox
     Friend WithEvents dtpReceiptDate As DateTimePicker
     Friend WithEvents btThemSach As Button
     Friend WithEvents lbMaSach As Label

@@ -15,7 +15,7 @@ Public Class TiepnhansachDAL
         Me.connectionString = ConnectionString
     End Sub
 
-    Public Function insertDocGia(ts As TiepnhansachDTO)
+    Public Function insertsach(ts As TiepnhansachDTO)
         Dim query As String = String.Empty
         query &= "INSERT INTO TVDataBs"
         query &= "(masach,tensach,matheloai,matacgia,namxuatban,manhaxuatban,ngaynhap,trigia,matinhtrang)"

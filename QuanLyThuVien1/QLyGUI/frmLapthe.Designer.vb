@@ -26,10 +26,10 @@ Partial Class frmLapthe
         Me.dtpNgayLapThe = New System.Windows.Forms.DateTimePicker()
         Me.dtpNgaySinh = New System.Windows.Forms.DateTimePicker()
         Me.cbLoaiDocGia = New System.Windows.Forms.ComboBox()
-        Me.tbEmail = New System.Windows.Forms.TextBox()
-        Me.tbDiaChi = New System.Windows.Forms.TextBox()
-        Me.tbTenDocGia = New System.Windows.Forms.TextBox()
-        Me.tbMaDocGia = New System.Windows.Forms.TextBox()
+        Me.txbEmail = New System.Windows.Forms.TextBox()
+        Me.txbDiaChi = New System.Windows.Forms.TextBox()
+        Me.txbTenDocGia = New System.Windows.Forms.TextBox()
+        Me.txbMaDocGia = New System.Windows.Forms.TextBox()
         Me.lbDiaChi = New System.Windows.Forms.Label()
         Me.lbNgayLapThe = New System.Windows.Forms.Label()
         Me.lbEmail = New System.Windows.Forms.Label()
@@ -70,33 +70,33 @@ Partial Class frmLapthe
         Me.cbLoaiDocGia.Size = New System.Drawing.Size(200, 21)
         Me.cbLoaiDocGia.TabIndex = 27
         '
-        'tbEmail
+        'txbEmail
         '
-        Me.tbEmail.Location = New System.Drawing.Point(95, 206)
-        Me.tbEmail.Name = "tbEmail"
-        Me.tbEmail.Size = New System.Drawing.Size(200, 20)
-        Me.tbEmail.TabIndex = 26
+        Me.txbEmail.Location = New System.Drawing.Point(95, 206)
+        Me.txbEmail.Name = "txbEmail"
+        Me.txbEmail.Size = New System.Drawing.Size(200, 20)
+        Me.txbEmail.TabIndex = 26
         '
-        'tbDiaChi
+        'txbDiaChi
         '
-        Me.tbDiaChi.Location = New System.Drawing.Point(95, 158)
-        Me.tbDiaChi.Name = "tbDiaChi"
-        Me.tbDiaChi.Size = New System.Drawing.Size(200, 20)
-        Me.tbDiaChi.TabIndex = 25
+        Me.txbDiaChi.Location = New System.Drawing.Point(95, 158)
+        Me.txbDiaChi.Name = "txbDiaChi"
+        Me.txbDiaChi.Size = New System.Drawing.Size(200, 20)
+        Me.txbDiaChi.TabIndex = 25
         '
-        'tbTenDocGia
+        'txbTenDocGia
         '
-        Me.tbTenDocGia.Location = New System.Drawing.Point(95, 115)
-        Me.tbTenDocGia.Name = "tbTenDocGia"
-        Me.tbTenDocGia.Size = New System.Drawing.Size(200, 20)
-        Me.tbTenDocGia.TabIndex = 24
+        Me.txbTenDocGia.Location = New System.Drawing.Point(95, 115)
+        Me.txbTenDocGia.Name = "txbTenDocGia"
+        Me.txbTenDocGia.Size = New System.Drawing.Size(200, 20)
+        Me.txbTenDocGia.TabIndex = 24
         '
-        'tbMaDocGia
+        'txbMaDocGia
         '
-        Me.tbMaDocGia.Location = New System.Drawing.Point(95, 64)
-        Me.tbMaDocGia.Name = "tbMaDocGia"
-        Me.tbMaDocGia.Size = New System.Drawing.Size(200, 20)
-        Me.tbMaDocGia.TabIndex = 23
+        Me.txbMaDocGia.Location = New System.Drawing.Point(95, 64)
+        Me.txbMaDocGia.Name = "txbMaDocGia"
+        Me.txbMaDocGia.Size = New System.Drawing.Size(200, 20)
+        Me.txbMaDocGia.TabIndex = 23
         '
         'lbDiaChi
         '
@@ -170,10 +170,10 @@ Partial Class frmLapthe
         Me.Controls.Add(Me.dtpNgayLapThe)
         Me.Controls.Add(Me.dtpNgaySinh)
         Me.Controls.Add(Me.cbLoaiDocGia)
-        Me.Controls.Add(Me.tbEmail)
-        Me.Controls.Add(Me.tbDiaChi)
-        Me.Controls.Add(Me.tbTenDocGia)
-        Me.Controls.Add(Me.tbMaDocGia)
+        Me.Controls.Add(Me.txbEmail)
+        Me.Controls.Add(Me.txbDiaChi)
+        Me.Controls.Add(Me.txbTenDocGia)
+        Me.Controls.Add(Me.txbMaDocGia)
         Me.Controls.Add(Me.lbDiaChi)
         Me.Controls.Add(Me.lbNgayLapThe)
         Me.Controls.Add(Me.lbEmail)
@@ -192,10 +192,10 @@ Partial Class frmLapthe
     Friend WithEvents dtpNgayLapThe As DateTimePicker
     Friend WithEvents dtpNgaySinh As DateTimePicker
     Friend WithEvents cbLoaiDocGia As ComboBox
-    Friend WithEvents tbEmail As TextBox
-    Friend WithEvents tbDiaChi As TextBox
-    Friend WithEvents tbTenDocGia As TextBox
-    Friend WithEvents tbMaDocGia As TextBox
+    Friend WithEvents txbEmail As TextBox
+    Friend WithEvents txbDiaChi As TextBox
+    Friend WithEvents txbTenDocGia As TextBox
+    Friend WithEvents txbMaDocGia As TextBox
     Friend WithEvents lbDiaChi As Label
     Friend WithEvents lbNgayLapThe As Label
     Friend WithEvents lbEmail As Label
