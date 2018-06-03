@@ -15,12 +15,13 @@
     End Sub
 
     Private Sub btnBookUpdate_Click(sender As Object, e As EventArgs) Handles btnBookUpdate.Click
-        Dim fLapThe = New frmLapthe
-        fLapThe.ShowDialog()
+        Dim fTiepNhanSach = New frmTiepnhanSach
+        frmTiepnhanSach.ShowDialog()
     End Sub
 
     Private Sub btnReaderManagement_Click(sender As Object, e As EventArgs) Handles btnReaderManagement.Click
-
+        Dim fLapThe = New frmLapthe
+        fLapThe.ShowDialog()
     End Sub
 
     Private Sub btnAuthorManagement_Click(sender As Object, e As EventArgs) Handles btnAuthorManagement.Click
@@ -32,7 +33,8 @@
     End Sub
 
     Private Sub btnFindBook_Click(sender As Object, e As EventArgs) Handles btnFindBook.Click
-
+        Dim fFind = New frmFind
+        fFind.ShowDialog()
     End Sub
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click

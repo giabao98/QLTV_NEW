@@ -76,6 +76,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmFind.Designer.vb">
+      <DependentUpon>frmFind.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFind.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLapthe.Designer.vb">
       <DependentUpon>frmLapthe.vb</DependentUpon>
     </Compile>
@@ -118,6 +124,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmFind.resx">
+      <DependentUpon>frmFind.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLapthe.resx">
       <DependentUpon>frmLapthe.vb</DependentUpon>
     </EmbeddedResource>

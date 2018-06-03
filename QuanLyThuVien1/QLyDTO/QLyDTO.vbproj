@@ -63,6 +63,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindDTO.vb" />
     <Compile Include="LaptheDTO.vb" />
     <Compile Include="LoginDTO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
