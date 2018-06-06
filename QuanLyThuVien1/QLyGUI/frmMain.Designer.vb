@@ -52,16 +52,16 @@ Partial Class frmMain
         '
         'btnAuthorManagement
         '
-        Me.btnAuthorManagement.Location = New System.Drawing.Point(427, 148)
+        Me.btnAuthorManagement.Location = New System.Drawing.Point(32, 293)
         Me.btnAuthorManagement.Name = "btnAuthorManagement"
         Me.btnAuthorManagement.Size = New System.Drawing.Size(182, 126)
         Me.btnAuthorManagement.TabIndex = 2
-        Me.btnAuthorManagement.Text = "Quản lý tác giả"
+        Me.btnAuthorManagement.Text = "Thay đổi quy định"
         Me.btnAuthorManagement.UseVisualStyleBackColor = True
         '
         'btnBorrowBook
         '
-        Me.btnBorrowBook.Location = New System.Drawing.Point(32, 293)
+        Me.btnBorrowBook.Location = New System.Drawing.Point(427, 148)
         Me.btnBorrowBook.Name = "btnBorrowBook"
         Me.btnBorrowBook.Size = New System.Drawing.Size(182, 126)
         Me.btnBorrowBook.TabIndex = 3
