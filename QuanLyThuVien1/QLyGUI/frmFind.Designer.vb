@@ -44,7 +44,7 @@ Partial Class frmFind
         Me.txbFindTenMaSach.Location = New System.Drawing.Point(93, 26)
         Me.txbFindTenMaSach.Multiline = True
         Me.txbFindTenMaSach.Name = "txbFindTenMaSach"
-        Me.txbFindTenMaSach.Size = New System.Drawing.Size(383, 39)
+        Me.txbFindTenMaSach.Size = New System.Drawing.Size(412, 39)
         Me.txbFindTenMaSach.TabIndex = 0
         '
         'btnFind
@@ -59,7 +59,7 @@ Partial Class frmFind
         'rbtnMaSach
         '
         Me.rbtnMaSach.AutoSize = True
-        Me.rbtnMaSach.Location = New System.Drawing.Point(504, 44)
+        Me.rbtnMaSach.Location = New System.Drawing.Point(528, 44)
         Me.rbtnMaSach.Name = "rbtnMaSach"
         Me.rbtnMaSach.Size = New System.Drawing.Size(82, 21)
         Me.rbtnMaSach.TabIndex = 2
@@ -70,7 +70,7 @@ Partial Class frmFind
         'rbtnTenSach
         '
         Me.rbtnTenSach.AutoSize = True
-        Me.rbtnTenSach.Location = New System.Drawing.Point(627, 44)
+        Me.rbtnTenSach.Location = New System.Drawing.Point(630, 44)
         Me.rbtnTenSach.Name = "rbtnTenSach"
         Me.rbtnTenSach.Size = New System.Drawing.Size(88, 21)
         Me.rbtnTenSach.TabIndex = 3
@@ -88,7 +88,7 @@ Partial Class frmFind
         '
         'txbFindTheLoai
         '
-        Me.txbFindTheLoai.Location = New System.Drawing.Point(93, 187)
+        Me.txbFindTheLoai.Location = New System.Drawing.Point(93, 190)
         Me.txbFindTheLoai.Multiline = True
         Me.txbFindTheLoai.Name = "txbFindTheLoai"
         Me.txbFindTheLoai.Size = New System.Drawing.Size(278, 39)
@@ -161,14 +161,14 @@ Partial Class frmFind
         Me.DataGridView1.Location = New System.Drawing.Point(28, 332)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(782, 227)
+        Me.DataGridView1.Size = New System.Drawing.Size(761, 227)
         Me.DataGridView1.TabIndex = 16
         '
         'frmFind
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(845, 580)
+        Me.ClientSize = New System.Drawing.Size(833, 580)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Label6)
