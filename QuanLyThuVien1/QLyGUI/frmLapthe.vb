@@ -10,7 +10,7 @@ Public Class frmLapthe
 
     End Sub
 
-    Private Sub btLapthe_Click_1(sender As Object, e As EventArgs) Handles btLapthe.Click
+    Private Sub Add_button_Click(sender As Object, e As EventArgs) Handles Add_button.Click
 
         Dim lt As LaptheDTO
         lt = New LaptheDTO()
@@ -78,4 +78,6 @@ Public Class frmLapthe
             MessageBox.Show("Them hoc sinh that bai.")
         End If
     End Sub
+
+
 End Class
