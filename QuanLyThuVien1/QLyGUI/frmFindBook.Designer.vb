@@ -42,7 +42,7 @@ Partial Class frmFindBook
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.txbAuthorCode = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.txbProducer = New System.Windows.Forms.TextBox()
+        Me.txbProducerCode = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txbAmount = New System.Windows.Forms.TextBox()
         Me.txbPublishingYear = New System.Windows.Forms.TextBox()
@@ -250,7 +250,7 @@ Partial Class frmFindBook
         '
         Me.GroupBox6.Controls.Add(Me.txbAuthorCode)
         Me.GroupBox6.Controls.Add(Me.Label11)
-        Me.GroupBox6.Controls.Add(Me.txbProducer)
+        Me.GroupBox6.Controls.Add(Me.txbProducerCode)
         Me.GroupBox6.Controls.Add(Me.Label3)
         Me.GroupBox6.Controls.Add(Me.txbAmount)
         Me.GroupBox6.Controls.Add(Me.txbPublishingYear)
@@ -293,13 +293,13 @@ Partial Class frmFindBook
         Me.Label11.TabIndex = 15
         Me.Label11.Text = "Mã Tác Giả:"
         '
-        'txbProducer
+        'txbProducerCode
         '
-        Me.txbProducer.Location = New System.Drawing.Point(157, 117)
-        Me.txbProducer.Margin = New System.Windows.Forms.Padding(4)
-        Me.txbProducer.Name = "txbProducer"
-        Me.txbProducer.Size = New System.Drawing.Size(289, 22)
-        Me.txbProducer.TabIndex = 14
+        Me.txbProducerCode.Location = New System.Drawing.Point(157, 117)
+        Me.txbProducerCode.Margin = New System.Windows.Forms.Padding(4)
+        Me.txbProducerCode.Name = "txbProducerCode"
+        Me.txbProducerCode.Size = New System.Drawing.Size(289, 22)
+        Me.txbProducerCode.TabIndex = 14
         '
         'Label3
         '
@@ -513,6 +513,6 @@ Partial Class frmFindBook
     Private WithEvents label4 As Label
     Private WithEvents txbAuthorCode As TextBox
     Private WithEvents Label11 As Label
-    Private WithEvents txbProducer As TextBox
+    Private WithEvents txbProducerCode As TextBox
     Private WithEvents Label3 As Label
 End Class
