@@ -22,6 +22,7 @@ Partial Class frmLapthe
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLapthe))
         Me.Add_button = New System.Windows.Forms.Button()
         Me.dtpNgayLapThe = New System.Windows.Forms.DateTimePicker()
         Me.dtpNgaySinh = New System.Windows.Forms.DateTimePicker()
@@ -52,12 +53,17 @@ Partial Class frmLapthe
         '
         'Add_button
         '
-        Me.Add_button.Location = New System.Drawing.Point(28, 19)
+        Me.Add_button.BackColor = System.Drawing.Color.LightGreen
+        Me.Add_button.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Add_button.Image = CType(resources.GetObject("Add_button.Image"), System.Drawing.Image)
+        Me.Add_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Add_button.Location = New System.Drawing.Point(28, 21)
         Me.Add_button.Name = "Add_button"
-        Me.Add_button.Size = New System.Drawing.Size(75, 23)
+        Me.Add_button.Size = New System.Drawing.Size(75, 27)
         Me.Add_button.TabIndex = 30
         Me.Add_button.Text = "Lập thẻ"
-        Me.Add_button.UseVisualStyleBackColor = True
+        Me.Add_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Add_button.UseVisualStyleBackColor = False
         '
         'dtpNgayLapThe
         '
@@ -212,37 +218,45 @@ Partial Class frmLapthe
         Me.GroupBox2.Size = New System.Drawing.Size(628, 150)
         Me.GroupBox2.TabIndex = 32
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
+        Me.GroupBox2.Text = "Thông tin chi tiết"
         '
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.Delete_button)
-        Me.GroupBox3.Controls.Add(Me.Update_button)
         Me.GroupBox3.Controls.Add(Me.Add_button)
-        Me.GroupBox3.Location = New System.Drawing.Point(646, 84)
+        Me.GroupBox3.Controls.Add(Me.Update_button)
+        Me.GroupBox3.Location = New System.Drawing.Point(646, 78)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(136, 144)
+        Me.GroupBox3.Size = New System.Drawing.Size(136, 150)
         Me.GroupBox3.TabIndex = 33
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "GroupBox3"
+        Me.GroupBox3.Text = "Chức năng"
         '
         'Delete_button
         '
-        Me.Delete_button.Location = New System.Drawing.Point(28, 105)
+        Me.Delete_button.BackColor = System.Drawing.Color.LightCoral
+        Me.Delete_button.Image = CType(resources.GetObject("Delete_button.Image"), System.Drawing.Image)
+        Me.Delete_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Delete_button.Location = New System.Drawing.Point(28, 87)
         Me.Delete_button.Name = "Delete_button"
-        Me.Delete_button.Size = New System.Drawing.Size(75, 23)
+        Me.Delete_button.Size = New System.Drawing.Size(75, 27)
         Me.Delete_button.TabIndex = 2
-        Me.Delete_button.Text = "Xóa"
-        Me.Delete_button.UseVisualStyleBackColor = True
+        Me.Delete_button.Text = "Xóa thẻ"
+        Me.Delete_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Delete_button.UseVisualStyleBackColor = False
         '
         'Update_button
         '
-        Me.Update_button.Location = New System.Drawing.Point(28, 64)
+        Me.Update_button.BackColor = System.Drawing.Color.LightGreen
+        Me.Update_button.Image = CType(resources.GetObject("Update_button.Image"), System.Drawing.Image)
+        Me.Update_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Update_button.Location = New System.Drawing.Point(28, 54)
         Me.Update_button.Name = "Update_button"
-        Me.Update_button.Size = New System.Drawing.Size(75, 23)
+        Me.Update_button.Size = New System.Drawing.Size(75, 27)
         Me.Update_button.TabIndex = 1
-        Me.Update_button.Text = "Sửa"
-        Me.Update_button.UseVisualStyleBackColor = True
+        Me.Update_button.Text = "Cập nhật"
+        Me.Update_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Update_button.UseVisualStyleBackColor = False
         '
         'DataGridView1
         '

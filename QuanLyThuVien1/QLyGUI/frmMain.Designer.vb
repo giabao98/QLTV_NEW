@@ -41,9 +41,10 @@ Partial Class frmMain
         Me.btnReaderManagement.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.btnReaderManagement.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReaderManagement.Image = CType(resources.GetObject("btnReaderManagement.Image"), System.Drawing.Image)
-        Me.btnReaderManagement.Location = New System.Drawing.Point(219, 125)
+        Me.btnReaderManagement.Location = New System.Drawing.Point(164, 102)
+        Me.btnReaderManagement.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnReaderManagement.Name = "btnReaderManagement"
-        Me.btnReaderManagement.Size = New System.Drawing.Size(182, 126)
+        Me.btnReaderManagement.Size = New System.Drawing.Size(136, 102)
         Me.btnReaderManagement.TabIndex = 1
         Me.btnReaderManagement.Text = "Quản lý độc giả"
         Me.btnReaderManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -55,9 +56,10 @@ Partial Class frmMain
         Me.btnAuthorManagement.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.btnAuthorManagement.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAuthorManagement.Image = CType(resources.GetObject("btnAuthorManagement.Image"), System.Drawing.Image)
-        Me.btnAuthorManagement.Location = New System.Drawing.Point(24, 270)
+        Me.btnAuthorManagement.Location = New System.Drawing.Point(18, 219)
+        Me.btnAuthorManagement.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnAuthorManagement.Name = "btnAuthorManagement"
-        Me.btnAuthorManagement.Size = New System.Drawing.Size(182, 126)
+        Me.btnAuthorManagement.Size = New System.Drawing.Size(136, 102)
         Me.btnAuthorManagement.TabIndex = 2
         Me.btnAuthorManagement.Text = "Thay đổi quy định"
         Me.btnAuthorManagement.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -69,9 +71,10 @@ Partial Class frmMain
         Me.btnBorrowBook.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.btnBorrowBook.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBorrowBook.Image = CType(resources.GetObject("btnBorrowBook.Image"), System.Drawing.Image)
-        Me.btnBorrowBook.Location = New System.Drawing.Point(419, 125)
+        Me.btnBorrowBook.Location = New System.Drawing.Point(314, 102)
+        Me.btnBorrowBook.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnBorrowBook.Name = "btnBorrowBook"
-        Me.btnBorrowBook.Size = New System.Drawing.Size(182, 126)
+        Me.btnBorrowBook.Size = New System.Drawing.Size(136, 102)
         Me.btnBorrowBook.TabIndex = 3
         Me.btnBorrowBook.Text = "Mượn trả sách"
         Me.btnBorrowBook.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -83,9 +86,10 @@ Partial Class frmMain
         Me.btnFindBook.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.btnFindBook.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFindBook.Image = CType(resources.GetObject("btnFindBook.Image"), System.Drawing.Image)
-        Me.btnFindBook.Location = New System.Drawing.Point(219, 270)
+        Me.btnFindBook.Location = New System.Drawing.Point(164, 219)
+        Me.btnFindBook.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnFindBook.Name = "btnFindBook"
-        Me.btnFindBook.Size = New System.Drawing.Size(182, 126)
+        Me.btnFindBook.Size = New System.Drawing.Size(136, 102)
         Me.btnFindBook.TabIndex = 4
         Me.btnFindBook.Text = "Tìm kiếm"
         Me.btnFindBook.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -95,9 +99,10 @@ Partial Class frmMain
         'btnLogout
         '
         Me.btnLogout.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.btnLogout.Location = New System.Drawing.Point(419, 270)
+        Me.btnLogout.Location = New System.Drawing.Point(314, 219)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(182, 58)
+        Me.btnLogout.Size = New System.Drawing.Size(136, 47)
         Me.btnLogout.TabIndex = 5
         Me.btnLogout.Text = "Đăng xuất"
         Me.btnLogout.UseVisualStyleBackColor = False
@@ -105,10 +110,11 @@ Partial Class frmMain
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font(".VnTime", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(87, 12)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(65, 10)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(470, 70)
+        Me.Label1.Size = New System.Drawing.Size(386, 55)
         Me.Label1.TabIndex = 6
         Me.Label1.Text = "Quản lý thư viện"
         '
@@ -117,9 +123,10 @@ Partial Class frmMain
         Me.btnClose.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
-        Me.btnClose.Location = New System.Drawing.Point(419, 334)
+        Me.btnClose.Location = New System.Drawing.Point(314, 271)
+        Me.btnClose.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(182, 62)
+        Me.btnClose.Size = New System.Drawing.Size(136, 50)
         Me.btnClose.TabIndex = 7
         Me.btnClose.Text = "Đóng"
         Me.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -129,16 +136,18 @@ Partial Class frmMain
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(619, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(464, 10)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(431, 665)
+        Me.PictureBox1.Size = New System.Drawing.Size(323, 482)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(339, 470)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(223, 330)
+        Me.MonthCalendar1.Margin = New System.Windows.Forms.Padding(7, 7, 7, 7)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 10
         '
@@ -146,9 +155,10 @@ Partial Class frmMain
         '
         Me.btnBookUpdate.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.btnBookUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBookUpdate.Location = New System.Drawing.Point(24, 125)
+        Me.btnBookUpdate.Location = New System.Drawing.Point(18, 102)
+        Me.btnBookUpdate.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnBookUpdate.Name = "btnBookUpdate"
-        Me.btnBookUpdate.Size = New System.Drawing.Size(182, 126)
+        Me.btnBookUpdate.Size = New System.Drawing.Size(136, 102)
         Me.btnBookUpdate.TabIndex = 0
         Me.btnBookUpdate.Text = "Cập nhật sách"
         Me.btnBookUpdate.TextAlign = System.Drawing.ContentAlignment.BottomCenter
@@ -157,10 +167,10 @@ Partial Class frmMain
         '
         'frmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.ClientSize = New System.Drawing.Size(1062, 710)
+        Me.ClientSize = New System.Drawing.Size(796, 504)
         Me.Controls.Add(Me.MonthCalendar1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnClose)
@@ -171,6 +181,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.btnAuthorManagement)
         Me.Controls.Add(Me.btnReaderManagement)
         Me.Controls.Add(Me.btnBookUpdate)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "frmMain"
         Me.Text = "frmMain"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
