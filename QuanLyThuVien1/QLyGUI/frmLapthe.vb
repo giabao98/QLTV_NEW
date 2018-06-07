@@ -19,9 +19,9 @@ Public Class frmLapthe
         lt.ReaderID = txbMaDocGia.Text
         lt.ReaderName = txbTenDocGia.Text
         lt.ReaderCategoryID = Convert.ToInt32(cbLoaiDocGia.SelectedValue)
-        lt.Birthday = dtpNgaySinh.Text
+        lt.Birthday = dtpNgaySinh.Value
         lt.Adress = txbDiaChi.Text
-        lt.DayOfCard = dtpNgayLapThe.Text
+        lt.DayOfCard = dtpNgayLapThe.Value
         lt.Email = txbEmail.Text
         '2. Business .... kiem tra cac textbox du lieu nhap
         Dim ltbus As New LaptheBUS
@@ -67,19 +67,23 @@ Public Class frmLapthe
             Return
         End If
 
-        '3. Chen ket qua vao DataBase
-        Dim ltdal As QLyDAL.LaptheDAL
-        ltdal = New QLyDAL.LaptheDAL()
-        Dim result As Integer
-        result = ltdal.insertDocGia(lt)
-        If (result = 0) Then
-            MessageBox.Show("Them hoc sinh thanh cong.")
-        Else
-            MessageBox.Show("Them hoc sinh that bai.")
-        End If
+        ''3. Chen ket qua vao DataBase
+        'Dim ltdal As QLyDAL.LaptheDAL
+        'ltdal = New QLyDAL.LaptheDAL()
+        'Dim result As Integer
+        'result = ltdal.ThemDocGia(lt)
+        'If (result = 0) Then
+        '    MessageBox.Show("Them doc gia thanh cong.")
+        'Else
+        '    MessageBox.Show("Them doc gia that bai.")
+        'End If
     End Sub
 
     Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GroupBox3.Enter
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

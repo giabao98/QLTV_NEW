@@ -5,23 +5,29 @@ Imports System.Data.SqlClient
 Imports System.Configuration
 
 Public Class LaptheDAL
-    Private connectionString As String
+    Private dbAccess As DataBaseAccess
+    Protected Con As SqlConnection
+    Private ConnectionString As String
 
     Public Sub New()
-        ' Read ConnectionString value from App.config file
-        connectionString = ConfigurationManager.AppSettings("ConnectionString")
+        Con = New SqlConnection
+        ConnectionString = ConfigurationManager.AppSettings("ConnectionString")
+        Con.ConnectionString = ConnectionString
     End Sub
+
     Public Sub New(ConnectionString As String)
-        Me.connectionString = ConnectionString
+        Me.ConnectionString = ConnectionString
     End Sub
 
-    Public Function insertDocGia(dg As LaptheDTO)
+    Public Function ThemDocGia(dg As LaptheDTO)
         Dim query As String = String.Empty
-        query &= "INSERT INTO TVDataBs"
-        query &= "(madocgia,hoten,maloaidocgai,ngaysinh,ngaylapthe,email,diachi)"
-        query &= "VALUES (@madocgia,@hoten,@maloaidocgia,@ngaysinh,@email,@diachi,@ngaylapthe)"
+        query &= "INSERT INTO [tblDOCGIA] "
+        query &= "( [madocgia], [hoten], [maloaidocgia], [ngaysinh], "
+        query &= "[email], [diachi], [ngaylapthe])"
+        query &= "VALUES (@madocgia,@hoten,@maloaidocgia,"
+        query &= "@ngaysinh,@email,@diachi,@ngaylapthe)"
 
-        Using conn As New SqlConnection(connectionString)
+        Using conn As New SqlConnection(ConnectionString)
             Using comm As New SqlCommand()
                 With comm
                     .Connection = conn
@@ -39,7 +45,7 @@ Public Class LaptheDAL
                 Try
                     conn.Open()
                     comm.ExecuteNonQuery()
-                Catch
+                Catch ex As Exception
                     conn.Close()
                     Return 1 ' them that bai!!!
                 End Try

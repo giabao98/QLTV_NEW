@@ -1,5 +1,5 @@
 ﻿Public Class LaptheDTO
-    Private strReaderID As Integer
+    Private strReaderID As String
     Private strReaderName As String
     Private intReaderCategoryID As Integer
     Private dBirthday As Date
@@ -8,11 +8,11 @@
     Private strEmail As String
     Private intCreator As Integer
 
-    Public Property ReaderID As Integer
+    Public Property ReaderID As String
         Get
             Return strReaderID
         End Get
-        Set(value As Integer)
+        Set(value As String)
             strReaderID = value
         End Set
     End Property
