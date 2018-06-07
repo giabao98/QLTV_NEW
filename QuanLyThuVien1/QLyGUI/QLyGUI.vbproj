@@ -82,6 +82,18 @@
     <Compile Include="frmFind.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmFindBook.Designer.vb">
+      <DependentUpon>frmFindBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFindBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFindReader.Designer.vb">
+      <DependentUpon>frmFindReader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFindReader.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLapthe.Designer.vb">
       <DependentUpon>frmLapthe.vb</DependentUpon>
     </Compile>
@@ -126,6 +138,12 @@
   <ItemGroup>
     <EmbeddedResource Include="frmFind.resx">
       <DependentUpon>frmFind.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFindBook.resx">
+      <DependentUpon>frmFindBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFindReader.resx">
+      <DependentUpon>frmFindReader.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLapthe.resx">
       <DependentUpon>frmLapthe.vb</DependentUpon>
