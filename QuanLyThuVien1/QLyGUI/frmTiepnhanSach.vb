@@ -17,6 +17,8 @@ Public Class frmTiepnhanSach
         ts.ReceiptDate = dtpReceiptDate.Text
         ts.Value = txbValue.Text
         ts.StatusID = cbStatusID.Text
+        ts.Numbers = txtNumbers.Text
+
         '2. Business .... kiem tra cac textbox du lieu nhap
         Dim tsbus As New TiepnhansachBUS
         If (tsbus.ValidBookID(ts) = False) Then
@@ -72,6 +74,12 @@ Public Class frmTiepnhanSach
             cbStatusID.Focus()
             Return
         End If
+
+        If (tsbus.ValidNumbers(ts) = False) Then
+            MessageBox.Show("So luong sach chua duoc nhap")
+            txtNumbers.Focus()
+            Return
+        End If
         '3. Chen ket qua vao DataBase
         Dim tsdal As QLyDAL.TiepnhansachDAL
         tsdal = New QLyDAL.TiepnhansachDAL()
@@ -82,5 +90,9 @@ Public Class frmTiepnhanSach
         Else
             MessageBox.Show("Them hoc sinh that bai.")
         End If
+    End Sub
+
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+
     End Sub
 End Class

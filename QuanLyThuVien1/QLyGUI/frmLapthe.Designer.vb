@@ -56,13 +56,13 @@ Partial Class frmLapthe
         Me.Add_button.BackColor = System.Drawing.Color.LightGreen
         Me.Add_button.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Add_button.Image = CType(resources.GetObject("Add_button.Image"), System.Drawing.Image)
-        Me.Add_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Add_button.Location = New System.Drawing.Point(28, 21)
         Me.Add_button.Name = "Add_button"
-        Me.Add_button.Size = New System.Drawing.Size(75, 27)
+        Me.Add_button.Size = New System.Drawing.Size(88, 30)
         Me.Add_button.TabIndex = 30
         Me.Add_button.Text = "Lập thẻ"
         Me.Add_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Add_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Add_button.UseVisualStyleBackColor = False
         '
         'dtpNgayLapThe
@@ -180,6 +180,7 @@ Partial Class frmLapthe
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.LightSeaGreen
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
@@ -191,6 +192,7 @@ Partial Class frmLapthe
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label1.Location = New System.Drawing.Point(296, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(194, 29)
@@ -199,6 +201,7 @@ Partial Class frmLapthe
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.AliceBlue
         Me.GroupBox2.Controls.Add(Me.lbMaDocGia)
         Me.GroupBox2.Controls.Add(Me.lbTenDocGia)
         Me.GroupBox2.Controls.Add(Me.lbEmail)
@@ -222,6 +225,7 @@ Partial Class frmLapthe
         '
         'GroupBox3
         '
+        Me.GroupBox3.BackColor = System.Drawing.Color.AliceBlue
         Me.GroupBox3.Controls.Add(Me.Delete_button)
         Me.GroupBox3.Controls.Add(Me.Add_button)
         Me.GroupBox3.Controls.Add(Me.Update_button)
@@ -236,26 +240,26 @@ Partial Class frmLapthe
         '
         Me.Delete_button.BackColor = System.Drawing.Color.LightCoral
         Me.Delete_button.Image = CType(resources.GetObject("Delete_button.Image"), System.Drawing.Image)
-        Me.Delete_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Delete_button.Location = New System.Drawing.Point(28, 87)
+        Me.Delete_button.Location = New System.Drawing.Point(28, 104)
         Me.Delete_button.Name = "Delete_button"
-        Me.Delete_button.Size = New System.Drawing.Size(75, 27)
+        Me.Delete_button.Size = New System.Drawing.Size(88, 30)
         Me.Delete_button.TabIndex = 2
         Me.Delete_button.Text = "Xóa thẻ"
         Me.Delete_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Delete_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Delete_button.UseVisualStyleBackColor = False
         '
         'Update_button
         '
         Me.Update_button.BackColor = System.Drawing.Color.LightGreen
         Me.Update_button.Image = CType(resources.GetObject("Update_button.Image"), System.Drawing.Image)
-        Me.Update_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Update_button.Location = New System.Drawing.Point(28, 54)
+        Me.Update_button.Location = New System.Drawing.Point(28, 59)
         Me.Update_button.Name = "Update_button"
-        Me.Update_button.Size = New System.Drawing.Size(75, 27)
+        Me.Update_button.Size = New System.Drawing.Size(88, 30)
         Me.Update_button.TabIndex = 1
         Me.Update_button.Text = "Cập nhật"
         Me.Update_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Update_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Update_button.UseVisualStyleBackColor = False
         '
         'DataGridView1

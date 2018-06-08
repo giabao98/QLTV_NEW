@@ -78,5 +78,13 @@ Public Class TiepnhansachBUS
 
         Return True
     End Function
+    Public Function ValidNumbers(ts As TiepnhansachDTO) As Boolean
+
+        If (ts.Numbers.ToString.Length < 1) Then
+            Return False
+        End If
+
+        Return True
+    End Function
 
 End Class

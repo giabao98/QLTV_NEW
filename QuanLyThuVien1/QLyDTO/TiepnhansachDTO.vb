@@ -8,6 +8,7 @@
     Private intReceiptDate As Date
     Private intValue As Integer
     Private intStatusID As Integer
+    Private intNumbers As Integer
 
     Public Property BookName As String
         Get
@@ -87,6 +88,15 @@
         End Get
         Set(value As Integer)
             intStatusID = value
+        End Set
+    End Property
+
+    Public Property Numbers As Integer
+        Get
+            Return intNumbers
+        End Get
+        Set(value As Integer)
+            intNumbers = value
         End Set
     End Property
 End Class

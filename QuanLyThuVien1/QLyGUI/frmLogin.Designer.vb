@@ -43,6 +43,7 @@ Partial Class frmLogin
         Me.txbPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txbPassword.Size = New System.Drawing.Size(318, 33)
         Me.txbPassword.TabIndex = 9
+        Me.txbPassword.Text = "admin"
         '
         'txbUserName
         '
@@ -51,6 +52,7 @@ Partial Class frmLogin
         Me.txbUserName.Name = "txbUserName"
         Me.txbUserName.Size = New System.Drawing.Size(318, 34)
         Me.txbUserName.TabIndex = 8
+        Me.txbUserName.Text = "admin"
         '
         'Label3
         '
@@ -104,7 +106,7 @@ Partial Class frmLogin
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(8, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(443, 642)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom

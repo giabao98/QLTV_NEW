@@ -22,6 +22,7 @@ Partial Class frmTiepnhanSach
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTiepnhanSach))
         Me.lbMaSach = New System.Windows.Forms.Label()
         Me.cbStatusID = New System.Windows.Forms.ComboBox()
         Me.lbMaHienTrang = New System.Windows.Forms.Label()
@@ -45,10 +46,12 @@ Partial Class frmTiepnhanSach
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Add_button = New System.Windows.Forms.Button()
-        Me.Update_button = New System.Windows.Forms.Button()
         Me.Delete_button = New System.Windows.Forms.Button()
+        Me.Update_button = New System.Windows.Forms.Button()
+        Me.Add_button = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Soluong_Label = New System.Windows.Forms.Label()
+        Me.txtNumbers = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -215,7 +218,9 @@ Partial Class frmTiepnhanSach
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.LightSeaGreen
         Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(770, 55)
@@ -234,6 +239,9 @@ Partial Class frmTiepnhanSach
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.AliceBlue
+        Me.GroupBox2.Controls.Add(Me.txtNumbers)
+        Me.GroupBox2.Controls.Add(Me.Soluong_Label)
         Me.GroupBox2.Controls.Add(Me.lbMaSach)
         Me.GroupBox2.Controls.Add(Me.cbBookID)
         Me.GroupBox2.Controls.Add(Me.cbStatusID)
@@ -261,6 +269,7 @@ Partial Class frmTiepnhanSach
         '
         'GroupBox3
         '
+        Me.GroupBox3.BackColor = System.Drawing.Color.AliceBlue
         Me.GroupBox3.Controls.Add(Me.Delete_button)
         Me.GroupBox3.Controls.Add(Me.Update_button)
         Me.GroupBox3.Controls.Add(Me.Add_button)
@@ -271,32 +280,41 @@ Partial Class frmTiepnhanSach
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Chức năng"
         '
-        'Add_button
-        '
-        Me.Add_button.Location = New System.Drawing.Point(21, 41)
-        Me.Add_button.Name = "Add_button"
-        Me.Add_button.Size = New System.Drawing.Size(88, 30)
-        Me.Add_button.TabIndex = 0
-        Me.Add_button.Text = "Thêm"
-        Me.Add_button.UseVisualStyleBackColor = True
-        '
-        'Update_button
-        '
-        Me.Update_button.Location = New System.Drawing.Point(21, 80)
-        Me.Update_button.Name = "Update_button"
-        Me.Update_button.Size = New System.Drawing.Size(88, 30)
-        Me.Update_button.TabIndex = 1
-        Me.Update_button.Text = "Sửa"
-        Me.Update_button.UseVisualStyleBackColor = True
-        '
         'Delete_button
         '
+        Me.Delete_button.BackColor = System.Drawing.Color.LightCoral
+        Me.Delete_button.Image = CType(resources.GetObject("Delete_button.Image"), System.Drawing.Image)
         Me.Delete_button.Location = New System.Drawing.Point(21, 122)
         Me.Delete_button.Name = "Delete_button"
         Me.Delete_button.Size = New System.Drawing.Size(88, 30)
         Me.Delete_button.TabIndex = 2
-        Me.Delete_button.Text = "Xóa"
-        Me.Delete_button.UseVisualStyleBackColor = True
+        Me.Delete_button.Text = "Xóa sách"
+        Me.Delete_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Delete_button.UseVisualStyleBackColor = False
+        '
+        'Update_button
+        '
+        Me.Update_button.BackColor = System.Drawing.Color.LightGreen
+        Me.Update_button.Image = CType(resources.GetObject("Update_button.Image"), System.Drawing.Image)
+        Me.Update_button.Location = New System.Drawing.Point(21, 80)
+        Me.Update_button.Name = "Update_button"
+        Me.Update_button.Size = New System.Drawing.Size(88, 30)
+        Me.Update_button.TabIndex = 1
+        Me.Update_button.Text = "Sửa sách"
+        Me.Update_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Update_button.UseVisualStyleBackColor = False
+        '
+        'Add_button
+        '
+        Me.Add_button.BackColor = System.Drawing.Color.LightGreen
+        Me.Add_button.Image = CType(resources.GetObject("Add_button.Image"), System.Drawing.Image)
+        Me.Add_button.Location = New System.Drawing.Point(21, 41)
+        Me.Add_button.Name = "Add_button"
+        Me.Add_button.Size = New System.Drawing.Size(88, 30)
+        Me.Add_button.TabIndex = 0
+        Me.Add_button.Text = "Thêm sách"
+        Me.Add_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Add_button.UseVisualStyleBackColor = False
         '
         'DataGridView1
         '
@@ -305,6 +323,22 @@ Partial Class frmTiepnhanSach
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(770, 226)
         Me.DataGridView1.TabIndex = 25
+        '
+        'Soluong_Label
+        '
+        Me.Soluong_Label.AutoSize = True
+        Me.Soluong_Label.Location = New System.Drawing.Point(328, 155)
+        Me.Soluong_Label.Name = "Soluong_Label"
+        Me.Soluong_Label.Size = New System.Drawing.Size(49, 13)
+        Me.Soluong_Label.TabIndex = 22
+        Me.Soluong_Label.Text = "Số lượng"
+        '
+        'txtNumbers
+        '
+        Me.txtNumbers.Location = New System.Drawing.Point(428, 155)
+        Me.txtNumbers.Name = "txtNumbers"
+        Me.txtNumbers.Size = New System.Drawing.Size(200, 20)
+        Me.txtNumbers.TabIndex = 23
         '
         'frmTiepnhanSach
         '
@@ -355,4 +389,6 @@ Partial Class frmTiepnhanSach
     Friend WithEvents Delete_button As Button
     Friend WithEvents Update_button As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents txtNumbers As TextBox
+    Friend WithEvents Soluong_Label As Label
 End Class

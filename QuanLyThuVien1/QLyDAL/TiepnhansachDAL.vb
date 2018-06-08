@@ -18,8 +18,8 @@ Public Class TiepnhansachDAL
     Public Function insertsach(ts As TiepnhansachDTO)
         Dim query As String = String.Empty
         query &= "INSERT INTO TVDataBs"
-        query &= "(masach,tensach,matheloai,matacgia,namxuatban,manhaxuatban,ngaynhap,trigia,matinhtrang)"
-        query &= "VALUES (@masach,@tensach,@matheloai,@matacgia,@namxuatban,@manhaxuatban,@ngaynhap,@trigia,@matinhtrang)"
+        query &= "(masach,tensach,matheloai,matacgia,namxuatban,manhaxuatban,ngaynhap,trigia,matinhtrang,soluong)"
+        query &= "VALUES (@masach,@tensach,@matheloai,@matacgia,@namxuatban,@manhaxuatban,@ngaynhap,@trigia,@matinhtrang,@soluong)"
 
         Using conn As New SqlConnection(connectionString)
             Using comm As New SqlCommand()
@@ -36,6 +36,7 @@ Public Class TiepnhansachDAL
                     .Parameters.AddWithValue("@ngaynhap", ts.ReceiptDate)
                     .Parameters.AddWithValue("@trigia", ts.Value)
                     .Parameters.AddWithValue("@matinhtrang", ts.StatusID)
+                    .Parameters.AddWithValue("@soluong", ts.Numbers)
                 End With
                 Try
                     conn.Open()
