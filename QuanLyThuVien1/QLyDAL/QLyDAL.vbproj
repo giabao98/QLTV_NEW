@@ -65,7 +65,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBaseAccess.vb" />
-    <Compile Include="FindDAL.vb" />
+    <Compile Include="FindBookDAL.vb" />
+    <Compile Include="FindReaderDAL.vb" />
     <Compile Include="LaptheDAL.vb" />
     <Compile Include="LoginDAL.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

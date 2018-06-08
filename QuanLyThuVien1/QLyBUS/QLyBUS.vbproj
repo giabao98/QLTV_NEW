@@ -63,7 +63,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FindBUS.vb" />
+    <Compile Include="FindBookBUS.vb" />
+    <Compile Include="FindReaderBUS.vb" />
     <Compile Include="laptheBUS.vb" />
     <Compile Include="LoginBUS.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
