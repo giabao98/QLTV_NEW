@@ -68,15 +68,15 @@ Public Class frmLapthe
         End If
 
         ''3. Chen ket qua vao DataBase
-        'Dim ltdal As QLyDAL.LaptheDAL
-        'ltdal = New QLyDAL.LaptheDAL()
-        'Dim result As Integer
-        'result = ltdal.ThemDocGia(lt)
-        'If (result = 0) Then
-        '    MessageBox.Show("Them doc gia thanh cong.")
-        'Else
-        '    MessageBox.Show("Them doc gia that bai.")
-        'End If
+        Dim ltdal As QLyDAL.LaptheDAL
+        ltdal = New QLyDAL.LaptheDAL()
+        Dim result As Integer
+        result = ltdal.ThemDocGia(lt)
+        If (result = 0) Then
+            MessageBox.Show("Them doc gia thanh cong.")
+        Else
+            MessageBox.Show("Them doc gia that bai.")
+        End If
     End Sub
 
     Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GroupBox3.Enter
