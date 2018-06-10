@@ -1,22 +1,22 @@
 ﻿Public Class FindBookDTO
-    Private iKind As Integer
+    Private strFindCategory As String
     Private strFind As String
-    Private iBookCode As Integer
+    Private strBookCode As String
     Private strBookName As String
-    Private iProducerCode As Integer
-    Private iAuthorCode As Integer
-    Private iKindCode As Integer
-    Private iPublishingYear As Integer
-    Private iAmount As Integer
+    Private strProducerCode As String
+    Private strAuthorCode As String
+    Private strCategoryCode As String
+    Private strPublishingYear As String
+    Private strAmount As String
     Private dateInputDay As DateTime
 
 
-    Public Property Kind As Integer
+    Public Property FindCategory As String
         Get
-            Return iKind
+            Return strFindCategory
         End Get
         Set
-            iKind = Value
+            strFindCategory = Value
         End Set
     End Property
 
@@ -29,12 +29,12 @@
         End Set
     End Property
 
-    Public Property BookCode As Integer
+    Public Property BookCode As String
         Get
-            Return iBookCode
+            Return strBookCode
         End Get
         Set
-            iBookCode = Value
+            strBookCode = Value
         End Set
     End Property
 
@@ -47,48 +47,48 @@
         End Set
     End Property
 
-    Public Property ProducerCode As Integer
+    Public Property ProducerCode As String
         Get
-            Return iProducerCode
+            Return strProducerCode
         End Get
         Set
-            iProducerCode = Value
+            strProducerCode = Value
         End Set
     End Property
 
-    Public Property AuthorCode As Integer
+    Public Property AuthorCode As String
         Get
-            Return iAuthorCode
+            Return strAuthorCode
         End Get
         Set
-            iAuthorCode = Value
+            strAuthorCode = Value
         End Set
     End Property
 
-    Public Property KindCode As Integer
+    Public Property CategoryCode As String
         Get
-            Return iKindCode
+            Return strCategoryCode
         End Get
         Set
-            iKindCode = Value
+            strCategoryCode = Value
         End Set
     End Property
 
-    Public Property PublishingYear As Integer
+    Public Property PublishingYear As String
         Get
-            Return iPublishingYear
+            Return strPublishingYear
         End Get
         Set
-            iPublishingYear = Value
+            strPublishingYear = Value
         End Set
     End Property
 
-    Public Property Amount As Integer
+    Public Property Amount As String
         Get
-            Return iAmount
+            Return strAmount
         End Get
         Set
-            iAmount = Value
+            strAmount = Value
         End Set
     End Property
 

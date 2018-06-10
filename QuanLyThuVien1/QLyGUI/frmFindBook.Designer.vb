@@ -22,6 +22,7 @@ Partial Class frmFindBook
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.tabctrFindBook = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
@@ -34,10 +35,10 @@ Partial Class frmFindBook
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txbFind = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.cbbKind = New System.Windows.Forms.ComboBox()
+        Me.cbbFindCategory = New System.Windows.Forms.ComboBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.dgvBook = New System.Windows.Forms.DataGridView()
+        Me.dgvBookInfo1 = New System.Windows.Forms.DataGridView()
         Me.label10 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.txbAuthorCode = New System.Windows.Forms.TextBox()
@@ -46,9 +47,8 @@ Partial Class frmFindBook
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txbAmount = New System.Windows.Forms.TextBox()
         Me.txbPublishingYear = New System.Windows.Forms.TextBox()
-        Me.txbKindCode = New System.Windows.Forms.TextBox()
+        Me.txbCategoryCode = New System.Windows.Forms.TextBox()
         Me.txbBookName = New System.Windows.Forms.TextBox()
-        Me.mtxbInputDay = New System.Windows.Forms.MaskedTextBox()
         Me.txbBookCode = New System.Windows.Forms.TextBox()
         Me.btnClose1 = New System.Windows.Forms.Button()
         Me.btnFind1 = New System.Windows.Forms.Button()
@@ -58,6 +58,30 @@ Partial Class frmFindBook
         Me.label6 = New System.Windows.Forms.Label()
         Me.label5 = New System.Windows.Forms.Label()
         Me.label4 = New System.Windows.Forms.Label()
+        Me.TVDataBsDataSet = New QLyGUI.TVDataBsDataSet()
+        Me.TblSACHBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblSACHTableAdapter = New QLyGUI.TVDataBsDataSetTableAdapters.tblSACHTableAdapter()
+        Me.MasachDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TensachDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MatheloaiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MatacgiaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NamxuatbanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ManhaxuatbanDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NgaynhapDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TrigiaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MatinhtrangDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SoluongDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dateInputDay = New System.Windows.Forms.DateTimePicker()
+        Me.MasachDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TensachDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MatheloaiDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MatacgiaDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NamxuatbanDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ManhaxuatbanDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NgaynhapDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TrigiaDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MatinhtrangDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SoluongDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.tabctrFindBook.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -67,8 +91,10 @@ Partial Class frmFindBook
         Me.GroupBox2.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
-        CType(Me.dgvBook, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvBookInfo1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox6.SuspendLayout()
+        CType(Me.TVDataBsDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblSACHBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tabctrFindBook
@@ -116,7 +142,10 @@ Partial Class frmFindBook
         '
         'dgvBookInfo
         '
+        Me.dgvBookInfo.AutoGenerateColumns = False
         Me.dgvBookInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvBookInfo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MasachDataGridViewTextBoxColumn, Me.TensachDataGridViewTextBoxColumn, Me.MatheloaiDataGridViewTextBoxColumn, Me.MatacgiaDataGridViewTextBoxColumn, Me.NamxuatbanDataGridViewTextBoxColumn, Me.ManhaxuatbanDataGridViewTextBoxColumn, Me.NgaynhapDataGridViewTextBoxColumn, Me.TrigiaDataGridViewTextBoxColumn, Me.MatinhtrangDataGridViewTextBoxColumn, Me.SoluongDataGridViewTextBoxColumn})
+        Me.dgvBookInfo.DataSource = Me.TblSACHBindingSource
         Me.dgvBookInfo.Location = New System.Drawing.Point(17, 55)
         Me.dgvBookInfo.Name = "dgvBookInfo"
         Me.dgvBookInfo.RowTemplate.Height = 24
@@ -169,7 +198,7 @@ Partial Class frmFindBook
         '
         Me.GroupBox2.Controls.Add(Me.txbFind)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.cbbKind)
+        Me.GroupBox2.Controls.Add(Me.cbbFindCategory)
         Me.GroupBox2.Location = New System.Drawing.Point(13, 20)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(593, 107)
@@ -193,13 +222,14 @@ Partial Class frmFindBook
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Tìm theo:"
         '
-        'cbbKind
+        'cbbFindCategory
         '
-        Me.cbbKind.FormattingEnabled = True
-        Me.cbbKind.Location = New System.Drawing.Point(162, 21)
-        Me.cbbKind.Name = "cbbKind"
-        Me.cbbKind.Size = New System.Drawing.Size(173, 24)
-        Me.cbbKind.TabIndex = 0
+        Me.cbbFindCategory.FormattingEnabled = True
+        Me.cbbFindCategory.Items.AddRange(New Object() {"masach", "tensach", "matheloai", "matacgia", "namxuatban", "manhaxuatban", "trigia", "soluong"})
+        Me.cbbFindCategory.Location = New System.Drawing.Point(162, 21)
+        Me.cbbFindCategory.Name = "cbbFindCategory"
+        Me.cbbFindCategory.Size = New System.Drawing.Size(173, 24)
+        Me.cbbFindCategory.TabIndex = 0
         '
         'TabPage2
         '
@@ -215,7 +245,7 @@ Partial Class frmFindBook
         '
         'GroupBox5
         '
-        Me.GroupBox5.Controls.Add(Me.dgvBook)
+        Me.GroupBox5.Controls.Add(Me.dgvBookInfo1)
         Me.GroupBox5.Controls.Add(Me.label10)
         Me.GroupBox5.Location = New System.Drawing.Point(4, 240)
         Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4)
@@ -225,14 +255,17 @@ Partial Class frmFindBook
         Me.GroupBox5.TabIndex = 3
         Me.GroupBox5.TabStop = False
         '
-        'dgvBook
+        'dgvBookInfo1
         '
-        Me.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvBook.Location = New System.Drawing.Point(7, 58)
-        Me.dgvBook.Name = "dgvBook"
-        Me.dgvBook.RowTemplate.Height = 24
-        Me.dgvBook.Size = New System.Drawing.Size(933, 364)
-        Me.dgvBook.TabIndex = 2
+        Me.dgvBookInfo1.AutoGenerateColumns = False
+        Me.dgvBookInfo1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvBookInfo1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MasachDataGridViewTextBoxColumn1, Me.TensachDataGridViewTextBoxColumn1, Me.MatheloaiDataGridViewTextBoxColumn1, Me.MatacgiaDataGridViewTextBoxColumn1, Me.NamxuatbanDataGridViewTextBoxColumn1, Me.ManhaxuatbanDataGridViewTextBoxColumn1, Me.NgaynhapDataGridViewTextBoxColumn1, Me.TrigiaDataGridViewTextBoxColumn1, Me.MatinhtrangDataGridViewTextBoxColumn1, Me.SoluongDataGridViewTextBoxColumn1})
+        Me.dgvBookInfo1.DataSource = Me.TblSACHBindingSource
+        Me.dgvBookInfo1.Location = New System.Drawing.Point(7, 58)
+        Me.dgvBookInfo1.Name = "dgvBookInfo1"
+        Me.dgvBookInfo1.RowTemplate.Height = 24
+        Me.dgvBookInfo1.Size = New System.Drawing.Size(933, 364)
+        Me.dgvBookInfo1.TabIndex = 2
         '
         'label10
         '
@@ -248,15 +281,15 @@ Partial Class frmFindBook
         '
         'GroupBox6
         '
+        Me.GroupBox6.Controls.Add(Me.dateInputDay)
         Me.GroupBox6.Controls.Add(Me.txbAuthorCode)
         Me.GroupBox6.Controls.Add(Me.Label11)
         Me.GroupBox6.Controls.Add(Me.txbProducerCode)
         Me.GroupBox6.Controls.Add(Me.Label3)
         Me.GroupBox6.Controls.Add(Me.txbAmount)
         Me.GroupBox6.Controls.Add(Me.txbPublishingYear)
-        Me.GroupBox6.Controls.Add(Me.txbKindCode)
+        Me.GroupBox6.Controls.Add(Me.txbCategoryCode)
         Me.GroupBox6.Controls.Add(Me.txbBookName)
-        Me.GroupBox6.Controls.Add(Me.mtxbInputDay)
         Me.GroupBox6.Controls.Add(Me.txbBookCode)
         Me.GroupBox6.Controls.Add(Me.btnClose1)
         Me.GroupBox6.Controls.Add(Me.btnFind1)
@@ -328,13 +361,13 @@ Partial Class frmFindBook
         Me.txbPublishingYear.Size = New System.Drawing.Size(311, 22)
         Me.txbPublishingYear.TabIndex = 11
         '
-        'txbKindCode
+        'txbCategoryCode
         '
-        Me.txbKindCode.Location = New System.Drawing.Point(603, 23)
-        Me.txbKindCode.Margin = New System.Windows.Forms.Padding(4)
-        Me.txbKindCode.Name = "txbKindCode"
-        Me.txbKindCode.Size = New System.Drawing.Size(311, 22)
-        Me.txbKindCode.TabIndex = 10
+        Me.txbCategoryCode.Location = New System.Drawing.Point(603, 23)
+        Me.txbCategoryCode.Margin = New System.Windows.Forms.Padding(4)
+        Me.txbCategoryCode.Name = "txbCategoryCode"
+        Me.txbCategoryCode.Size = New System.Drawing.Size(311, 22)
+        Me.txbCategoryCode.TabIndex = 10
         '
         'txbBookName
         '
@@ -343,16 +376,6 @@ Partial Class frmFindBook
         Me.txbBookName.Name = "txbBookName"
         Me.txbBookName.Size = New System.Drawing.Size(289, 22)
         Me.txbBookName.TabIndex = 9
-        '
-        'mtxbInputDay
-        '
-        Me.mtxbInputDay.Location = New System.Drawing.Point(603, 162)
-        Me.mtxbInputDay.Margin = New System.Windows.Forms.Padding(4)
-        Me.mtxbInputDay.Mask = "00/00/0000"
-        Me.mtxbInputDay.Name = "mtxbInputDay"
-        Me.mtxbInputDay.Size = New System.Drawing.Size(311, 22)
-        Me.mtxbInputDay.TabIndex = 8
-        Me.mtxbInputDay.ValidatingType = GetType(Date)
         '
         'txbBookCode
         '
@@ -452,6 +475,149 @@ Partial Class frmFindBook
         Me.label4.TabIndex = 0
         Me.label4.Text = "Mã Sách:"
         '
+        'TVDataBsDataSet
+        '
+        Me.TVDataBsDataSet.DataSetName = "TVDataBsDataSet"
+        Me.TVDataBsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TblSACHBindingSource
+        '
+        Me.TblSACHBindingSource.DataMember = "tblSACH"
+        Me.TblSACHBindingSource.DataSource = Me.TVDataBsDataSet
+        '
+        'TblSACHTableAdapter
+        '
+        Me.TblSACHTableAdapter.ClearBeforeFill = True
+        '
+        'MasachDataGridViewTextBoxColumn
+        '
+        Me.MasachDataGridViewTextBoxColumn.DataPropertyName = "masach"
+        Me.MasachDataGridViewTextBoxColumn.HeaderText = "Mã sách"
+        Me.MasachDataGridViewTextBoxColumn.Name = "MasachDataGridViewTextBoxColumn"
+        Me.MasachDataGridViewTextBoxColumn.Width = 90
+        '
+        'TensachDataGridViewTextBoxColumn
+        '
+        Me.TensachDataGridViewTextBoxColumn.DataPropertyName = "tensach"
+        Me.TensachDataGridViewTextBoxColumn.HeaderText = "Tên sách"
+        Me.TensachDataGridViewTextBoxColumn.Name = "TensachDataGridViewTextBoxColumn"
+        '
+        'MatheloaiDataGridViewTextBoxColumn
+        '
+        Me.MatheloaiDataGridViewTextBoxColumn.DataPropertyName = "matheloai"
+        Me.MatheloaiDataGridViewTextBoxColumn.HeaderText = "Mã thể loại"
+        Me.MatheloaiDataGridViewTextBoxColumn.Name = "MatheloaiDataGridViewTextBoxColumn"
+        '
+        'MatacgiaDataGridViewTextBoxColumn
+        '
+        Me.MatacgiaDataGridViewTextBoxColumn.DataPropertyName = "matacgia"
+        Me.MatacgiaDataGridViewTextBoxColumn.HeaderText = "Mã tác giả"
+        Me.MatacgiaDataGridViewTextBoxColumn.Name = "MatacgiaDataGridViewTextBoxColumn"
+        '
+        'NamxuatbanDataGridViewTextBoxColumn
+        '
+        Me.NamxuatbanDataGridViewTextBoxColumn.DataPropertyName = "namxuatban"
+        Me.NamxuatbanDataGridViewTextBoxColumn.HeaderText = "Năm xuất bản"
+        Me.NamxuatbanDataGridViewTextBoxColumn.Name = "NamxuatbanDataGridViewTextBoxColumn"
+        '
+        'ManhaxuatbanDataGridViewTextBoxColumn
+        '
+        Me.ManhaxuatbanDataGridViewTextBoxColumn.DataPropertyName = "manhaxuatban"
+        Me.ManhaxuatbanDataGridViewTextBoxColumn.HeaderText = "Mã nhà xuất bản"
+        Me.ManhaxuatbanDataGridViewTextBoxColumn.Name = "ManhaxuatbanDataGridViewTextBoxColumn"
+        '
+        'NgaynhapDataGridViewTextBoxColumn
+        '
+        Me.NgaynhapDataGridViewTextBoxColumn.DataPropertyName = "ngaynhap"
+        Me.NgaynhapDataGridViewTextBoxColumn.HeaderText = "Ngày nhập"
+        Me.NgaynhapDataGridViewTextBoxColumn.Name = "NgaynhapDataGridViewTextBoxColumn"
+        '
+        'TrigiaDataGridViewTextBoxColumn
+        '
+        Me.TrigiaDataGridViewTextBoxColumn.DataPropertyName = "trigia"
+        Me.TrigiaDataGridViewTextBoxColumn.HeaderText = "Trị giá"
+        Me.TrigiaDataGridViewTextBoxColumn.Name = "TrigiaDataGridViewTextBoxColumn"
+        '
+        'MatinhtrangDataGridViewTextBoxColumn
+        '
+        Me.MatinhtrangDataGridViewTextBoxColumn.DataPropertyName = "matinhtrang"
+        Me.MatinhtrangDataGridViewTextBoxColumn.HeaderText = "Mã tình trạng"
+        Me.MatinhtrangDataGridViewTextBoxColumn.Name = "MatinhtrangDataGridViewTextBoxColumn"
+        '
+        'SoluongDataGridViewTextBoxColumn
+        '
+        Me.SoluongDataGridViewTextBoxColumn.DataPropertyName = "soluong"
+        Me.SoluongDataGridViewTextBoxColumn.HeaderText = "Số lượng"
+        Me.SoluongDataGridViewTextBoxColumn.Name = "SoluongDataGridViewTextBoxColumn"
+        '
+        'dateInputDay
+        '
+        Me.dateInputDay.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dateInputDay.Location = New System.Drawing.Point(603, 160)
+        Me.dateInputDay.Name = "dateInputDay"
+        Me.dateInputDay.Size = New System.Drawing.Size(314, 22)
+        Me.dateInputDay.TabIndex = 17
+        '
+        'MasachDataGridViewTextBoxColumn1
+        '
+        Me.MasachDataGridViewTextBoxColumn1.DataPropertyName = "masach"
+        Me.MasachDataGridViewTextBoxColumn1.HeaderText = "Mã sách"
+        Me.MasachDataGridViewTextBoxColumn1.Name = "MasachDataGridViewTextBoxColumn1"
+        '
+        'TensachDataGridViewTextBoxColumn1
+        '
+        Me.TensachDataGridViewTextBoxColumn1.DataPropertyName = "tensach"
+        Me.TensachDataGridViewTextBoxColumn1.HeaderText = "Tên sách"
+        Me.TensachDataGridViewTextBoxColumn1.Name = "TensachDataGridViewTextBoxColumn1"
+        '
+        'MatheloaiDataGridViewTextBoxColumn1
+        '
+        Me.MatheloaiDataGridViewTextBoxColumn1.DataPropertyName = "matheloai"
+        Me.MatheloaiDataGridViewTextBoxColumn1.HeaderText = "Mã thể loại"
+        Me.MatheloaiDataGridViewTextBoxColumn1.Name = "MatheloaiDataGridViewTextBoxColumn1"
+        '
+        'MatacgiaDataGridViewTextBoxColumn1
+        '
+        Me.MatacgiaDataGridViewTextBoxColumn1.DataPropertyName = "matacgia"
+        Me.MatacgiaDataGridViewTextBoxColumn1.HeaderText = "Mã tác giả"
+        Me.MatacgiaDataGridViewTextBoxColumn1.Name = "MatacgiaDataGridViewTextBoxColumn1"
+        '
+        'NamxuatbanDataGridViewTextBoxColumn1
+        '
+        Me.NamxuatbanDataGridViewTextBoxColumn1.DataPropertyName = "namxuatban"
+        Me.NamxuatbanDataGridViewTextBoxColumn1.HeaderText = "Năm xuất bản"
+        Me.NamxuatbanDataGridViewTextBoxColumn1.Name = "NamxuatbanDataGridViewTextBoxColumn1"
+        '
+        'ManhaxuatbanDataGridViewTextBoxColumn1
+        '
+        Me.ManhaxuatbanDataGridViewTextBoxColumn1.DataPropertyName = "manhaxuatban"
+        Me.ManhaxuatbanDataGridViewTextBoxColumn1.HeaderText = "Mã nhà xuất bản"
+        Me.ManhaxuatbanDataGridViewTextBoxColumn1.Name = "ManhaxuatbanDataGridViewTextBoxColumn1"
+        '
+        'NgaynhapDataGridViewTextBoxColumn1
+        '
+        Me.NgaynhapDataGridViewTextBoxColumn1.DataPropertyName = "ngaynhap"
+        Me.NgaynhapDataGridViewTextBoxColumn1.HeaderText = "Ngày nhập"
+        Me.NgaynhapDataGridViewTextBoxColumn1.Name = "NgaynhapDataGridViewTextBoxColumn1"
+        '
+        'TrigiaDataGridViewTextBoxColumn1
+        '
+        Me.TrigiaDataGridViewTextBoxColumn1.DataPropertyName = "trigia"
+        Me.TrigiaDataGridViewTextBoxColumn1.HeaderText = "Trị giá"
+        Me.TrigiaDataGridViewTextBoxColumn1.Name = "TrigiaDataGridViewTextBoxColumn1"
+        '
+        'MatinhtrangDataGridViewTextBoxColumn1
+        '
+        Me.MatinhtrangDataGridViewTextBoxColumn1.DataPropertyName = "matinhtrang"
+        Me.MatinhtrangDataGridViewTextBoxColumn1.HeaderText = "Mã tình trạng"
+        Me.MatinhtrangDataGridViewTextBoxColumn1.Name = "MatinhtrangDataGridViewTextBoxColumn1"
+        '
+        'SoluongDataGridViewTextBoxColumn1
+        '
+        Me.SoluongDataGridViewTextBoxColumn1.DataPropertyName = "soluong"
+        Me.SoluongDataGridViewTextBoxColumn1.HeaderText = "Số lượng"
+        Me.SoluongDataGridViewTextBoxColumn1.Name = "SoluongDataGridViewTextBoxColumn1"
+        '
         'frmFindBook
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -472,9 +638,11 @@ Partial Class frmFindBook
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
-        CType(Me.dgvBook, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvBookInfo1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
+        CType(Me.TVDataBsDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblSACHBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -491,17 +659,16 @@ Partial Class frmFindBook
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents txbFind As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents cbbKind As ComboBox
+    Friend WithEvents cbbFindCategory As ComboBox
     Friend WithEvents TabPage2 As TabPage
     Private WithEvents GroupBox5 As GroupBox
-    Friend WithEvents dgvBook As DataGridView
+    Friend WithEvents dgvBookInfo1 As DataGridView
     Private WithEvents label10 As Label
     Private WithEvents GroupBox6 As GroupBox
     Private WithEvents txbAmount As TextBox
     Private WithEvents txbPublishingYear As TextBox
-    Private WithEvents txbKindCode As TextBox
+    Private WithEvents txbCategoryCode As TextBox
     Private WithEvents txbBookName As TextBox
-    Private WithEvents mtxbInputDay As MaskedTextBox
     Private WithEvents txbBookCode As TextBox
     Private WithEvents btnClose1 As Button
     Private WithEvents btnFind1 As Button
@@ -515,4 +682,28 @@ Partial Class frmFindBook
     Private WithEvents Label11 As Label
     Private WithEvents txbProducerCode As TextBox
     Private WithEvents Label3 As Label
+    Friend WithEvents TVDataBsDataSet As TVDataBsDataSet
+    Friend WithEvents TblSACHBindingSource As BindingSource
+    Friend WithEvents TblSACHTableAdapter As TVDataBsDataSetTableAdapters.tblSACHTableAdapter
+    Friend WithEvents MasachDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TensachDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MatheloaiDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MatacgiaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NamxuatbanDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ManhaxuatbanDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NgaynhapDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TrigiaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MatinhtrangDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents SoluongDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents dateInputDay As DateTimePicker
+    Friend WithEvents MasachDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents TensachDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents MatheloaiDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents MatacgiaDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents NamxuatbanDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents ManhaxuatbanDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents NgaynhapDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents TrigiaDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents MatinhtrangDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents SoluongDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
 End Class

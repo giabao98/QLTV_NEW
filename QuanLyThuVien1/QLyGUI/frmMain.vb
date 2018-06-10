@@ -16,7 +16,7 @@
 
     Private Sub btnBookUpdate_Click(sender As Object, e As EventArgs) Handles btnBookUpdate.Click
         Dim fTiepNhanSach = New frmTiepnhanSach
-        frmTiepnhanSach.ShowDialog()
+        fTiepNhanSach.ShowDialog()
     End Sub
 
     Private Sub btnReaderManagement_Click(sender As Object, e As EventArgs) Handles btnReaderManagement.Click
