@@ -8,6 +8,10 @@ Public Class frmLapthe
     Private Sub frmLapthe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'TVDataBsDataSet1.tblDOCGIA' table. You can move, or remove it, as needed.
         Me.TblDOCGIATableAdapter.Fill(Me.TVDataBsDataSet1.tblDOCGIA)
+        dtpNgayLapThe.Format = DateTimePickerFormat.Custom
+        dtpNgayLapThe.CustomFormat = "dd/MM/yyyy"
+        dtpNgaySinh.Format = DateTimePickerFormat.Custom
+        dtpNgaySinh.CustomFormat = "dd/MM/yyyy"
 
 
     End Sub
