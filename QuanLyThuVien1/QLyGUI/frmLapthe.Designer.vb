@@ -238,6 +238,7 @@ Partial Class frmLapthe
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MadocgiaDataGridViewTextBoxColumn, Me.HotenDataGridViewTextBoxColumn, Me.LoaidocgiaDataGridViewTextBoxColumn, Me.NgaysinhDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.DiachiDataGridViewTextBoxColumn, Me.NgaylaptheDataGridViewTextBoxColumn})
@@ -305,49 +306,49 @@ Partial Class frmLapthe
         'MadocgiaDataGridViewTextBoxColumn
         '
         Me.MadocgiaDataGridViewTextBoxColumn.DataPropertyName = "madocgia"
-        Me.MadocgiaDataGridViewTextBoxColumn.HeaderText = "madocgia"
+        Me.MadocgiaDataGridViewTextBoxColumn.HeaderText = "Mã đọc giả"
         Me.MadocgiaDataGridViewTextBoxColumn.Name = "MadocgiaDataGridViewTextBoxColumn"
         Me.MadocgiaDataGridViewTextBoxColumn.ReadOnly = True
         '
         'HotenDataGridViewTextBoxColumn
         '
         Me.HotenDataGridViewTextBoxColumn.DataPropertyName = "hoten"
-        Me.HotenDataGridViewTextBoxColumn.HeaderText = "hoten"
+        Me.HotenDataGridViewTextBoxColumn.HeaderText = "Họ tên"
         Me.HotenDataGridViewTextBoxColumn.Name = "HotenDataGridViewTextBoxColumn"
         Me.HotenDataGridViewTextBoxColumn.ReadOnly = True
         '
         'LoaidocgiaDataGridViewTextBoxColumn
         '
         Me.LoaidocgiaDataGridViewTextBoxColumn.DataPropertyName = "loaidocgia"
-        Me.LoaidocgiaDataGridViewTextBoxColumn.HeaderText = "loaidocgia"
+        Me.LoaidocgiaDataGridViewTextBoxColumn.HeaderText = "Loại đọc giả"
         Me.LoaidocgiaDataGridViewTextBoxColumn.Name = "LoaidocgiaDataGridViewTextBoxColumn"
         Me.LoaidocgiaDataGridViewTextBoxColumn.ReadOnly = True
         '
         'NgaysinhDataGridViewTextBoxColumn
         '
         Me.NgaysinhDataGridViewTextBoxColumn.DataPropertyName = "ngaysinh"
-        Me.NgaysinhDataGridViewTextBoxColumn.HeaderText = "ngaysinh"
+        Me.NgaysinhDataGridViewTextBoxColumn.HeaderText = "Ngày sinh"
         Me.NgaysinhDataGridViewTextBoxColumn.Name = "NgaysinhDataGridViewTextBoxColumn"
         Me.NgaysinhDataGridViewTextBoxColumn.ReadOnly = True
         '
         'EmailDataGridViewTextBoxColumn
         '
         Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "email"
-        Me.EmailDataGridViewTextBoxColumn.HeaderText = "email"
+        Me.EmailDataGridViewTextBoxColumn.HeaderText = "Email"
         Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
         Me.EmailDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DiachiDataGridViewTextBoxColumn
         '
         Me.DiachiDataGridViewTextBoxColumn.DataPropertyName = "diachi"
-        Me.DiachiDataGridViewTextBoxColumn.HeaderText = "diachi"
+        Me.DiachiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ"
         Me.DiachiDataGridViewTextBoxColumn.Name = "DiachiDataGridViewTextBoxColumn"
         Me.DiachiDataGridViewTextBoxColumn.ReadOnly = True
         '
         'NgaylaptheDataGridViewTextBoxColumn
         '
         Me.NgaylaptheDataGridViewTextBoxColumn.DataPropertyName = "ngaylapthe"
-        Me.NgaylaptheDataGridViewTextBoxColumn.HeaderText = "ngaylapthe"
+        Me.NgaylaptheDataGridViewTextBoxColumn.HeaderText = "Ngày lập thẻ"
         Me.NgaylaptheDataGridViewTextBoxColumn.Name = "NgaylaptheDataGridViewTextBoxColumn"
         Me.NgaylaptheDataGridViewTextBoxColumn.ReadOnly = True
         '
