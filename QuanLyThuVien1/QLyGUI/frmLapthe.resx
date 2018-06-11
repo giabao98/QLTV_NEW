@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="TblDOCGIABindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>170, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Add_button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -135,6 +138,24 @@
         sOTzQHkG999K49XO4zQ81dLqHx2P70O9MMVunoBdBDwyQCTwgkwShsdum8AFBZO41RxHQ6uWu5o1DDsj
         o6selKhgcfTBdPtAMUBWeEw44DxXJBCGRAyI42wkOqhQLYnCB+c49Fu1QzBuO/gjSeInniiGwmG+gAOB
         3zwIzfBjtocWAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="Update_button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAulJREFUOE+l
+        0o0v1HEcB/BPprI8dBxOuDhh6tYtTkOhPKxW1mZDdss8RE9UYrVKKz23kma79TQpMWt5mJizHW5a96uI
+        jkrLcB5zUqwuZ0rx7uf38x/02b77bp/P9/X97PtA/x3JKSkUHhFO7hIJuVo6LaQUJKBqkgsGlwaJjORv
+        O0xCqmPzSc7LHMjOTkh+cvnCOjaTkkw7o6JItEQgJkt6sfpUEDJabiBvtBxFE/W4902FzLYCuJ0LBbtp
+        6woy9wwMDOTxkaxMipCGisiOJsKb9kI5VYXyoQaoB1vROPQWKr0WKkMzauYZbNNmgMRk8nOSenB4V/AO
+        Mney7JDXRuPyoBJFnRUYME7CYJqAekiDsu5KXGsvxLWWApR8LccmjQJmq1f0cVhANnGCo+5I1B/Afd1j
+        LES/sRuHnydgn2Y3jjOpyNddwrEXR5FUn4Acw3k45viAw1ZetuqN1TIcZBSYZ6Fp9guSGvyxvykCZ17F
+        4/TLeBzQhCBbq4BqQIO05niENQTz2D7MdnQrI8fNtotc12d9pYiu80ZuSxiLQ3D2dQji6kXs+dVcvbir
+        CAGMy2LnULOZY70xmPrF1fDzN1DYlYNsxhpX2mXsbIO777P44mKcHEziscd22zFF53JoR/jzTs70sEiI
+        6zoHKN+5IU/njBu6tdCOKrm6euA2svQyHnvKXTRpjAAnWkUYMX3E095I5HcQSrvFKPm0ClV6G5xgCO3j
+        DRy+8EaKPa+Jx0tJmKBQ2uPhjBi32q1x58M6POhaj6o+Qk0/sTdNqOi9ysEP409Q8J2QXCzkscxzM0nW
+        OXQ/GhNBZVyJyh4f1A+ko1Z/FjV9+WgZ68efOfb5vheh4qs1in9YwHWt5WcOJ6ckkstKucQ7gEwvf4vx
+        AzIYZoNgmM6F8Vc1268W439SMQxHMLNW8I20mPN22SLlcGxsDPF/1dpb4mOuK1PZY3rOl0VSdniywxnG
+        v44ob7THGil9tCCvDemHMugfQXnOENV6O/QAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="Delete_button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -156,22 +177,10 @@
         K5CeICoVAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Update_button.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAulJREFUOE+l
-        0o0v1HEcB/BPprI8dBxOuDhh6tYtTkOhPKxW1mZDdss8RE9UYrVKKz23kma79TQpMWt5mJizHW5a96uI
-        jkrLcB5zUqwuZ0rx7uf38x/02b77bp/P9/X97PtA/x3JKSkUHhFO7hIJuVo6LaQUJKBqkgsGlwaJjORv
-        O0xCqmPzSc7LHMjOTkh+cvnCOjaTkkw7o6JItEQgJkt6sfpUEDJabiBvtBxFE/W4902FzLYCuJ0LBbtp
-        6woy9wwMDOTxkaxMipCGisiOJsKb9kI5VYXyoQaoB1vROPQWKr0WKkMzauYZbNNmgMRk8nOSenB4V/AO
-        Mney7JDXRuPyoBJFnRUYME7CYJqAekiDsu5KXGsvxLWWApR8LccmjQJmq1f0cVhANnGCo+5I1B/Afd1j
-        LES/sRuHnydgn2Y3jjOpyNddwrEXR5FUn4Acw3k45viAw1ZetuqN1TIcZBSYZ6Fp9guSGvyxvykCZ17F
-        4/TLeBzQhCBbq4BqQIO05niENQTz2D7MdnQrI8fNtotc12d9pYiu80ZuSxiLQ3D2dQji6kXs+dVcvbir
-        CAGMy2LnULOZY70xmPrF1fDzN1DYlYNsxhpX2mXsbIO777P44mKcHEziscd22zFF53JoR/jzTs70sEiI
-        6zoHKN+5IU/njBu6tdCOKrm6euA2svQyHnvKXTRpjAAnWkUYMX3E095I5HcQSrvFKPm0ClV6G5xgCO3j
-        DRy+8EaKPa+Jx0tJmKBQ2uPhjBi32q1x58M6POhaj6o+Qk0/sTdNqOi9ysEP409Q8J2QXCzkscxzM0nW
-        OXQ/GhNBZVyJyh4f1A+ko1Z/FjV9+WgZ68efOfb5vheh4qs1in9YwHWt5WcOJ6ckkstKucQ7gEwvf4vx
-        AzIYZoNgmM6F8Vc1268W439SMQxHMLNW8I20mPN22SLlcGxsDPF/1dpb4mOuK1PZY3rOl0VSdniywxnG
-        v44ob7THGil9tCCvDemHMugfQXnOENV6O/QAAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="TVDataBsDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="TblDOCGIATableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>362, 17</value>
+  </metadata>
 </root>

@@ -1,12 +1,12 @@
 ﻿Public Class LaptheDTO
     Private strReaderID As String
     Private strReaderName As String
-    Private intReaderCategoryID As Integer
+    Private strReaderCategory As String
     Private dBirthday As Date
     Private strAdress As String
     Private dDayOfCard As Date
     Private strEmail As String
-    Private intCreator As Integer
+    Private strCreator As String
 
     Public Property ReaderID As String
         Get
@@ -64,21 +64,21 @@
         End Set
     End Property
 
-    Public Property Creator As Integer
+    Public Property Creator As String
         Get
-            Return intCreator
+            Return strCreator
         End Get
-        Set(value As Integer)
-            intCreator = value
+        Set(value As String)
+            strCreator = value
         End Set
     End Property
 
-    Public Property ReaderCategoryID As Integer
+    Public Property ReaderCategory As String
         Get
-            Return intReaderCategoryID
+            Return strReaderCategory
         End Get
-        Set(value As Integer)
-            intReaderCategoryID = value
+        Set(value As String)
+            strReaderCategory = value
         End Set
     End Property
 End Class

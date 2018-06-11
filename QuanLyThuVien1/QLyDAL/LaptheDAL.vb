@@ -22,10 +22,8 @@ Public Class LaptheDAL
     Public Function ThemDocGia(dg As LaptheDTO)
         Dim query As String = String.Empty
         query &= "INSERT INTO [tblDOCGIA] "
-        query &= "( [madocgia], [hoten], [maloaidocgia], [ngaysinh], "
-        query &= "[email], [diachi], [ngaylapthe])"
-        query &= "VALUES (@madocgia,@hoten,@maloaidocgia,"
-        query &= "@ngaysinh,@email,@diachi,@ngaylapthe)"
+        query &= "( [madocgia], [hoten], [loaidocgia], [ngaysinh],[email], [diachi], [ngaylapthe])"
+        query &= "VALUES (@madocgia,@hoten,@loaidocgia, @ngaysinh,@email,@diachi,@ngaylapthe)"
 
         Using conn As New SqlConnection(ConnectionString)
             Using comm As New SqlCommand()
@@ -35,7 +33,7 @@ Public Class LaptheDAL
                     .CommandText = query
                     .Parameters.AddWithValue("@madocgia", dg.ReaderID)
                     .Parameters.AddWithValue("@hoten", dg.ReaderName)
-                    .Parameters.AddWithValue("@maloaidocgia", dg.ReaderCategoryID)
+                    .Parameters.AddWithValue("@loaidocgia", dg.ReaderCategory)
                     .Parameters.AddWithValue("@ngaysinh", dg.Birthday)
                     .Parameters.AddWithValue("@email", dg.Email)
                     .Parameters.AddWithValue("@diachi", dg.Adress)
@@ -48,6 +46,77 @@ Public Class LaptheDAL
                 Catch ex As Exception
                     conn.Close()
                     Return 1 ' them that bai!!!
+                End Try
+            End Using
+        End Using
+        Return 0 ' thanh cong
+    End Function
+    Public Function CapNhatDocGia(dg As LaptheDTO)
+        Dim query As String = String.Empty
+        query &= " UPDATE [tblDOCGIA] SET"
+        query &= " [madocgia] = @madocgia "
+        query &= " ,[hoten] = @hoten "
+        query &= " ,[loaidocgia] = @loaidocgia "
+        query &= " ,[ngaysinh] = @ngaysinh "
+        query &= " ,[email] = @email "
+        query &= " ,[diachi] = @diachi "
+        query &= " ,[ngaylapthe] = @ngaylapthe "
+        query &= " WHERE "
+        query &= " [madocgia] = @madocgia "
+
+        Using conn As New SqlConnection(ConnectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@madocgia", dg.ReaderID)
+                    .Parameters.AddWithValue("@hoten", dg.ReaderName)
+                    .Parameters.AddWithValue("@loaidocgia", dg.ReaderCategory)
+                    .Parameters.AddWithValue("@ngaysinh", dg.Birthday)
+                    .Parameters.AddWithValue("@email", dg.Email)
+                    .Parameters.AddWithValue("@diachi", dg.Adress)
+                    .Parameters.AddWithValue("@ngaylapthe", dg.DayOfCard)
+
+                End With
+                Try
+                    conn.Open()
+                    comm.ExecuteNonQuery()
+                Catch ex As Exception
+                    conn.Close()
+                    Return 1 ' cap nhat that bai!!!
+                End Try
+            End Using
+        End Using
+        Return 0 ' thanh cong
+    End Function
+    Public Function XoaDocGia(dg As LaptheDTO)
+        Dim query As String = String.Empty
+        query &= " DELETE [tblDOCGIA]"
+        query &= " WHERE "
+        query &= " [madocgia] = @madocgia "
+
+        Using conn As New SqlConnection(ConnectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                    .Parameters.AddWithValue("@madocgia", dg.ReaderID)
+                    .Parameters.AddWithValue("@hoten", dg.ReaderName)
+                    .Parameters.AddWithValue("@loaidocgia", dg.ReaderCategory)
+                    .Parameters.AddWithValue("@ngaysinh", dg.Birthday)
+                    .Parameters.AddWithValue("@email", dg.Email)
+                    .Parameters.AddWithValue("@diachi", dg.Adress)
+                    .Parameters.AddWithValue("@ngaylapthe", dg.DayOfCard)
+
+                End With
+                Try
+                    conn.Open()
+                    comm.ExecuteNonQuery()
+                Catch ex As Exception
+                    conn.Close()
+                    Return 1 ' xoa that bai!!!
                 End Try
             End Using
         End Using

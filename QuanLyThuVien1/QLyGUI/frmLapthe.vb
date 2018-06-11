@@ -6,19 +6,28 @@ Imports QLyDTO
 Public Class frmLapthe
 
     Private Sub frmLapthe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'TVDataBsDataSet1.tblDOCGIA' table. You can move, or remove it, as needed.
+        Me.TblDOCGIATableAdapter.Fill(Me.TVDataBsDataSet1.tblDOCGIA)
 
 
     End Sub
 
-    Private Sub Add_button_Click(sender As Object, e As EventArgs) Handles Add_button.Click
+    Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GroupBox3.Enter
 
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Add_button_Click_1(sender As Object, e As EventArgs) Handles Add_button.Click
         Dim lt As LaptheDTO
         lt = New LaptheDTO()
 
         '1. Lop GUI control
         lt.ReaderID = txbMaDocGia.Text
         lt.ReaderName = txbTenDocGia.Text
-        lt.ReaderCategoryID = Convert.ToInt32(cbLoaiDocGia.SelectedValue)
+        lt.ReaderCategory = cbLoaiDocGia.Text
         lt.Birthday = dtpNgaySinh.Value
         lt.Adress = txbDiaChi.Text
         lt.DayOfCard = dtpNgayLapThe.Value
@@ -43,8 +52,8 @@ Public Class frmLapthe
             Return
         End If
 
-        If (ltbus.ValidReaderCategoryID(lt) = False) Then
-            MessageBox.Show("Ma loai doc gia chua duoc nhap")
+        If (ltbus.ValidReaderCategory(lt) = False) Then
+            MessageBox.Show("Loai doc gia chua duoc nhap")
             txbMaDocGia.Focus()
             Return
         End If
@@ -77,13 +86,55 @@ Public Class frmLapthe
         Else
             MessageBox.Show("Them doc gia that bai.")
         End If
+        Me.TblDOCGIATableAdapter.Fill(Me.TVDataBsDataSet1.tblDOCGIA)
     End Sub
 
-    Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GroupBox3.Enter
+    Private Sub Update_button_Click(sender As Object, e As EventArgs) Handles Update_button.Click
+        Dim lt As LaptheDTO
+        lt = New LaptheDTO()
 
+        '1. Lop GUI control
+        lt.ReaderID = txbMaDocGia.Text
+        lt.ReaderName = txbTenDocGia.Text
+        lt.ReaderCategory = cbLoaiDocGia.Text
+        lt.Birthday = dtpNgaySinh.Value
+        lt.Adress = txbDiaChi.Text
+        lt.DayOfCard = dtpNgayLapThe.Value
+        lt.Email = txbEmail.Text
+        ''3. Chen ket qua vao DataBase
+        Dim ltdal As QLyDAL.LaptheDAL
+        ltdal = New QLyDAL.LaptheDAL()
+        Dim result As Integer
+        result = ltdal.CapNhatDocGia(lt)
+        If (result = 0) Then
+            MessageBox.Show("Cập nhật đọc giả thành công.")
+        Else
+            MessageBox.Show("Cập nhật đọc giả thất bại.")
+        End If
+        Me.TblDOCGIATableAdapter.Fill(Me.TVDataBsDataSet1.tblDOCGIA)
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
+    Private Sub Delete_button_Click(sender As Object, e As EventArgs) Handles Delete_button.Click
+        Dim lt As LaptheDTO
+        lt = New LaptheDTO()
 
+        '1. Lop GUI control
+        lt.ReaderID = txbMaDocGia.Text
+        lt.ReaderName = txbTenDocGia.Text
+        lt.ReaderCategory = cbLoaiDocGia.Text
+        lt.Birthday = dtpNgaySinh.Value
+        lt.Adress = txbDiaChi.Text
+        lt.DayOfCard = dtpNgayLapThe.Value
+        lt.Email = txbEmail.Text
+        Dim ltdal As QLyDAL.LaptheDAL
+        ltdal = New QLyDAL.LaptheDAL()
+        Dim result As Integer
+        result = ltdal.XoaDocGia(lt)
+        If (result = 0) Then
+            MessageBox.Show("Xóa đọc giả thành công.")
+        Else
+            MessageBox.Show("Xoá đọc giả thất bại.")
+        End If
+        Me.TblDOCGIATableAdapter.Fill(Me.TVDataBsDataSet1.tblDOCGIA)
     End Sub
 End Class

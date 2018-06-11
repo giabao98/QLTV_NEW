@@ -145,6 +145,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TVDataBsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TVDataBsDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TVDataBsDataSet1.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmFind.resx">
@@ -198,6 +203,17 @@
     </None>
     <None Include="TVDataBsDataSet.xss">
       <DependentUpon>TVDataBsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TVDataBsDataSet1.xsc">
+      <DependentUpon>TVDataBsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TVDataBsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TVDataBsDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TVDataBsDataSet1.xss">
+      <DependentUpon>TVDataBsDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
