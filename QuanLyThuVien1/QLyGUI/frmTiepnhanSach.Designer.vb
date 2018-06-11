@@ -52,7 +52,7 @@ Partial Class frmTiepnhanSach
         Me.Delete_button = New System.Windows.Forms.Button()
         Me.Update_button = New System.Windows.Forms.Button()
         Me.Add_button = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvSach = New System.Windows.Forms.DataGridView()
         Me.MasachDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TensachDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MatheloaiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -69,7 +69,7 @@ Partial Class frmTiepnhanSach
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvSach, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblSACHBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TVDataBsDataSet2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -348,19 +348,19 @@ Partial Class frmTiepnhanSach
         Me.Add_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Add_button.UseVisualStyleBackColor = False
         '
-        'DataGridView1
+        'dgvSach
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MasachDataGridViewTextBoxColumn, Me.TensachDataGridViewTextBoxColumn, Me.MatheloaiDataGridViewTextBoxColumn, Me.MatacgiaDataGridViewTextBoxColumn, Me.NamxuatbanDataGridViewTextBoxColumn, Me.ManhaxuatbanDataGridViewTextBoxColumn, Me.NgaynhapDataGridViewTextBoxColumn, Me.TrigiaDataGridViewTextBoxColumn, Me.MatinhtrangDataGridViewTextBoxColumn, Me.SoluongDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.TblSACHBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 268)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(770, 226)
-        Me.DataGridView1.TabIndex = 25
+        Me.dgvSach.AllowUserToAddRows = False
+        Me.dgvSach.AllowUserToDeleteRows = False
+        Me.dgvSach.AutoGenerateColumns = False
+        Me.dgvSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvSach.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MasachDataGridViewTextBoxColumn, Me.TensachDataGridViewTextBoxColumn, Me.MatheloaiDataGridViewTextBoxColumn, Me.MatacgiaDataGridViewTextBoxColumn, Me.NamxuatbanDataGridViewTextBoxColumn, Me.ManhaxuatbanDataGridViewTextBoxColumn, Me.NgaynhapDataGridViewTextBoxColumn, Me.TrigiaDataGridViewTextBoxColumn, Me.MatinhtrangDataGridViewTextBoxColumn, Me.SoluongDataGridViewTextBoxColumn})
+        Me.dgvSach.DataSource = Me.TblSACHBindingSource
+        Me.dgvSach.Location = New System.Drawing.Point(12, 268)
+        Me.dgvSach.Name = "dgvSach"
+        Me.dgvSach.ReadOnly = True
+        Me.dgvSach.Size = New System.Drawing.Size(770, 226)
+        Me.dgvSach.TabIndex = 25
         '
         'MasachDataGridViewTextBoxColumn
         '
@@ -451,7 +451,7 @@ Partial Class frmTiepnhanSach
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(803, 561)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvSach)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -463,7 +463,7 @@ Partial Class frmTiepnhanSach
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvSach, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblSACHBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TVDataBsDataSet2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -487,7 +487,7 @@ Partial Class frmTiepnhanSach
     Friend WithEvents Add_button As Button
     Friend WithEvents Delete_button As Button
     Friend WithEvents Update_button As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvSach As DataGridView
     Friend WithEvents Soluong_Label As Label
     Friend WithEvents cbBookKindID As ComboBox
     Friend WithEvents txbBookName As TextBox

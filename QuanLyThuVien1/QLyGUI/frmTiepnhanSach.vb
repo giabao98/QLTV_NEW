@@ -12,13 +12,45 @@ Public Class frmTiepnhanSach
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub dgvSach_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSach.CellContentClick
 
     End Sub
+    Private Sub dgvSach_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSach.CellClick
+        Dim row As DataGridViewRow = dgvSach.CurrentRow
+        Try
+            cbBookID.Text = row.Cells(0).Value.ToString()
+            txbBookName.Text = row.Cells(1).Value
+            cbBookKindID.Text = row.Cells(2).Value.ToString()
+            cbAuthorID.Text = row.Cells(3).Value
+            dtpPublishingYear.Text = row.Cells(4).Value.ToString()
+            cbPublishingHouseID.Text = row.Cells(5).Value.ToString()
+            dtpReceiptDate.Text = row.Cells(6).Value
+            txbValue.Text = row.Cells(7).Value.ToString()
+            cbStatusID.Text = row.Cells(8).Value.ToString()
+            txtNumbers.Text = row.Cells(9).Value.ToString()
+        Catch ex As Exception
 
+        End Try
+    End Sub
+    Public Function resetData(ts)
+        cbBookID.Text = ""
+        txbBookName.Text = ""
+        cbBookKindID.Text = ""
+        cbAuthorID.Text = ""
+        dtpPublishingYear.Text = ""
+        cbPublishingHouseID.Text = ""
+        dtpReceiptDate.Text = ""
+        txbValue.Text = ""
+        cbStatusID.Text = ""
+        txtNumbers.Text = ""
+    End Function
     Private Sub frmTiepnhanSach_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'TVDataBsDataSet2.tblSACH' table. You can move, or remove it, as needed.
         Me.TblSACHTableAdapter.Fill(Me.TVDataBsDataSet2.tblSACH)
+        dtpPublishingYear.Format = DateTimePickerFormat.Custom
+        dtpPublishingYear.CustomFormat = "dd/MM/yyyy"
+        dtpReceiptDate.Format = DateTimePickerFormat.Custom
+        dtpReceiptDate.CustomFormat = "dd/MM/yyyy"
 
     End Sub
 
@@ -110,6 +142,7 @@ Public Class frmTiepnhanSach
             MessageBox.Show("Them sach that bai.")
         End If
         Me.TblSACHTableAdapter.Fill(Me.TVDataBsDataSet2.tblSACH)
+        resetData(ts)
     End Sub
 
     Private Sub Update_button_Click(sender As Object, e As EventArgs) Handles Update_button.Click
@@ -200,6 +233,7 @@ Public Class frmTiepnhanSach
             MessageBox.Show("Cap nhat sach that bai.")
         End If
         Me.TblSACHTableAdapter.Fill(Me.TVDataBsDataSet2.tblSACH)
+        resetData(ts)
     End Sub
 
     Private Sub Delete_button_Click(sender As Object, e As EventArgs) Handles Delete_button.Click
@@ -228,5 +262,6 @@ Public Class frmTiepnhanSach
             MessageBox.Show("Xoa sach that bai.")
         End If
         Me.TblSACHTableAdapter.Fill(Me.TVDataBsDataSet2.tblSACH)
+        resetData(ts)
     End Sub
 End Class

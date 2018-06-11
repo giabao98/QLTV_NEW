@@ -23,6 +23,15 @@ Public Class frmLapthe
     Private Sub Label2_Click(sender As Object, e As EventArgs)
 
     End Sub
+    Public Function resetData(dg)
+        txbMaDocGia.Text = ""
+        txbTenDocGia.Text = ""
+        cbLoaiDocGia.Text = ""
+        dtpNgaySinh.Text = ""
+        txbDiaChi.Text = ""
+        dtpNgayLapThe.Text = ""
+        txbEmail.Text = ""
+    End Function
 
     Private Sub Add_button_Click_1(sender As Object, e As EventArgs) Handles Add_button.Click
         Dim lt As LaptheDTO
@@ -91,6 +100,7 @@ Public Class frmLapthe
             MessageBox.Show("Them doc gia that bai.")
         End If
         Me.TblDOCGIATableAdapter.Fill(Me.TVDataBsDataSet1.tblDOCGIA)
+        resetData(lt)
     End Sub
 
     Private Sub Update_button_Click(sender As Object, e As EventArgs) Handles Update_button.Click
@@ -116,6 +126,8 @@ Public Class frmLapthe
             MessageBox.Show("Cập nhật đọc giả thất bại.")
         End If
         Me.TblDOCGIATableAdapter.Fill(Me.TVDataBsDataSet1.tblDOCGIA)
+        resetData(lt)
+
     End Sub
 
     Private Sub Delete_button_Click(sender As Object, e As EventArgs) Handles Delete_button.Click
@@ -138,5 +150,24 @@ Public Class frmLapthe
             MessageBox.Show("Xoá đọc giả thất bại.")
         End If
         Me.TblDOCGIATableAdapter.Fill(Me.TVDataBsDataSet1.tblDOCGIA)
+        resetData(lt)
+    End Sub
+    Private Sub dgvDocGia_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDocGia.CellClick
+        Dim row As DataGridViewRow = dgvDocGia.CurrentRow
+        Try
+            txbMaDocGia.Text = row.Cells(0).Value.ToString()
+            cbLoaiDocGia.Text = row.Cells(2).Value
+            txbTenDocGia.Text = row.Cells(1).Value.ToString()
+            dtpNgaySinh.Value = row.Cells(3).Value
+            txbEmail.Text = row.Cells(4).Value.ToString()
+            txbDiaChi.Text = row.Cells(5).Value.ToString()
+            dtpNgayLapThe.Value = row.Cells(6).Value
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub dgvDocGia_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvDocGia.CellContentClick
+
     End Sub
 End Class
