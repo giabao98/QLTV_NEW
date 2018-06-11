@@ -121,8 +121,6 @@ Public Class frmLapthe
     Private Sub Delete_button_Click(sender As Object, e As EventArgs) Handles Delete_button.Click
         Dim lt As LaptheDTO
         lt = New LaptheDTO()
-
-        '1. Lop GUI control
         lt.ReaderID = txbMaDocGia.Text
         lt.ReaderName = txbTenDocGia.Text
         lt.ReaderCategory = cbLoaiDocGia.Text

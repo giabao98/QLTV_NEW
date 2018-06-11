@@ -1,13 +1,13 @@
 ﻿Public Class TiepnhansachDTO
     Private strBookName As String
-    Private strBookID As Integer
-    Private strBookKindID As Integer
-    Private strAuthorID As Integer
+    Private strBookID As String
+    Private strBookKindID As String
+    Private strAuthorID As String
     Private intPublishingDate As Date
-    Private strPublishingHouseID As Integer
+    Private strPublishingHouseID As String
     Private intReceiptDate As Date
     Private intValue As Integer
-    Private intStatusID As Integer
+    Private strStatusID As String
     Private intNumbers As Integer
 
     Public Property BookName As String
@@ -19,29 +19,29 @@
         End Set
     End Property
 
-    Public Property BookID As Integer
+    Public Property BookID As String
         Get
             Return strBookID
         End Get
-        Set(value As Integer)
+        Set(value As String)
             strBookID = value
         End Set
     End Property
 
-    Public Property BookKindID As Integer
+    Public Property BookKindID As String
         Get
             Return strBookKindID
         End Get
-        Set(value As Integer)
+        Set(value As String)
             strBookKindID = value
         End Set
     End Property
 
-    Public Property AuthorID As Integer
+    Public Property AuthorID As String
         Get
             Return strAuthorID
         End Get
-        Set(value As Integer)
+        Set(value As String)
             strAuthorID = value
         End Set
     End Property
@@ -55,11 +55,11 @@
         End Set
     End Property
 
-    Public Property PublishingHouseID As Integer
+    Public Property PublishingHouseID As String
         Get
             Return strPublishingHouseID
         End Get
-        Set(value As Integer)
+        Set(value As String)
             strPublishingHouseID = value
         End Set
     End Property
@@ -82,12 +82,12 @@
         End Set
     End Property
 
-    Public Property StatusID As Integer
+    Public Property StatusID As String
         Get
-            Return intStatusID
+            Return strStatusID
         End Get
-        Set(value As Integer)
-            intStatusID = value
+        Set(value As String)
+            strStatusID = value
         End Set
     End Property
 
