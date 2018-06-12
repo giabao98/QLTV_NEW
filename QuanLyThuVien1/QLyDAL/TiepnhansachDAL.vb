@@ -14,7 +14,6 @@ Public Class TiepnhansachDAL
     Public Sub New(ConnectionString As String)
         Me.connectionString = ConnectionString
     End Sub
-
     Public Function ThemSach(ts As TiepnhansachDTO)
         Dim query As String = String.Empty
         query &= "INSERT INTO tblSACH"
@@ -51,19 +50,19 @@ Public Class TiepnhansachDAL
     End Function
     Public Function CapNhatSach(ts As TiepnhansachDTO)
         Dim query As String = String.Empty
-        query &= "UPDATE [tblSACH] SET"
-        query &= "[masach] = @masach"
-        query &= " ,[tensach] = @tensach"
-        query &= " ,[matheloai] = @matheloai"
-        query &= " ,[matacgia] = @matacgia"
-        query &= " ,[namxuatban] = @namxuatban"
-        query &= " ,[manhaxuatban] = @manhaxuatban"
-        query &= " ,[ngaynhap] = @ngaynhap"
-        query &= " ,[trigia] = @trigia"
-        query &= " ,[matinhtrang] = @matinhtrang"
-        query &= " ,[soluong] = @soluong"
-        query &= "WHERE"
-        query &= "[masach] = @masach"
+        query &= " UPDATE [tblSACH] SET "
+        query &= " [masach] = @masach "
+        query &= " ,[tensach] = @tensach "
+        query &= " ,[matheloai] = @matheloai "
+        query &= " ,[matacgia] = @matacgia "
+        query &= " ,[namxuatban] = @namxuatban "
+        query &= " ,[manhaxuatban] = @manhaxuatban "
+        query &= " ,[ngaynhap] = @ngaynhap "
+        query &= " ,[trigia] = @trigia "
+        query &= " ,[matinhtrang] = @matinhtrang "
+        query &= " ,[soluong] = @soluong "
+        query &= " WHERE "
+        query &= " [masach] = @masach "
 
         Using conn As New SqlConnection(connectionString)
             Using comm As New SqlCommand()

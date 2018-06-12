@@ -42,13 +42,10 @@ Partial Class frmLapthe
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Add_button = New System.Windows.Forms.Button()
-        Me.Update_button = New System.Windows.Forms.Button()
         Me.Delete_button = New System.Windows.Forms.Button()
-        Me.TVDataBsDataSet1 = New QLyGUI.TVDataBsDataSet1()
-        Me.TblDOCGIABindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TblDOCGIATableAdapter = New QLyGUI.TVDataBsDataSet1TableAdapters.tblDOCGIATableAdapter()
+        Me.Update_button = New System.Windows.Forms.Button()
+        Me.Add_button = New System.Windows.Forms.Button()
+        Me.dgvDocGia = New System.Windows.Forms.DataGridView()
         Me.MadocgiaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HotenDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.LoaidocgiaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -56,12 +53,15 @@ Partial Class frmLapthe
         Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DiachiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NgaylaptheDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblDOCGIABindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TVDataBsDataSet1 = New QLyGUI.TVDataBsDataSet1()
+        Me.TblDOCGIATableAdapter = New QLyGUI.TVDataBsDataSet1TableAdapters.tblDOCGIATableAdapter()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TVDataBsDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvDocGia, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblDOCGIABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TVDataBsDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dtpNgayLapThe
@@ -235,19 +235,31 @@ Partial Class frmLapthe
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Chức năng"
         '
-        'DataGridView1
+        'Delete_button
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MadocgiaDataGridViewTextBoxColumn, Me.HotenDataGridViewTextBoxColumn, Me.LoaidocgiaDataGridViewTextBoxColumn, Me.NgaysinhDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.DiachiDataGridViewTextBoxColumn, Me.NgaylaptheDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.TblDOCGIABindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 234)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(770, 204)
-        Me.DataGridView1.TabIndex = 34
+        Me.Delete_button.BackColor = System.Drawing.Color.LightCoral
+        Me.Delete_button.Image = CType(resources.GetObject("Delete_button.Image"), System.Drawing.Image)
+        Me.Delete_button.Location = New System.Drawing.Point(24, 112)
+        Me.Delete_button.Name = "Delete_button"
+        Me.Delete_button.Size = New System.Drawing.Size(88, 30)
+        Me.Delete_button.TabIndex = 33
+        Me.Delete_button.Text = "Xóa thẻ"
+        Me.Delete_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Delete_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Delete_button.UseVisualStyleBackColor = False
+        '
+        'Update_button
+        '
+        Me.Update_button.BackColor = System.Drawing.Color.LightGreen
+        Me.Update_button.Image = CType(resources.GetObject("Update_button.Image"), System.Drawing.Image)
+        Me.Update_button.Location = New System.Drawing.Point(24, 72)
+        Me.Update_button.Name = "Update_button"
+        Me.Update_button.Size = New System.Drawing.Size(88, 30)
+        Me.Update_button.TabIndex = 32
+        Me.Update_button.Text = "Cập nhật"
+        Me.Update_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Update_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Update_button.UseVisualStyleBackColor = False
         '
         'Add_button
         '
@@ -263,45 +275,19 @@ Partial Class frmLapthe
         Me.Add_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Add_button.UseVisualStyleBackColor = False
         '
-        'Update_button
+        'dgvDocGia
         '
-        Me.Update_button.BackColor = System.Drawing.Color.LightGreen
-        Me.Update_button.Image = CType(resources.GetObject("Update_button.Image"), System.Drawing.Image)
-        Me.Update_button.Location = New System.Drawing.Point(24, 72)
-        Me.Update_button.Name = "Update_button"
-        Me.Update_button.Size = New System.Drawing.Size(88, 30)
-        Me.Update_button.TabIndex = 32
-        Me.Update_button.Text = "Cập nhật"
-        Me.Update_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Update_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Update_button.UseVisualStyleBackColor = False
-        '
-        'Delete_button
-        '
-        Me.Delete_button.BackColor = System.Drawing.Color.LightCoral
-        Me.Delete_button.Image = CType(resources.GetObject("Delete_button.Image"), System.Drawing.Image)
-        Me.Delete_button.Location = New System.Drawing.Point(24, 112)
-        Me.Delete_button.Name = "Delete_button"
-        Me.Delete_button.Size = New System.Drawing.Size(88, 30)
-        Me.Delete_button.TabIndex = 33
-        Me.Delete_button.Text = "Xóa thẻ"
-        Me.Delete_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Delete_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Delete_button.UseVisualStyleBackColor = False
-        '
-        'TVDataBsDataSet1
-        '
-        Me.TVDataBsDataSet1.DataSetName = "TVDataBsDataSet1"
-        Me.TVDataBsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TblDOCGIABindingSource
-        '
-        Me.TblDOCGIABindingSource.DataMember = "tblDOCGIA"
-        Me.TblDOCGIABindingSource.DataSource = Me.TVDataBsDataSet1
-        '
-        'TblDOCGIATableAdapter
-        '
-        Me.TblDOCGIATableAdapter.ClearBeforeFill = True
+        Me.dgvDocGia.AllowUserToAddRows = False
+        Me.dgvDocGia.AllowUserToDeleteRows = False
+        Me.dgvDocGia.AutoGenerateColumns = False
+        Me.dgvDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDocGia.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MadocgiaDataGridViewTextBoxColumn, Me.HotenDataGridViewTextBoxColumn, Me.LoaidocgiaDataGridViewTextBoxColumn, Me.NgaysinhDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.DiachiDataGridViewTextBoxColumn, Me.NgaylaptheDataGridViewTextBoxColumn})
+        Me.dgvDocGia.DataSource = Me.TblDOCGIABindingSource
+        Me.dgvDocGia.Location = New System.Drawing.Point(12, 234)
+        Me.dgvDocGia.Name = "dgvDocGia"
+        Me.dgvDocGia.ReadOnly = True
+        Me.dgvDocGia.Size = New System.Drawing.Size(770, 204)
+        Me.dgvDocGia.TabIndex = 34
         '
         'MadocgiaDataGridViewTextBoxColumn
         '
@@ -352,12 +338,26 @@ Partial Class frmLapthe
         Me.NgaylaptheDataGridViewTextBoxColumn.Name = "NgaylaptheDataGridViewTextBoxColumn"
         Me.NgaylaptheDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'TblDOCGIABindingSource
+        '
+        Me.TblDOCGIABindingSource.DataMember = "tblDOCGIA"
+        Me.TblDOCGIABindingSource.DataSource = Me.TVDataBsDataSet1
+        '
+        'TVDataBsDataSet1
+        '
+        Me.TVDataBsDataSet1.DataSetName = "TVDataBsDataSet1"
+        Me.TVDataBsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TblDOCGIATableAdapter
+        '
+        Me.TblDOCGIATableAdapter.ClearBeforeFill = True
+        '
         'frmLapthe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(796, 450)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvDocGia)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -368,9 +368,9 @@ Partial Class frmLapthe
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TVDataBsDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvDocGia, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblDOCGIABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TVDataBsDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -392,7 +392,7 @@ Partial Class frmLapthe
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvDocGia As DataGridView
     Friend WithEvents Delete_button As Button
     Friend WithEvents Update_button As Button
     Friend WithEvents Add_button As Button
