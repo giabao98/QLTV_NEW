@@ -8,7 +8,7 @@ Public Class frmFindBook
 
     End Sub
 
-    Private Sub btnFind1_Click(sender As Object, e As EventArgs) Handles btnFind1.Click
+    Private Sub btnFind1_Click(sender As Object, e As EventArgs)
         Dim fb As FindBookDTO
         fb = New FindBookDTO
 
@@ -22,10 +22,12 @@ Public Class frmFindBook
         fb.InputDay = dateInputDay.Value
 
         Dim fbDAL As New FindBookDAL
-        fbDAL.LoadData2DataGridView("select * from tblSACH where masach like '%" + txbBookCode.Text + "%' or tensach like '%" + txbBookName.Text + "%'  or manhaxuatban like '%" + txbProducerCode.Text + "%'  or matacgia like '%" + txbAuthorCode.Text + "%'  or matheloai '%" + txbCategoryCode.Text + "%'  or namxuatban '" + txbPublishingYear.Text + "'  or soluong '" + txbAmount.Text + "'  or ngaynhap '" + dateInputDay.Value + "'", dgvBookInfo1)
+        Dim result As Integer
+        result = fbDAL.LoadData2DataGridView1(dgvBookInfo1, fb)
+
     End Sub
 
-    Private Sub btnFind_Click(sender As Object, e As EventArgs) Handles btnFind.Click
+    Private Sub btnFind_Click(sender As Object, e As EventArgs)
         Dim fb As FindBookDTO
         fb = New FindBookDTO
 
@@ -51,7 +53,8 @@ Public Class frmFindBook
         End If
 
         Dim fbDAL As New FindBookDAL
-        fbDAL.LoadData2DataGridView("select * from tblSACH where " + fb.FindCategory + " Like'%" + fb.Find + "%'", dgvBookInfo)
+        Dim result As Integer
+        result = fbDAL.LoadData2DataGridView(dgvBookInfo, fb)
 
     End Sub
 
@@ -61,11 +64,11 @@ Public Class frmFindBook
 
     End Sub
 
-    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+    Private Sub btnClose_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
-    Private Sub btnClose1_Click(sender As Object, e As EventArgs) Handles btnClose1.Click
+    Private Sub btnClose1_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 End Class
