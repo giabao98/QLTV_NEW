@@ -8,24 +8,24 @@ Public Class frmFindBook
 
     End Sub
 
-    Private Sub btnFind1_Click(sender As Object, e As EventArgs)
-        Dim fb As FindBookDTO
-        fb = New FindBookDTO
+    'Private Sub btnFind1_Click(sender As Object, e As EventArgs)
+    '    Dim fb As FindBookDTO
+    '    fb = New FindBookDTO
 
-        fb.BookCode = txbBookCode.Text
-        fb.BookName = txbBookName.Text
-        fb.ProducerCode = txbProducerCode.Text
-        fb.AuthorCode = txbAuthorCode.Text
-        fb.CategoryCode = txbCategoryCode.Text
-        fb.PublishingYear = txbPublishingYear.Text
-        fb.Amount = txbAmount.Text
-        fb.InputDay = dateInputDay.Value
+    '    fb.BookCode = txbBookCode.Text
+    '    fb.BookName = txbBookName.Text
+    '    fb.ProducerCode = txbProducerCode.Text
+    '    fb.AuthorCode = txbAuthorCode.Text
+    '    fb.CategoryCode = txbCategoryCode.Text
+    '    fb.PublishingYear = txbPublishingYear.Text
+    '    fb.Amount = txbAmount.Text
+    '    fb.InputDay = dateInputDay.Value
 
-        Dim fbDAL As New FindBookDAL
-        Dim result As Integer
-        result = fbDAL.LoadData2DataGridView1(dgvBookInfo1, fb)
+    '    Dim fbDAL As New FindBookDAL
+    '    Dim result As Integer
+    '    result = fbDAL.LoadData2DataGridView1(dgvBookInfo1, fb)
 
-    End Sub
+    'End Sub
 
     Private Sub btnFind_Click(sender As Object, e As EventArgs)
         Dim fb As FindBookDTO
