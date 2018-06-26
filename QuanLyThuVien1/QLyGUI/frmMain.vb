@@ -29,7 +29,8 @@
     End Sub
 
     Private Sub btnBorrowBook_Click(sender As Object, e As EventArgs) Handles btnBorrowBook.Click
-
+        Dim fMuonTraSach = New frmMuonTraSach
+        fMuonTraSach.ShowDialog()
     End Sub
 
     Private Sub btnFindBook_Click(sender As Object, e As EventArgs) Handles btnFindBook.Click

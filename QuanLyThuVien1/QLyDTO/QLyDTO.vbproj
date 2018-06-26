@@ -67,6 +67,7 @@
     <Compile Include="FindReaderDTO.vb" />
     <Compile Include="LaptheDTO.vb" />
     <Compile Include="LoginDTO.vb" />
+    <Compile Include="MuonTraSachDTO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

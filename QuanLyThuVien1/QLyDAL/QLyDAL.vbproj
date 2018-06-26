@@ -70,6 +70,7 @@
     <Compile Include="FindReaderDAL.vb" />
     <Compile Include="LaptheDAL.vb" />
     <Compile Include="LoginDAL.vb" />
+    <Compile Include="MuonTraSachDAL.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
