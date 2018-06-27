@@ -63,9 +63,9 @@ Public Class frmTiepnhanSach
         ts.BookName = txbBookName.Text
         ts.BookKindID = cbBookKindID.Text
         ts.AuthorID = cbAuthorID.Text
-        ts.PublishingDate = dtpPublishingYear.Text
+        ts.PublishingDate = dtpPublishingYear.Value
         ts.PublishingHouseID = cbPublishingHouseID.Text
-        ts.ReceiptDate = dtpReceiptDate.Text
+        ts.ReceiptDate = dtpReceiptDate.Value
         ts.Value = txbValue.Text
         ts.StatusID = cbStatusID.Text
         ts.Numbers = txtNumbers.Text
@@ -154,9 +154,9 @@ Public Class frmTiepnhanSach
         ts.BookName = txbBookName.Text
         ts.BookKindID = cbBookKindID.Text
         ts.AuthorID = cbAuthorID.Text
-        ts.PublishingDate = dtpPublishingYear.Text
+        ts.PublishingDate = dtpPublishingYear.Value
         ts.PublishingHouseID = cbPublishingHouseID.Text
-        ts.ReceiptDate = dtpReceiptDate.Text
+        ts.ReceiptDate = dtpReceiptDate.Value
         ts.Value = txbValue.Text
         ts.StatusID = cbStatusID.Text
         ts.Numbers = txtNumbers.Text
@@ -245,9 +245,9 @@ Public Class frmTiepnhanSach
         ts.BookName = txbBookName.Text
         ts.BookKindID = cbBookKindID.Text
         ts.AuthorID = cbAuthorID.Text
-        ts.PublishingDate = dtpPublishingYear.Text
+        ts.PublishingDate = dtpPublishingYear.Value
         ts.PublishingHouseID = cbPublishingHouseID.Text
-        ts.ReceiptDate = dtpReceiptDate.Text
+        ts.ReceiptDate = dtpReceiptDate.Value
         ts.Value = txbValue.Text
         ts.StatusID = cbStatusID.Text
         ts.Numbers = txtNumbers.Text

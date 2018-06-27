@@ -3,9 +3,27 @@ Imports QLyDAL
 Imports QLyDTO
 Public Class frmMuonTraSach
     Private Sub frmMuonTraSach_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'TVDataBsDataSet5.tblCHITIETPHIEUMUON' table. You can move, or remove it, as needed.
+        Me.TblCHITIETPHIEUMUONTableAdapter.Fill(Me.TVDataBsDataSet5.tblCHITIETPHIEUMUON)
         'TODO: This line of code loads data into the 'TVDataBsDataSet4.tblCHITIETPHIEUMUON' table. You can move, or remove it, as needed.
-        Me.TblCHITIETPHIEUMUONTableAdapter.Fill(Me.TVDataBsDataSet4.tblCHITIETPHIEUMUON)
+        Me.TblCHITIETPHIEUMUONTableAdapter.Fill(Me.TVDataBsDataSet5.tblCHITIETPHIEUMUON)
+        dtpNgayMuon.Format = DateTimePickerFormat.Custom
+        dtpNgayMuon.CustomFormat = "dd/MM/yyyy"
+        dtpNgayTra.Format = DateTimePickerFormat.Custom
+        dtpNgayTra.CustomFormat = "dd/MM/yyyy"
     End Sub
+    Public Function ResetData(mt)
+        txbMaPhieuMuon.Text = ""
+        cbMaDocGia.Text = ""
+        txbTenDocGia.Text = ""
+        cbMaSach.Text = ""
+        txbTenSach.Text = ""
+        txbTacGia.Text = ""
+        cbTheLoai.Text = ""
+        txbSoLuongmuon.Text = ""
+        cbXacNhanTra.Text = ""
+        txbGhiChu.Text = ""
+    End Function
     Private Sub dgvPhieuMuonTra_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvPhieuMuonTra.CellClick
         Dim row As DataGridViewRow = dgvPhieuMuonTra.CurrentRow
         Try
@@ -37,9 +55,9 @@ Public Class frmMuonTraSach
         mt.TenSach = txbTenSach.Text
         mt.TacGia = txbTacGia.Text
         mt.TheLoai = cbTheLoai.Text
-        mt.NgayMuon = dtpNgayMuon.Text
+        mt.NgayMuon = dtpNgayMuon.Value
         mt.SoLuongMuon = txbSoLuongmuon.Text
-        mt.NgayTra = dtpNgayTra.Text
+        mt.NgayTra = dtpNgayTra.Value
         mt.XacNhanTra = cbXacNhanTra.Text
         mt.GhiChu = txbGhiChu.Text
         '2. Business .... kiem tra cac textbox du lieu nhap
@@ -119,8 +137,8 @@ Public Class frmMuonTraSach
         Else
             MessageBox.Show("Them phieu muon that bai.")
         End If
-        Me.TblCHITIETPHIEUMUONTableAdapter.Fill(Me.TVDataBsDataSet4.tblCHITIETPHIEUMUON)
-        'resetData(mt)
+        Me.TblCHITIETPHIEUMUONTableAdapter.Fill(Me.TVDataBsDataSet5.tblCHITIETPHIEUMUON)
+        ResetData(mt)
     End Sub
 
     Private Sub btUpdate_Click(sender As Object, e As EventArgs) Handles btUpdate.Click
@@ -135,9 +153,9 @@ Public Class frmMuonTraSach
         mt.TenSach = txbTenSach.Text
         mt.TacGia = txbTacGia.Text
         mt.TheLoai = cbTheLoai.Text
-        mt.NgayMuon = dtpNgayMuon.Text
+        mt.NgayMuon = dtpNgayMuon.Value
         mt.SoLuongMuon = txbSoLuongmuon.Text
-        mt.NgayTra = dtpNgayTra.Text
+        mt.NgayTra = dtpNgayTra.Value
         mt.XacNhanTra = cbXacNhanTra.Text
         mt.GhiChu = txbGhiChu.Text
         '2. Business .... kiem tra cac textbox du lieu nhap
@@ -217,8 +235,8 @@ Public Class frmMuonTraSach
         Else
             MessageBox.Show("Cap nhat phieu muon that bai.")
         End If
-        Me.TblCHITIETPHIEUMUONTableAdapter.Fill(Me.TVDataBsDataSet4.tblCHITIETPHIEUMUON)
-        'resetData(mt)
+        Me.TblCHITIETPHIEUMUONTableAdapter.Fill(Me.TVDataBsDataSet5.tblCHITIETPHIEUMUON)
+        ResetData(mt)
     End Sub
 
     Private Sub btDelete_Click(sender As Object, e As EventArgs) Handles btDelete.Click
@@ -233,9 +251,9 @@ Public Class frmMuonTraSach
         mt.TenSach = txbTenSach.Text
         mt.TacGia = txbTacGia.Text
         mt.TheLoai = cbTheLoai.Text
-        mt.NgayMuon = dtpNgayMuon.Text
+        mt.NgayMuon = dtpNgayMuon.Value
         mt.SoLuongMuon = txbSoLuongmuon.Text
-        mt.NgayTra = dtpNgayTra.Text
+        mt.NgayTra = dtpNgayTra.Value
         mt.XacNhanTra = cbXacNhanTra.Text
         mt.GhiChu = txbGhiChu.Text
 
@@ -250,8 +268,8 @@ Public Class frmMuonTraSach
         Else
             MessageBox.Show("Xoa phieu muon that bai.")
         End If
-        Me.TblCHITIETPHIEUMUONTableAdapter.Fill(Me.TVDataBsDataSet4.tblCHITIETPHIEUMUON)
-        'resetData(mt)
+        Me.TblCHITIETPHIEUMUONTableAdapter.Fill(Me.TVDataBsDataSet5.tblCHITIETPHIEUMUON)
+        ResetData(mt)
 
     End Sub
 End Class

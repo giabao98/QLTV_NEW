@@ -56,9 +56,9 @@ Partial Class frmMuonTraSach
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TVDataBsDataSet4 = New QLyGUI.TVDataBsDataSet4()
+        Me.TVDataBsDataSet5 = New QLyGUI.TVDataBsDataSet5()
         Me.TblCHITIETPHIEUMUONBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TblCHITIETPHIEUMUONTableAdapter = New QLyGUI.TVDataBsDataSet4TableAdapters.tblCHITIETPHIEUMUONTableAdapter()
+        Me.TblCHITIETPHIEUMUONTableAdapter = New QLyGUI.TVDataBsDataSet5TableAdapters.tblCHITIETPHIEUMUONTableAdapter()
         Me.maphieumuon = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.madocgia = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.hoten = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -75,7 +75,7 @@ Partial Class frmMuonTraSach
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.TVDataBsDataSet4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TVDataBsDataSet5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblCHITIETPHIEUMUONBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -392,15 +392,15 @@ Partial Class frmMuonTraSach
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Chi tiết phiếu mượn trả sách"
         '
-        'TVDataBsDataSet4
+        'TVDataBsDataSet5
         '
-        Me.TVDataBsDataSet4.DataSetName = "TVDataBsDataSet4"
-        Me.TVDataBsDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.TVDataBsDataSet5.DataSetName = "TVDataBsDataSet5"
+        Me.TVDataBsDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TblCHITIETPHIEUMUONBindingSource
         '
         Me.TblCHITIETPHIEUMUONBindingSource.DataMember = "tblCHITIETPHIEUMUON"
-        Me.TblCHITIETPHIEUMUONBindingSource.DataSource = Me.TVDataBsDataSet4
+        Me.TblCHITIETPHIEUMUONBindingSource.DataSource = Me.TVDataBsDataSet5
         '
         'TblCHITIETPHIEUMUONTableAdapter
         '
@@ -507,7 +507,7 @@ Partial Class frmMuonTraSach
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.TVDataBsDataSet4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TVDataBsDataSet5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblCHITIETPHIEUMUONBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -545,9 +545,9 @@ Partial Class frmMuonTraSach
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Public WithEvents Label3 As Label
-    Friend WithEvents TVDataBsDataSet4 As TVDataBsDataSet4
+    Friend WithEvents TVDataBsDataSet5 As TVDataBsDataSet5
     Friend WithEvents TblCHITIETPHIEUMUONBindingSource As BindingSource
-    Friend WithEvents TblCHITIETPHIEUMUONTableAdapter As TVDataBsDataSet4TableAdapters.tblCHITIETPHIEUMUONTableAdapter
+    Friend WithEvents TblCHITIETPHIEUMUONTableAdapter As TVDataBsDataSet5TableAdapters.tblCHITIETPHIEUMUONTableAdapter
     Friend WithEvents maphieumuon As DataGridViewTextBoxColumn
     Friend WithEvents madocgia As DataGridViewTextBoxColumn
     Friend WithEvents hoten As DataGridViewTextBoxColumn

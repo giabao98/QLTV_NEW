@@ -25,7 +25,7 @@ Partial Class frmTiepnhanSach
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTiepnhanSach))
         Me.lbMaSach = New System.Windows.Forms.Label()
-        Me.lbMaHienTrang = New System.Windows.Forms.Label()
+        Me.lbHienTrang = New System.Windows.Forms.Label()
         Me.lbTenSach = New System.Windows.Forms.Label()
         Me.btThemSach = New System.Windows.Forms.Button()
         Me.lbMaTheLoai = New System.Windows.Forms.Label()
@@ -33,7 +33,7 @@ Partial Class frmTiepnhanSach
         Me.lbNgayNhap = New System.Windows.Forms.Label()
         Me.lbMaNhaXuatBan = New System.Windows.Forms.Label()
         Me.lbNamXuatBan = New System.Windows.Forms.Label()
-        Me.lbMaTacGia = New System.Windows.Forms.Label()
+        Me.lbTacGia = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -46,7 +46,6 @@ Partial Class frmTiepnhanSach
         Me.cbAuthorID = New System.Windows.Forms.ComboBox()
         Me.cbBookKindID = New System.Windows.Forms.ComboBox()
         Me.txbBookName = New System.Windows.Forms.TextBox()
-        Me.cbBookID = New System.Windows.Forms.ComboBox()
         Me.Soluong_Label = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Delete_button = New System.Windows.Forms.Button()
@@ -66,6 +65,7 @@ Partial Class frmTiepnhanSach
         Me.TblSACHBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TVDataBsDataSet2 = New QLyGUI.TVDataBsDataSet2()
         Me.TblSACHTableAdapter = New QLyGUI.TVDataBsDataSet2TableAdapters.tblSACHTableAdapter()
+        Me.cbBookID = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -83,14 +83,14 @@ Partial Class frmTiepnhanSach
         Me.lbMaSach.TabIndex = 17
         Me.lbMaSach.Text = "Mã sách"
         '
-        'lbMaHienTrang
+        'lbHienTrang
         '
-        Me.lbMaHienTrang.AutoSize = True
-        Me.lbMaHienTrang.Location = New System.Drawing.Point(328, 122)
-        Me.lbMaHienTrang.Name = "lbMaHienTrang"
-        Me.lbMaHienTrang.Size = New System.Drawing.Size(72, 13)
-        Me.lbMaHienTrang.TabIndex = 20
-        Me.lbMaHienTrang.Text = "Mã hiện trạng"
+        Me.lbHienTrang.AutoSize = True
+        Me.lbHienTrang.Location = New System.Drawing.Point(328, 122)
+        Me.lbHienTrang.Name = "lbHienTrang"
+        Me.lbHienTrang.Size = New System.Drawing.Size(56, 13)
+        Me.lbHienTrang.TabIndex = 20
+        Me.lbHienTrang.Text = "Hiện trạng"
         '
         'lbTenSach
         '
@@ -115,9 +115,9 @@ Partial Class frmTiepnhanSach
         Me.lbMaTheLoai.AutoSize = True
         Me.lbMaTheLoai.Location = New System.Drawing.Point(6, 89)
         Me.lbMaTheLoai.Name = "lbMaTheLoai"
-        Me.lbMaTheLoai.Size = New System.Drawing.Size(59, 13)
+        Me.lbMaTheLoai.Size = New System.Drawing.Size(45, 13)
         Me.lbMaTheLoai.TabIndex = 7
-        Me.lbMaTheLoai.Text = "Mã thể loại"
+        Me.lbMaTheLoai.Text = "Thể loại"
         '
         'lbTriGia
         '
@@ -142,9 +142,9 @@ Partial Class frmTiepnhanSach
         Me.lbMaNhaXuatBan.AutoSize = True
         Me.lbMaNhaXuatBan.Location = New System.Drawing.Point(6, 158)
         Me.lbMaNhaXuatBan.Name = "lbMaNhaXuatBan"
-        Me.lbMaNhaXuatBan.Size = New System.Drawing.Size(87, 13)
+        Me.lbMaNhaXuatBan.Size = New System.Drawing.Size(71, 13)
         Me.lbMaNhaXuatBan.TabIndex = 4
-        Me.lbMaNhaXuatBan.Text = "Mã nhà xuất bản"
+        Me.lbMaNhaXuatBan.Text = "Nhà xuất bản"
         '
         'lbNamXuatBan
         '
@@ -155,14 +155,14 @@ Partial Class frmTiepnhanSach
         Me.lbNamXuatBan.TabIndex = 3
         Me.lbNamXuatBan.Text = "Năm xuất bản"
         '
-        'lbMaTacGia
+        'lbTacGia
         '
-        Me.lbMaTacGia.AutoSize = True
-        Me.lbMaTacGia.Location = New System.Drawing.Point(6, 122)
-        Me.lbMaTacGia.Name = "lbMaTacGia"
-        Me.lbMaTacGia.Size = New System.Drawing.Size(57, 13)
-        Me.lbMaTacGia.TabIndex = 2
-        Me.lbMaTacGia.Text = "Mã tác giả"
+        Me.lbTacGia.AutoSize = True
+        Me.lbTacGia.Location = New System.Drawing.Point(6, 122)
+        Me.lbTacGia.Name = "lbTacGia"
+        Me.lbTacGia.Size = New System.Drawing.Size(43, 13)
+        Me.lbTacGia.TabIndex = 2
+        Me.lbTacGia.Text = "Tác giả"
         '
         'GroupBox1
         '
@@ -201,10 +201,10 @@ Partial Class frmTiepnhanSach
         Me.GroupBox2.Controls.Add(Me.Soluong_Label)
         Me.GroupBox2.Controls.Add(Me.lbMaSach)
         Me.GroupBox2.Controls.Add(Me.lbTenSach)
-        Me.GroupBox2.Controls.Add(Me.lbMaHienTrang)
+        Me.GroupBox2.Controls.Add(Me.lbHienTrang)
         Me.GroupBox2.Controls.Add(Me.lbTriGia)
         Me.GroupBox2.Controls.Add(Me.lbMaTheLoai)
-        Me.GroupBox2.Controls.Add(Me.lbMaTacGia)
+        Me.GroupBox2.Controls.Add(Me.lbTacGia)
         Me.GroupBox2.Controls.Add(Me.lbNgayNhap)
         Me.GroupBox2.Controls.Add(Me.lbNamXuatBan)
         Me.GroupBox2.Controls.Add(Me.lbMaNhaXuatBan)
@@ -281,14 +281,6 @@ Partial Class frmTiepnhanSach
         Me.txbBookName.Name = "txbBookName"
         Me.txbBookName.Size = New System.Drawing.Size(200, 20)
         Me.txbBookName.TabIndex = 25
-        '
-        'cbBookID
-        '
-        Me.cbBookID.FormattingEnabled = True
-        Me.cbBookID.Location = New System.Drawing.Point(106, 23)
-        Me.cbBookID.Name = "cbBookID"
-        Me.cbBookID.Size = New System.Drawing.Size(200, 21)
-        Me.cbBookID.TabIndex = 24
         '
         'Soluong_Label
         '
@@ -446,6 +438,14 @@ Partial Class frmTiepnhanSach
         '
         Me.TblSACHTableAdapter.ClearBeforeFill = True
         '
+        'cbBookID
+        '
+        Me.cbBookID.FormattingEnabled = True
+        Me.cbBookID.Location = New System.Drawing.Point(106, 23)
+        Me.cbBookID.Name = "cbBookID"
+        Me.cbBookID.Size = New System.Drawing.Size(200, 21)
+        Me.cbBookID.TabIndex = 24
+        '
         'frmTiepnhanSach
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -471,7 +471,7 @@ Partial Class frmTiepnhanSach
     End Sub
 
     Friend WithEvents lbMaSach As Label
-    Friend WithEvents lbMaHienTrang As Label
+    Friend WithEvents lbHienTrang As Label
     Friend WithEvents lbTenSach As Label
     Friend WithEvents btThemSach As Button
     Friend WithEvents lbMaTheLoai As Label
@@ -479,7 +479,7 @@ Partial Class frmTiepnhanSach
     Friend WithEvents lbNgayNhap As Label
     Friend WithEvents lbMaNhaXuatBan As Label
     Friend WithEvents lbNamXuatBan As Label
-    Friend WithEvents lbMaTacGia As Label
+    Friend WithEvents lbTacGia As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
@@ -491,7 +491,6 @@ Partial Class frmTiepnhanSach
     Friend WithEvents Soluong_Label As Label
     Friend WithEvents cbBookKindID As ComboBox
     Friend WithEvents txbBookName As TextBox
-    Friend WithEvents cbBookID As ComboBox
     Friend WithEvents cbPublishingHouseID As ComboBox
     Friend WithEvents cbAuthorID As ComboBox
     Friend WithEvents dtpPublishingYear As DateTimePicker
@@ -512,4 +511,5 @@ Partial Class frmTiepnhanSach
     Friend WithEvents TrigiaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents MatinhtrangDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SoluongDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents cbBookID As ComboBox
 End Class
