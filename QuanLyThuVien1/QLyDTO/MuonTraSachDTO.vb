@@ -7,7 +7,7 @@
     Private strTacGia As String
     Private strMaPhieuMuon As String
     Private dtpNgayMuon As Date
-    Private intSoLuongMuon As Integer
+    Private strSoLuongMuon As String
     Private dtpNgayTra As Date
     Private strXacNhanTra As String
     Private strGhiChu As String
@@ -84,12 +84,12 @@
         End Set
     End Property
 
-    Public Property SoLuongMuon As Integer
+    Public Property SoLuongMuon As String
         Get
-            Return intSoLuongMuon
+            Return strSoLuongMuon
         End Get
-        Set(value As Integer)
-            intSoLuongMuon = value
+        Set(value As String)
+            strSoLuongMuon = value
         End Set
     End Property
 

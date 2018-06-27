@@ -66,6 +66,7 @@
     <Compile Include="FindBookBUS.vb" />
     <Compile Include="FindReaderBUS.vb" />
     <Compile Include="laptheBUS.vb" />
+    <Compile Include="LoaiDocGiaBUS.vb" />
     <Compile Include="LoginBUS.vb" />
     <Compile Include="MuonTraSachBUS.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

@@ -100,6 +100,12 @@
     <Compile Include="frmLapthe.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmLoaiDocGia.Designer.vb">
+      <DependentUpon>frmLoaiDocGia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoaiDocGia.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,12 @@
     <Compile Include="frmTiepnhanSach.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmThayDoiQuyDinh.Designer.vb">
+      <DependentUpon>frmThayDoiQuyDinh.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmThayDoiQuyDinh.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TVDataBsDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -166,6 +178,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TVDataBsDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TVDataBsDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TVDataBsDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TVDataBsDataSet5.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -184,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLapthe.resx">
       <DependentUpon>frmLapthe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoaiDocGia.resx">
+      <DependentUpon>frmLoaiDocGia.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
@@ -204,6 +224,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThayDoiQuyDinh.resx">
+      <DependentUpon>frmThayDoiQuyDinh.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -260,6 +283,17 @@
     </None>
     <None Include="TVDataBsDataSet3.xss">
       <DependentUpon>TVDataBsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TVDataBsDataSet4.xsc">
+      <DependentUpon>TVDataBsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TVDataBsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TVDataBsDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TVDataBsDataSet4.xss">
+      <DependentUpon>TVDataBsDataSet4.xsd</DependentUpon>
     </None>
     <None Include="TVDataBsDataSet5.xsc">
       <DependentUpon>TVDataBsDataSet5.xsd</DependentUpon>

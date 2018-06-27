@@ -69,6 +69,7 @@
     <Compile Include="FindBookDAL.vb" />
     <Compile Include="FindReaderDAL.vb" />
     <Compile Include="LaptheDAL.vb" />
+    <Compile Include="LoaiDocGiaDAL.vb" />
     <Compile Include="LoginDAL.vb" />
     <Compile Include="MuonTraSachDAL.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

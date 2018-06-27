@@ -48,43 +48,43 @@ Public Class frmLapthe
         '2. Business .... kiem tra cac textbox du lieu nhap
         Dim ltbus As New LaptheBUS
         If (ltbus.ValidReaderName(lt) = False) Then
-            MessageBox.Show("Ho ten chua duoc nhap")
+            MessageBox.Show("Họ tên chưa được nhập.")
             txbTenDocGia.Focus()
             Return
         End If
 
         If (ltbus.ValidAdress(lt) = False) Then
-            MessageBox.Show("Dia chi chua duoc nhap")
+            MessageBox.Show("Địa chỉ chưa được nhập.")
             txbDiaChi.Focus()
             Return
         End If
 
         If (ltbus.ValidEmail(lt) = False) Then
-            MessageBox.Show("Email chua duoc nhap")
+            MessageBox.Show("Email chưa được nhập.")
             txbEmail.Focus()
             Return
         End If
 
         If (ltbus.ValidReaderCategory(lt) = False) Then
-            MessageBox.Show("Loai doc gia chua duoc nhap")
+            MessageBox.Show("Loại đọc giả chưa được nhập.")
             txbMaDocGia.Focus()
             Return
         End If
 
         If (ltbus.ValidDayOfCard(lt) = False) Then
-            MessageBox.Show("Ngay lap the chua duoc nhap")
+            MessageBox.Show("Ngày lập thẻ chưa được nhập.")
             dtpNgayLapThe.Focus()
             Return
         End If
 
         If (ltbus.ValidBirthday(lt) = False) Then
-            MessageBox.Show("Ngay sinh chua duoc nhap")
+            MessageBox.Show("Ngày sinh chưa được nhập.")
             dtpNgaySinh.Focus()
             Return
         End If
 
         If (ltbus.ValidReaderID(lt) = False) Then
-            MessageBox.Show("Ma doc gia chua duoc nhap")
+            MessageBox.Show("Mã đọc giả chưa được nhập.")
             txbMaDocGia.Focus()
             Return
         End If
@@ -95,9 +95,9 @@ Public Class frmLapthe
         Dim result As Integer
         result = ltdal.ThemDocGia(lt)
         If (result = 0) Then
-            MessageBox.Show("Them doc gia thanh cong.")
+            MessageBox.Show("Thêm đọc giả thành công.")
         Else
-            MessageBox.Show("Them doc gia that bai.")
+            MessageBox.Show("Thêm đọc giả thất bại!")
         End If
         Me.TblDOCGIATableAdapter.Fill(Me.TVDataBsDataSet1.tblDOCGIA)
         resetData(lt)
@@ -115,6 +115,49 @@ Public Class frmLapthe
         lt.Adress = txbDiaChi.Text
         lt.DayOfCard = dtpNgayLapThe.Value
         lt.Email = txbEmail.Text
+        '2. Business .... kiem tra cac textbox du lieu nhap
+        Dim ltbus As New LaptheBUS
+        If (ltbus.ValidReaderName(lt) = False) Then
+            MessageBox.Show("Họ tên chưa được nhập.")
+            txbTenDocGia.Focus()
+            Return
+        End If
+
+        If (ltbus.ValidAdress(lt) = False) Then
+            MessageBox.Show("Địa chỉ chưa được nhập.")
+            txbDiaChi.Focus()
+            Return
+        End If
+
+        If (ltbus.ValidEmail(lt) = False) Then
+            MessageBox.Show("Email chưa được nhập.")
+            txbEmail.Focus()
+            Return
+        End If
+
+        If (ltbus.ValidReaderCategory(lt) = False) Then
+            MessageBox.Show("Loại đọc giả chưa được nhập.")
+            txbMaDocGia.Focus()
+            Return
+        End If
+
+        If (ltbus.ValidDayOfCard(lt) = False) Then
+            MessageBox.Show("Ngày lập thẻ chưa được nhập.")
+            dtpNgayLapThe.Focus()
+            Return
+        End If
+
+        If (ltbus.ValidBirthday(lt) = False) Then
+            MessageBox.Show("Ngày sinh chưa được nhập.")
+            dtpNgaySinh.Focus()
+            Return
+        End If
+
+        If (ltbus.ValidReaderID(lt) = False) Then
+            MessageBox.Show("Mã đọc giả chưa được nhập.")
+            txbMaDocGia.Focus()
+            Return
+        End If
         ''3. Chen ket qua vao DataBase
         Dim ltdal As QLyDAL.LaptheDAL
         ltdal = New QLyDAL.LaptheDAL()

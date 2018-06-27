@@ -63,66 +63,55 @@ Public Class frmMuonTraSach
         '2. Business .... kiem tra cac textbox du lieu nhap
         Dim mtbus As New MuonTraSachBUS
         If (mtbus.ValidMaPhieuMuon(mt) = False) Then
-            MessageBox.Show("Ma phieumuon chua duoc nhap")
+            MessageBox.Show("Mã phiếu mượn chưa được nhập!")
             txbMaPhieuMuon.Focus()
             Return
         End If
 
         If (mtbus.ValidMaDocGia(mt) = False) Then
-            MessageBox.Show("Ma doc gia chua duoc nhap")
+            MessageBox.Show("Mã đọc giả chưa được nhập!")
             cbMaDocGia.Focus()
             Return
         End If
 
         If (mtbus.ValidTenDocGia(mt) = False) Then
-            MessageBox.Show("Ten doc gia chua duoc nhap")
+            MessageBox.Show("Tên đọc giả chưa được nhập!")
             txbTenDocGia.Focus()
             Return
         End If
 
         If (mtbus.ValidMaSach(mt) = False) Then
-            MessageBox.Show("Ma sach chua duoc nhap")
+            MessageBox.Show("Mã sách chưa được nhập!")
             cbMaSach.Focus()
             Return
         End If
 
         If (mtbus.ValidTenSach(mt) = False) Then
-            MessageBox.Show("Ten sach chua duoc nhap")
+            MessageBox.Show("Tên sách chưa được nhập!")
             txbTenSach.Focus()
             Return
         End If
 
         If (mtbus.ValidTheLoai(mt) = False) Then
-            MessageBox.Show("The loai chua duoc nhap")
+            MessageBox.Show("Thể loại chưa được nhập!")
             cbTheLoai.Focus()
             Return
         End If
 
         If (mtbus.ValidTacGia(mt) = False) Then
-            MessageBox.Show("Tac gia chua duoc nhap")
+            MessageBox.Show("Tác giả chưa được nhập!")
             txbTacGia.Focus()
             Return
         End If
 
-        If (mtbus.ValidNgayMuon(mt) = False) Then
-            MessageBox.Show("Ngay muon chua duoc nhap")
-            dtpNgayMuon.Focus()
-            Return
-        End If
-
         If (mtbus.ValidSoLuongMuon(mt) = False) Then
-            MessageBox.Show("So luong muon chua duoc nhap")
+            MessageBox.Show("Số lượng mượn chưa được nhập!")
             txbSoLuongmuon.Focus()
             Return
         End If
 
-        If (mtbus.ValidNgayTra(mt) = False) Then
-            MessageBox.Show("Ngay tra chua duoc nhap")
-            dtpNgayTra.Focus()
-            Return
-        End If
         If (mtbus.ValidXacNhanTra(mt) = False) Then
-            MessageBox.Show("Chua co thong tin xac nhan tra")
+            MessageBox.Show("Chưa có thông tin xác nhận trả")
             cbXacNhanTra.Focus()
             Return
         End If
@@ -133,9 +122,9 @@ Public Class frmMuonTraSach
         Dim result As Integer
         result = mtdal.XacNhan(mt)
         If (result = 0) Then
-            MessageBox.Show("Them phieu muon thanh cong.")
+            MessageBox.Show("Thêm phiếu mượn thành công.")
         Else
-            MessageBox.Show("Them phieu muon that bai.")
+            MessageBox.Show("Thêm phiếu mượn thất bại, trường dữ liệu SỐ LƯỢNG MƯỢN phải là kiểu dữ liệu SỐ!")
         End If
         Me.TblCHITIETPHIEUMUONTableAdapter.Fill(Me.TVDataBsDataSet5.tblCHITIETPHIEUMUON)
         ResetData(mt)
@@ -161,66 +150,55 @@ Public Class frmMuonTraSach
         '2. Business .... kiem tra cac textbox du lieu nhap
         Dim mtbus As New MuonTraSachBUS
         If (mtbus.ValidMaPhieuMuon(mt) = False) Then
-            MessageBox.Show("Ma phieumuon chua duoc nhap")
+            MessageBox.Show("Mã phiếu mượn chưa được nhập!")
             txbMaPhieuMuon.Focus()
             Return
         End If
 
         If (mtbus.ValidMaDocGia(mt) = False) Then
-            MessageBox.Show("Ma doc gia chua duoc nhap")
+            MessageBox.Show("Mã đọc giả chưa được nhập!")
             cbMaDocGia.Focus()
             Return
         End If
 
         If (mtbus.ValidTenDocGia(mt) = False) Then
-            MessageBox.Show("Ten doc gia chua duoc nhap")
+            MessageBox.Show("Tên đọc giả chưa được nhập!")
             txbTenDocGia.Focus()
             Return
         End If
 
         If (mtbus.ValidMaSach(mt) = False) Then
-            MessageBox.Show("Ma sach chua duoc nhap")
+            MessageBox.Show("Mã sách chưa được nhập!")
             cbMaSach.Focus()
             Return
         End If
 
         If (mtbus.ValidTenSach(mt) = False) Then
-            MessageBox.Show("Ten sach chua duoc nhap")
+            MessageBox.Show("Tên sách chưa được nhập!")
             txbTenSach.Focus()
             Return
         End If
 
         If (mtbus.ValidTheLoai(mt) = False) Then
-            MessageBox.Show("The loai chua duoc nhap")
+            MessageBox.Show("Thể loại chưa được nhập!")
             cbTheLoai.Focus()
             Return
         End If
 
         If (mtbus.ValidTacGia(mt) = False) Then
-            MessageBox.Show("Tac gia chua duoc nhap")
+            MessageBox.Show("Tác giả chưa được nhập!")
             txbTacGia.Focus()
             Return
         End If
 
-        If (mtbus.ValidNgayMuon(mt) = False) Then
-            MessageBox.Show("Ngay muon chua duoc nhap")
-            dtpNgayMuon.Focus()
-            Return
-        End If
-
         If (mtbus.ValidSoLuongMuon(mt) = False) Then
-            MessageBox.Show("So luong muon chua duoc nhap")
+            MessageBox.Show("Số lượng mượn chưa được nhập!")
             txbSoLuongmuon.Focus()
             Return
         End If
 
-        If (mtbus.ValidNgayTra(mt) = False) Then
-            MessageBox.Show("Ngay tra chua duoc nhap")
-            dtpNgayTra.Focus()
-            Return
-        End If
         If (mtbus.ValidXacNhanTra(mt) = False) Then
-            MessageBox.Show("Chua co thong tin xac nhan tra")
+            MessageBox.Show("Chưa có thông tin xác nhận trả")
             cbXacNhanTra.Focus()
             Return
         End If
@@ -231,9 +209,9 @@ Public Class frmMuonTraSach
         Dim result As Integer
         result = mtdal.CapNhatMuonTra(mt)
         If (result = 0) Then
-            MessageBox.Show("Cap nhat phieu muon thanh cong.")
+            MessageBox.Show("Cập nhật phiếu mượn thành công.")
         Else
-            MessageBox.Show("Cap nhat phieu muon that bai.")
+            MessageBox.Show("Cập nhật phiếu mượn thất bại, trường dữ liệu SỐ LƯỢNG MƯỢN phải là kiểu dữ liệu SỐ.")
         End If
         Me.TblCHITIETPHIEUMUONTableAdapter.Fill(Me.TVDataBsDataSet5.tblCHITIETPHIEUMUON)
         ResetData(mt)
@@ -264,9 +242,9 @@ Public Class frmMuonTraSach
         Dim result As Integer
         result = mtdal.XoaPhieu(mt)
         If (result = 0) Then
-            MessageBox.Show("Xoa phieu muon thanh cong.")
+            MessageBox.Show("Xóa phiếu mượn thành công.")
         Else
-            MessageBox.Show("Xoa phieu muon that bai.")
+            MessageBox.Show("Xóa dữ liệu thất bại!")
         End If
         Me.TblCHITIETPHIEUMUONTableAdapter.Fill(Me.TVDataBsDataSet5.tblCHITIETPHIEUMUON)
         ResetData(mt)
