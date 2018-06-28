@@ -22,133 +22,221 @@ Partial Class frmMuonTraSach
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMuonTraSach))
-        Me.Muonsach_TabControl = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.txbGhiChu = New System.Windows.Forms.TextBox()
+        Me.dtpNgayTra = New System.Windows.Forms.DateTimePicker()
+        Me.txbSoLuongmuon = New System.Windows.Forms.TextBox()
+        Me.dtpNgayMuon = New System.Windows.Forms.DateTimePicker()
+        Me.txbTacGia = New System.Windows.Forms.TextBox()
+        Me.cbTheLoai = New System.Windows.Forms.ComboBox()
+        Me.cbXacNhanTra = New System.Windows.Forms.ComboBox()
+        Me.txbTenSach = New System.Windows.Forms.TextBox()
+        Me.cbMaSach = New System.Windows.Forms.ComboBox()
+        Me.txbTenDocGia = New System.Windows.Forms.TextBox()
+        Me.dgvPhieuMuonTra = New System.Windows.Forms.DataGridView()
         Me.btDelete = New System.Windows.Forms.Button()
+        Me.cbMaDocGia = New System.Windows.Forms.ComboBox()
+        Me.txbMaPhieuMuon = New System.Windows.Forms.TextBox()
+        Me.lbMaPhieuMuon = New System.Windows.Forms.Label()
+        Me.lbGhiChu = New System.Windows.Forms.Label()
+        Me.lbXacNhanTra = New System.Windows.Forms.Label()
+        Me.lbNgaytra = New System.Windows.Forms.Label()
+        Me.lbAuthor = New System.Windows.Forms.Label()
         Me.btUpdate = New System.Windows.Forms.Button()
         Me.btAdd = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dtpDayCreate = New System.Windows.Forms.DateTimePicker()
-        Me.txtNumbers = New System.Windows.Forms.TextBox()
-        Me.txtAuthor = New System.Windows.Forms.TextBox()
-        Me.cbBookKindID = New System.Windows.Forms.ComboBox()
-        Me.lbAuthor = New System.Windows.Forms.Label()
-        Me.txtBookName = New System.Windows.Forms.TextBox()
-        Me.cbBookID = New System.Windows.Forms.ComboBox()
-        Me.txtReaderName = New System.Windows.Forms.TextBox()
-        Me.cbReaderID = New System.Windows.Forms.ComboBox()
-        Me.lbSoLuong = New System.Windows.Forms.Label()
+        Me.lbSoLuongmuon = New System.Windows.Forms.Label()
         Me.lbNgayMuon = New System.Windows.Forms.Label()
         Me.lbTheLoai = New System.Windows.Forms.Label()
-        Me.lbTenSach = New System.Windows.Forms.Label()
         Me.lbReaderID = New System.Windows.Forms.Label()
         Me.lbMaSach = New System.Windows.Forms.Label()
         Me.lbReaderName = New System.Windows.Forms.Label()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.lbStatus = New System.Windows.Forms.Label()
-        Me.cbStatusID = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Muonsach_TabControl.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lbTenSach = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TVDataBsDataSet5 = New QLyGUI.TVDataBsDataSet5()
+        Me.TblCHITIETPHIEUMUONBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblCHITIETPHIEUMUONTableAdapter = New QLyGUI.TVDataBsDataSet5TableAdapters.tblCHITIETPHIEUMUONTableAdapter()
+        Me.maphieumuon = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.madocgia = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.hoten = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.masach = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.tensach = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.matheloai = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.matacgia = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ngaymuon = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.soluongmuon = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ngaytra = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.xacnhantra = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ghichu = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CType(Me.dgvPhieuMuonTra, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox4.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
+        CType(Me.TVDataBsDataSet5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblCHITIETPHIEUMUONBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Muonsach_TabControl
+        'txbGhiChu
         '
-        Me.Muonsach_TabControl.Controls.Add(Me.TabPage1)
-        Me.Muonsach_TabControl.Controls.Add(Me.TabPage2)
-        Me.Muonsach_TabControl.Location = New System.Drawing.Point(12, 12)
-        Me.Muonsach_TabControl.Name = "Muonsach_TabControl"
-        Me.Muonsach_TabControl.SelectedIndex = 0
-        Me.Muonsach_TabControl.Size = New System.Drawing.Size(766, 483)
-        Me.Muonsach_TabControl.TabIndex = 0
+        Me.txbGhiChu.Location = New System.Drawing.Point(404, 120)
+        Me.txbGhiChu.Multiline = True
+        Me.txbGhiChu.Name = "txbGhiChu"
+        Me.txbGhiChu.Size = New System.Drawing.Size(182, 71)
+        Me.txbGhiChu.TabIndex = 44
         '
-        'TabPage1
+        'dtpNgayTra
         '
-        Me.TabPage1.Controls.Add(Me.DataGridView1)
-        Me.TabPage1.Controls.Add(Me.GroupBox3)
-        Me.TabPage1.Controls.Add(Me.GroupBox2)
-        Me.TabPage1.Controls.Add(Me.GroupBox1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(758, 457)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Mượn sách"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.dtpNgayTra.Location = New System.Drawing.Point(404, 64)
+        Me.dtpNgayTra.Name = "dtpNgayTra"
+        Me.dtpNgayTra.Size = New System.Drawing.Size(182, 20)
+        Me.dtpNgayTra.TabIndex = 42
         '
-        'DataGridView1
+        'txbSoLuongmuon
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 256)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(750, 204)
-        Me.DataGridView1.TabIndex = 6
+        Me.txbSoLuongmuon.Location = New System.Drawing.Point(404, 38)
+        Me.txbSoLuongmuon.Name = "txbSoLuongmuon"
+        Me.txbSoLuongmuon.Size = New System.Drawing.Size(182, 20)
+        Me.txbSoLuongmuon.TabIndex = 41
         '
-        'GroupBox3
+        'dtpNgayMuon
         '
-        Me.GroupBox3.BackColor = System.Drawing.Color.AliceBlue
-        Me.GroupBox3.Controls.Add(Me.btDelete)
-        Me.GroupBox3.Controls.Add(Me.btUpdate)
-        Me.GroupBox3.Controls.Add(Me.btAdd)
-        Me.GroupBox3.Location = New System.Drawing.Point(604, 63)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(152, 187)
-        Me.GroupBox3.TabIndex = 5
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "GroupBox3"
+        Me.dtpNgayMuon.Location = New System.Drawing.Point(404, 12)
+        Me.dtpNgayMuon.Name = "dtpNgayMuon"
+        Me.dtpNgayMuon.Size = New System.Drawing.Size(182, 20)
+        Me.dtpNgayMuon.TabIndex = 40
+        '
+        'txbTacGia
+        '
+        Me.txbTacGia.Location = New System.Drawing.Point(106, 171)
+        Me.txbTacGia.Name = "txbTacGia"
+        Me.txbTacGia.Size = New System.Drawing.Size(182, 20)
+        Me.txbTacGia.TabIndex = 39
+        '
+        'cbTheLoai
+        '
+        Me.cbTheLoai.FormattingEnabled = True
+        Me.cbTheLoai.Location = New System.Drawing.Point(106, 144)
+        Me.cbTheLoai.Name = "cbTheLoai"
+        Me.cbTheLoai.Size = New System.Drawing.Size(182, 21)
+        Me.cbTheLoai.TabIndex = 38
+        '
+        'cbXacNhanTra
+        '
+        Me.cbXacNhanTra.FormattingEnabled = True
+        Me.cbXacNhanTra.Location = New System.Drawing.Point(404, 93)
+        Me.cbXacNhanTra.Name = "cbXacNhanTra"
+        Me.cbXacNhanTra.Size = New System.Drawing.Size(182, 21)
+        Me.cbXacNhanTra.TabIndex = 43
+        '
+        'txbTenSach
+        '
+        Me.txbTenSach.Location = New System.Drawing.Point(106, 119)
+        Me.txbTenSach.Name = "txbTenSach"
+        Me.txbTenSach.Size = New System.Drawing.Size(182, 20)
+        Me.txbTenSach.TabIndex = 37
+        '
+        'cbMaSach
+        '
+        Me.cbMaSach.FormattingEnabled = True
+        Me.cbMaSach.Location = New System.Drawing.Point(106, 92)
+        Me.cbMaSach.Name = "cbMaSach"
+        Me.cbMaSach.Size = New System.Drawing.Size(182, 21)
+        Me.cbMaSach.TabIndex = 36
+        '
+        'txbTenDocGia
+        '
+        Me.txbTenDocGia.Location = New System.Drawing.Point(106, 66)
+        Me.txbTenDocGia.Name = "txbTenDocGia"
+        Me.txbTenDocGia.Size = New System.Drawing.Size(182, 20)
+        Me.txbTenDocGia.TabIndex = 35
+        '
+        'dgvPhieuMuonTra
+        '
+        Me.dgvPhieuMuonTra.AllowUserToDeleteRows = False
+        Me.dgvPhieuMuonTra.AutoGenerateColumns = False
+        Me.dgvPhieuMuonTra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPhieuMuonTra.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.maphieumuon, Me.madocgia, Me.hoten, Me.masach, Me.tensach, Me.matheloai, Me.matacgia, Me.ngaymuon, Me.soluongmuon, Me.ngaytra, Me.xacnhantra, Me.ghichu})
+        Me.dgvPhieuMuonTra.DataSource = Me.TblCHITIETPHIEUMUONBindingSource
+        Me.dgvPhieuMuonTra.Location = New System.Drawing.Point(12, 272)
+        Me.dgvPhieuMuonTra.Name = "dgvPhieuMuonTra"
+        Me.dgvPhieuMuonTra.ReadOnly = True
+        Me.dgvPhieuMuonTra.Size = New System.Drawing.Size(750, 194)
+        Me.dgvPhieuMuonTra.TabIndex = 14
         '
         'btDelete
         '
         Me.btDelete.BackColor = System.Drawing.Color.LightCoral
         Me.btDelete.Image = CType(resources.GetObject("btDelete.Image"), System.Drawing.Image)
-        Me.btDelete.Location = New System.Drawing.Point(43, 137)
+        Me.btDelete.Location = New System.Drawing.Point(43, 120)
         Me.btDelete.Name = "btDelete"
         Me.btDelete.Size = New System.Drawing.Size(88, 30)
         Me.btDelete.TabIndex = 2
         Me.btDelete.Text = "Xóa phiếu"
         Me.btDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btDelete.UseVisualStyleBackColor = False
+        '
+        'cbMaDocGia
+        '
+        Me.cbMaDocGia.FormattingEnabled = True
+        Me.cbMaDocGia.Location = New System.Drawing.Point(106, 39)
+        Me.cbMaDocGia.Name = "cbMaDocGia"
+        Me.cbMaDocGia.Size = New System.Drawing.Size(182, 21)
+        Me.cbMaDocGia.TabIndex = 34
+        '
+        'txbMaPhieuMuon
+        '
+        Me.txbMaPhieuMuon.Location = New System.Drawing.Point(106, 13)
+        Me.txbMaPhieuMuon.Name = "txbMaPhieuMuon"
+        Me.txbMaPhieuMuon.Size = New System.Drawing.Size(182, 20)
+        Me.txbMaPhieuMuon.TabIndex = 33
+        '
+        'lbMaPhieuMuon
+        '
+        Me.lbMaPhieuMuon.AutoSize = True
+        Me.lbMaPhieuMuon.Location = New System.Drawing.Point(17, 16)
+        Me.lbMaPhieuMuon.Name = "lbMaPhieuMuon"
+        Me.lbMaPhieuMuon.Size = New System.Drawing.Size(80, 13)
+        Me.lbMaPhieuMuon.TabIndex = 32
+        Me.lbMaPhieuMuon.Text = "Mã phiếu mượn"
+        '
+        'lbGhiChu
+        '
+        Me.lbGhiChu.AutoSize = True
+        Me.lbGhiChu.Location = New System.Drawing.Point(323, 122)
+        Me.lbGhiChu.Name = "lbGhiChu"
+        Me.lbGhiChu.Size = New System.Drawing.Size(44, 13)
+        Me.lbGhiChu.TabIndex = 23
+        Me.lbGhiChu.Text = "Ghi chú"
+        '
+        'lbXacNhanTra
+        '
+        Me.lbXacNhanTra.AutoSize = True
+        Me.lbXacNhanTra.Location = New System.Drawing.Point(320, 96)
+        Me.lbXacNhanTra.Name = "lbXacNhanTra"
+        Me.lbXacNhanTra.Size = New System.Drawing.Size(68, 13)
+        Me.lbXacNhanTra.TabIndex = 19
+        Me.lbXacNhanTra.Text = "Xác nhận trả"
+        '
+        'lbNgaytra
+        '
+        Me.lbNgaytra.AutoSize = True
+        Me.lbNgaytra.Location = New System.Drawing.Point(320, 69)
+        Me.lbNgaytra.Name = "lbNgaytra"
+        Me.lbNgaytra.Size = New System.Drawing.Size(47, 13)
+        Me.lbNgaytra.TabIndex = 18
+        Me.lbNgaytra.Text = "Ngày trả"
+        '
+        'lbAuthor
+        '
+        Me.lbAuthor.AutoSize = True
+        Me.lbAuthor.Location = New System.Drawing.Point(17, 174)
+        Me.lbAuthor.Name = "lbAuthor"
+        Me.lbAuthor.Size = New System.Drawing.Size(43, 13)
+        Me.lbAuthor.TabIndex = 11
+        Me.lbAuthor.Text = "Tác giả"
         '
         'btUpdate
         '
@@ -158,7 +246,7 @@ Partial Class frmMuonTraSach
         Me.btUpdate.Name = "btUpdate"
         Me.btUpdate.Size = New System.Drawing.Size(88, 30)
         Me.btUpdate.TabIndex = 1
-        Me.btUpdate.Text = "Thay đổi"
+        Me.btUpdate.Text = "Cập nhật"
         Me.btUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btUpdate.UseVisualStyleBackColor = False
         '
@@ -166,7 +254,7 @@ Partial Class frmMuonTraSach
         '
         Me.btAdd.BackColor = System.Drawing.Color.LightGreen
         Me.btAdd.Image = CType(resources.GetObject("btAdd.Image"), System.Drawing.Image)
-        Me.btAdd.Location = New System.Drawing.Point(43, 19)
+        Me.btAdd.Location = New System.Drawing.Point(43, 32)
         Me.btAdd.Name = "btAdd"
         Me.btAdd.Size = New System.Drawing.Size(88, 30)
         Me.btAdd.TabIndex = 0
@@ -174,14 +262,123 @@ Partial Class frmMuonTraSach
         Me.btAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btAdd.UseVisualStyleBackColor = False
         '
+        'lbSoLuongmuon
+        '
+        Me.lbSoLuongmuon.AutoSize = True
+        Me.lbSoLuongmuon.Location = New System.Drawing.Point(320, 43)
+        Me.lbSoLuongmuon.Name = "lbSoLuongmuon"
+        Me.lbSoLuongmuon.Size = New System.Drawing.Size(78, 13)
+        Me.lbSoLuongmuon.TabIndex = 6
+        Me.lbSoLuongmuon.Text = "Số lượng mượn"
+        '
+        'lbNgayMuon
+        '
+        Me.lbNgayMuon.AutoSize = True
+        Me.lbNgayMuon.Location = New System.Drawing.Point(320, 16)
+        Me.lbNgayMuon.Name = "lbNgayMuon"
+        Me.lbNgayMuon.Size = New System.Drawing.Size(61, 13)
+        Me.lbNgayMuon.TabIndex = 5
+        Me.lbNgayMuon.Text = "Ngày mượn"
+        '
+        'lbTheLoai
+        '
+        Me.lbTheLoai.AutoSize = True
+        Me.lbTheLoai.Location = New System.Drawing.Point(17, 148)
+        Me.lbTheLoai.Name = "lbTheLoai"
+        Me.lbTheLoai.Size = New System.Drawing.Size(45, 13)
+        Me.lbTheLoai.TabIndex = 4
+        Me.lbTheLoai.Text = "Thể loại"
+        '
+        'lbReaderID
+        '
+        Me.lbReaderID.AutoSize = True
+        Me.lbReaderID.Location = New System.Drawing.Point(17, 42)
+        Me.lbReaderID.Name = "lbReaderID"
+        Me.lbReaderID.Size = New System.Drawing.Size(61, 13)
+        Me.lbReaderID.TabIndex = 0
+        Me.lbReaderID.Text = "Mã đọc giả"
+        '
+        'lbMaSach
+        '
+        Me.lbMaSach.AutoSize = True
+        Me.lbMaSach.Location = New System.Drawing.Point(17, 95)
+        Me.lbMaSach.Name = "lbMaSach"
+        Me.lbMaSach.Size = New System.Drawing.Size(48, 13)
+        Me.lbMaSach.TabIndex = 2
+        Me.lbMaSach.Text = "Mã sách"
+        '
+        'lbReaderName
+        '
+        Me.lbReaderName.AutoSize = True
+        Me.lbReaderName.Location = New System.Drawing.Point(17, 69)
+        Me.lbReaderName.Name = "lbReaderName"
+        Me.lbReaderName.Size = New System.Drawing.Size(65, 13)
+        Me.lbReaderName.TabIndex = 1
+        Me.lbReaderName.Text = "Tên đọc giả"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.AliceBlue
+        Me.GroupBox1.Controls.Add(Me.txbGhiChu)
+        Me.GroupBox1.Controls.Add(Me.cbXacNhanTra)
+        Me.GroupBox1.Controls.Add(Me.dtpNgayTra)
+        Me.GroupBox1.Controls.Add(Me.txbSoLuongmuon)
+        Me.GroupBox1.Controls.Add(Me.dtpNgayMuon)
+        Me.GroupBox1.Controls.Add(Me.txbTacGia)
+        Me.GroupBox1.Controls.Add(Me.cbTheLoai)
+        Me.GroupBox1.Controls.Add(Me.txbTenSach)
+        Me.GroupBox1.Controls.Add(Me.cbMaSach)
+        Me.GroupBox1.Controls.Add(Me.txbTenDocGia)
+        Me.GroupBox1.Controls.Add(Me.cbMaDocGia)
+        Me.GroupBox1.Controls.Add(Me.txbMaPhieuMuon)
+        Me.GroupBox1.Controls.Add(Me.lbMaPhieuMuon)
+        Me.GroupBox1.Controls.Add(Me.lbGhiChu)
+        Me.GroupBox1.Controls.Add(Me.lbXacNhanTra)
+        Me.GroupBox1.Controls.Add(Me.lbNgaytra)
+        Me.GroupBox1.Controls.Add(Me.lbAuthor)
+        Me.GroupBox1.Controls.Add(Me.lbSoLuongmuon)
+        Me.GroupBox1.Controls.Add(Me.lbNgayMuon)
+        Me.GroupBox1.Controls.Add(Me.lbTheLoai)
+        Me.GroupBox1.Controls.Add(Me.lbTenSach)
+        Me.GroupBox1.Controls.Add(Me.lbReaderID)
+        Me.GroupBox1.Controls.Add(Me.lbMaSach)
+        Me.GroupBox1.Controls.Add(Me.lbReaderName)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 67)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(592, 199)
+        Me.GroupBox1.TabIndex = 11
+        Me.GroupBox1.TabStop = False
+        '
+        'lbTenSach
+        '
+        Me.lbTenSach.AutoSize = True
+        Me.lbTenSach.Location = New System.Drawing.Point(17, 122)
+        Me.lbTenSach.Name = "lbTenSach"
+        Me.lbTenSach.Size = New System.Drawing.Size(52, 13)
+        Me.lbTenSach.TabIndex = 3
+        Me.lbTenSach.Text = "Tên sách"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.BackColor = System.Drawing.Color.AliceBlue
+        Me.GroupBox3.Controls.Add(Me.btDelete)
+        Me.GroupBox3.Controls.Add(Me.btUpdate)
+        Me.GroupBox3.Controls.Add(Me.btAdd)
+        Me.GroupBox3.Location = New System.Drawing.Point(610, 69)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(152, 197)
+        Me.GroupBox3.TabIndex = 13
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "GroupBox3"
+        '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.LightSeaGreen
         Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(750, 50)
-        Me.GroupBox2.TabIndex = 4
+        Me.GroupBox2.TabIndex = 12
         Me.GroupBox2.TabStop = False
         '
         'Label3
@@ -191,551 +388,176 @@ Partial Class frmMuonTraSach
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label3.Location = New System.Drawing.Point(235, 16)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(273, 25)
+        Me.Label3.Size = New System.Drawing.Size(308, 25)
         Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Chi tiết phiếu mượn sách"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.BackColor = System.Drawing.Color.AliceBlue
-        Me.GroupBox1.Controls.Add(Me.cbStatusID)
-        Me.GroupBox1.Controls.Add(Me.lbStatus)
-        Me.GroupBox1.Controls.Add(Me.dtpDayCreate)
-        Me.GroupBox1.Controls.Add(Me.txtNumbers)
-        Me.GroupBox1.Controls.Add(Me.txtAuthor)
-        Me.GroupBox1.Controls.Add(Me.cbBookKindID)
-        Me.GroupBox1.Controls.Add(Me.lbAuthor)
-        Me.GroupBox1.Controls.Add(Me.txtBookName)
-        Me.GroupBox1.Controls.Add(Me.cbBookID)
-        Me.GroupBox1.Controls.Add(Me.txtReaderName)
-        Me.GroupBox1.Controls.Add(Me.cbReaderID)
-        Me.GroupBox1.Controls.Add(Me.lbSoLuong)
-        Me.GroupBox1.Controls.Add(Me.lbNgayMuon)
-        Me.GroupBox1.Controls.Add(Me.lbTheLoai)
-        Me.GroupBox1.Controls.Add(Me.lbTenSach)
-        Me.GroupBox1.Controls.Add(Me.lbReaderID)
-        Me.GroupBox1.Controls.Add(Me.lbMaSach)
-        Me.GroupBox1.Controls.Add(Me.lbReaderName)
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 61)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(592, 189)
-        Me.GroupBox1.TabIndex = 3
-        Me.GroupBox1.TabStop = False
-        '
-        'dtpDayCreate
-        '
-        Me.dtpDayCreate.Location = New System.Drawing.Point(404, 44)
-        Me.dtpDayCreate.Name = "dtpDayCreate"
-        Me.dtpDayCreate.Size = New System.Drawing.Size(182, 20)
-        Me.dtpDayCreate.TabIndex = 15
-        '
-        'txtNumbers
-        '
-        Me.txtNumbers.Location = New System.Drawing.Point(404, 84)
-        Me.txtNumbers.Name = "txtNumbers"
-        Me.txtNumbers.Size = New System.Drawing.Size(182, 20)
-        Me.txtNumbers.TabIndex = 14
-        '
-        'txtAuthor
-        '
-        Me.txtAuthor.Location = New System.Drawing.Point(404, 9)
-        Me.txtAuthor.Name = "txtAuthor"
-        Me.txtAuthor.Size = New System.Drawing.Size(182, 20)
-        Me.txtAuthor.TabIndex = 13
-        '
-        'cbBookKindID
-        '
-        Me.cbBookKindID.FormattingEnabled = True
-        Me.cbBookKindID.Location = New System.Drawing.Point(106, 156)
-        Me.cbBookKindID.Name = "cbBookKindID"
-        Me.cbBookKindID.Size = New System.Drawing.Size(182, 21)
-        Me.cbBookKindID.TabIndex = 12
-        '
-        'lbAuthor
-        '
-        Me.lbAuthor.AutoSize = True
-        Me.lbAuthor.Location = New System.Drawing.Point(337, 16)
-        Me.lbAuthor.Name = "lbAuthor"
-        Me.lbAuthor.Size = New System.Drawing.Size(43, 13)
-        Me.lbAuthor.TabIndex = 11
-        Me.lbAuthor.Text = "Tác giả"
-        '
-        'txtBookName
-        '
-        Me.txtBookName.Location = New System.Drawing.Point(106, 121)
-        Me.txtBookName.Name = "txtBookName"
-        Me.txtBookName.Size = New System.Drawing.Size(182, 20)
-        Me.txtBookName.TabIndex = 10
-        '
-        'cbBookID
-        '
-        Me.cbBookID.FormattingEnabled = True
-        Me.cbBookID.Location = New System.Drawing.Point(106, 84)
-        Me.cbBookID.Name = "cbBookID"
-        Me.cbBookID.Size = New System.Drawing.Size(182, 21)
-        Me.cbBookID.TabIndex = 9
-        '
-        'txtReaderName
-        '
-        Me.txtReaderName.Location = New System.Drawing.Point(106, 48)
-        Me.txtReaderName.Name = "txtReaderName"
-        Me.txtReaderName.Size = New System.Drawing.Size(182, 20)
-        Me.txtReaderName.TabIndex = 8
-        '
-        'cbReaderID
-        '
-        Me.cbReaderID.FormattingEnabled = True
-        Me.cbReaderID.Location = New System.Drawing.Point(106, 13)
-        Me.cbReaderID.Name = "cbReaderID"
-        Me.cbReaderID.Size = New System.Drawing.Size(182, 21)
-        Me.cbReaderID.TabIndex = 7
-        '
-        'lbSoLuong
-        '
-        Me.lbSoLuong.AutoSize = True
-        Me.lbSoLuong.Location = New System.Drawing.Point(337, 90)
-        Me.lbSoLuong.Name = "lbSoLuong"
-        Me.lbSoLuong.Size = New System.Drawing.Size(49, 13)
-        Me.lbSoLuong.TabIndex = 6
-        Me.lbSoLuong.Text = "Số lượng"
-        '
-        'lbNgayMuon
-        '
-        Me.lbNgayMuon.AutoSize = True
-        Me.lbNgayMuon.Location = New System.Drawing.Point(337, 51)
-        Me.lbNgayMuon.Name = "lbNgayMuon"
-        Me.lbNgayMuon.Size = New System.Drawing.Size(61, 13)
-        Me.lbNgayMuon.TabIndex = 5
-        Me.lbNgayMuon.Text = "Ngày mượn"
-        '
-        'lbTheLoai
-        '
-        Me.lbTheLoai.AutoSize = True
-        Me.lbTheLoai.Location = New System.Drawing.Point(35, 159)
-        Me.lbTheLoai.Name = "lbTheLoai"
-        Me.lbTheLoai.Size = New System.Drawing.Size(45, 13)
-        Me.lbTheLoai.TabIndex = 4
-        Me.lbTheLoai.Text = "Thể loại"
-        '
-        'lbTenSach
-        '
-        Me.lbTenSach.AutoSize = True
-        Me.lbTenSach.Location = New System.Drawing.Point(35, 124)
-        Me.lbTenSach.Name = "lbTenSach"
-        Me.lbTenSach.Size = New System.Drawing.Size(52, 13)
-        Me.lbTenSach.TabIndex = 3
-        Me.lbTenSach.Text = "Tên sách"
-        '
-        'lbReaderID
-        '
-        Me.lbReaderID.AutoSize = True
-        Me.lbReaderID.Location = New System.Drawing.Point(35, 16)
-        Me.lbReaderID.Name = "lbReaderID"
-        Me.lbReaderID.Size = New System.Drawing.Size(61, 13)
-        Me.lbReaderID.TabIndex = 0
-        Me.lbReaderID.Text = "Mã đọc giả"
-        '
-        'lbMaSach
-        '
-        Me.lbMaSach.AutoSize = True
-        Me.lbMaSach.Location = New System.Drawing.Point(35, 90)
-        Me.lbMaSach.Name = "lbMaSach"
-        Me.lbMaSach.Size = New System.Drawing.Size(48, 13)
-        Me.lbMaSach.TabIndex = 2
-        Me.lbMaSach.Text = "Mã sách"
-        '
-        'lbReaderName
-        '
-        Me.lbReaderName.AutoSize = True
-        Me.lbReaderName.Location = New System.Drawing.Point(35, 51)
-        Me.lbReaderName.Name = "lbReaderName"
-        Me.lbReaderName.Size = New System.Drawing.Size(65, 13)
-        Me.lbReaderName.TabIndex = 1
-        Me.lbReaderName.Text = "Tên đọc giả"
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.DataGridView2)
-        Me.TabPage2.Controls.Add(Me.GroupBox4)
-        Me.TabPage2.Controls.Add(Me.GroupBox5)
-        Me.TabPage2.Controls.Add(Me.GroupBox6)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(758, 457)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Trả sách"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(5, 248)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(751, 210)
-        Me.DataGridView2.TabIndex = 10
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.BackColor = System.Drawing.Color.AliceBlue
-        Me.GroupBox4.Controls.Add(Me.Button1)
-        Me.GroupBox4.Controls.Add(Me.Button2)
-        Me.GroupBox4.Controls.Add(Me.Button3)
-        Me.GroupBox4.Location = New System.Drawing.Point(603, 61)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(152, 181)
-        Me.GroupBox4.TabIndex = 9
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "GroupBox4"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.LightCoral
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(43, 138)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(88, 30)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Xóa phiếu"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.LightGreen
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(43, 82)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(88, 30)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Thay đổi"
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.LightGreen
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.Location = New System.Drawing.Point(43, 19)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(88, 30)
-        Me.Button3.TabIndex = 0
-        Me.Button3.Text = "Xác nhận"
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'GroupBox5
-        '
-        Me.GroupBox5.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.GroupBox5.Controls.Add(Me.Label1)
-        Me.GroupBox5.Location = New System.Drawing.Point(6, 6)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(750, 50)
-        Me.GroupBox5.TabIndex = 8
-        Me.GroupBox5.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(235, 16)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(244, 25)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Chi tiết phiếu trả sách"
-        '
-        'GroupBox6
-        '
-        Me.GroupBox6.BackColor = System.Drawing.Color.AliceBlue
-        Me.GroupBox6.Controls.Add(Me.TextBox5)
-        Me.GroupBox6.Controls.Add(Me.Label12)
-        Me.GroupBox6.Controls.Add(Me.TextBox1)
-        Me.GroupBox6.Controls.Add(Me.Label11)
-        Me.GroupBox6.Controls.Add(Me.DateTimePicker2)
-        Me.GroupBox6.Controls.Add(Me.Label4)
-        Me.GroupBox6.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox6.Controls.Add(Me.TextBox2)
-        Me.GroupBox6.Controls.Add(Me.ComboBox1)
-        Me.GroupBox6.Controls.Add(Me.Label2)
-        Me.GroupBox6.Controls.Add(Me.TextBox3)
-        Me.GroupBox6.Controls.Add(Me.ComboBox2)
-        Me.GroupBox6.Controls.Add(Me.TextBox4)
-        Me.GroupBox6.Controls.Add(Me.ComboBox3)
-        Me.GroupBox6.Controls.Add(Me.Label5)
-        Me.GroupBox6.Controls.Add(Me.Label6)
-        Me.GroupBox6.Controls.Add(Me.Label7)
-        Me.GroupBox6.Controls.Add(Me.Label8)
-        Me.GroupBox6.Controls.Add(Me.Label9)
-        Me.GroupBox6.Controls.Add(Me.Label10)
-        Me.GroupBox6.Location = New System.Drawing.Point(5, 59)
-        Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(592, 183)
-        Me.GroupBox6.TabIndex = 7
-        Me.GroupBox6.TabStop = False
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(404, 45)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(182, 20)
-        Me.DateTimePicker1.TabIndex = 15
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(404, 13)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(182, 20)
-        Me.TextBox2.TabIndex = 13
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(106, 154)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(182, 21)
-        Me.ComboBox1.TabIndex = 12
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(337, 16)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 13)
-        Me.Label2.TabIndex = 11
-        Me.Label2.Text = "Tác giả"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(106, 121)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(182, 20)
-        Me.TextBox3.TabIndex = 10
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(106, 84)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(182, 21)
-        Me.ComboBox2.TabIndex = 9
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(106, 48)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(182, 20)
-        Me.TextBox4.TabIndex = 8
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(106, 13)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(182, 21)
-        Me.ComboBox3.TabIndex = 7
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(337, 51)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(61, 13)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Ngày mượn"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(35, 157)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(45, 13)
-        Me.Label6.TabIndex = 4
-        Me.Label6.Text = "Thể loại"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(35, 124)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(52, 13)
-        Me.Label7.TabIndex = 3
-        Me.Label7.Text = "Tên sách"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(35, 16)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(61, 13)
-        Me.Label8.TabIndex = 0
-        Me.Label8.Text = "Mã đọc giả"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(35, 87)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(48, 13)
-        Me.Label9.TabIndex = 2
-        Me.Label9.Text = "Mã sách"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(35, 51)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(65, 13)
-        Me.Label10.TabIndex = 1
-        Me.Label10.Text = "Tên đọc giả"
-        '
-        'lbStatus
-        '
-        Me.lbStatus.AutoSize = True
-        Me.lbStatus.Location = New System.Drawing.Point(337, 124)
-        Me.lbStatus.Name = "lbStatus"
-        Me.lbStatus.Size = New System.Drawing.Size(55, 13)
-        Me.lbStatus.TabIndex = 16
-        Me.lbStatus.Text = "Tình trạng"
-        '
-        'cbStatusID
-        '
-        Me.cbStatusID.FormattingEnabled = True
-        Me.cbStatusID.Location = New System.Drawing.Point(404, 121)
-        Me.cbStatusID.Name = "cbStatusID"
-        Me.cbStatusID.Size = New System.Drawing.Size(182, 21)
-        Me.cbStatusID.TabIndex = 17
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(337, 123)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
-        Me.Label4.TabIndex = 16
-        Me.Label4.Text = "Label4"
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(404, 118)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(182, 20)
-        Me.DateTimePicker2.TabIndex = 17
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(337, 87)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(61, 13)
-        Me.Label11.TabIndex = 18
-        Me.Label11.Text = "Ngày mượn"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(404, 84)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(182, 20)
-        Me.TextBox1.TabIndex = 19
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(337, 157)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(45, 13)
-        Me.Label12.TabIndex = 20
-        Me.Label12.Text = "Label12"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(404, 154)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(182, 20)
-        Me.TextBox5.TabIndex = 21
+        Me.Label3.Text = "Chi tiết phiếu mượn trả sách"
+        '
+        'TVDataBsDataSet5
+        '
+        Me.TVDataBsDataSet5.DataSetName = "TVDataBsDataSet5"
+        Me.TVDataBsDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TblCHITIETPHIEUMUONBindingSource
+        '
+        Me.TblCHITIETPHIEUMUONBindingSource.DataMember = "tblCHITIETPHIEUMUON"
+        Me.TblCHITIETPHIEUMUONBindingSource.DataSource = Me.TVDataBsDataSet5
+        '
+        'TblCHITIETPHIEUMUONTableAdapter
+        '
+        Me.TblCHITIETPHIEUMUONTableAdapter.ClearBeforeFill = True
+        '
+        'maphieumuon
+        '
+        Me.maphieumuon.DataPropertyName = "maphieumuon"
+        Me.maphieumuon.HeaderText = "Mã phiếu mượn"
+        Me.maphieumuon.Name = "maphieumuon"
+        Me.maphieumuon.ReadOnly = True
+        '
+        'madocgia
+        '
+        Me.madocgia.DataPropertyName = "madocgia"
+        Me.madocgia.HeaderText = "Mã đọc giả"
+        Me.madocgia.Name = "madocgia"
+        Me.madocgia.ReadOnly = True
+        '
+        'hoten
+        '
+        Me.hoten.DataPropertyName = "hoten"
+        Me.hoten.HeaderText = "Họ tên"
+        Me.hoten.Name = "hoten"
+        Me.hoten.ReadOnly = True
+        '
+        'masach
+        '
+        Me.masach.DataPropertyName = "masach"
+        Me.masach.HeaderText = "Mã sách"
+        Me.masach.Name = "masach"
+        Me.masach.ReadOnly = True
+        '
+        'tensach
+        '
+        Me.tensach.DataPropertyName = "tensach"
+        Me.tensach.HeaderText = "Tên sách"
+        Me.tensach.Name = "tensach"
+        Me.tensach.ReadOnly = True
+        '
+        'matheloai
+        '
+        Me.matheloai.DataPropertyName = "matheloai"
+        Me.matheloai.HeaderText = "Mã thể loại"
+        Me.matheloai.Name = "matheloai"
+        Me.matheloai.ReadOnly = True
+        '
+        'matacgia
+        '
+        Me.matacgia.DataPropertyName = "matacgia"
+        Me.matacgia.HeaderText = "Mã tác giả"
+        Me.matacgia.Name = "matacgia"
+        Me.matacgia.ReadOnly = True
+        '
+        'ngaymuon
+        '
+        Me.ngaymuon.DataPropertyName = "ngaymuon"
+        Me.ngaymuon.HeaderText = "Ngày mượn"
+        Me.ngaymuon.Name = "ngaymuon"
+        Me.ngaymuon.ReadOnly = True
+        '
+        'soluongmuon
+        '
+        Me.soluongmuon.DataPropertyName = "soluongmuon"
+        Me.soluongmuon.HeaderText = "Số lượng mượn"
+        Me.soluongmuon.Name = "soluongmuon"
+        Me.soluongmuon.ReadOnly = True
+        '
+        'ngaytra
+        '
+        Me.ngaytra.DataPropertyName = "ngaytra"
+        Me.ngaytra.HeaderText = "Ngày trả"
+        Me.ngaytra.Name = "ngaytra"
+        Me.ngaytra.ReadOnly = True
+        '
+        'xacnhantra
+        '
+        Me.xacnhantra.DataPropertyName = "xacnhantra"
+        Me.xacnhantra.HeaderText = "Xác nhận trả"
+        Me.xacnhantra.Name = "xacnhantra"
+        Me.xacnhantra.ReadOnly = True
+        '
+        'ghichu
+        '
+        Me.ghichu.DataPropertyName = "ghichu"
+        Me.ghichu.HeaderText = "Ghi chú"
+        Me.ghichu.Name = "ghichu"
+        Me.ghichu.ReadOnly = True
         '
         'frmMuonTraSach
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(793, 507)
-        Me.Controls.Add(Me.Muonsach_TabControl)
+        Me.ClientSize = New System.Drawing.Size(774, 507)
+        Me.Controls.Add(Me.dgvPhieuMuonTra)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Name = "frmMuonTraSach"
         Me.Text = "frmMuonTraSach"
-        Me.Muonsach_TabControl.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvPhieuMuonTra, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox4.ResumeLayout(False)
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox5.PerformLayout()
-        Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox6.PerformLayout()
+        CType(Me.TVDataBsDataSet5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblCHITIETPHIEUMUONBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Muonsach_TabControl As TabControl
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents lbReaderName As Label
-    Friend WithEvents lbReaderID As Label
-    Friend WithEvents GroupBox2 As GroupBox
-    Public WithEvents Label3 As Label
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents lbMaSach As Label
-    Friend WithEvents txtBookName As TextBox
-    Friend WithEvents cbBookID As ComboBox
-    Friend WithEvents txtReaderName As TextBox
-    Friend WithEvents cbReaderID As ComboBox
-    Friend WithEvents lbSoLuong As Label
-    Friend WithEvents lbNgayMuon As Label
-    Friend WithEvents lbTheLoai As Label
-    Friend WithEvents lbTenSach As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents dtpDayCreate As DateTimePicker
-    Friend WithEvents txtNumbers As TextBox
-    Friend WithEvents txtAuthor As TextBox
-    Friend WithEvents cbBookKindID As ComboBox
-    Friend WithEvents lbAuthor As Label
+    Friend WithEvents txbGhiChu As TextBox
+    Friend WithEvents dtpNgayTra As DateTimePicker
+    Friend WithEvents txbSoLuongmuon As TextBox
+    Friend WithEvents dtpNgayMuon As DateTimePicker
+    Friend WithEvents txbTacGia As TextBox
+    Friend WithEvents cbTheLoai As ComboBox
+    Friend WithEvents cbXacNhanTra As ComboBox
+    Friend WithEvents txbTenSach As TextBox
+    Friend WithEvents cbMaSach As ComboBox
+    Friend WithEvents txbTenDocGia As TextBox
+    Friend WithEvents dgvPhieuMuonTra As DataGridView
     Friend WithEvents btDelete As Button
+    Friend WithEvents cbMaDocGia As ComboBox
+    Friend WithEvents txbMaPhieuMuon As TextBox
+    Friend WithEvents lbMaPhieuMuon As Label
+    Friend WithEvents lbGhiChu As Label
+    Friend WithEvents lbXacNhanTra As Label
+    Friend WithEvents lbNgaytra As Label
+    Friend WithEvents lbAuthor As Label
     Friend WithEvents btUpdate As Button
     Friend WithEvents btAdd As Button
-    Friend WithEvents cbStatusID As ComboBox
-    Friend WithEvents lbStatus As Label
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents GroupBox5 As GroupBox
-    Public WithEvents Label1 As Label
-    Friend WithEvents GroupBox6 As GroupBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label11 As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents Label4 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
+    Friend WithEvents lbSoLuongmuon As Label
+    Friend WithEvents lbNgayMuon As Label
+    Friend WithEvents lbTheLoai As Label
+    Friend WithEvents lbReaderID As Label
+    Friend WithEvents lbMaSach As Label
+    Friend WithEvents lbReaderName As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents lbTenSach As Label
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Public WithEvents Label3 As Label
+    Friend WithEvents TVDataBsDataSet5 As TVDataBsDataSet5
+    Friend WithEvents TblCHITIETPHIEUMUONBindingSource As BindingSource
+    Friend WithEvents TblCHITIETPHIEUMUONTableAdapter As TVDataBsDataSet5TableAdapters.tblCHITIETPHIEUMUONTableAdapter
+    Friend WithEvents maphieumuon As DataGridViewTextBoxColumn
+    Friend WithEvents madocgia As DataGridViewTextBoxColumn
+    Friend WithEvents hoten As DataGridViewTextBoxColumn
+    Friend WithEvents masach As DataGridViewTextBoxColumn
+    Friend WithEvents tensach As DataGridViewTextBoxColumn
+    Friend WithEvents matheloai As DataGridViewTextBoxColumn
+    Friend WithEvents matacgia As DataGridViewTextBoxColumn
+    Friend WithEvents ngaymuon As DataGridViewTextBoxColumn
+    Friend WithEvents soluongmuon As DataGridViewTextBoxColumn
+    Friend WithEvents ngaytra As DataGridViewTextBoxColumn
+    Friend WithEvents xacnhantra As DataGridViewTextBoxColumn
+    Friend WithEvents ghichu As DataGridViewTextBoxColumn
 End Class

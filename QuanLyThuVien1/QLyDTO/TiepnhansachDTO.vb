@@ -6,9 +6,9 @@
     Private intPublishingDate As Date
     Private strPublishingHouseID As String
     Private intReceiptDate As Date
-    Private intValue As Integer
+    Private strValue As String
     Private strStatusID As String
-    Private intNumbers As Integer
+    Private strNumbers As String
 
     Public Property BookName As String
         Get
@@ -73,12 +73,12 @@
         End Set
     End Property
 
-    Public Property Value As Integer
+    Public Property Value As String
         Get
-            Return intValue
+            Return strValue
         End Get
-        Set(value As Integer)
-            intValue = value
+        Set(value As String)
+            strValue = value
         End Set
     End Property
 
@@ -91,12 +91,12 @@
         End Set
     End Property
 
-    Public Property Numbers As Integer
+    Public Property Numbers As String
         Get
-            Return intNumbers
+            Return strNumbers
         End Get
-        Set(value As Integer)
-            intNumbers = value
+        Set(value As String)
+            strNumbers = value
         End Set
     End Property
 End Class

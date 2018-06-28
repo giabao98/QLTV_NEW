@@ -63,9 +63,9 @@ Public Class frmTiepnhanSach
         ts.BookName = txbBookName.Text
         ts.BookKindID = cbBookKindID.Text
         ts.AuthorID = cbAuthorID.Text
-        ts.PublishingDate = dtpPublishingYear.Text
+        ts.PublishingDate = dtpPublishingYear.Value
         ts.PublishingHouseID = cbPublishingHouseID.Text
-        ts.ReceiptDate = dtpReceiptDate.Text
+        ts.ReceiptDate = dtpReceiptDate.Value
         ts.Value = txbValue.Text
         ts.StatusID = cbStatusID.Text
         ts.Numbers = txtNumbers.Text
@@ -73,61 +73,61 @@ Public Class frmTiepnhanSach
         '2. Business .... kiem tra cac textbox du lieu nhap
         Dim tsbus As New TiepnhansachBUS
         If (tsbus.ValidBookID(ts) = False) Then
-            MessageBox.Show("Ma sach chua duoc nhap")
+            MessageBox.Show("Mã sách chưa được nhập!")
             cbBookID.Focus()
             Return
         End If
 
         If (tsbus.ValidBookName(ts) = False) Then
-            MessageBox.Show("Ten sach chua duoc nhap")
+            MessageBox.Show("Tên sách chưa được nhập!")
             txbBookName.Focus()
             Return
         End If
 
         If (tsbus.ValidBookKindID(ts) = False) Then
-            MessageBox.Show("Ma the loai chua duoc nhap")
+            MessageBox.Show("Thể loại chưa được nhập!")
             cbBookKindID.Focus()
             Return
         End If
 
         If (tsbus.ValidAuthorID(ts) = False) Then
-            MessageBox.Show("Ma tac gia chua duoc nhap")
+            MessageBox.Show("Mã tác giả chưa được nhập!")
             cbAuthorID.Focus()
             Return
         End If
 
         If (tsbus.ValidPublishingDate(ts) = False) Then
-            MessageBox.Show("Nam san xuat chua duoc nhap")
+            MessageBox.Show("Năm xuất bản chưa được nhập!")
             dtpPublishingYear.Focus()
             Return
         End If
 
         If (tsbus.ValidPublishingHouseID(ts) = False) Then
-            MessageBox.Show("Ma nha san xuat chua duoc nhap")
+            MessageBox.Show("Nhà xuất bản chưa được nhập!")
             cbPublishingHouseID.Focus()
             Return
         End If
 
         If (tsbus.ValidReceiptDate(ts) = False) Then
-            MessageBox.Show("Ngay nhap sach chua duoc nhap")
+            MessageBox.Show("Ngày nhập sách chưa được nhập!")
             dtpReceiptDate.Focus()
             Return
         End If
 
         If (tsbus.ValidValue(ts) = False) Then
-            MessageBox.Show("Tri gia chua duoc nhap")
+            MessageBox.Show("Trị giá sách chưa được nhập!")
             txbValue.Focus()
             Return
         End If
 
         If (tsbus.ValidStatusID(ts) = False) Then
-            MessageBox.Show("Ma hien trang sach chua duoc nhap")
+            MessageBox.Show("Hiện trạng sách chưa được nhập!")
             cbStatusID.Focus()
             Return
         End If
 
         If (tsbus.ValidNumbers(ts) = False) Then
-            MessageBox.Show("So luong sach chua duoc nhap")
+            MessageBox.Show("Số lượng chưa được nhập!")
             txtNumbers.Focus()
             Return
         End If
@@ -137,9 +137,9 @@ Public Class frmTiepnhanSach
         Dim result As Integer
         result = tsdal.ThemSach(ts)
         If (result = 0) Then
-            MessageBox.Show("Them sach thanh cong.")
+            MessageBox.Show("Thêm sách thành công.")
         Else
-            MessageBox.Show("Them sach that bai.")
+            MessageBox.Show("Thêm sách thất bại, trường dữ liệu TRỊ GIÁ và SỐ LƯỢNG phải là kiểu dữ liệu SỐ!")
         End If
         Me.TblSACHTableAdapter.Fill(Me.TVDataBsDataSet2.tblSACH)
         resetData(ts)
@@ -154,9 +154,9 @@ Public Class frmTiepnhanSach
         ts.BookName = txbBookName.Text
         ts.BookKindID = cbBookKindID.Text
         ts.AuthorID = cbAuthorID.Text
-        ts.PublishingDate = dtpPublishingYear.Text
+        ts.PublishingDate = dtpPublishingYear.Value
         ts.PublishingHouseID = cbPublishingHouseID.Text
-        ts.ReceiptDate = dtpReceiptDate.Text
+        ts.ReceiptDate = dtpReceiptDate.Value
         ts.Value = txbValue.Text
         ts.StatusID = cbStatusID.Text
         ts.Numbers = txtNumbers.Text
@@ -164,61 +164,61 @@ Public Class frmTiepnhanSach
         '2. Business .... kiem tra cac textbox du lieu nhap
         Dim tsbus As New TiepnhansachBUS
         If (tsbus.ValidBookID(ts) = False) Then
-            MessageBox.Show("Ma sach chua duoc nhap")
+            MessageBox.Show("Mã sách chưa được nhập!")
             cbBookID.Focus()
             Return
         End If
 
         If (tsbus.ValidBookName(ts) = False) Then
-            MessageBox.Show("Ten sach chua duoc nhap")
+            MessageBox.Show("Tên sách chưa được nhập!")
             txbBookName.Focus()
             Return
         End If
 
         If (tsbus.ValidBookKindID(ts) = False) Then
-            MessageBox.Show("Ma the loai chua duoc nhap")
+            MessageBox.Show("Thể loại chưa được nhập!")
             cbBookKindID.Focus()
             Return
         End If
 
         If (tsbus.ValidAuthorID(ts) = False) Then
-            MessageBox.Show("Ma tac gia chua duoc nhap")
+            MessageBox.Show("Mã tác giả chưa được nhập!")
             cbAuthorID.Focus()
             Return
         End If
 
         If (tsbus.ValidPublishingDate(ts) = False) Then
-            MessageBox.Show("Nam san xuat chua duoc nhap")
+            MessageBox.Show("Năm xuất bản chưa được nhập!")
             dtpPublishingYear.Focus()
             Return
         End If
 
         If (tsbus.ValidPublishingHouseID(ts) = False) Then
-            MessageBox.Show("Ma nha san xuat chua duoc nhap")
+            MessageBox.Show("Nhà xuất bản chưa được nhập!")
             cbPublishingHouseID.Focus()
             Return
         End If
 
         If (tsbus.ValidReceiptDate(ts) = False) Then
-            MessageBox.Show("Ngay nhap sach chua duoc nhap")
+            MessageBox.Show("Ngày nhập sách chưa được nhập!")
             dtpReceiptDate.Focus()
             Return
         End If
 
         If (tsbus.ValidValue(ts) = False) Then
-            MessageBox.Show("Tri gia chua duoc nhap")
+            MessageBox.Show("Trị giá sách chưa được nhập!")
             txbValue.Focus()
             Return
         End If
 
         If (tsbus.ValidStatusID(ts) = False) Then
-            MessageBox.Show("Ma hien trang sach chua duoc nhap")
+            MessageBox.Show("Hiện trạng sách chưa được nhập!")
             cbStatusID.Focus()
             Return
         End If
 
         If (tsbus.ValidNumbers(ts) = False) Then
-            MessageBox.Show("So luong sach chua duoc nhap")
+            MessageBox.Show("Số lượng chưa được nhập!")
             txtNumbers.Focus()
             Return
         End If
@@ -228,9 +228,9 @@ Public Class frmTiepnhanSach
         Dim result As Integer
         result = tsdal.CapNhatSach(ts)
         If (result = 0) Then
-            MessageBox.Show("Cap nhat sach thanh cong.")
+            MessageBox.Show("Cập nhật sách thành công.")
         Else
-            MessageBox.Show("Cap nhat sach that bai.")
+            MessageBox.Show("Cập nhật sách thất bại, trường dữ liệu TRỊ GIÁ và SỐ LƯỢNG phải là kiểu dữ liệu SỐ!")
         End If
         Me.TblSACHTableAdapter.Fill(Me.TVDataBsDataSet2.tblSACH)
         resetData(ts)
@@ -245,9 +245,9 @@ Public Class frmTiepnhanSach
         ts.BookName = txbBookName.Text
         ts.BookKindID = cbBookKindID.Text
         ts.AuthorID = cbAuthorID.Text
-        ts.PublishingDate = dtpPublishingYear.Text
+        ts.PublishingDate = dtpPublishingYear.Value
         ts.PublishingHouseID = cbPublishingHouseID.Text
-        ts.ReceiptDate = dtpReceiptDate.Text
+        ts.ReceiptDate = dtpReceiptDate.Value
         ts.Value = txbValue.Text
         ts.StatusID = cbStatusID.Text
         ts.Numbers = txtNumbers.Text
@@ -257,9 +257,9 @@ Public Class frmTiepnhanSach
         Dim result As Integer
         result = tsdal.XoaSach(ts)
         If (result = 0) Then
-            MessageBox.Show("Xoa sach thanh cong.")
+            MessageBox.Show("Xóa sách thành công.")
         Else
-            MessageBox.Show("Xoa sach that bai.")
+            MessageBox.Show("Xóa sách thất bại!")
         End If
         Me.TblSACHTableAdapter.Fill(Me.TVDataBsDataSet2.tblSACH)
         resetData(ts)
