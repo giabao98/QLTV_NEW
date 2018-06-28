@@ -13,6 +13,12 @@ Public Class frmReport
         If (rbtnSoLanDGMuonSach.Checked) Then
             report.KiHieu = 2
         End If
+
+        Dim rpDAL As New ReportDAL
+        Dim result As Integer
+
+        result = rpDAL.LoadData2DataGridView(dgvReaderReport, report)
+
     End Sub
 
     Private Sub btnReport1_Click(sender As Object, e As EventArgs) Handles btnReport1.Click
@@ -25,5 +31,10 @@ Public Class frmReport
         If (rbtnSachChuaDuocMuon.Checked) Then
             report.KiHieu = 5
         End If
+
+        Dim rpDAL As New ReportDAL
+        Dim result As Integer
+
+        result = rpDAL.LoadData2DataGridView(dgvBookReport, report)
     End Sub
 End Class
