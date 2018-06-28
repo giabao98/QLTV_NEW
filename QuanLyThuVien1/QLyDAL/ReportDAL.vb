@@ -18,23 +18,11 @@ Public Class ReportDAL
 
     Public Function LoadData2DataGridView(dgv As DataGridView, report As ReportDTO)
         Dim strFind As String = ""
-        If (report.KiHieu = 0) Then
-            strFind = " "
-        End If
         If (report.KiHieu = 1) Then
-            strFind = " "
+            strFind = "select* from tblSACH where sosachhong > 0"
         End If
         If (report.KiHieu = 2) Then
-            strFind = " "
-        End If
-        If (report.KiHieu = 3) Then
-            strFind = "select* from tblSACH where sosachhong > 0; "
-        End If
-        If (report.KiHieu = 4) Then
-            strFind = " "
-        End If
-        If (report.KiHieu = 5) Then
-            strFind = " "
+            strFind = "select a.masach, tensach, count(*) as SoLanMuon from tblCHITIETPHIEUMUON a inner join tblSACH b on a.masach = b.tensach group by a.masach, tensach "
         End If
 
         dt.Clear()
