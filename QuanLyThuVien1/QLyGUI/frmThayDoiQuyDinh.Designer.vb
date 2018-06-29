@@ -26,7 +26,7 @@ Partial Class frmThayDoiQuyDinh
         Me.gbThayDoiQuyDinh = New System.Windows.Forms.GroupBox()
         Me.btnQuyDinhMuonSach = New System.Windows.Forms.Button()
         Me.btnQuyDinhDocGia = New System.Windows.Forms.Button()
-        Me.btnLoaiDocGia = New System.Windows.Forms.Button()
+        Me.btnQuyDinhTheLoaiSach = New System.Windows.Forms.Button()
         Me.gbThayDoiQuyDinh.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,7 +45,7 @@ Partial Class frmThayDoiQuyDinh
         '
         Me.gbThayDoiQuyDinh.Controls.Add(Me.btnQuyDinhMuonSach)
         Me.gbThayDoiQuyDinh.Controls.Add(Me.btnQuyDinhDocGia)
-        Me.gbThayDoiQuyDinh.Controls.Add(Me.btnLoaiDocGia)
+        Me.gbThayDoiQuyDinh.Controls.Add(Me.btnQuyDinhTheLoaiSach)
         Me.gbThayDoiQuyDinh.Location = New System.Drawing.Point(16, 59)
         Me.gbThayDoiQuyDinh.Margin = New System.Windows.Forms.Padding(4)
         Me.gbThayDoiQuyDinh.Name = "gbThayDoiQuyDinh"
@@ -58,7 +58,7 @@ Partial Class frmThayDoiQuyDinh
         '
         Me.btnQuyDinhMuonSach.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnQuyDinhMuonSach.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnQuyDinhMuonSach.Location = New System.Drawing.Point(314, 23)
+        Me.btnQuyDinhMuonSach.Location = New System.Drawing.Point(165, 23)
         Me.btnQuyDinhMuonSach.Margin = New System.Windows.Forms.Padding(4)
         Me.btnQuyDinhMuonSach.Name = "btnQuyDinhMuonSach"
         Me.btnQuyDinhMuonSach.Size = New System.Drawing.Size(129, 79)
@@ -70,7 +70,7 @@ Partial Class frmThayDoiQuyDinh
         '
         Me.btnQuyDinhDocGia.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnQuyDinhDocGia.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnQuyDinhDocGia.Location = New System.Drawing.Point(157, 23)
+        Me.btnQuyDinhDocGia.Location = New System.Drawing.Point(25, 23)
         Me.btnQuyDinhDocGia.Margin = New System.Windows.Forms.Padding(4)
         Me.btnQuyDinhDocGia.Name = "btnQuyDinhDocGia"
         Me.btnQuyDinhDocGia.Size = New System.Drawing.Size(129, 79)
@@ -78,17 +78,17 @@ Partial Class frmThayDoiQuyDinh
         Me.btnQuyDinhDocGia.Text = "Tuổi đọc giả và hạn sử dụng thẻ"
         Me.btnQuyDinhDocGia.UseVisualStyleBackColor = False
         '
-        'btnLoaiDocGia
+        'btnQuyDinhTheLoaiSach
         '
-        Me.btnLoaiDocGia.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnLoaiDocGia.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLoaiDocGia.Location = New System.Drawing.Point(8, 23)
-        Me.btnLoaiDocGia.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnLoaiDocGia.Name = "btnLoaiDocGia"
-        Me.btnLoaiDocGia.Size = New System.Drawing.Size(129, 79)
-        Me.btnLoaiDocGia.TabIndex = 0
-        Me.btnLoaiDocGia.Text = "Loại đọc giả"
-        Me.btnLoaiDocGia.UseVisualStyleBackColor = False
+        Me.btnQuyDinhTheLoaiSach.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnQuyDinhTheLoaiSach.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnQuyDinhTheLoaiSach.Location = New System.Drawing.Point(305, 23)
+        Me.btnQuyDinhTheLoaiSach.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnQuyDinhTheLoaiSach.Name = "btnQuyDinhTheLoaiSach"
+        Me.btnQuyDinhTheLoaiSach.Size = New System.Drawing.Size(129, 79)
+        Me.btnQuyDinhTheLoaiSach.TabIndex = 0
+        Me.btnQuyDinhTheLoaiSach.Text = "Thể loại sách"
+        Me.btnQuyDinhTheLoaiSach.UseVisualStyleBackColor = False
         '
         'frmThayDoiQuyDinh
         '
@@ -109,7 +109,7 @@ Partial Class frmThayDoiQuyDinh
 
     Friend WithEvents lbThayDoiQuyDinh As Label
     Friend WithEvents gbThayDoiQuyDinh As GroupBox
-    Friend WithEvents btnLoaiDocGia As Button
+    Friend WithEvents btnQuyDinhTheLoaiSach As Button
     Friend WithEvents btnQuyDinhMuonSach As Button
     Friend WithEvents btnQuyDinhDocGia As Button
 End Class

@@ -87,6 +87,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="QuyDinhDocGiaDAL.vb" />
+    <Compile Include="QuyDinhMuonSachDAL.vb" />
     <Compile Include="ReportDAL.vb" />
     <Compile Include="TiepnhansachDAL.vb" />
   </ItemGroup>

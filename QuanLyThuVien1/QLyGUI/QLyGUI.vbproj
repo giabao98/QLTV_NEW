@@ -100,10 +100,10 @@
     <Compile Include="frmLapthe.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLoaiDocGia.Designer.vb">
-      <DependentUpon>frmLoaiDocGia.vb</DependentUpon>
+    <Compile Include="frmQuyDinhTheLoaiSach.Designer.vb">
+      <DependentUpon>frmQuyDinhTheLoaiSach.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmLoaiDocGia.vb">
+    <Compile Include="frmQuyDinhTheLoaiSach.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.vb">
@@ -214,8 +214,8 @@
     <EmbeddedResource Include="frmLapthe.resx">
       <DependentUpon>frmLapthe.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLoaiDocGia.resx">
-      <DependentUpon>frmLoaiDocGia.vb</DependentUpon>
+    <EmbeddedResource Include="frmQuyDinhTheLoaiSach.resx">
+      <DependentUpon>frmQuyDinhTheLoaiSach.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>

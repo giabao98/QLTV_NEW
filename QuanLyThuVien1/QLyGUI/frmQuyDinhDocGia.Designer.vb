@@ -24,16 +24,17 @@ Partial Class frmQuyDinhDocGia
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmQuyDinhDocGia))
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Update_button = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txbTenLoaiDocGia = New System.Windows.Forms.TextBox()
+        Me.txbHanSuDung = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txbTuoiToiDa = New System.Windows.Forms.TextBox()
         Me.lbTenLoaiDocGia = New System.Windows.Forms.Label()
-        Me.txbMaLoaiDocGia = New System.Windows.Forms.TextBox()
+        Me.txbTuoiToiThieu = New System.Windows.Forms.TextBox()
         Me.lbMaLoaiDocGia = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -42,7 +43,7 @@ Partial Class frmQuyDinhDocGia
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.Color.AliceBlue
-        Me.GroupBox3.Controls.Add(Me.Update_button)
+        Me.GroupBox3.Controls.Add(Me.btnUpdate)
         Me.GroupBox3.Location = New System.Drawing.Point(406, 94)
         Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
@@ -52,28 +53,29 @@ Partial Class frmQuyDinhDocGia
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Chức năng"
         '
-        'Update_button
+        'btnUpdate
         '
-        Me.Update_button.BackColor = System.Drawing.Color.LightGreen
-        Me.Update_button.Image = CType(resources.GetObject("Update_button.Image"), System.Drawing.Image)
-        Me.Update_button.Location = New System.Drawing.Point(27, 71)
-        Me.Update_button.Margin = New System.Windows.Forms.Padding(4)
-        Me.Update_button.Name = "Update_button"
-        Me.Update_button.Size = New System.Drawing.Size(111, 37)
-        Me.Update_button.TabIndex = 32
-        Me.Update_button.Text = "Cập nhật"
-        Me.Update_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Update_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Update_button.UseVisualStyleBackColor = False
+        Me.btnUpdate.BackColor = System.Drawing.Color.LightGreen
+        Me.btnUpdate.Image = CType(resources.GetObject("btnUpdate.Image"), System.Drawing.Image)
+        Me.btnUpdate.Location = New System.Drawing.Point(27, 71)
+        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(111, 37)
+        Me.btnUpdate.TabIndex = 32
+        Me.btnUpdate.Text = "Cập nhật"
+        Me.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnUpdate.UseVisualStyleBackColor = False
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.AliceBlue
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.txbHanSuDung)
         Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.txbTenLoaiDocGia)
+        Me.GroupBox2.Controls.Add(Me.txbTuoiToiDa)
         Me.GroupBox2.Controls.Add(Me.lbTenLoaiDocGia)
-        Me.GroupBox2.Controls.Add(Me.txbMaLoaiDocGia)
+        Me.GroupBox2.Controls.Add(Me.txbTuoiToiThieu)
         Me.GroupBox2.Controls.Add(Me.lbMaLoaiDocGia)
         Me.GroupBox2.Location = New System.Drawing.Point(13, 94)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
@@ -84,13 +86,31 @@ Partial Class frmQuyDinhDocGia
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Thông tin chi tiết"
         '
-        'txbTenLoaiDocGia
+        'txbHanSuDung
         '
-        Me.txbTenLoaiDocGia.Location = New System.Drawing.Point(136, 86)
-        Me.txbTenLoaiDocGia.Margin = New System.Windows.Forms.Padding(4)
-        Me.txbTenLoaiDocGia.Name = "txbTenLoaiDocGia"
-        Me.txbTenLoaiDocGia.Size = New System.Drawing.Size(205, 22)
-        Me.txbTenLoaiDocGia.TabIndex = 21
+        Me.txbHanSuDung.Location = New System.Drawing.Point(136, 129)
+        Me.txbHanSuDung.Margin = New System.Windows.Forms.Padding(4)
+        Me.txbHanSuDung.Name = "txbHanSuDung"
+        Me.txbHanSuDung.Size = New System.Drawing.Size(205, 22)
+        Me.txbHanSuDung.TabIndex = 23
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(8, 133)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(117, 17)
+        Me.Label2.TabIndex = 22
+        Me.Label2.Text = "Hạn sử dụng thẻ:"
+        '
+        'txbTuoiToiDa
+        '
+        Me.txbTuoiToiDa.Location = New System.Drawing.Point(136, 86)
+        Me.txbTuoiToiDa.Margin = New System.Windows.Forms.Padding(4)
+        Me.txbTuoiToiDa.Name = "txbTuoiToiDa"
+        Me.txbTuoiToiDa.Size = New System.Drawing.Size(205, 22)
+        Me.txbTuoiToiDa.TabIndex = 21
         '
         'lbTenLoaiDocGia
         '
@@ -102,13 +122,13 @@ Partial Class frmQuyDinhDocGia
         Me.lbTenLoaiDocGia.TabIndex = 20
         Me.lbTenLoaiDocGia.Text = "Tuổi tối đa:"
         '
-        'txbMaLoaiDocGia
+        'txbTuoiToiThieu
         '
-        Me.txbMaLoaiDocGia.Location = New System.Drawing.Point(136, 43)
-        Me.txbMaLoaiDocGia.Margin = New System.Windows.Forms.Padding(4)
-        Me.txbMaLoaiDocGia.Name = "txbMaLoaiDocGia"
-        Me.txbMaLoaiDocGia.Size = New System.Drawing.Size(205, 22)
-        Me.txbMaLoaiDocGia.TabIndex = 19
+        Me.txbTuoiToiThieu.Location = New System.Drawing.Point(136, 43)
+        Me.txbTuoiToiThieu.Margin = New System.Windows.Forms.Padding(4)
+        Me.txbTuoiToiThieu.Name = "txbTuoiToiThieu"
+        Me.txbTuoiToiThieu.Size = New System.Drawing.Size(205, 22)
+        Me.txbTuoiToiThieu.TabIndex = 19
         '
         'lbMaLoaiDocGia
         '
@@ -144,25 +164,17 @@ Partial Class frmQuyDinhDocGia
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Quy định độc giả"
         '
-        'TextBox1
+        'Label3
         '
-        Me.TextBox1.Location = New System.Drawing.Point(136, 129)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(205, 22)
-        Me.TextBox1.TabIndex = 23
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(294, 132)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(37, 17)
+        Me.Label3.TabIndex = 24
+        Me.Label3.Text = "Năm"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(8, 133)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(117, 17)
-        Me.Label2.TabIndex = 22
-        Me.Label2.Text = "Hạn sử dụng thẻ:"
-        '
-        'frmQuyDinhDoTuoi
+        'frmQuyDinhDocGia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -170,7 +182,7 @@ Partial Class frmQuyDinhDocGia
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "frmQuyDinhDoTuoi"
+        Me.Name = "frmQuyDinhDocGia"
         Me.Text = "frmQuyDinhDoTuoi"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
@@ -181,14 +193,15 @@ Partial Class frmQuyDinhDocGia
 
     End Sub
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Update_button As Button
+    Friend WithEvents btnUpdate As Button
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents txbTenLoaiDocGia As TextBox
+    Friend WithEvents txbTuoiToiDa As TextBox
     Friend WithEvents lbTenLoaiDocGia As Label
-    Friend WithEvents txbMaLoaiDocGia As TextBox
+    Friend WithEvents txbTuoiToiThieu As TextBox
     Friend WithEvents lbMaLoaiDocGia As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txbHanSuDung As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class

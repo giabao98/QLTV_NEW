@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmLoaiDocGia
+Partial Class frmQuyDinhTheLoaiSach
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,7 +23,7 @@ Partial Class frmLoaiDocGia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLoaiDocGia))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmQuyDinhTheLoaiSach))
         Me.dgvLoaiDocGia = New System.Windows.Forms.DataGridView()
         Me.MaloaidocgiaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TenloaidocgiaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -57,10 +57,11 @@ Partial Class frmLoaiDocGia
         Me.dgvLoaiDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvLoaiDocGia.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MaloaidocgiaDataGridViewTextBoxColumn, Me.TenloaidocgiaDataGridViewTextBoxColumn})
         Me.dgvLoaiDocGia.DataSource = Me.TblLOAIDOCGIABindingSource
-        Me.dgvLoaiDocGia.Location = New System.Drawing.Point(15, 223)
+        Me.dgvLoaiDocGia.Location = New System.Drawing.Point(20, 274)
+        Me.dgvLoaiDocGia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvLoaiDocGia.Name = "dgvLoaiDocGia"
         Me.dgvLoaiDocGia.ReadOnly = True
-        Me.dgvLoaiDocGia.Size = New System.Drawing.Size(415, 105)
+        Me.dgvLoaiDocGia.Size = New System.Drawing.Size(553, 129)
         Me.dgvLoaiDocGia.TabIndex = 38
         '
         'MaloaidocgiaDataGridViewTextBoxColumn
@@ -93,9 +94,10 @@ Partial Class frmLoaiDocGia
         '
         Me.Delete_button.BackColor = System.Drawing.Color.LightCoral
         Me.Delete_button.Image = CType(resources.GetObject("Delete_button.Image"), System.Drawing.Image)
-        Me.Delete_button.Location = New System.Drawing.Point(18, 100)
+        Me.Delete_button.Location = New System.Drawing.Point(24, 123)
+        Me.Delete_button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Delete_button.Name = "Delete_button"
-        Me.Delete_button.Size = New System.Drawing.Size(83, 30)
+        Me.Delete_button.Size = New System.Drawing.Size(111, 37)
         Me.Delete_button.TabIndex = 33
         Me.Delete_button.Text = "Xóa"
         Me.Delete_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -106,9 +108,10 @@ Partial Class frmLoaiDocGia
         '
         Me.Update_button.BackColor = System.Drawing.Color.LightGreen
         Me.Update_button.Image = CType(resources.GetObject("Update_button.Image"), System.Drawing.Image)
-        Me.Update_button.Location = New System.Drawing.Point(18, 64)
+        Me.Update_button.Location = New System.Drawing.Point(24, 79)
+        Me.Update_button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Update_button.Name = "Update_button"
-        Me.Update_button.Size = New System.Drawing.Size(83, 30)
+        Me.Update_button.Size = New System.Drawing.Size(111, 37)
         Me.Update_button.TabIndex = 32
         Me.Update_button.Text = "Cập nhật"
         Me.Update_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -120,9 +123,10 @@ Partial Class frmLoaiDocGia
         Me.Add_button.BackColor = System.Drawing.Color.LightGreen
         Me.Add_button.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Add_button.Image = CType(resources.GetObject("Add_button.Image"), System.Drawing.Image)
-        Me.Add_button.Location = New System.Drawing.Point(18, 28)
+        Me.Add_button.Location = New System.Drawing.Point(24, 34)
+        Me.Add_button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Add_button.Name = "Add_button"
-        Me.Add_button.Size = New System.Drawing.Size(83, 30)
+        Me.Add_button.Size = New System.Drawing.Size(111, 37)
         Me.Add_button.TabIndex = 31
         Me.Add_button.Text = "Thêm"
         Me.Add_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -135,9 +139,11 @@ Partial Class frmLoaiDocGia
         Me.GroupBox3.Controls.Add(Me.Delete_button)
         Me.GroupBox3.Controls.Add(Me.Update_button)
         Me.GroupBox3.Controls.Add(Me.Add_button)
-        Me.GroupBox3.Location = New System.Drawing.Point(310, 78)
+        Me.GroupBox3.Location = New System.Drawing.Point(413, 96)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(120, 139)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Size = New System.Drawing.Size(160, 171)
         Me.GroupBox3.TabIndex = 37
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Chức năng"
@@ -149,42 +155,48 @@ Partial Class frmLoaiDocGia
         Me.GroupBox2.Controls.Add(Me.lbTenLoaiDocGia)
         Me.GroupBox2.Controls.Add(Me.txbMaLoaiDocGia)
         Me.GroupBox2.Controls.Add(Me.lbMaLoaiDocGia)
-        Me.GroupBox2.Location = New System.Drawing.Point(15, 78)
+        Me.GroupBox2.Location = New System.Drawing.Point(20, 96)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(289, 139)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(385, 171)
         Me.GroupBox2.TabIndex = 36
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Thông tin chi tiết"
         '
         'txbTenLoaiDocGia
         '
-        Me.txbTenLoaiDocGia.Location = New System.Drawing.Point(102, 70)
+        Me.txbTenLoaiDocGia.Location = New System.Drawing.Point(136, 86)
+        Me.txbTenLoaiDocGia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txbTenLoaiDocGia.Name = "txbTenLoaiDocGia"
-        Me.txbTenLoaiDocGia.Size = New System.Drawing.Size(155, 20)
+        Me.txbTenLoaiDocGia.Size = New System.Drawing.Size(205, 22)
         Me.txbTenLoaiDocGia.TabIndex = 21
         '
         'lbTenLoaiDocGia
         '
         Me.lbTenLoaiDocGia.AutoSize = True
-        Me.lbTenLoaiDocGia.Location = New System.Drawing.Point(6, 73)
+        Me.lbTenLoaiDocGia.Location = New System.Drawing.Point(8, 90)
+        Me.lbTenLoaiDocGia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbTenLoaiDocGia.Name = "lbTenLoaiDocGia"
-        Me.lbTenLoaiDocGia.Size = New System.Drawing.Size(84, 13)
+        Me.lbTenLoaiDocGia.Size = New System.Drawing.Size(109, 17)
         Me.lbTenLoaiDocGia.TabIndex = 20
         Me.lbTenLoaiDocGia.Text = "Tên loại đọc giả"
         '
         'txbMaLoaiDocGia
         '
-        Me.txbMaLoaiDocGia.Location = New System.Drawing.Point(102, 35)
+        Me.txbMaLoaiDocGia.Location = New System.Drawing.Point(136, 43)
+        Me.txbMaLoaiDocGia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txbMaLoaiDocGia.Name = "txbMaLoaiDocGia"
-        Me.txbMaLoaiDocGia.Size = New System.Drawing.Size(155, 20)
+        Me.txbMaLoaiDocGia.Size = New System.Drawing.Size(205, 22)
         Me.txbMaLoaiDocGia.TabIndex = 19
         '
         'lbMaLoaiDocGia
         '
         Me.lbMaLoaiDocGia.AutoSize = True
-        Me.lbMaLoaiDocGia.Location = New System.Drawing.Point(6, 38)
+        Me.lbMaLoaiDocGia.Location = New System.Drawing.Point(8, 47)
+        Me.lbMaLoaiDocGia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbMaLoaiDocGia.Name = "lbMaLoaiDocGia"
-        Me.lbMaLoaiDocGia.Size = New System.Drawing.Size(80, 13)
+        Me.lbMaLoaiDocGia.Size = New System.Drawing.Size(103, 17)
         Me.lbMaLoaiDocGia.TabIndex = 18
         Me.lbMaLoaiDocGia.Text = "Mã loại độc giả"
         '
@@ -193,9 +205,10 @@ Partial Class frmLoaiDocGia
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(133, 16)
+        Me.Label1.Location = New System.Drawing.Point(177, 20)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(156, 29)
+        Me.Label1.Size = New System.Drawing.Size(189, 36)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Loại đọc giả"
         '
@@ -203,9 +216,11 @@ Partial Class frmLoaiDocGia
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.LightSeaGreen
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(15, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(20, 15)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(415, 60)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(553, 74)
         Me.GroupBox1.TabIndex = 35
         Me.GroupBox1.TabStop = False
         '
@@ -215,13 +230,14 @@ Partial Class frmLoaiDocGia
         '
         'frmLoaiDocGia
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(445, 339)
+        Me.ClientSize = New System.Drawing.Size(593, 417)
         Me.Controls.Add(Me.dgvLoaiDocGia)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmLoaiDocGia"
         Me.Text = "frmLoaiDocGia"
         CType(Me.dgvLoaiDocGia, System.ComponentModel.ISupportInitialize).EndInit()

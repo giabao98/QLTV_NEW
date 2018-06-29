@@ -2,7 +2,7 @@
 Imports QLyDAL
 Imports QLyDTO
 
-Public Class frmLoaiDocGia
+Public Class frmQuyDinhTheLoaiSach
     Private Sub frmLoaiDocGia_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'TVDataBsDataSet4.tblLOAIDOCGIA' table. You can move, or remove it, as needed.
         Me.TblLOAIDOCGIATableAdapter.Fill(Me.TVDataBsDataSet4.tblLOAIDOCGIA)

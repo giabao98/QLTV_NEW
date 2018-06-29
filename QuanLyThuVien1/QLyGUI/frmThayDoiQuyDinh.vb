@@ -1,6 +1,6 @@
 ﻿Public Class frmThayDoiQuyDinh
-    Private Sub btnLoaiDocGia_Click(sender As Object, e As EventArgs) Handles btnLoaiDocGia.Click
-        Dim ldg = New frmLoaiDocGia
+    Private Sub btnLoaiDocGia_Click(sender As Object, e As EventArgs) Handles btnQuyDinhTheLoaiSach.Click
+        Dim ldg = New frmQuyDinhTheLoaiSach
         ldg.ShowDialog()
     End Sub
 
