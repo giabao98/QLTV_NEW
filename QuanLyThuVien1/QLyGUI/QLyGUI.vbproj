@@ -125,10 +125,22 @@
     <Compile Include="frmMuonTraSach.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmQuyDinhDoTuoi.Designer.vb">
+      <DependentUpon>frmQuyDinhDoTuoi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuyDinhDoTuoi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmReport.Designer.vb">
       <DependentUpon>frmReport.vb</DependentUpon>
     </Compile>
     <Compile Include="frmReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThayDoiSoLuong.Designer.vb">
+      <DependentUpon>frmThayDoiSoLuong.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmThayDoiSoLuong.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
