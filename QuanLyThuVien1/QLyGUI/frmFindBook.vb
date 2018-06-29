@@ -4,30 +4,14 @@ Imports QLyDAL
 
 
 Public Class frmFindBook
-    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs)
+
+    Private Sub frmFindBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'TVDataBsDataSet.tblSACH' table. You can move, or remove it, as needed.
+        Me.TblSACHTableAdapter.Fill(Me.TVDataBsDataSet.tblSACH)
 
     End Sub
 
-    'Private Sub btnFind1_Click(sender As Object, e As EventArgs)
-    '    Dim fb As FindBookDTO
-    '    fb = New FindBookDTO
-
-    '    fb.BookCode = txbBookCode.Text
-    '    fb.BookName = txbBookName.Text
-    '    fb.ProducerCode = txbProducerCode.Text
-    '    fb.AuthorCode = txbAuthorCode.Text
-    '    fb.CategoryCode = txbCategoryCode.Text
-    '    fb.PublishingYear = txbPublishingYear.Text
-    '    fb.Amount = txbAmount.Text
-    '    fb.InputDay = dateInputDay.Value
-
-    '    Dim fbDAL As New FindBookDAL
-    '    Dim result As Integer
-    '    result = fbDAL.LoadData2DataGridView1(dgvBookInfo1, fb)
-
-    'End Sub
-
-    Private Sub btnFind_Click(sender As Object, e As EventArgs)
+    Private Sub btnFind_Click(sender As Object, e As EventArgs) Handles btnFind.Click
         Dim fb As FindBookDTO
         fb = New FindBookDTO
 
@@ -55,20 +39,10 @@ Public Class frmFindBook
         Dim fbDAL As New FindBookDAL
         Dim result As Integer
         result = fbDAL.LoadData2DataGridView(dgvBookInfo, fb)
-
     End Sub
 
-    Private Sub frmFindBook_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'TVDataBsDataSet.tblSACH' table. You can move, or remove it, as needed.
-        Me.TblSACHTableAdapter.Fill(Me.TVDataBsDataSet.tblSACH)
-
-    End Sub
-
-    Private Sub btnClose_Click(sender As Object, e As EventArgs)
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
     End Sub
 
-    Private Sub btnClose1_Click(sender As Object, e As EventArgs)
-        Me.Close()
-    End Sub
 End Class

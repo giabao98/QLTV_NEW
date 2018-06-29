@@ -125,10 +125,10 @@
     <Compile Include="frmMuonTraSach.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuyDinhDoTuoi.Designer.vb">
-      <DependentUpon>frmQuyDinhDoTuoi.vb</DependentUpon>
+    <Compile Include="frmQuyDinhDocGia.Designer.vb">
+      <DependentUpon>frmQuyDinhDocGia.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmQuyDinhDoTuoi.vb">
+    <Compile Include="frmQuyDinhDocGia.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmReport.Designer.vb">
@@ -137,10 +137,10 @@
     <Compile Include="frmReport.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThayDoiSoLuong.Designer.vb">
-      <DependentUpon>frmThayDoiSoLuong.vb</DependentUpon>
+    <Compile Include="frmQuyDinhMuonSach.Designer.vb">
+      <DependentUpon>frmQuyDinhMuonSach.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmThayDoiSoLuong.vb">
+    <Compile Include="frmQuyDinhMuonSach.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -226,8 +226,14 @@
     <EmbeddedResource Include="frmMuonTraSach.resx">
       <DependentUpon>frmMuonTraSach.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQuyDinhDocGia.resx">
+      <DependentUpon>frmQuyDinhDocGia.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmReport.resx">
       <DependentUpon>frmReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuyDinhMuonSach.resx">
+      <DependentUpon>frmQuyDinhMuonSach.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTiepnhanSach.resx">
       <DependentUpon>frmTiepnhanSach.vb</DependentUpon>
