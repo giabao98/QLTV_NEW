@@ -12,13 +12,13 @@ Public Class frmQuyDinhTheLoaiSach
 
         'đưa data vào textbox
         txbKhoangNamXB.DataBindings.Add("Text", dtsource, "thoigianxuatban")
+        txbSoLuong.DataBindings.Add("Text", dtsource, "soluongsachtoida")
 
 
     End Sub
     Public Function resetData(a)
         txbMaTheLoai.Text = ""
         txbTenTheLoai.Text = ""
-        txbSoLuong.Text = ""
     End Function
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
@@ -27,7 +27,6 @@ Public Class frmQuyDinhTheLoaiSach
         qdtls = New QuyDinhTheLoaiSachDTO()
         qdtls.MaTheLoai = txbMaTheLoai.Text
         qdtls.TenTheLoai = txbTenTheLoai.Text
-        qdtls.SoLuong = txbSoLuong.Text
         'Lop BUS
         Dim qdtlsBUS As New QuyDinhTheLoaiSachBUS
         If (qdtlsBUS.ValidMaTheLoai(qdtls) = False) Then
@@ -40,11 +39,7 @@ Public Class frmQuyDinhTheLoaiSach
             txbTenTheLoai.Focus()
             Return
         End If
-        If (qdtlsBUS.ValidSoLuong(qdtls) = False) Then
-            MessageBox.Show("Số lượng chưa được nhập!")
-            txbMaTheLoai.Focus()
-            Return
-        End If
+
         'lop dal
         Dim qdtlsDAL As QuyDinhTheLoaiSachDAL
         qdtlsDAL = New QuyDinhTheLoaiSachDAL()
@@ -66,7 +61,6 @@ Public Class frmQuyDinhTheLoaiSach
         qdtls = New QuyDinhTheLoaiSachDTO()
         qdtls.MaTheLoai = txbMaTheLoai.Text
         qdtls.TenTheLoai = txbTenTheLoai.Text
-        qdtls.SoLuong = txbSoLuong.Text
         'Lop BUS
         Dim qdtlsBUS As New QuyDinhTheLoaiSachBUS
         If (qdtlsBUS.ValidMaTheLoai(qdtls) = False) Then
@@ -79,11 +73,7 @@ Public Class frmQuyDinhTheLoaiSach
             txbTenTheLoai.Focus()
             Return
         End If
-        If (qdtlsBUS.ValidSoLuong(qdtls) = False) Then
-            MessageBox.Show("Số lượng chưa được nhập!")
-            txbMaTheLoai.Focus()
-            Return
-        End If
+
         'lop dal
         Dim qdtlsDAL As QuyDinhTheLoaiSachDAL
         qdtlsDAL = New QuyDinhTheLoaiSachDAL()
@@ -105,7 +95,7 @@ Public Class frmQuyDinhTheLoaiSach
         qdtls = New QuyDinhTheLoaiSachDTO()
         qdtls.MaTheLoai = txbMaTheLoai.Text
         qdtls.TenTheLoai = txbTenTheLoai.Text
-        qdtls.SoLuong = txbSoLuong.Text
+
         'lop dal
         Dim qdtlsDAL As QuyDinhTheLoaiSachDAL
         qdtlsDAL = New QuyDinhTheLoaiSachDAL()
@@ -126,7 +116,6 @@ Public Class frmQuyDinhTheLoaiSach
         Try
             txbMaTheLoai.Text = row.Cells(0).Value.ToString()
             txbTenTheLoai.Text = row.Cells(1).Value.ToString()
-            txbSoLuong.Text = row.Cells(2).Value.ToString()
         Catch ex As Exception
 
         End Try
@@ -136,12 +125,18 @@ Public Class frmQuyDinhTheLoaiSach
         'Gui
         Dim qdtls As New QuyDinhTheLoaiSachDTO
         qdtls.KhoangNamXB = txbKhoangNamXB.Text
+        qdtls.SoLuong = txbSoLuong.Text
 
         'BUS
         Dim qdtlsBUS As New QuyDinhTheLoaiSachBUS
         If (qdtlsBUS.ValidKhoangNamXB(qdtls) = False) Then
             MessageBox.Show("Ô số lượng sách mượn tối đa trống!")
             txbKhoangNamXB.Focus()
+            Return
+        End If
+        If (qdtlsBUS.ValidSoLuong(qdtls) = False) Then
+            MessageBox.Show("Số lượng chưa được nhập!")
+            txbMaTheLoai.Focus()
             Return
         End If
 

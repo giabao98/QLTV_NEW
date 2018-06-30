@@ -27,6 +27,16 @@ Public Class MuonTraSachDAL
         Return dt
     End Function
 
+    Public Function datatable1()
+        Dim dt As New DataTable
+        Dim dtAdap As SqlDataAdapter
+        Dim strFind As String = "select [tentheloai] from tblTHELOAI"
+        dt.Clear()
+        dtAdap = New SqlDataAdapter(strFind, Con)
+        dtAdap.Fill(dt)
+        Return dt
+    End Function
+
     Public Function XacNhan(mt As MuonTraSachDTO)
         Dim query As String = String.Empty
         query &= "INSERT INTO [tblCHITIETPHIEUMUON]"

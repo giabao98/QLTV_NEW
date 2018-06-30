@@ -11,6 +11,11 @@ Public Class frmMuonTraSach
         dtpNgayMuon.CustomFormat = "dd/MM/yyyy"
         dtpNgayTra.Format = DateTimePickerFormat.Custom
         dtpNgayTra.CustomFormat = "dd/MM/yyyy"
+
+        Dim mtsDAL As New MuonTraSachDAL
+        cbTheLoai.DataSource = mtsDAL.datatable1
+        cbTheLoai.ValueMember = "tentheloai"
+        cbTheLoai.DisplayMember = "tentheloai"
     End Sub
     Public Function ResetData(mt)
         txbMaPhieuMuon.Text = ""

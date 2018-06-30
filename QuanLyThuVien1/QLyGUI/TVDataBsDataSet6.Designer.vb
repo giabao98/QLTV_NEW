@@ -287,8 +287,6 @@ Partial Public Class TVDataBsDataSet6
         
         Private columntentheloai As Global.System.Data.DataColumn
         
-        Private columnsoluong As Global.System.Data.DataColumn
-        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -341,14 +339,6 @@ Partial Public Class TVDataBsDataSet6
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property soluongColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnsoluong
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -385,9 +375,9 @@ Partial Public Class TVDataBsDataSet6
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddtblTHELOAIRow(ByVal matheloai As Integer, ByVal tentheloai As String, ByVal soluong As Integer) As tblTHELOAIRow
+        Public Overloads Function AddtblTHELOAIRow(ByVal matheloai As Integer, ByVal tentheloai As String) As tblTHELOAIRow
             Dim rowtblTHELOAIRow As tblTHELOAIRow = CType(Me.NewRow,tblTHELOAIRow)
-            Dim columnValuesArray() As Object = New Object() {matheloai, tentheloai, soluong}
+            Dim columnValuesArray() As Object = New Object() {matheloai, tentheloai}
             rowtblTHELOAIRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowtblTHELOAIRow)
             Return rowtblTHELOAIRow
@@ -418,7 +408,6 @@ Partial Public Class TVDataBsDataSet6
         Friend Sub InitVars()
             Me.columnmatheloai = MyBase.Columns("matheloai")
             Me.columntentheloai = MyBase.Columns("tentheloai")
-            Me.columnsoluong = MyBase.Columns("soluong")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -428,14 +417,11 @@ Partial Public Class TVDataBsDataSet6
             MyBase.Columns.Add(Me.columnmatheloai)
             Me.columntentheloai = New Global.System.Data.DataColumn("tentheloai", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntentheloai)
-            Me.columnsoluong = New Global.System.Data.DataColumn("soluong", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnsoluong)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnmatheloai}, true))
             Me.columnmatheloai.AllowDBNull = false
             Me.columnmatheloai.Unique = true
             Me.columntentheloai.AllowDBNull = false
             Me.columntentheloai.MaxLength = 50
-            Me.columnsoluong.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -599,17 +585,6 @@ Partial Public Class TVDataBsDataSet6
             End Get
             Set
                 Me(Me.tabletblTHELOAI.tentheloaiColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property soluong() As Integer
-            Get
-                Return CType(Me(Me.tabletblTHELOAI.soluongColumn),Integer)
-            End Get
-            Set
-                Me(Me.tabletblTHELOAI.soluongColumn) = value
             End Set
         End Property
     End Class
@@ -782,38 +757,32 @@ Namespace TVDataBsDataSet6TableAdapters
             tableMapping.DataSetTable = "tblTHELOAI"
             tableMapping.ColumnMappings.Add("matheloai", "matheloai")
             tableMapping.ColumnMappings.Add("tentheloai", "tentheloai")
-            tableMapping.ColumnMappings.Add("soluong", "soluong")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tblTHELOAI] WHERE (([matheloai] = @Original_matheloai) AND ([t"& _ 
-                "entheloai] = @Original_tentheloai) AND ([soluong] = @Original_soluong))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [tblTHELOAI] WHERE (([matheloai] = @Original_matheloai) AND ([tenthel"& _ 
+                "oai] = @Original_tentheloai))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_matheloai", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "matheloai", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_tentheloai", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tentheloai", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_soluong", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "soluong", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tblTHELOAI] ([matheloai], [tentheloai], [soluong]) VALUES (@ma"& _ 
-                "theloai, @tentheloai, @soluong);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT matheloai, tentheloai, soluong FROM tbl"& _ 
-                "THELOAI WHERE (matheloai = @matheloai)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [tblTHELOAI] ([matheloai], [tentheloai]) VALUES (@matheloai, @tenthel"& _ 
+                "oai);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT matheloai, tentheloai FROM tblTHELOAI WHERE (matheloai = @matheloa"& _ 
+                "i)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@matheloai", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "matheloai", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tentheloai", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tentheloai", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@soluong", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "soluong", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tblTHELOAI] SET [matheloai] = @matheloai, [tentheloai] = @tentheloa"& _ 
-                "i, [soluong] = @soluong WHERE (([matheloai] = @Original_matheloai) AND ([tenthel"& _ 
-                "oai] = @Original_tentheloai) AND ([soluong] = @Original_soluong));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT mathe"& _ 
-                "loai, tentheloai, soluong FROM tblTHELOAI WHERE (matheloai = @matheloai)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [tblTHELOAI] SET [matheloai] = @matheloai, [tentheloai] = @tentheloai WHER"& _ 
+                "E (([matheloai] = @Original_matheloai) AND ([tentheloai] = @Original_tentheloai)"& _ 
+                ");"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT matheloai, tentheloai FROM tblTHELOAI WHERE (matheloai = @matheloai)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@matheloai", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "matheloai", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@tentheloai", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tentheloai", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@soluong", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "soluong", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_matheloai", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "matheloai", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_tentheloai", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "tentheloai", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_soluong", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "soluong", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -829,7 +798,7 @@ Namespace TVDataBsDataSet6TableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT matheloai, tentheloai, soluong FROM dbo.tblTHELOAI"
+            Me._commandCollection(0).CommandText = "SELECT matheloai, tentheloai FROM tblTHELOAI"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -889,14 +858,13 @@ Namespace TVDataBsDataSet6TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_matheloai As Integer, ByVal Original_tentheloai As String, ByVal Original_soluong As Integer) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_matheloai As Integer, ByVal Original_tentheloai As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_matheloai,Integer)
             If (Original_tentheloai Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_tentheloai")
             Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_tentheloai,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_soluong,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -916,14 +884,13 @@ Namespace TVDataBsDataSet6TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal matheloai As Integer, ByVal tentheloai As String, ByVal soluong As Integer) As Integer
+        Public Overloads Overridable Function Insert(ByVal matheloai As Integer, ByVal tentheloai As String) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(matheloai,Integer)
             If (tentheloai Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("tentheloai")
             Else
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(tentheloai,String)
             End If
-            Me.Adapter.InsertCommand.Parameters(2).Value = CType(soluong,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -943,21 +910,19 @@ Namespace TVDataBsDataSet6TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal matheloai As Integer, ByVal tentheloai As String, ByVal soluong As Integer, ByVal Original_matheloai As Integer, ByVal Original_tentheloai As String, ByVal Original_soluong As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal matheloai As Integer, ByVal tentheloai As String, ByVal Original_matheloai As Integer, ByVal Original_tentheloai As String) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(matheloai,Integer)
             If (tentheloai Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("tentheloai")
             Else
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(tentheloai,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(soluong,Integer)
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_matheloai,Integer)
+            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Original_matheloai,Integer)
             If (Original_tentheloai Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_tentheloai")
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_tentheloai,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_tentheloai,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_soluong,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -977,8 +942,8 @@ Namespace TVDataBsDataSet6TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal tentheloai As String, ByVal soluong As Integer, ByVal Original_matheloai As Integer, ByVal Original_tentheloai As String, ByVal Original_soluong As Integer) As Integer
-            Return Me.Update(Original_matheloai, tentheloai, soluong, Original_matheloai, Original_tentheloai, Original_soluong)
+        Public Overloads Overridable Function Update(ByVal tentheloai As String, ByVal Original_matheloai As Integer, ByVal Original_tentheloai As String) As Integer
+            Return Me.Update(Original_matheloai, tentheloai, Original_matheloai, Original_tentheloai)
         End Function
     End Class
     

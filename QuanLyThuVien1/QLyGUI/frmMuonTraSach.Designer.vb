@@ -47,6 +47,18 @@ Partial Class frmMuonTraSach
         Me.ngaytra = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.xacnhantra = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ghichu = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MaphieumuonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MasachDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GhichuDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NgaymuonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SoluongmuonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NgaytraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.XacnhantraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MadocgiaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HotenDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TensachDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MatheloaiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MatacgiaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TblCHITIETPHIEUMUONBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TVDataBsDataSet5 = New QLyGUI.TVDataBsDataSet5()
         Me.btDelete = New System.Windows.Forms.Button()
@@ -71,18 +83,6 @@ Partial Class frmMuonTraSach
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TblCHITIETPHIEUMUONTableAdapter = New QLyGUI.TVDataBsDataSet5TableAdapters.tblCHITIETPHIEUMUONTableAdapter()
-        Me.MaphieumuonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MasachDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GhichuDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NgaymuonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SoluongmuonDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NgaytraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.XacnhantraDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MadocgiaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HotenDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TensachDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MatheloaiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MatacgiaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvPhieuMuonTra, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblCHITIETPHIEUMUONBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TVDataBsDataSet5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,7 +94,7 @@ Partial Class frmMuonTraSach
         'txbGhiChu
         '
         Me.txbGhiChu.Location = New System.Drawing.Point(539, 148)
-        Me.txbGhiChu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txbGhiChu.Margin = New System.Windows.Forms.Padding(4)
         Me.txbGhiChu.Multiline = True
         Me.txbGhiChu.Name = "txbGhiChu"
         Me.txbGhiChu.Size = New System.Drawing.Size(241, 86)
@@ -103,7 +103,7 @@ Partial Class frmMuonTraSach
         'dtpNgayTra
         '
         Me.dtpNgayTra.Location = New System.Drawing.Point(539, 79)
-        Me.dtpNgayTra.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpNgayTra.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpNgayTra.Name = "dtpNgayTra"
         Me.dtpNgayTra.Size = New System.Drawing.Size(241, 22)
         Me.dtpNgayTra.TabIndex = 42
@@ -111,7 +111,7 @@ Partial Class frmMuonTraSach
         'txbSoLuongmuon
         '
         Me.txbSoLuongmuon.Location = New System.Drawing.Point(539, 47)
-        Me.txbSoLuongmuon.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txbSoLuongmuon.Margin = New System.Windows.Forms.Padding(4)
         Me.txbSoLuongmuon.Name = "txbSoLuongmuon"
         Me.txbSoLuongmuon.Size = New System.Drawing.Size(241, 22)
         Me.txbSoLuongmuon.TabIndex = 41
@@ -119,7 +119,7 @@ Partial Class frmMuonTraSach
         'dtpNgayMuon
         '
         Me.dtpNgayMuon.Location = New System.Drawing.Point(539, 15)
-        Me.dtpNgayMuon.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpNgayMuon.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpNgayMuon.Name = "dtpNgayMuon"
         Me.dtpNgayMuon.Size = New System.Drawing.Size(241, 22)
         Me.dtpNgayMuon.TabIndex = 40
@@ -127,16 +127,17 @@ Partial Class frmMuonTraSach
         'txbTacGia
         '
         Me.txbTacGia.Location = New System.Drawing.Point(141, 210)
-        Me.txbTacGia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txbTacGia.Margin = New System.Windows.Forms.Padding(4)
         Me.txbTacGia.Name = "txbTacGia"
         Me.txbTacGia.Size = New System.Drawing.Size(241, 22)
         Me.txbTacGia.TabIndex = 39
         '
         'cbTheLoai
         '
+        Me.cbTheLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTheLoai.FormattingEnabled = True
         Me.cbTheLoai.Location = New System.Drawing.Point(141, 177)
-        Me.cbTheLoai.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbTheLoai.Margin = New System.Windows.Forms.Padding(4)
         Me.cbTheLoai.Name = "cbTheLoai"
         Me.cbTheLoai.Size = New System.Drawing.Size(241, 24)
         Me.cbTheLoai.TabIndex = 38
@@ -147,7 +148,7 @@ Partial Class frmMuonTraSach
         Me.cbXacNhanTra.FormattingEnabled = True
         Me.cbXacNhanTra.Items.AddRange(New Object() {"Đã Trả", "Chưa Trả"})
         Me.cbXacNhanTra.Location = New System.Drawing.Point(539, 114)
-        Me.cbXacNhanTra.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbXacNhanTra.Margin = New System.Windows.Forms.Padding(4)
         Me.cbXacNhanTra.Name = "cbXacNhanTra"
         Me.cbXacNhanTra.Size = New System.Drawing.Size(241, 24)
         Me.cbXacNhanTra.TabIndex = 43
@@ -155,7 +156,7 @@ Partial Class frmMuonTraSach
         'txbTenSach
         '
         Me.txbTenSach.Location = New System.Drawing.Point(141, 146)
-        Me.txbTenSach.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txbTenSach.Margin = New System.Windows.Forms.Padding(4)
         Me.txbTenSach.Name = "txbTenSach"
         Me.txbTenSach.Size = New System.Drawing.Size(241, 22)
         Me.txbTenSach.TabIndex = 37
@@ -164,7 +165,7 @@ Partial Class frmMuonTraSach
         '
         Me.cbMaSach.FormattingEnabled = True
         Me.cbMaSach.Location = New System.Drawing.Point(141, 113)
-        Me.cbMaSach.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbMaSach.Margin = New System.Windows.Forms.Padding(4)
         Me.cbMaSach.Name = "cbMaSach"
         Me.cbMaSach.Size = New System.Drawing.Size(241, 24)
         Me.cbMaSach.TabIndex = 36
@@ -172,7 +173,7 @@ Partial Class frmMuonTraSach
         'txbTenDocGia
         '
         Me.txbTenDocGia.Location = New System.Drawing.Point(141, 81)
-        Me.txbTenDocGia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txbTenDocGia.Margin = New System.Windows.Forms.Padding(4)
         Me.txbTenDocGia.Name = "txbTenDocGia"
         Me.txbTenDocGia.Size = New System.Drawing.Size(241, 22)
         Me.txbTenDocGia.TabIndex = 35
@@ -185,7 +186,7 @@ Partial Class frmMuonTraSach
         Me.dgvPhieuMuonTra.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.maphieumuon, Me.madocgia, Me.hoten, Me.masach, Me.tensach, Me.matheloai, Me.matacgia, Me.ngaymuon, Me.soluongmuon, Me.ngaytra, Me.xacnhantra, Me.ghichu, Me.MaphieumuonDataGridViewTextBoxColumn, Me.MasachDataGridViewTextBoxColumn, Me.GhichuDataGridViewTextBoxColumn, Me.NgaymuonDataGridViewTextBoxColumn, Me.SoluongmuonDataGridViewTextBoxColumn, Me.NgaytraDataGridViewTextBoxColumn, Me.XacnhantraDataGridViewTextBoxColumn, Me.MadocgiaDataGridViewTextBoxColumn, Me.HotenDataGridViewTextBoxColumn, Me.TensachDataGridViewTextBoxColumn, Me.MatheloaiDataGridViewTextBoxColumn, Me.MatacgiaDataGridViewTextBoxColumn})
         Me.dgvPhieuMuonTra.DataSource = Me.TblCHITIETPHIEUMUONBindingSource
         Me.dgvPhieuMuonTra.Location = New System.Drawing.Point(16, 335)
-        Me.dgvPhieuMuonTra.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvPhieuMuonTra.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvPhieuMuonTra.Name = "dgvPhieuMuonTra"
         Me.dgvPhieuMuonTra.ReadOnly = True
         Me.dgvPhieuMuonTra.Size = New System.Drawing.Size(1000, 239)
@@ -275,6 +276,90 @@ Partial Class frmMuonTraSach
         Me.ghichu.Name = "ghichu"
         Me.ghichu.ReadOnly = True
         '
+        'MaphieumuonDataGridViewTextBoxColumn
+        '
+        Me.MaphieumuonDataGridViewTextBoxColumn.DataPropertyName = "maphieumuon"
+        Me.MaphieumuonDataGridViewTextBoxColumn.HeaderText = "maphieumuon"
+        Me.MaphieumuonDataGridViewTextBoxColumn.Name = "MaphieumuonDataGridViewTextBoxColumn"
+        Me.MaphieumuonDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MasachDataGridViewTextBoxColumn
+        '
+        Me.MasachDataGridViewTextBoxColumn.DataPropertyName = "masach"
+        Me.MasachDataGridViewTextBoxColumn.HeaderText = "masach"
+        Me.MasachDataGridViewTextBoxColumn.Name = "MasachDataGridViewTextBoxColumn"
+        Me.MasachDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'GhichuDataGridViewTextBoxColumn
+        '
+        Me.GhichuDataGridViewTextBoxColumn.DataPropertyName = "ghichu"
+        Me.GhichuDataGridViewTextBoxColumn.HeaderText = "ghichu"
+        Me.GhichuDataGridViewTextBoxColumn.Name = "GhichuDataGridViewTextBoxColumn"
+        Me.GhichuDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NgaymuonDataGridViewTextBoxColumn
+        '
+        Me.NgaymuonDataGridViewTextBoxColumn.DataPropertyName = "ngaymuon"
+        Me.NgaymuonDataGridViewTextBoxColumn.HeaderText = "ngaymuon"
+        Me.NgaymuonDataGridViewTextBoxColumn.Name = "NgaymuonDataGridViewTextBoxColumn"
+        Me.NgaymuonDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SoluongmuonDataGridViewTextBoxColumn
+        '
+        Me.SoluongmuonDataGridViewTextBoxColumn.DataPropertyName = "soluongmuon"
+        Me.SoluongmuonDataGridViewTextBoxColumn.HeaderText = "soluongmuon"
+        Me.SoluongmuonDataGridViewTextBoxColumn.Name = "SoluongmuonDataGridViewTextBoxColumn"
+        Me.SoluongmuonDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NgaytraDataGridViewTextBoxColumn
+        '
+        Me.NgaytraDataGridViewTextBoxColumn.DataPropertyName = "ngaytra"
+        Me.NgaytraDataGridViewTextBoxColumn.HeaderText = "ngaytra"
+        Me.NgaytraDataGridViewTextBoxColumn.Name = "NgaytraDataGridViewTextBoxColumn"
+        Me.NgaytraDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'XacnhantraDataGridViewTextBoxColumn
+        '
+        Me.XacnhantraDataGridViewTextBoxColumn.DataPropertyName = "xacnhantra"
+        Me.XacnhantraDataGridViewTextBoxColumn.HeaderText = "xacnhantra"
+        Me.XacnhantraDataGridViewTextBoxColumn.Name = "XacnhantraDataGridViewTextBoxColumn"
+        Me.XacnhantraDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MadocgiaDataGridViewTextBoxColumn
+        '
+        Me.MadocgiaDataGridViewTextBoxColumn.DataPropertyName = "madocgia"
+        Me.MadocgiaDataGridViewTextBoxColumn.HeaderText = "madocgia"
+        Me.MadocgiaDataGridViewTextBoxColumn.Name = "MadocgiaDataGridViewTextBoxColumn"
+        Me.MadocgiaDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'HotenDataGridViewTextBoxColumn
+        '
+        Me.HotenDataGridViewTextBoxColumn.DataPropertyName = "hoten"
+        Me.HotenDataGridViewTextBoxColumn.HeaderText = "hoten"
+        Me.HotenDataGridViewTextBoxColumn.Name = "HotenDataGridViewTextBoxColumn"
+        Me.HotenDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TensachDataGridViewTextBoxColumn
+        '
+        Me.TensachDataGridViewTextBoxColumn.DataPropertyName = "tensach"
+        Me.TensachDataGridViewTextBoxColumn.HeaderText = "tensach"
+        Me.TensachDataGridViewTextBoxColumn.Name = "TensachDataGridViewTextBoxColumn"
+        Me.TensachDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MatheloaiDataGridViewTextBoxColumn
+        '
+        Me.MatheloaiDataGridViewTextBoxColumn.DataPropertyName = "matheloai"
+        Me.MatheloaiDataGridViewTextBoxColumn.HeaderText = "matheloai"
+        Me.MatheloaiDataGridViewTextBoxColumn.Name = "MatheloaiDataGridViewTextBoxColumn"
+        Me.MatheloaiDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'MatacgiaDataGridViewTextBoxColumn
+        '
+        Me.MatacgiaDataGridViewTextBoxColumn.DataPropertyName = "matacgia"
+        Me.MatacgiaDataGridViewTextBoxColumn.HeaderText = "matacgia"
+        Me.MatacgiaDataGridViewTextBoxColumn.Name = "MatacgiaDataGridViewTextBoxColumn"
+        Me.MatacgiaDataGridViewTextBoxColumn.ReadOnly = True
+        '
         'TblCHITIETPHIEUMUONBindingSource
         '
         Me.TblCHITIETPHIEUMUONBindingSource.DataMember = "tblCHITIETPHIEUMUON"
@@ -290,7 +375,7 @@ Partial Class frmMuonTraSach
         Me.btDelete.BackColor = System.Drawing.Color.LightCoral
         Me.btDelete.Image = CType(resources.GetObject("btDelete.Image"), System.Drawing.Image)
         Me.btDelete.Location = New System.Drawing.Point(57, 148)
-        Me.btDelete.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btDelete.Margin = New System.Windows.Forms.Padding(4)
         Me.btDelete.Name = "btDelete"
         Me.btDelete.Size = New System.Drawing.Size(117, 37)
         Me.btDelete.TabIndex = 2
@@ -302,7 +387,7 @@ Partial Class frmMuonTraSach
         '
         Me.cbMaDocGia.FormattingEnabled = True
         Me.cbMaDocGia.Location = New System.Drawing.Point(141, 48)
-        Me.cbMaDocGia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbMaDocGia.Margin = New System.Windows.Forms.Padding(4)
         Me.cbMaDocGia.Name = "cbMaDocGia"
         Me.cbMaDocGia.Size = New System.Drawing.Size(241, 24)
         Me.cbMaDocGia.TabIndex = 34
@@ -310,7 +395,7 @@ Partial Class frmMuonTraSach
         'txbMaPhieuMuon
         '
         Me.txbMaPhieuMuon.Location = New System.Drawing.Point(141, 16)
-        Me.txbMaPhieuMuon.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txbMaPhieuMuon.Margin = New System.Windows.Forms.Padding(4)
         Me.txbMaPhieuMuon.Name = "txbMaPhieuMuon"
         Me.txbMaPhieuMuon.Size = New System.Drawing.Size(241, 22)
         Me.txbMaPhieuMuon.TabIndex = 33
@@ -370,7 +455,7 @@ Partial Class frmMuonTraSach
         Me.btUpdate.BackColor = System.Drawing.Color.LightGreen
         Me.btUpdate.Image = CType(resources.GetObject("btUpdate.Image"), System.Drawing.Image)
         Me.btUpdate.Location = New System.Drawing.Point(57, 94)
-        Me.btUpdate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btUpdate.Margin = New System.Windows.Forms.Padding(4)
         Me.btUpdate.Name = "btUpdate"
         Me.btUpdate.Size = New System.Drawing.Size(117, 37)
         Me.btUpdate.TabIndex = 1
@@ -383,7 +468,7 @@ Partial Class frmMuonTraSach
         Me.btAdd.BackColor = System.Drawing.Color.LightGreen
         Me.btAdd.Image = CType(resources.GetObject("btAdd.Image"), System.Drawing.Image)
         Me.btAdd.Location = New System.Drawing.Point(57, 39)
-        Me.btAdd.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btAdd.Margin = New System.Windows.Forms.Padding(4)
         Me.btAdd.Name = "btAdd"
         Me.btAdd.Size = New System.Drawing.Size(117, 37)
         Me.btAdd.TabIndex = 0
@@ -479,9 +564,9 @@ Partial Class frmMuonTraSach
         Me.GroupBox1.Controls.Add(Me.lbMaSach)
         Me.GroupBox1.Controls.Add(Me.lbReaderName)
         Me.GroupBox1.Location = New System.Drawing.Point(16, 82)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(789, 245)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
@@ -503,9 +588,9 @@ Partial Class frmMuonTraSach
         Me.GroupBox3.Controls.Add(Me.btUpdate)
         Me.GroupBox3.Controls.Add(Me.btAdd)
         Me.GroupBox3.Location = New System.Drawing.Point(813, 85)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Size = New System.Drawing.Size(203, 242)
         Me.GroupBox3.TabIndex = 13
         Me.GroupBox3.TabStop = False
@@ -516,9 +601,9 @@ Partial Class frmMuonTraSach
         Me.GroupBox2.BackColor = System.Drawing.Color.LightSeaGreen
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Location = New System.Drawing.Point(16, 15)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(1000, 62)
         Me.GroupBox2.TabIndex = 12
         Me.GroupBox2.TabStop = False
@@ -539,90 +624,6 @@ Partial Class frmMuonTraSach
         '
         Me.TblCHITIETPHIEUMUONTableAdapter.ClearBeforeFill = True
         '
-        'MaphieumuonDataGridViewTextBoxColumn
-        '
-        Me.MaphieumuonDataGridViewTextBoxColumn.DataPropertyName = "maphieumuon"
-        Me.MaphieumuonDataGridViewTextBoxColumn.HeaderText = "maphieumuon"
-        Me.MaphieumuonDataGridViewTextBoxColumn.Name = "MaphieumuonDataGridViewTextBoxColumn"
-        Me.MaphieumuonDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MasachDataGridViewTextBoxColumn
-        '
-        Me.MasachDataGridViewTextBoxColumn.DataPropertyName = "masach"
-        Me.MasachDataGridViewTextBoxColumn.HeaderText = "masach"
-        Me.MasachDataGridViewTextBoxColumn.Name = "MasachDataGridViewTextBoxColumn"
-        Me.MasachDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'GhichuDataGridViewTextBoxColumn
-        '
-        Me.GhichuDataGridViewTextBoxColumn.DataPropertyName = "ghichu"
-        Me.GhichuDataGridViewTextBoxColumn.HeaderText = "ghichu"
-        Me.GhichuDataGridViewTextBoxColumn.Name = "GhichuDataGridViewTextBoxColumn"
-        Me.GhichuDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NgaymuonDataGridViewTextBoxColumn
-        '
-        Me.NgaymuonDataGridViewTextBoxColumn.DataPropertyName = "ngaymuon"
-        Me.NgaymuonDataGridViewTextBoxColumn.HeaderText = "ngaymuon"
-        Me.NgaymuonDataGridViewTextBoxColumn.Name = "NgaymuonDataGridViewTextBoxColumn"
-        Me.NgaymuonDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SoluongmuonDataGridViewTextBoxColumn
-        '
-        Me.SoluongmuonDataGridViewTextBoxColumn.DataPropertyName = "soluongmuon"
-        Me.SoluongmuonDataGridViewTextBoxColumn.HeaderText = "soluongmuon"
-        Me.SoluongmuonDataGridViewTextBoxColumn.Name = "SoluongmuonDataGridViewTextBoxColumn"
-        Me.SoluongmuonDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NgaytraDataGridViewTextBoxColumn
-        '
-        Me.NgaytraDataGridViewTextBoxColumn.DataPropertyName = "ngaytra"
-        Me.NgaytraDataGridViewTextBoxColumn.HeaderText = "ngaytra"
-        Me.NgaytraDataGridViewTextBoxColumn.Name = "NgaytraDataGridViewTextBoxColumn"
-        Me.NgaytraDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'XacnhantraDataGridViewTextBoxColumn
-        '
-        Me.XacnhantraDataGridViewTextBoxColumn.DataPropertyName = "xacnhantra"
-        Me.XacnhantraDataGridViewTextBoxColumn.HeaderText = "xacnhantra"
-        Me.XacnhantraDataGridViewTextBoxColumn.Name = "XacnhantraDataGridViewTextBoxColumn"
-        Me.XacnhantraDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MadocgiaDataGridViewTextBoxColumn
-        '
-        Me.MadocgiaDataGridViewTextBoxColumn.DataPropertyName = "madocgia"
-        Me.MadocgiaDataGridViewTextBoxColumn.HeaderText = "madocgia"
-        Me.MadocgiaDataGridViewTextBoxColumn.Name = "MadocgiaDataGridViewTextBoxColumn"
-        Me.MadocgiaDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'HotenDataGridViewTextBoxColumn
-        '
-        Me.HotenDataGridViewTextBoxColumn.DataPropertyName = "hoten"
-        Me.HotenDataGridViewTextBoxColumn.HeaderText = "hoten"
-        Me.HotenDataGridViewTextBoxColumn.Name = "HotenDataGridViewTextBoxColumn"
-        Me.HotenDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TensachDataGridViewTextBoxColumn
-        '
-        Me.TensachDataGridViewTextBoxColumn.DataPropertyName = "tensach"
-        Me.TensachDataGridViewTextBoxColumn.HeaderText = "tensach"
-        Me.TensachDataGridViewTextBoxColumn.Name = "TensachDataGridViewTextBoxColumn"
-        Me.TensachDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MatheloaiDataGridViewTextBoxColumn
-        '
-        Me.MatheloaiDataGridViewTextBoxColumn.DataPropertyName = "matheloai"
-        Me.MatheloaiDataGridViewTextBoxColumn.HeaderText = "matheloai"
-        Me.MatheloaiDataGridViewTextBoxColumn.Name = "MatheloaiDataGridViewTextBoxColumn"
-        Me.MatheloaiDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MatacgiaDataGridViewTextBoxColumn
-        '
-        Me.MatacgiaDataGridViewTextBoxColumn.DataPropertyName = "matacgia"
-        Me.MatacgiaDataGridViewTextBoxColumn.HeaderText = "matacgia"
-        Me.MatacgiaDataGridViewTextBoxColumn.Name = "MatacgiaDataGridViewTextBoxColumn"
-        Me.MatacgiaDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'frmMuonTraSach
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -632,7 +633,7 @@ Partial Class frmMuonTraSach
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmMuonTraSach"
         Me.Text = "frmMuonTraSach"
         CType(Me.dgvPhieuMuonTra, System.ComponentModel.ISupportInitialize).EndInit()

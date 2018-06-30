@@ -2,6 +2,7 @@
 Imports QLyDAL
 
 Public Class TiepnhansachBUS
+    Dim tnsDAL As New TiepnhansachDAL
     Public Function ValidBookID(ts As TiepnhansachDTO) As Boolean
 
         If (ts.BookID.ToString.Length < 1) Then
@@ -39,8 +40,10 @@ Public Class TiepnhansachBUS
     End Function
 
     Public Function ValidPublishingDate(ts As TiepnhansachDTO) As Boolean
-
-        If (ts.PublishingDate.ToString.Length < 1) Then
+        Dim dtsource = tnsDAL.datatable
+        Dim ThoiGianToiDa As Integer = Convert.ToInt32(dtsource.rows(0).item("thoigianxuatban").ToString())
+        Dim nam As Integer = Convert.ToInt32(DateTime.Now.Year.ToString)
+        If ((ts.PublishingDate.ToString.Length < 1) Or ((nam - ts.PublishingDate.Year) > ThoiGianToiDa)) Then
             Return False
         End If
 
@@ -79,8 +82,10 @@ Public Class TiepnhansachBUS
         Return True
     End Function
     Public Function ValidNumbers(ts As TiepnhansachDTO) As Boolean
+        Dim dtsource = tnsDAL.datatable
+        Dim SoLuong As Integer = Convert.ToInt32(dtsource.rows(0).item("soluongsachtoida").ToString())
 
-        If (ts.Numbers.ToString.Length < 1) Then
+        If ((ts.Numbers.ToString.Length < 1) Or (ts.Numbers > SoLuong)) Then
             Return False
         End If
 

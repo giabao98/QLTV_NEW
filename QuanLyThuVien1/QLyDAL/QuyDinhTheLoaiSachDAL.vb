@@ -24,7 +24,7 @@ Public Class QuyDinhTheLoaiSachDAL
 
     Public Function datatable()
         Dim dtSour As New DataGridView
-        Dim strFind As String = "select [thoigianxuatban] from tblTHAMSO"
+        Dim strFind As String = "select [thoigianxuatban],[soluongsachtoida] from tblTHAMSO"
         dt.Clear()
         dtAdap = New SqlDataAdapter(strFind, Con)
         dtAdap.Fill(dt)
@@ -35,8 +35,8 @@ Public Class QuyDinhTheLoaiSachDAL
     Public Function ThemTheLoai(qdtls As QuyDinhTheLoaiSachDTO)
         Dim query As String = String.Empty
         query &= "INSERT INTO [tblTHELOAI] "
-        query &= "( [matheloai], [tentheloai], [soluong])"
-        query &= "VALUES (@matheloai,@tentheloai,@soluong)"
+        query &= "( [matheloai], [tentheloai])"
+        query &= "VALUES (@matheloai,@tentheloai)"
 
         Using conn As New SqlConnection(ConnectionString)
             Using comm As New SqlCommand()
@@ -46,7 +46,6 @@ Public Class QuyDinhTheLoaiSachDAL
                     .CommandText = query
                     .Parameters.AddWithValue("@matheloai", qdtls.MaTheLoai)
                     .Parameters.AddWithValue("@tentheloai", qdtls.TenTheLoai)
-                    .Parameters.AddWithValue("@soluong", qdtls.SoLuong)
 
                 End With
                 Try
@@ -65,7 +64,6 @@ Public Class QuyDinhTheLoaiSachDAL
         query &= "UPDATE [tblTHELOAI] SET "
         query &= "[matheloai] = @matheloai "
         query &= " ,[tentheloai] = @tentheloai "
-        query &= " ,[soluong] = @soluong "
         query &= " WHERE "
         query &= " [matheloai] = @matheloai "
 
@@ -77,7 +75,6 @@ Public Class QuyDinhTheLoaiSachDAL
                     .CommandText = query
                     .Parameters.AddWithValue("@matheloai", qdtls.MaTheLoai)
                     .Parameters.AddWithValue("@tentheloai", qdtls.TenTheLoai)
-                    .Parameters.AddWithValue("@soluong", qdtls.SoLuong)
 
                 End With
                 Try
@@ -105,7 +102,6 @@ Public Class QuyDinhTheLoaiSachDAL
                     .CommandText = query
                     .Parameters.AddWithValue("@matheloai", qdtls.MaTheLoai)
                     .Parameters.AddWithValue("@tentheloai", qdtls.TenTheLoai)
-                    .Parameters.AddWithValue("@soluong", qdtls.SoLuong)
 
                 End With
                 Try
@@ -124,6 +120,7 @@ Public Class QuyDinhTheLoaiSachDAL
         Dim query As String = String.Empty
         query &= "UPDATE [tblTHAMSO] SET "
         query &= "[thoigianxuatban] = @thoigianxuatban "
+        query &= ",[soluongsachtoida] = @soluongsachtoida "
 
         Using conn As New SqlConnection(ConnectionString)
             Using comm As New SqlCommand()
@@ -132,7 +129,7 @@ Public Class QuyDinhTheLoaiSachDAL
                     .CommandType = CommandType.Text
                     .CommandText = query
                     .Parameters.AddWithValue("@thoigianxuatban", qdtls.KhoangNamXB)
-
+                    .Parameters.AddWithValue("@soluongsachtoida", qdtls.SoLuong)
                 End With
                 Try
                     conn.Open()

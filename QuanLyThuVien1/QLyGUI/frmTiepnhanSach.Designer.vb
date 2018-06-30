@@ -46,6 +46,7 @@ Partial Class frmTiepnhanSach
         Me.cbAuthorID = New System.Windows.Forms.ComboBox()
         Me.cbBookKindID = New System.Windows.Forms.ComboBox()
         Me.txbBookName = New System.Windows.Forms.TextBox()
+        Me.cbBookID = New System.Windows.Forms.ComboBox()
         Me.Soluong_Label = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Delete_button = New System.Windows.Forms.Button()
@@ -65,7 +66,6 @@ Partial Class frmTiepnhanSach
         Me.TblSACHBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TVDataBsDataSet2 = New QLyGUI.TVDataBsDataSet2()
         Me.TblSACHTableAdapter = New QLyGUI.TVDataBsDataSet2TableAdapters.tblSACHTableAdapter()
-        Me.cbBookID = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -77,35 +77,39 @@ Partial Class frmTiepnhanSach
         'lbMaSach
         '
         Me.lbMaSach.AutoSize = True
-        Me.lbMaSach.Location = New System.Drawing.Point(6, 26)
+        Me.lbMaSach.Location = New System.Drawing.Point(8, 32)
+        Me.lbMaSach.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbMaSach.Name = "lbMaSach"
-        Me.lbMaSach.Size = New System.Drawing.Size(48, 13)
+        Me.lbMaSach.Size = New System.Drawing.Size(61, 17)
         Me.lbMaSach.TabIndex = 17
         Me.lbMaSach.Text = "Mã sách"
         '
         'lbHienTrang
         '
         Me.lbHienTrang.AutoSize = True
-        Me.lbHienTrang.Location = New System.Drawing.Point(328, 122)
+        Me.lbHienTrang.Location = New System.Drawing.Point(437, 150)
+        Me.lbHienTrang.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbHienTrang.Name = "lbHienTrang"
-        Me.lbHienTrang.Size = New System.Drawing.Size(56, 13)
+        Me.lbHienTrang.Size = New System.Drawing.Size(74, 17)
         Me.lbHienTrang.TabIndex = 20
         Me.lbHienTrang.Text = "Hiện trạng"
         '
         'lbTenSach
         '
         Me.lbTenSach.AutoSize = True
-        Me.lbTenSach.Location = New System.Drawing.Point(6, 58)
+        Me.lbTenSach.Location = New System.Drawing.Point(8, 71)
+        Me.lbTenSach.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbTenSach.Name = "lbTenSach"
-        Me.lbTenSach.Size = New System.Drawing.Size(52, 13)
+        Me.lbTenSach.Size = New System.Drawing.Size(67, 17)
         Me.lbTenSach.TabIndex = 0
         Me.lbTenSach.Text = "Tên sách"
         '
         'btThemSach
         '
-        Me.btThemSach.Location = New System.Drawing.Point(973, 467)
+        Me.btThemSach.Location = New System.Drawing.Point(1297, 575)
+        Me.btThemSach.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btThemSach.Name = "btThemSach"
-        Me.btThemSach.Size = New System.Drawing.Size(75, 23)
+        Me.btThemSach.Size = New System.Drawing.Size(100, 28)
         Me.btThemSach.TabIndex = 15
         Me.btThemSach.Text = "Thêm sách"
         Me.btThemSach.UseVisualStyleBackColor = True
@@ -113,54 +117,60 @@ Partial Class frmTiepnhanSach
         'lbMaTheLoai
         '
         Me.lbMaTheLoai.AutoSize = True
-        Me.lbMaTheLoai.Location = New System.Drawing.Point(6, 89)
+        Me.lbMaTheLoai.Location = New System.Drawing.Point(8, 110)
+        Me.lbMaTheLoai.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbMaTheLoai.Name = "lbMaTheLoai"
-        Me.lbMaTheLoai.Size = New System.Drawing.Size(45, 13)
+        Me.lbMaTheLoai.Size = New System.Drawing.Size(59, 17)
         Me.lbMaTheLoai.TabIndex = 7
         Me.lbMaTheLoai.Text = "Thể loại"
         '
         'lbTriGia
         '
         Me.lbTriGia.AutoSize = True
-        Me.lbTriGia.Location = New System.Drawing.Point(328, 89)
+        Me.lbTriGia.Location = New System.Drawing.Point(437, 110)
+        Me.lbTriGia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbTriGia.Name = "lbTriGia"
-        Me.lbTriGia.Size = New System.Drawing.Size(36, 13)
+        Me.lbTriGia.Size = New System.Drawing.Size(48, 17)
         Me.lbTriGia.TabIndex = 6
         Me.lbTriGia.Text = "Trị giá"
         '
         'lbNgayNhap
         '
         Me.lbNgayNhap.AutoSize = True
-        Me.lbNgayNhap.Location = New System.Drawing.Point(328, 58)
+        Me.lbNgayNhap.Location = New System.Drawing.Point(437, 71)
+        Me.lbNgayNhap.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbNgayNhap.Name = "lbNgayNhap"
-        Me.lbNgayNhap.Size = New System.Drawing.Size(59, 13)
+        Me.lbNgayNhap.Size = New System.Drawing.Size(77, 17)
         Me.lbNgayNhap.TabIndex = 5
         Me.lbNgayNhap.Text = "Ngày nhập"
         '
         'lbMaNhaXuatBan
         '
         Me.lbMaNhaXuatBan.AutoSize = True
-        Me.lbMaNhaXuatBan.Location = New System.Drawing.Point(6, 158)
+        Me.lbMaNhaXuatBan.Location = New System.Drawing.Point(8, 194)
+        Me.lbMaNhaXuatBan.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbMaNhaXuatBan.Name = "lbMaNhaXuatBan"
-        Me.lbMaNhaXuatBan.Size = New System.Drawing.Size(71, 13)
+        Me.lbMaNhaXuatBan.Size = New System.Drawing.Size(92, 17)
         Me.lbMaNhaXuatBan.TabIndex = 4
         Me.lbMaNhaXuatBan.Text = "Nhà xuất bản"
         '
         'lbNamXuatBan
         '
         Me.lbNamXuatBan.AutoSize = True
-        Me.lbNamXuatBan.Location = New System.Drawing.Point(328, 26)
+        Me.lbNamXuatBan.Location = New System.Drawing.Point(437, 32)
+        Me.lbNamXuatBan.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbNamXuatBan.Name = "lbNamXuatBan"
-        Me.lbNamXuatBan.Size = New System.Drawing.Size(73, 13)
+        Me.lbNamXuatBan.Size = New System.Drawing.Size(95, 17)
         Me.lbNamXuatBan.TabIndex = 3
         Me.lbNamXuatBan.Text = "Năm xuất bản"
         '
         'lbTacGia
         '
         Me.lbTacGia.AutoSize = True
-        Me.lbTacGia.Location = New System.Drawing.Point(6, 122)
+        Me.lbTacGia.Location = New System.Drawing.Point(8, 150)
+        Me.lbTacGia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbTacGia.Name = "lbTacGia"
-        Me.lbTacGia.Size = New System.Drawing.Size(43, 13)
+        Me.lbTacGia.Size = New System.Drawing.Size(55, 17)
         Me.lbTacGia.TabIndex = 2
         Me.lbTacGia.Text = "Tác giả"
         '
@@ -169,9 +179,11 @@ Partial Class frmTiepnhanSach
         Me.GroupBox1.BackColor = System.Drawing.Color.LightSeaGreen
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 15)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(770, 55)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(1027, 68)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         '
@@ -179,9 +191,10 @@ Partial Class frmTiepnhanSach
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(300, 16)
+        Me.Label1.Location = New System.Drawing.Point(400, 20)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(162, 29)
+        Me.Label1.Size = New System.Drawing.Size(200, 36)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Quản lý sách"
         '
@@ -208,86 +221,110 @@ Partial Class frmTiepnhanSach
         Me.GroupBox2.Controls.Add(Me.lbNgayNhap)
         Me.GroupBox2.Controls.Add(Me.lbNamXuatBan)
         Me.GroupBox2.Controls.Add(Me.lbMaNhaXuatBan)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 73)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 90)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(639, 189)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(852, 233)
         Me.GroupBox2.TabIndex = 23
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Nhập đầy đủ các thông tin"
         '
         'txtNumbers
         '
-        Me.txtNumbers.Location = New System.Drawing.Point(428, 152)
+        Me.txtNumbers.Location = New System.Drawing.Point(571, 187)
+        Me.txtNumbers.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNumbers.Name = "txtNumbers"
-        Me.txtNumbers.Size = New System.Drawing.Size(200, 20)
+        Me.txtNumbers.Size = New System.Drawing.Size(265, 22)
         Me.txtNumbers.TabIndex = 38
         '
         'cbStatusID
         '
+        Me.cbStatusID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbStatusID.FormattingEnabled = True
-        Me.cbStatusID.Location = New System.Drawing.Point(428, 119)
+        Me.cbStatusID.Items.AddRange(New Object() {"Mới", "Cũ", "Đã Hỏng"})
+        Me.cbStatusID.Location = New System.Drawing.Point(571, 146)
+        Me.cbStatusID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbStatusID.Name = "cbStatusID"
-        Me.cbStatusID.Size = New System.Drawing.Size(200, 21)
+        Me.cbStatusID.Size = New System.Drawing.Size(265, 24)
         Me.cbStatusID.TabIndex = 37
         '
         'txbValue
         '
-        Me.txbValue.Location = New System.Drawing.Point(428, 87)
+        Me.txbValue.Location = New System.Drawing.Point(571, 107)
+        Me.txbValue.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txbValue.Name = "txbValue"
-        Me.txbValue.Size = New System.Drawing.Size(200, 20)
+        Me.txbValue.Size = New System.Drawing.Size(265, 22)
         Me.txbValue.TabIndex = 36
         '
         'dtpReceiptDate
         '
-        Me.dtpReceiptDate.Location = New System.Drawing.Point(428, 55)
+        Me.dtpReceiptDate.Location = New System.Drawing.Point(571, 68)
+        Me.dtpReceiptDate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dtpReceiptDate.Name = "dtpReceiptDate"
-        Me.dtpReceiptDate.Size = New System.Drawing.Size(200, 20)
+        Me.dtpReceiptDate.Size = New System.Drawing.Size(265, 22)
         Me.dtpReceiptDate.TabIndex = 35
         '
         'dtpPublishingYear
         '
-        Me.dtpPublishingYear.Location = New System.Drawing.Point(428, 23)
+        Me.dtpPublishingYear.Location = New System.Drawing.Point(571, 28)
+        Me.dtpPublishingYear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dtpPublishingYear.Name = "dtpPublishingYear"
-        Me.dtpPublishingYear.Size = New System.Drawing.Size(200, 20)
+        Me.dtpPublishingYear.Size = New System.Drawing.Size(265, 22)
         Me.dtpPublishingYear.TabIndex = 34
         '
         'cbPublishingHouseID
         '
         Me.cbPublishingHouseID.FormattingEnabled = True
-        Me.cbPublishingHouseID.Location = New System.Drawing.Point(106, 152)
+        Me.cbPublishingHouseID.Location = New System.Drawing.Point(141, 187)
+        Me.cbPublishingHouseID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbPublishingHouseID.Name = "cbPublishingHouseID"
-        Me.cbPublishingHouseID.Size = New System.Drawing.Size(200, 21)
+        Me.cbPublishingHouseID.Size = New System.Drawing.Size(265, 24)
         Me.cbPublishingHouseID.TabIndex = 28
         '
         'cbAuthorID
         '
         Me.cbAuthorID.FormattingEnabled = True
-        Me.cbAuthorID.Location = New System.Drawing.Point(106, 119)
+        Me.cbAuthorID.Location = New System.Drawing.Point(141, 146)
+        Me.cbAuthorID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbAuthorID.Name = "cbAuthorID"
-        Me.cbAuthorID.Size = New System.Drawing.Size(200, 21)
+        Me.cbAuthorID.Size = New System.Drawing.Size(265, 24)
         Me.cbAuthorID.TabIndex = 27
         '
         'cbBookKindID
         '
+        Me.cbBookKindID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbBookKindID.FormattingEnabled = True
-        Me.cbBookKindID.Location = New System.Drawing.Point(106, 86)
+        Me.cbBookKindID.Location = New System.Drawing.Point(141, 106)
+        Me.cbBookKindID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cbBookKindID.Name = "cbBookKindID"
-        Me.cbBookKindID.Size = New System.Drawing.Size(200, 21)
+        Me.cbBookKindID.Size = New System.Drawing.Size(265, 24)
         Me.cbBookKindID.TabIndex = 26
         '
         'txbBookName
         '
-        Me.txbBookName.Location = New System.Drawing.Point(106, 55)
+        Me.txbBookName.Location = New System.Drawing.Point(141, 68)
+        Me.txbBookName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txbBookName.Name = "txbBookName"
-        Me.txbBookName.Size = New System.Drawing.Size(200, 20)
+        Me.txbBookName.Size = New System.Drawing.Size(265, 22)
         Me.txbBookName.TabIndex = 25
+        '
+        'cbBookID
+        '
+        Me.cbBookID.FormattingEnabled = True
+        Me.cbBookID.Location = New System.Drawing.Point(141, 28)
+        Me.cbBookID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbBookID.Name = "cbBookID"
+        Me.cbBookID.Size = New System.Drawing.Size(265, 24)
+        Me.cbBookID.TabIndex = 24
         '
         'Soluong_Label
         '
         Me.Soluong_Label.AutoSize = True
-        Me.Soluong_Label.Location = New System.Drawing.Point(328, 155)
+        Me.Soluong_Label.Location = New System.Drawing.Point(437, 191)
+        Me.Soluong_Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Soluong_Label.Name = "Soluong_Label"
-        Me.Soluong_Label.Size = New System.Drawing.Size(49, 13)
+        Me.Soluong_Label.Size = New System.Drawing.Size(64, 17)
         Me.Soluong_Label.TabIndex = 22
         Me.Soluong_Label.Text = "Số lượng"
         '
@@ -297,9 +334,11 @@ Partial Class frmTiepnhanSach
         Me.GroupBox3.Controls.Add(Me.Delete_button)
         Me.GroupBox3.Controls.Add(Me.Update_button)
         Me.GroupBox3.Controls.Add(Me.Add_button)
-        Me.GroupBox3.Location = New System.Drawing.Point(657, 73)
+        Me.GroupBox3.Location = New System.Drawing.Point(876, 90)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(125, 189)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Size = New System.Drawing.Size(167, 233)
         Me.GroupBox3.TabIndex = 24
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Chức năng"
@@ -308,9 +347,10 @@ Partial Class frmTiepnhanSach
         '
         Me.Delete_button.BackColor = System.Drawing.Color.LightCoral
         Me.Delete_button.Image = CType(resources.GetObject("Delete_button.Image"), System.Drawing.Image)
-        Me.Delete_button.Location = New System.Drawing.Point(21, 122)
+        Me.Delete_button.Location = New System.Drawing.Point(28, 150)
+        Me.Delete_button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Delete_button.Name = "Delete_button"
-        Me.Delete_button.Size = New System.Drawing.Size(88, 30)
+        Me.Delete_button.Size = New System.Drawing.Size(117, 37)
         Me.Delete_button.TabIndex = 2
         Me.Delete_button.Text = "Xóa sách"
         Me.Delete_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -320,9 +360,10 @@ Partial Class frmTiepnhanSach
         '
         Me.Update_button.BackColor = System.Drawing.Color.LightGreen
         Me.Update_button.Image = CType(resources.GetObject("Update_button.Image"), System.Drawing.Image)
-        Me.Update_button.Location = New System.Drawing.Point(21, 80)
+        Me.Update_button.Location = New System.Drawing.Point(28, 98)
+        Me.Update_button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Update_button.Name = "Update_button"
-        Me.Update_button.Size = New System.Drawing.Size(88, 30)
+        Me.Update_button.Size = New System.Drawing.Size(117, 37)
         Me.Update_button.TabIndex = 1
         Me.Update_button.Text = "Cập nhật"
         Me.Update_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -332,9 +373,10 @@ Partial Class frmTiepnhanSach
         '
         Me.Add_button.BackColor = System.Drawing.Color.LightGreen
         Me.Add_button.Image = CType(resources.GetObject("Add_button.Image"), System.Drawing.Image)
-        Me.Add_button.Location = New System.Drawing.Point(21, 41)
+        Me.Add_button.Location = New System.Drawing.Point(28, 50)
+        Me.Add_button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Add_button.Name = "Add_button"
-        Me.Add_button.Size = New System.Drawing.Size(88, 30)
+        Me.Add_button.Size = New System.Drawing.Size(117, 37)
         Me.Add_button.TabIndex = 0
         Me.Add_button.Text = "Thêm sách"
         Me.Add_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -348,10 +390,11 @@ Partial Class frmTiepnhanSach
         Me.dgvSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSach.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MasachDataGridViewTextBoxColumn, Me.TensachDataGridViewTextBoxColumn, Me.MatheloaiDataGridViewTextBoxColumn, Me.MatacgiaDataGridViewTextBoxColumn, Me.NamxuatbanDataGridViewTextBoxColumn, Me.ManhaxuatbanDataGridViewTextBoxColumn, Me.NgaynhapDataGridViewTextBoxColumn, Me.TrigiaDataGridViewTextBoxColumn, Me.MatinhtrangDataGridViewTextBoxColumn, Me.SoluongDataGridViewTextBoxColumn})
         Me.dgvSach.DataSource = Me.TblSACHBindingSource
-        Me.dgvSach.Location = New System.Drawing.Point(12, 268)
+        Me.dgvSach.Location = New System.Drawing.Point(16, 330)
+        Me.dgvSach.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvSach.Name = "dgvSach"
         Me.dgvSach.ReadOnly = True
-        Me.dgvSach.Size = New System.Drawing.Size(770, 226)
+        Me.dgvSach.Size = New System.Drawing.Size(1027, 278)
         Me.dgvSach.TabIndex = 25
         '
         'MasachDataGridViewTextBoxColumn
@@ -438,24 +481,17 @@ Partial Class frmTiepnhanSach
         '
         Me.TblSACHTableAdapter.ClearBeforeFill = True
         '
-        'cbBookID
-        '
-        Me.cbBookID.FormattingEnabled = True
-        Me.cbBookID.Location = New System.Drawing.Point(106, 23)
-        Me.cbBookID.Name = "cbBookID"
-        Me.cbBookID.Size = New System.Drawing.Size(200, 21)
-        Me.cbBookID.TabIndex = 24
-        '
         'frmTiepnhanSach
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(803, 561)
+        Me.ClientSize = New System.Drawing.Size(1071, 690)
         Me.Controls.Add(Me.dgvSach)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btThemSach)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmTiepnhanSach"
         Me.Text = "tiepnhanSach"
         Me.GroupBox1.ResumeLayout(False)

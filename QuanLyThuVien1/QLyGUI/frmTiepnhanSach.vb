@@ -52,6 +52,11 @@ Public Class frmTiepnhanSach
         dtpReceiptDate.Format = DateTimePickerFormat.Custom
         dtpReceiptDate.CustomFormat = "dd/MM/yyyy"
 
+        Dim tnsDAL As New TiepnhansachDAL
+        cbBookKindID.DataSource = tnsDAL.datatable1
+        cbBookKindID.DisplayMember = "tentheloai"
+        cbBookKindID.ValueMember = "tentheloai"
+
     End Sub
 
     Private Sub Add_button_Click(sender As Object, e As EventArgs) Handles Add_button.Click
@@ -97,7 +102,7 @@ Public Class frmTiepnhanSach
         End If
 
         If (tsbus.ValidPublishingDate(ts) = False) Then
-            MessageBox.Show("Năm xuất bản chưa được nhập!")
+            MessageBox.Show("Năm xuất bản vừa nhập vượt quá khoảng cách năm xuất bản tối cho phép!")
             dtpPublishingYear.Focus()
             Return
         End If
@@ -127,7 +132,7 @@ Public Class frmTiepnhanSach
         End If
 
         If (tsbus.ValidNumbers(ts) = False) Then
-            MessageBox.Show("Số lượng chưa được nhập!")
+            MessageBox.Show("Số lượng chưa được nhập hoặc vượt quá số lượng cho phép!")
             txtNumbers.Focus()
             Return
         End If
@@ -188,7 +193,7 @@ Public Class frmTiepnhanSach
         End If
 
         If (tsbus.ValidPublishingDate(ts) = False) Then
-            MessageBox.Show("Năm xuất bản chưa được nhập!")
+            MessageBox.Show("Năm xuất bản vừa nhập vượt quá khoảng cách năm xuất bản tối cho phép!")
             dtpPublishingYear.Focus()
             Return
         End If
@@ -218,7 +223,7 @@ Public Class frmTiepnhanSach
         End If
 
         If (tsbus.ValidNumbers(ts) = False) Then
-            MessageBox.Show("Số lượng chưa được nhập!")
+            MessageBox.Show("Số lượng chưa được nhập hoặc vượt quá số lượng cho phép!")
             txtNumbers.Focus()
             Return
         End If
