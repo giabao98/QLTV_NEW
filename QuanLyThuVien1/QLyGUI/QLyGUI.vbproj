@@ -77,6 +77,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDoiMatKhau.Designer.vb">
+      <DependentUpon>frmDoiMatKhau.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoiMatKhau.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmFind.Designer.vb">
       <DependentUpon>frmFind.vb</DependentUpon>
     </Compile>
@@ -93,6 +99,12 @@
       <DependentUpon>frmFindReader.vb</DependentUpon>
     </Compile>
     <Compile Include="frmFindReader.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHeThong.Designer.vb">
+      <DependentUpon>frmHeThong.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHeThong.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLapthe.Designer.vb">
@@ -142,6 +154,12 @@
       <DependentUpon>frmQuyDinhMuonSach.vb</DependentUpon>
     </Compile>
     <Compile Include="frmQuyDinhMuonSach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTaoTaiKhoan.Designer.vb">
+      <DependentUpon>frmTaoTaiKhoan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTaoTaiKhoan.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -208,6 +226,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmFind.resx">
       <DependentUpon>frmFind.vb</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmFindReader.resx">
       <DependentUpon>frmFindReader.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHeThong.resx">
+      <DependentUpon>frmHeThong.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLapthe.resx">
       <DependentUpon>frmLapthe.vb</DependentUpon>
@@ -240,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuyDinhMuonSach.resx">
       <DependentUpon>frmQuyDinhMuonSach.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTaoTaiKhoan.resx">
+      <DependentUpon>frmTaoTaiKhoan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTiepnhanSach.resx">
       <DependentUpon>frmTiepnhanSach.vb</DependentUpon>

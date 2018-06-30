@@ -27,7 +27,7 @@ Partial Class frmMain
         Me.btnAuthorManagement = New System.Windows.Forms.Button()
         Me.btnBorrowBook = New System.Windows.Forms.Button()
         Me.btnFindBook = New System.Windows.Forms.Button()
-        Me.btnLogout = New System.Windows.Forms.Button()
+        Me.btnHeThong = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -96,19 +96,19 @@ Partial Class frmMain
         Me.btnFindBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnFindBook.UseVisualStyleBackColor = False
         '
-        'btnLogout
+        'btnHeThong
         '
-        Me.btnLogout.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.btnLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.Image = CType(resources.GetObject("btnLogout.Image"), System.Drawing.Image)
-        Me.btnLogout.Location = New System.Drawing.Point(403, 314)
-        Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(182, 127)
-        Me.btnLogout.TabIndex = 5
-        Me.btnLogout.Text = "Hệ thống"
-        Me.btnLogout.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btnLogout.UseVisualStyleBackColor = False
+        Me.btnHeThong.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.btnHeThong.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHeThong.Image = CType(resources.GetObject("btnHeThong.Image"), System.Drawing.Image)
+        Me.btnHeThong.Location = New System.Drawing.Point(403, 314)
+        Me.btnHeThong.Name = "btnHeThong"
+        Me.btnHeThong.Size = New System.Drawing.Size(182, 127)
+        Me.btnHeThong.TabIndex = 5
+        Me.btnHeThong.Text = "Hệ thống"
+        Me.btnHeThong.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.btnHeThong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btnHeThong.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -191,7 +191,7 @@ Partial Class frmMain
         Me.GroupBox1.Controls.Add(Me.MonthCalendar1)
         Me.GroupBox1.Controls.Add(Me.btnClose)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.btnLogout)
+        Me.GroupBox1.Controls.Add(Me.btnHeThong)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.btnBookUpdate)
         Me.GroupBox1.Controls.Add(Me.btnFindBook)
@@ -227,7 +227,7 @@ Partial Class frmMain
     Friend WithEvents btnAuthorManagement As Button
     Friend WithEvents btnBorrowBook As Button
     Friend WithEvents btnFindBook As Button
-    Friend WithEvents btnLogout As Button
+    Friend WithEvents btnHeThong As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents btnClose As Button
     Friend WithEvents PictureBox1 As PictureBox

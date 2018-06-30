@@ -39,12 +39,6 @@
         fFind.ShowDialog()
     End Sub
 
-    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        'Me.Controls.Clear()
-        'InitializeComponent()
-        'frmMain_Load(e, e)
-    End Sub
-
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Application.Exit()
     End Sub
@@ -52,5 +46,10 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim fReport = New frmReport
         fReport.ShowDialog()
+    End Sub
+
+    Private Sub btnHeThong_Click(sender As Object, e As EventArgs) Handles btnHeThong.Click
+        Dim fHeThong As New frmHeThong
+        fHeThong.ShowDialog()
     End Sub
 End Class

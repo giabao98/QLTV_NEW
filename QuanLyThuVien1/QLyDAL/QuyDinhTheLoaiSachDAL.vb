@@ -6,7 +6,6 @@ Imports System.Configuration
 Imports System.Windows.Forms
 
 Public Class QuyDinhTheLoaiSachDAL
-    Private dbAccess As DataBaseAccess
     Protected Con As SqlConnection
     Private ConnectionString As String
     Dim dt As New DataTable

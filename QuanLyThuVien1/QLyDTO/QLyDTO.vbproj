@@ -63,6 +63,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoiMatKhauDTO.vb" />
     <Compile Include="FindBookDTO.vb" />
     <Compile Include="FindReaderDTO.vb" />
     <Compile Include="LaptheDTO.vb" />
@@ -87,6 +88,7 @@
     <Compile Include="QuyDinhDocGiaDTO.vb" />
     <Compile Include="QuyDinhMuonSachDTO.vb" />
     <Compile Include="ReportDTO.vb" />
+    <Compile Include="TaoTaiKhoanDTO.vb" />
     <Compile Include="TiepnhansachDTO.vb" />
   </ItemGroup>
   <ItemGroup>

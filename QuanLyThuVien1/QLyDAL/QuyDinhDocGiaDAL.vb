@@ -4,7 +4,6 @@ Imports System.Windows.Forms
 Imports QLyDTO
 
 Public Class QuyDinhDocGiaDAL
-    Private dbAccess As DataBaseAccess
     Protected Con As SqlConnection
     Private ConnectionString As String
     Dim dt As New DataTable

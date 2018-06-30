@@ -63,6 +63,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoiMatKhauBUS.vb" />
     <Compile Include="FindBookBUS.vb" />
     <Compile Include="FindReaderBUS.vb" />
     <Compile Include="laptheBUS.vb" />
@@ -87,6 +88,7 @@
     <Compile Include="QuyDinhDocGiaBUS.vb" />
     <Compile Include="QuyDinhMuonSachBUS.vb" />
     <Compile Include="ReportBUS.vb" />
+    <Compile Include="TaoTaiKhoanBUS.vb" />
     <Compile Include="TiepnhansachBUS.vb" />
   </ItemGroup>
   <ItemGroup>

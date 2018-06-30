@@ -4,7 +4,6 @@ Imports System.Data.SqlClient
 Imports System.Windows.Forms
 
 Public Class QuyDinhMuonSachDAL
-    Private dbAccess As DataBaseAccess
     Protected Con As SqlConnection
     Private ConnectionString As String
     Dim dt As New DataTable
