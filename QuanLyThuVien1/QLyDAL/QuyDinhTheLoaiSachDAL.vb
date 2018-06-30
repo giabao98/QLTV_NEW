@@ -4,7 +4,7 @@ Imports System.Data
 Imports System.Data.SqlClient
 Imports System.Configuration
 
-Public Class LoaiDocGiaDAL
+Public Class QuyDinhTheLoaiSachDAL
     Private dbAccess As DataBaseAccess
     Protected Con As SqlConnection
     Private ConnectionString As String
@@ -19,11 +19,11 @@ Public Class LoaiDocGiaDAL
         Me.ConnectionString = ConnectionString
     End Sub
 
-    Public Function ThemLoaiDocGia(ldg As LoaiDocGiaDTO)
+    Public Function ThemTheLoai(qdtls As QuyDinhTheLoaiSachDTO)
         Dim query As String = String.Empty
-        query &= "INSERT INTO [tblLOAIDOCGIA] "
-        query &= "( [maloaidocgia], [tenloaidocgia])"
-        query &= "VALUES (@maloaidocgia,@tenloaidocgia)"
+        query &= "INSERT INTO [tblTHELOAI] "
+        query &= "( [matheloai], [tentheloai], [soluong])"
+        query &= "VALUES (@matheloai,@tentheloai,@soluong)"
 
         Using conn As New SqlConnection(ConnectionString)
             Using comm As New SqlCommand()
@@ -31,8 +31,9 @@ Public Class LoaiDocGiaDAL
                     .Connection = conn
                     .CommandType = CommandType.Text
                     .CommandText = query
-                    .Parameters.AddWithValue("@maloaidocgia", ldg.MaLoaiDocGia)
-                    .Parameters.AddWithValue("@tenloaidocgia", ldg.TenLoaiDocGia)
+                    .Parameters.AddWithValue("@matheloai", qdtls.MaTheLoai)
+                    .Parameters.AddWithValue("@tentheloai", qdtls.TenTheLoai)
+                    .Parameters.AddWithValue("@soluong", qdtls.SoLuong)
 
                 End With
                 Try
@@ -46,13 +47,14 @@ Public Class LoaiDocGiaDAL
         End Using
         Return 0 ' thanh cong
     End Function
-    Public Function CapNhatLoaiDocGia(ldg As LoaiDocGiaDTO)
+    Public Function CapNhatTheLoai(qdtls As QuyDinhTheLoaiSachDTO)
         Dim query As String = String.Empty
-        query &= "UPDATE [tblLOAIDOCGIA] SET "
-        query &= "[maloaidocgia] = @maloaidocgia "
-        query &= " ,[tenloaidocgia] = @tenloaidocgia "
+        query &= "UPDATE [tblTHELOAI] SET "
+        query &= "[matheloai] = @matheloai "
+        query &= " ,[tentheloai] = @tentheloai "
+        query &= " ,[soluong] = @soluong "
         query &= " WHERE "
-        query &= " [maloaidocgia] = @maloaidocgia "
+        query &= " [matheloai] = @matheloai "
 
         Using conn As New SqlConnection(ConnectionString)
             Using comm As New SqlCommand()
@@ -60,8 +62,9 @@ Public Class LoaiDocGiaDAL
                     .Connection = conn
                     .CommandType = CommandType.Text
                     .CommandText = query
-                    .Parameters.AddWithValue("@maloaidocgia", ldg.MaLoaiDocGia)
-                    .Parameters.AddWithValue("@tenloaidocgia", ldg.TenLoaiDocGia)
+                    .Parameters.AddWithValue("@matheloai", qdtls.MaTheLoai)
+                    .Parameters.AddWithValue("@tentheloai", qdtls.TenTheLoai)
+                    .Parameters.AddWithValue("@soluong", qdtls.SoLuong)
 
                 End With
                 Try
@@ -75,11 +78,11 @@ Public Class LoaiDocGiaDAL
         End Using
         Return 0 ' thanh cong
     End Function
-    Public Function XoaLoaiDocGia(ldg As LoaiDocGiaDTO)
+    Public Function XoaTheLoai(qdtls As QuyDinhTheLoaiSachDTO)
         Dim query As String = String.Empty
-        query &= "DELETE [tblLOAIDOCGIA] "
+        query &= "DELETE [tblTHELOAI] "
         query &= " WHERE "
-        query &= " [maloaidocgia] = @maloaidocgia "
+        query &= " [matheloai] = @matheloai "
 
         Using conn As New SqlConnection(ConnectionString)
             Using comm As New SqlCommand()
@@ -87,8 +90,9 @@ Public Class LoaiDocGiaDAL
                     .Connection = conn
                     .CommandType = CommandType.Text
                     .CommandText = query
-                    .Parameters.AddWithValue("@maloaidocgia", ldg.MaLoaiDocGia)
-                    .Parameters.AddWithValue("@tenloaidocgia", ldg.TenLoaiDocGia)
+                    .Parameters.AddWithValue("@matheloai", qdtls.MaTheLoai)
+                    .Parameters.AddWithValue("@tentheloai", qdtls.TenTheLoai)
+                    .Parameters.AddWithValue("@soluong", qdtls.SoLuong)
 
                 End With
                 Try

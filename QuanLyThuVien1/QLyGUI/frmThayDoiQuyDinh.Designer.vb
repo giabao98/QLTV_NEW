@@ -87,7 +87,7 @@ Partial Class frmThayDoiQuyDinh
         Me.btnQuyDinhTheLoaiSach.Name = "btnQuyDinhTheLoaiSach"
         Me.btnQuyDinhTheLoaiSach.Size = New System.Drawing.Size(129, 79)
         Me.btnQuyDinhTheLoaiSach.TabIndex = 0
-        Me.btnQuyDinhTheLoaiSach.Text = "Thể loại sách"
+        Me.btnQuyDinhTheLoaiSach.Text = "Thể loại sách và năm xuất bản"
         Me.btnQuyDinhTheLoaiSach.UseVisualStyleBackColor = False
         '
         'frmThayDoiQuyDinh
