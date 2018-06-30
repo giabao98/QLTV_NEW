@@ -3,6 +3,7 @@ Imports QLyDTO
 Imports System.Data
 Imports System.Data.SqlClient
 Imports System.Configuration
+Imports System.Windows.Forms
 
 Public Class LaptheDAL
     Private dbAccess As DataBaseAccess
@@ -18,6 +19,16 @@ Public Class LaptheDAL
     Public Sub New(ConnectionString As String)
         Me.ConnectionString = ConnectionString
     End Sub
+
+    Public Function datatable()
+        Dim dt As New DataTable
+        Dim dtAdap As SqlDataAdapter
+        Dim strFind As String = "select [tuoitoida],[tuoitoithieu],[hansudungthe] from tblTHAMSO"
+        dt.Clear()
+        dtAdap = New SqlDataAdapter(strFind, Con)
+        dtAdap.Fill(dt)
+        Return dt
+    End Function
 
     Public Function ThemDocGia(dg As LaptheDTO)
         Dim query As String = String.Empty

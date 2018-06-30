@@ -72,13 +72,13 @@ Public Class frmLapthe
         End If
 
         If (ltbus.ValidDayOfCard(lt) = False) Then
-            MessageBox.Show("Ngày lập thẻ chưa được nhập.")
+            MessageBox.Show("Ngày lập thẻ chưa được nhập hoặc ngày được nhập đã quá hạn.")
             dtpNgayLapThe.Focus()
             Return
         End If
 
         If (ltbus.ValidBirthday(lt) = False) Then
-            MessageBox.Show("Ngày sinh chưa được nhập.")
+            MessageBox.Show("Ngày sinh vừa nhập có năm sinh lớn/bé hơn so với tuổi quy định.")
             dtpNgaySinh.Focus()
             Return
         End If
@@ -142,13 +142,13 @@ Public Class frmLapthe
         End If
 
         If (ltbus.ValidDayOfCard(lt) = False) Then
-            MessageBox.Show("Ngày lập thẻ chưa được nhập.")
+            MessageBox.Show("Ngày lập thẻ chưa được nhập hoặc ngày được nhập đã quá hạn.")
             dtpNgayLapThe.Focus()
             Return
         End If
 
         If (ltbus.ValidBirthday(lt) = False) Then
-            MessageBox.Show("Ngày sinh chưa được nhập.")
+            MessageBox.Show("Ngày sinh vừa nhập có năm sinh lớn/bé hơn so với tuổi quy định.")
             dtpNgaySinh.Focus()
             Return
         End If

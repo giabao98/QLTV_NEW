@@ -105,7 +105,7 @@ Public Class frmMuonTraSach
         End If
 
         If (mtbus.ValidSoLuongMuon(mt) = False) Then
-            MessageBox.Show("Số lượng mượn chưa được nhập!")
+            MessageBox.Show("Số lượng mượn chưa được nhập hoặc bạn đã nhập quá số lượng cho phép!")
             txbSoLuongmuon.Focus()
             Return
         End If
@@ -113,6 +113,12 @@ Public Class frmMuonTraSach
         If (mtbus.ValidXacNhanTra(mt) = False) Then
             MessageBox.Show("Chưa có thông tin xác nhận trả")
             cbXacNhanTra.Focus()
+            Return
+        End If
+
+        If (mtbus.ValidNgayMuon(mt) = False) Then
+            MessageBox.Show("Ngày mượn vừa nhập đã quá thời gian mượn cho phép.")
+            dtpNgayMuon.Focus()
             Return
         End If
 
@@ -192,7 +198,7 @@ Public Class frmMuonTraSach
         End If
 
         If (mtbus.ValidSoLuongMuon(mt) = False) Then
-            MessageBox.Show("Số lượng mượn chưa được nhập!")
+            MessageBox.Show("Số lượng mượn chưa được nhập hoặc bạn đã nhập quá số lượng cho phép!")
             txbSoLuongmuon.Focus()
             Return
         End If
@@ -200,6 +206,12 @@ Public Class frmMuonTraSach
         If (mtbus.ValidXacNhanTra(mt) = False) Then
             MessageBox.Show("Chưa có thông tin xác nhận trả")
             cbXacNhanTra.Focus()
+            Return
+        End If
+
+        If (mtbus.ValidNgayMuon(mt) = False) Then
+            MessageBox.Show("Ngày mượn vừa nhập đã quá thời gian mượn cho phép.")
+            dtpNgayMuon.Focus()
             Return
         End If
 

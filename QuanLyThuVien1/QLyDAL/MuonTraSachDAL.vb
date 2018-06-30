@@ -5,14 +5,28 @@ Imports System.Data.SqlClient
 Imports System.Configuration
 Public Class MuonTraSachDAL
     Private connectionString As String
+    Protected Con As SqlConnection
 
     Public Sub New()
         ' Read ConnectionString value from App.config file
+        Con = New SqlConnection
         connectionString = ConfigurationManager.AppSettings("ConnectionString")
+        Con.ConnectionString = connectionString
     End Sub
     Public Sub New(ConnectionString As String)
         Me.connectionString = ConnectionString
     End Sub
+
+    Public Function datatable()
+        Dim dt As New DataTable
+        Dim dtAdap As SqlDataAdapter
+        Dim strFind As String = "select [thoigianmuontoida],[soluongmuontoida] from tblTHAMSO"
+        dt.Clear()
+        dtAdap = New SqlDataAdapter(strFind, Con)
+        dtAdap.Fill(dt)
+        Return dt
+    End Function
+
     Public Function XacNhan(mt As MuonTraSachDTO)
         Dim query As String = String.Empty
         query &= "INSERT INTO [tblCHITIETPHIEUMUON]"
