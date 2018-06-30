@@ -27,4 +27,13 @@ Public Class QuyDinhTheLoaiSachBUS
 
         Return True
     End Function
+
+    Public Function ValidKhoangNamXB(qdtls As QuyDinhTheLoaiSachDTO) As Boolean
+
+        If (qdtls.KhoangNamXB.ToString.Length < 1) Then
+            Return False
+        End If
+
+        Return True
+    End Function
 End Class

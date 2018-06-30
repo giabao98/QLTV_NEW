@@ -26,43 +26,43 @@ Partial Class frmQuyDinhTheLoaiSach
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmQuyDinhTheLoaiSach))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabTheLoai = New System.Windows.Forms.TabPage()
-        Me.tabNamXuatBan = New System.Windows.Forms.TabPage()
-        Me.SoluongDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MatheloaiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TblTHELOAITableAdapter = New QLyGUI.TVDataBsDataSet6TableAdapters.tblTHELOAITableAdapter()
-        Me.TblTHELOAIBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TVDataBsDataSet6 = New QLyGUI.TVDataBsDataSet6()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.txbSoLuong = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.txbTenTheLoai = New System.Windows.Forms.TextBox()
         Me.lbTenLoaiDocGia = New System.Windows.Forms.Label()
         Me.txbMaTheLoai = New System.Windows.Forms.TextBox()
         Me.lbMaLoaiDocGia = New System.Windows.Forms.Label()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnUpdate = New System.Windows.Forms.Button()
-        Me.btnAdd = New System.Windows.Forms.Button()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TentheloaiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvTheLoaiSach = New System.Windows.Forms.DataGridView()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.MatheloaiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TentheloaiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SoluongDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblTHELOAIBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TVDataBsDataSet6 = New QLyGUI.TVDataBsDataSet6()
+        Me.tabNamXuatBan = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnUpdateNamXB = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.txbTuoiToiThieu = New System.Windows.Forms.TextBox()
+        Me.txbKhoangNamXB = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TblTHELOAITableAdapter = New QLyGUI.TVDataBsDataSet6TableAdapters.tblTHELOAITableAdapter()
         Me.TabControl1.SuspendLayout()
         Me.tabTheLoai.SuspendLayout()
-        Me.tabNamXuatBan.SuspendLayout()
-        CType(Me.TblTHELOAIBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TVDataBsDataSet6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvTheLoaiSach, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblTHELOAIBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TVDataBsDataSet6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabNamXuatBan.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
@@ -92,112 +92,20 @@ Partial Class frmQuyDinhTheLoaiSach
         Me.tabTheLoai.Text = "Thể Loại"
         Me.tabTheLoai.UseVisualStyleBackColor = True
         '
-        'tabNamXuatBan
+        'GroupBox3
         '
-        Me.tabNamXuatBan.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.tabNamXuatBan.Controls.Add(Me.GroupBox4)
-        Me.tabNamXuatBan.Controls.Add(Me.GroupBox5)
-        Me.tabNamXuatBan.Controls.Add(Me.GroupBox6)
-        Me.tabNamXuatBan.Location = New System.Drawing.Point(4, 25)
-        Me.tabNamXuatBan.Name = "tabNamXuatBan"
-        Me.tabNamXuatBan.Padding = New System.Windows.Forms.Padding(3)
-        Me.tabNamXuatBan.Size = New System.Drawing.Size(561, 480)
-        Me.tabNamXuatBan.TabIndex = 1
-        Me.tabNamXuatBan.Text = "Năm Xuất Bản"
-        '
-        'SoluongDataGridViewTextBoxColumn
-        '
-        Me.SoluongDataGridViewTextBoxColumn.DataPropertyName = "soluong"
-        Me.SoluongDataGridViewTextBoxColumn.HeaderText = "Số Lượng"
-        Me.SoluongDataGridViewTextBoxColumn.Name = "SoluongDataGridViewTextBoxColumn"
-        Me.SoluongDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'MatheloaiDataGridViewTextBoxColumn
-        '
-        Me.MatheloaiDataGridViewTextBoxColumn.DataPropertyName = "matheloai"
-        Me.MatheloaiDataGridViewTextBoxColumn.HeaderText = "Mã Thể Loại"
-        Me.MatheloaiDataGridViewTextBoxColumn.Name = "MatheloaiDataGridViewTextBoxColumn"
-        Me.MatheloaiDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TblTHELOAITableAdapter
-        '
-        Me.TblTHELOAITableAdapter.ClearBeforeFill = True
-        '
-        'TblTHELOAIBindingSource
-        '
-        Me.TblTHELOAIBindingSource.DataMember = "tblTHELOAI"
-        Me.TblTHELOAIBindingSource.DataSource = Me.TVDataBsDataSet6
-        '
-        'TVDataBsDataSet6
-        '
-        Me.TVDataBsDataSet6.DataSetName = "TVDataBsDataSet6"
-        Me.TVDataBsDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'txbSoLuong
-        '
-        Me.txbSoLuong.Location = New System.Drawing.Point(136, 130)
-        Me.txbSoLuong.Margin = New System.Windows.Forms.Padding(4)
-        Me.txbSoLuong.Name = "txbSoLuong"
-        Me.txbSoLuong.Size = New System.Drawing.Size(205, 22)
-        Me.txbSoLuong.TabIndex = 23
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(8, 134)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(68, 17)
-        Me.Label2.TabIndex = 22
-        Me.Label2.Text = "Số lượng:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(106, 19)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(361, 36)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Quy Định Thể Loại Sách"
-        '
-        'txbTenTheLoai
-        '
-        Me.txbTenTheLoai.Location = New System.Drawing.Point(136, 86)
-        Me.txbTenTheLoai.Margin = New System.Windows.Forms.Padding(4)
-        Me.txbTenTheLoai.Name = "txbTenTheLoai"
-        Me.txbTenTheLoai.Size = New System.Drawing.Size(205, 22)
-        Me.txbTenTheLoai.TabIndex = 21
-        '
-        'lbTenLoaiDocGia
-        '
-        Me.lbTenLoaiDocGia.AutoSize = True
-        Me.lbTenLoaiDocGia.Location = New System.Drawing.Point(8, 90)
-        Me.lbTenLoaiDocGia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbTenLoaiDocGia.Name = "lbTenLoaiDocGia"
-        Me.lbTenLoaiDocGia.Size = New System.Drawing.Size(87, 17)
-        Me.lbTenLoaiDocGia.TabIndex = 20
-        Me.lbTenLoaiDocGia.Text = "Tên thể loại:"
-        '
-        'txbMaTheLoai
-        '
-        Me.txbMaTheLoai.Location = New System.Drawing.Point(136, 43)
-        Me.txbMaTheLoai.Margin = New System.Windows.Forms.Padding(4)
-        Me.txbMaTheLoai.Name = "txbMaTheLoai"
-        Me.txbMaTheLoai.Size = New System.Drawing.Size(205, 22)
-        Me.txbMaTheLoai.TabIndex = 19
-        '
-        'lbMaLoaiDocGia
-        '
-        Me.lbMaLoaiDocGia.AutoSize = True
-        Me.lbMaLoaiDocGia.Location = New System.Drawing.Point(8, 47)
-        Me.lbMaLoaiDocGia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbMaLoaiDocGia.Name = "lbMaLoaiDocGia"
-        Me.lbMaLoaiDocGia.Size = New System.Drawing.Size(81, 17)
-        Me.lbMaLoaiDocGia.TabIndex = 18
-        Me.lbMaLoaiDocGia.Text = "Mã thể loại:"
+        Me.GroupBox3.BackColor = System.Drawing.Color.AliceBlue
+        Me.GroupBox3.Controls.Add(Me.btnDelete)
+        Me.GroupBox3.Controls.Add(Me.btnUpdate)
+        Me.GroupBox3.Controls.Add(Me.btnAdd)
+        Me.GroupBox3.Location = New System.Drawing.Point(397, 81)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox3.Size = New System.Drawing.Size(160, 171)
+        Me.GroupBox3.TabIndex = 41
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Chức năng"
         '
         'btnDelete
         '
@@ -242,21 +150,6 @@ Partial Class frmQuyDinhTheLoaiSach
         Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnAdd.UseVisualStyleBackColor = False
         '
-        'GroupBox3
-        '
-        Me.GroupBox3.BackColor = System.Drawing.Color.AliceBlue
-        Me.GroupBox3.Controls.Add(Me.btnDelete)
-        Me.GroupBox3.Controls.Add(Me.btnUpdate)
-        Me.GroupBox3.Controls.Add(Me.btnAdd)
-        Me.GroupBox3.Location = New System.Drawing.Point(397, 81)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox3.Size = New System.Drawing.Size(160, 171)
-        Me.GroupBox3.TabIndex = 41
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Chức năng"
-        '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.AliceBlue
@@ -275,6 +168,60 @@ Partial Class frmQuyDinhTheLoaiSach
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Thông tin chi tiết"
         '
+        'txbSoLuong
+        '
+        Me.txbSoLuong.Location = New System.Drawing.Point(136, 130)
+        Me.txbSoLuong.Margin = New System.Windows.Forms.Padding(4)
+        Me.txbSoLuong.Name = "txbSoLuong"
+        Me.txbSoLuong.Size = New System.Drawing.Size(205, 22)
+        Me.txbSoLuong.TabIndex = 23
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(8, 134)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(68, 17)
+        Me.Label2.TabIndex = 22
+        Me.Label2.Text = "Số lượng:"
+        '
+        'txbTenTheLoai
+        '
+        Me.txbTenTheLoai.Location = New System.Drawing.Point(136, 86)
+        Me.txbTenTheLoai.Margin = New System.Windows.Forms.Padding(4)
+        Me.txbTenTheLoai.Name = "txbTenTheLoai"
+        Me.txbTenTheLoai.Size = New System.Drawing.Size(205, 22)
+        Me.txbTenTheLoai.TabIndex = 21
+        '
+        'lbTenLoaiDocGia
+        '
+        Me.lbTenLoaiDocGia.AutoSize = True
+        Me.lbTenLoaiDocGia.Location = New System.Drawing.Point(8, 90)
+        Me.lbTenLoaiDocGia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbTenLoaiDocGia.Name = "lbTenLoaiDocGia"
+        Me.lbTenLoaiDocGia.Size = New System.Drawing.Size(87, 17)
+        Me.lbTenLoaiDocGia.TabIndex = 20
+        Me.lbTenLoaiDocGia.Text = "Tên thể loại:"
+        '
+        'txbMaTheLoai
+        '
+        Me.txbMaTheLoai.Location = New System.Drawing.Point(136, 43)
+        Me.txbMaTheLoai.Margin = New System.Windows.Forms.Padding(4)
+        Me.txbMaTheLoai.Name = "txbMaTheLoai"
+        Me.txbMaTheLoai.Size = New System.Drawing.Size(205, 22)
+        Me.txbMaTheLoai.TabIndex = 19
+        '
+        'lbMaLoaiDocGia
+        '
+        Me.lbMaLoaiDocGia.AutoSize = True
+        Me.lbMaLoaiDocGia.Location = New System.Drawing.Point(8, 47)
+        Me.lbMaLoaiDocGia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbMaLoaiDocGia.Name = "lbMaLoaiDocGia"
+        Me.lbMaLoaiDocGia.Size = New System.Drawing.Size(81, 17)
+        Me.lbMaLoaiDocGia.TabIndex = 18
+        Me.lbMaLoaiDocGia.Text = "Mã thể loại:"
+        '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.LightSeaGreen
@@ -287,12 +234,17 @@ Partial Class frmQuyDinhTheLoaiSach
         Me.GroupBox1.TabIndex = 39
         Me.GroupBox1.TabStop = False
         '
-        'TentheloaiDataGridViewTextBoxColumn
+        'Label1
         '
-        Me.TentheloaiDataGridViewTextBoxColumn.DataPropertyName = "tentheloai"
-        Me.TentheloaiDataGridViewTextBoxColumn.HeaderText = "Tên Thể Loại"
-        Me.TentheloaiDataGridViewTextBoxColumn.Name = "TentheloaiDataGridViewTextBoxColumn"
-        Me.TentheloaiDataGridViewTextBoxColumn.ReadOnly = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(106, 19)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(361, 36)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Quy Định Thể Loại Sách"
         '
         'dgvTheLoaiSach
         '
@@ -309,22 +261,54 @@ Partial Class frmQuyDinhTheLoaiSach
         Me.dgvTheLoaiSach.Size = New System.Drawing.Size(553, 214)
         Me.dgvTheLoaiSach.TabIndex = 42
         '
-        'Label3
+        'MatheloaiDataGridViewTextBoxColumn
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(72, 19)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(420, 36)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Khoảng Cách Năm Xuất Bản"
+        Me.MatheloaiDataGridViewTextBoxColumn.DataPropertyName = "matheloai"
+        Me.MatheloaiDataGridViewTextBoxColumn.HeaderText = "Mã Thể Loại"
+        Me.MatheloaiDataGridViewTextBoxColumn.Name = "MatheloaiDataGridViewTextBoxColumn"
+        Me.MatheloaiDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TentheloaiDataGridViewTextBoxColumn
+        '
+        Me.TentheloaiDataGridViewTextBoxColumn.DataPropertyName = "tentheloai"
+        Me.TentheloaiDataGridViewTextBoxColumn.HeaderText = "Tên Thể Loại"
+        Me.TentheloaiDataGridViewTextBoxColumn.Name = "TentheloaiDataGridViewTextBoxColumn"
+        Me.TentheloaiDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SoluongDataGridViewTextBoxColumn
+        '
+        Me.SoluongDataGridViewTextBoxColumn.DataPropertyName = "soluong"
+        Me.SoluongDataGridViewTextBoxColumn.HeaderText = "Số Lượng"
+        Me.SoluongDataGridViewTextBoxColumn.Name = "SoluongDataGridViewTextBoxColumn"
+        Me.SoluongDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TblTHELOAIBindingSource
+        '
+        Me.TblTHELOAIBindingSource.DataMember = "tblTHELOAI"
+        Me.TblTHELOAIBindingSource.DataSource = Me.TVDataBsDataSet6
+        '
+        'TVDataBsDataSet6
+        '
+        Me.TVDataBsDataSet6.DataSetName = "TVDataBsDataSet6"
+        Me.TVDataBsDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'tabNamXuatBan
+        '
+        Me.tabNamXuatBan.BackColor = System.Drawing.Color.LightSeaGreen
+        Me.tabNamXuatBan.Controls.Add(Me.GroupBox4)
+        Me.tabNamXuatBan.Controls.Add(Me.GroupBox5)
+        Me.tabNamXuatBan.Controls.Add(Me.GroupBox6)
+        Me.tabNamXuatBan.Location = New System.Drawing.Point(4, 25)
+        Me.tabNamXuatBan.Name = "tabNamXuatBan"
+        Me.tabNamXuatBan.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabNamXuatBan.Size = New System.Drawing.Size(561, 480)
+        Me.tabNamXuatBan.TabIndex = 1
+        Me.tabNamXuatBan.Text = "Năm Xuất Bản"
         '
         'GroupBox4
         '
         Me.GroupBox4.BackColor = System.Drawing.Color.AliceBlue
-        Me.GroupBox4.Controls.Add(Me.Button1)
+        Me.GroupBox4.Controls.Add(Me.btnUpdateNamXB)
         Me.GroupBox4.Location = New System.Drawing.Point(397, 85)
         Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Name = "GroupBox4"
@@ -334,24 +318,24 @@ Partial Class frmQuyDinhTheLoaiSach
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Chức năng"
         '
-        'Button1
+        'btnUpdateNamXB
         '
-        Me.Button1.BackColor = System.Drawing.Color.LightGreen
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(27, 71)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(111, 37)
-        Me.Button1.TabIndex = 32
-        Me.Button1.Text = "Cập nhật"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnUpdateNamXB.BackColor = System.Drawing.Color.LightGreen
+        Me.btnUpdateNamXB.Image = CType(resources.GetObject("btnUpdateNamXB.Image"), System.Drawing.Image)
+        Me.btnUpdateNamXB.Location = New System.Drawing.Point(27, 71)
+        Me.btnUpdateNamXB.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnUpdateNamXB.Name = "btnUpdateNamXB"
+        Me.btnUpdateNamXB.Size = New System.Drawing.Size(111, 37)
+        Me.btnUpdateNamXB.TabIndex = 32
+        Me.btnUpdateNamXB.Text = "Cập nhật"
+        Me.btnUpdateNamXB.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnUpdateNamXB.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnUpdateNamXB.UseVisualStyleBackColor = False
         '
         'GroupBox5
         '
         Me.GroupBox5.BackColor = System.Drawing.Color.AliceBlue
-        Me.GroupBox5.Controls.Add(Me.txbTuoiToiThieu)
+        Me.GroupBox5.Controls.Add(Me.txbKhoangNamXB)
         Me.GroupBox5.Controls.Add(Me.Label7)
         Me.GroupBox5.Location = New System.Drawing.Point(4, 85)
         Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4)
@@ -362,23 +346,23 @@ Partial Class frmQuyDinhTheLoaiSach
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Thông tin chi tiết"
         '
-        'txbTuoiToiThieu
+        'txbKhoangNamXB
         '
-        Me.txbTuoiToiThieu.Location = New System.Drawing.Point(150, 77)
-        Me.txbTuoiToiThieu.Margin = New System.Windows.Forms.Padding(4)
-        Me.txbTuoiToiThieu.Name = "txbTuoiToiThieu"
-        Me.txbTuoiToiThieu.Size = New System.Drawing.Size(205, 22)
-        Me.txbTuoiToiThieu.TabIndex = 19
+        Me.txbKhoangNamXB.Location = New System.Drawing.Point(125, 79)
+        Me.txbKhoangNamXB.Margin = New System.Windows.Forms.Padding(4)
+        Me.txbKhoangNamXB.Name = "txbKhoangNamXB"
+        Me.txbKhoangNamXB.Size = New System.Drawing.Size(205, 22)
+        Me.txbKhoangNamXB.TabIndex = 19
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(22, 81)
+        Me.Label7.Location = New System.Drawing.Point(37, 82)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(94, 17)
+        Me.Label7.Size = New System.Drawing.Size(62, 17)
         Me.Label7.TabIndex = 18
-        Me.Label7.Text = "Tuổi tối thiểu:"
+        Me.Label7.Text = "Số Năm:"
         '
         'GroupBox6
         '
@@ -392,6 +376,22 @@ Partial Class frmQuyDinhTheLoaiSach
         Me.GroupBox6.TabIndex = 42
         Me.GroupBox6.TabStop = False
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label3.Location = New System.Drawing.Point(72, 19)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(420, 36)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Khoảng Cách Năm Xuất Bản"
+        '
+        'TblTHELOAITableAdapter
+        '
+        Me.TblTHELOAITableAdapter.ClearBeforeFill = True
+        '
         'frmQuyDinhTheLoaiSach
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -403,15 +403,15 @@ Partial Class frmQuyDinhTheLoaiSach
         Me.Text = "frmLoaiDocGia"
         Me.TabControl1.ResumeLayout(False)
         Me.tabTheLoai.ResumeLayout(False)
-        Me.tabNamXuatBan.ResumeLayout(False)
-        CType(Me.TblTHELOAIBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TVDataBsDataSet6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvTheLoaiSach, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblTHELOAIBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TVDataBsDataSet6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabNamXuatBan.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
@@ -445,9 +445,9 @@ Partial Class frmQuyDinhTheLoaiSach
     Friend WithEvents tabNamXuatBan As TabPage
     Friend WithEvents TblTHELOAITableAdapter As TVDataBsDataSet6TableAdapters.tblTHELOAITableAdapter
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnUpdateNamXB As Button
     Friend WithEvents GroupBox5 As GroupBox
-    Friend WithEvents txbTuoiToiThieu As TextBox
+    Friend WithEvents txbKhoangNamXB As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents GroupBox6 As GroupBox
     Friend WithEvents Label3 As Label

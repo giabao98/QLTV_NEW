@@ -7,6 +7,12 @@ Public Class frmQuyDinhTheLoaiSach
         'TODO: This line of code loads data into the 'TVDataBsDataSet6.tblTHELOAI' table. You can move, or remove it, as needed.
         Me.TblTHELOAITableAdapter.Fill(Me.TVDataBsDataSet6.tblTHELOAI)
 
+        Dim qdtlsDAL As New QuyDinhTheLoaiSachDAL
+        Dim dtsource = qdtlsDAL.datatable
+
+        'đưa data vào textbox
+        txbKhoangNamXB.DataBindings.Add("Text", dtsource, "thoigianxuatban")
+
 
     End Sub
     Public Function resetData(a)
@@ -124,5 +130,33 @@ Public Class frmQuyDinhTheLoaiSach
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub btnUpdateNamXB_Click(sender As Object, e As EventArgs) Handles btnUpdateNamXB.Click
+        'Gui
+        Dim qdtls As New QuyDinhTheLoaiSachDTO
+        qdtls.KhoangNamXB = txbKhoangNamXB.Text
+
+        'BUS
+        Dim qdtlsBUS As New QuyDinhTheLoaiSachBUS
+        If (qdtlsBUS.ValidKhoangNamXB(qdtls) = False) Then
+            MessageBox.Show("Ô số lượng sách mượn tối đa trống!")
+            txbKhoangNamXB.Focus()
+            Return
+        End If
+
+        'DAL
+        Dim qdtlsDAL As New QuyDinhTheLoaiSachDAL
+        Dim result As Integer
+
+        result = qdtlsDAL.CapNhatKhoangNamXB(qdtls)
+
+        If (result = 0) Then
+            MessageBox.Show("Cập nhật quy định thành công!")
+
+        End If
+        If (result = 1) Then
+            MessageBox.Show("Cập nhật quy định thất bại!")
+        End If
     End Sub
 End Class

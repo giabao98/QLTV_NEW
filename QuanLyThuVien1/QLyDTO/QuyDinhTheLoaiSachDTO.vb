@@ -2,6 +2,7 @@
     Private strMaTheLoai As String
     Private strTenTheLoai As String
     Private iSoLuong As Integer
+    Private iKhoangNamXB As Integer
 
     Public Property MaTheLoai As String
         Get
@@ -27,6 +28,15 @@
         End Get
         Set
             iSoLuong = Value
+        End Set
+    End Property
+
+    Public Property KhoangNamXB As Integer
+        Get
+            Return iKhoangNamXB
+        End Get
+        Set
+            iKhoangNamXB = Value
         End Set
     End Property
 End Class
