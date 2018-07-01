@@ -16,6 +16,16 @@ Public Class frmMuonTraSach
         cbTheLoai.DataSource = mtsDAL.datatable1
         cbTheLoai.ValueMember = "matheloai"
         cbTheLoai.DisplayMember = "matheloai"
+
+        cbMaSach.DataSource = mtsDAL.datatable2
+        cbMaSach.ValueMember = "masach"
+        cbMaSach.DisplayMember = "masach"
+
+        cbMaDocGia.DataSource = mtsDAL.datatable3
+        cbMaDocGia.DisplayMember = "madocgia"
+        cbMaDocGia.ValueMember = "madocgia"
+
+
     End Sub
     Public Function ResetData(mt)
         txbMaPhieuMuon.Text = ""
@@ -266,5 +276,13 @@ Public Class frmMuonTraSach
         Me.TblCHITIETPHIEUMUONTableAdapter.Fill(Me.TVDataBsDataSet5.tblCHITIETPHIEUMUON)
         ResetData(mt)
 
+    End Sub
+
+    Private Sub cbMaDocGia_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbMaDocGia.SelectedIndexChanged
+
+        'Dim strFind As String = "select [tendocgia] from tblDOCGIA where '" + cbMaDocGia.Text + "'"
+        'Dim mtsDAL As New MuonTraSachDAL
+        'Dim row = mtsDAL.datatable4(strFind)
+        'txbTenDocGia.Text = row.Rows(0).value.ToString()
     End Sub
 End Class

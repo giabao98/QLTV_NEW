@@ -163,6 +163,7 @@ Partial Class frmMuonTraSach
         '
         'cbMaSach
         '
+        Me.cbMaSach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMaSach.FormattingEnabled = True
         Me.cbMaSach.Location = New System.Drawing.Point(141, 113)
         Me.cbMaSach.Margin = New System.Windows.Forms.Padding(4)
@@ -385,6 +386,7 @@ Partial Class frmMuonTraSach
         '
         'cbMaDocGia
         '
+        Me.cbMaDocGia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMaDocGia.FormattingEnabled = True
         Me.cbMaDocGia.Location = New System.Drawing.Point(141, 48)
         Me.cbMaDocGia.Margin = New System.Windows.Forms.Padding(4)

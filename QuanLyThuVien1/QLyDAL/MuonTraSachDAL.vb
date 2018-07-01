@@ -3,6 +3,8 @@ Imports QLyDTO
 Imports System.Data
 Imports System.Data.SqlClient
 Imports System.Configuration
+Imports System.Windows.Forms
+
 Public Class MuonTraSachDAL
     Private connectionString As String
     Protected Con As SqlConnection
@@ -36,6 +38,39 @@ Public Class MuonTraSachDAL
         dtAdap.Fill(dt)
         Return dt
     End Function
+
+    Public Function datatable2()
+        Dim dt As New DataTable
+        Dim dtAdap As SqlDataAdapter
+        Dim strFind As String = "select [masach], [tensach] from tblSACH"
+        dt.Clear()
+        dtAdap = New SqlDataAdapter(strFind, Con)
+        dtAdap.Fill(dt)
+        Return dt
+    End Function
+
+    Public Function datatable3()
+        Dim dt As New DataTable
+        Dim dtAdap As SqlDataAdapter
+        Dim strFind As String = "select [madocgia] from tblDOCGIA"
+        dt.Clear()
+        dtAdap = New SqlDataAdapter(strFind, Con)
+        dtAdap.Fill(dt)
+        Return dt
+    End Function
+
+    'Public Function datatable4(strFind As String)
+    '    Dim mt As New MuonTraSachDTO
+    '    Dim dtsour As New DataGridView
+    '    Dim dt As New DataTable
+    '    Dim dtAdap As SqlDataAdapter
+    '    dt.Clear()
+    '    dtAdap = New SqlDataAdapter(strFind, Con)
+    '    dtAdap.Fill(dt)
+    '    dtsour.DataSource = dt
+    '    Return dt
+
+    'End Function
 
     Public Function XacNhan(mt As MuonTraSachDTO)
         Dim query As String = String.Empty
