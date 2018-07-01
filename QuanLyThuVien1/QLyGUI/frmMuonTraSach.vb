@@ -14,8 +14,8 @@ Public Class frmMuonTraSach
 
         Dim mtsDAL As New MuonTraSachDAL
         cbTheLoai.DataSource = mtsDAL.datatable1
-        cbTheLoai.ValueMember = "tentheloai"
-        cbTheLoai.DisplayMember = "tentheloai"
+        cbTheLoai.ValueMember = "matheloai"
+        cbTheLoai.DisplayMember = "matheloai"
     End Sub
     Public Function ResetData(mt)
         txbMaPhieuMuon.Text = ""

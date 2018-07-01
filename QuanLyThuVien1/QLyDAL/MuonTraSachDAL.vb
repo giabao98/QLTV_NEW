@@ -30,7 +30,7 @@ Public Class MuonTraSachDAL
     Public Function datatable1()
         Dim dt As New DataTable
         Dim dtAdap As SqlDataAdapter
-        Dim strFind As String = "select [tentheloai] from tblTHELOAI"
+        Dim strFind As String = "select [matheloai] from tblTHELOAI"
         dt.Clear()
         dtAdap = New SqlDataAdapter(strFind, Con)
         dtAdap.Fill(dt)

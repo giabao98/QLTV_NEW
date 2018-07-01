@@ -6,7 +6,7 @@ Imports QLyDTO
 Public Class ReportDAL
     Protected con As SqlConnection
     Private ConnectionString As String
-    Dim sqlAdap As New SqlDataAdapter
+    Dim sqlAdap As SqlDataAdapter
     Dim dt As New DataTable
 
     Public Sub New()
@@ -19,7 +19,7 @@ Public Class ReportDAL
     Public Function LoadData2DataGridView(dgv As DataGridView, report As ReportDTO)
         Dim strFind As String = ""
         If (report.KiHieu = 1) Then
-            strFind = "select a.masach, tensach, count(*) as SoLanMuon from tblCHITIETPHIEUMUON a inner join tblSACH b on a.masach = b.tensach group by a.masach, tensach "
+            strFind = "select masach, tensach, soluongmuon, matheloai muon from  tblCHITIETPHIEUMUON a inner join tblSACH b on a.matheloai = b.matheloai "
         End If
         If (report.KiHieu = 2) Then
             strFind = "select* from tblSACH where sosachhong > 0"

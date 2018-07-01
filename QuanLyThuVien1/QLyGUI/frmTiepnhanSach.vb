@@ -54,8 +54,8 @@ Public Class frmTiepnhanSach
 
         Dim tnsDAL As New TiepnhansachDAL
         cbBookKindID.DataSource = tnsDAL.datatable1
-        cbBookKindID.DisplayMember = "tentheloai"
-        cbBookKindID.ValueMember = "tentheloai"
+        cbBookKindID.DisplayMember = "matheloai"
+        cbBookKindID.ValueMember = "matheloai"
 
     End Sub
 
