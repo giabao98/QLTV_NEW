@@ -1,5 +1,6 @@
 ﻿Imports System.Configuration
 Imports System.Data.SqlClient
+Imports System.Windows.Forms
 Imports QLyDTO
 
 Public Class TaoTaiKhoanDAL

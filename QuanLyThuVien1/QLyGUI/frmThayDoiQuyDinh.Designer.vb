@@ -98,8 +98,11 @@ Partial Class frmThayDoiQuyDinh
         Me.ClientSize = New System.Drawing.Size(488, 199)
         Me.Controls.Add(Me.gbThayDoiQuyDinh)
         Me.Controls.Add(Me.lbThayDoiQuyDinh)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.Name = "frmThayDoiQuyDinh"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "ThayDoiQuyDinh"
         Me.gbThayDoiQuyDinh.ResumeLayout(False)
         Me.ResumeLayout(False)

@@ -26,6 +26,15 @@ Partial Class frmFindReader
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dgvReaderInfo = New System.Windows.Forms.DataGridView()
+        Me.MadocgiaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HotenDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.LoaidocgiaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NgaysinhDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DiachiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NgaylaptheDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TblDOCGIABindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TVDataBsDataSet3 = New QLyGUI.TVDataBsDataSet3()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnClose = New System.Windows.Forms.Button()
@@ -34,23 +43,14 @@ Partial Class frmFindReader
         Me.txbFind = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cbbFindCategory = New System.Windows.Forms.ComboBox()
-        Me.TVDataBsDataSet3 = New QLyGUI.TVDataBsDataSet3()
-        Me.TblDOCGIABindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblDOCGIATableAdapter = New QLyGUI.TVDataBsDataSet3TableAdapters.tblDOCGIATableAdapter()
-        Me.MadocgiaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HotenDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.LoaidocgiaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NgaysinhDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DiachiDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NgaylaptheDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgvReaderInfo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TblDOCGIABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TVDataBsDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.TVDataBsDataSet3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TblDOCGIABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox4
@@ -85,6 +85,62 @@ Partial Class frmFindReader
         Me.dgvReaderInfo.RowTemplate.Height = 24
         Me.dgvReaderInfo.Size = New System.Drawing.Size(930, 399)
         Me.dgvReaderInfo.TabIndex = 0
+        '
+        'MadocgiaDataGridViewTextBoxColumn
+        '
+        Me.MadocgiaDataGridViewTextBoxColumn.DataPropertyName = "madocgia"
+        Me.MadocgiaDataGridViewTextBoxColumn.HeaderText = "Mã độc giả"
+        Me.MadocgiaDataGridViewTextBoxColumn.Name = "MadocgiaDataGridViewTextBoxColumn"
+        Me.MadocgiaDataGridViewTextBoxColumn.Width = 120
+        '
+        'HotenDataGridViewTextBoxColumn
+        '
+        Me.HotenDataGridViewTextBoxColumn.DataPropertyName = "hoten"
+        Me.HotenDataGridViewTextBoxColumn.HeaderText = "Họ tên"
+        Me.HotenDataGridViewTextBoxColumn.Name = "HotenDataGridViewTextBoxColumn"
+        Me.HotenDataGridViewTextBoxColumn.Width = 150
+        '
+        'LoaidocgiaDataGridViewTextBoxColumn
+        '
+        Me.LoaidocgiaDataGridViewTextBoxColumn.DataPropertyName = "loaidocgia"
+        Me.LoaidocgiaDataGridViewTextBoxColumn.HeaderText = "Loại độc giả"
+        Me.LoaidocgiaDataGridViewTextBoxColumn.Name = "LoaidocgiaDataGridViewTextBoxColumn"
+        '
+        'NgaysinhDataGridViewTextBoxColumn
+        '
+        Me.NgaysinhDataGridViewTextBoxColumn.DataPropertyName = "ngaysinh"
+        Me.NgaysinhDataGridViewTextBoxColumn.HeaderText = "Ngày sinh"
+        Me.NgaysinhDataGridViewTextBoxColumn.Name = "NgaysinhDataGridViewTextBoxColumn"
+        Me.NgaysinhDataGridViewTextBoxColumn.Width = 120
+        '
+        'EmailDataGridViewTextBoxColumn
+        '
+        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "email"
+        Me.EmailDataGridViewTextBoxColumn.HeaderText = "Email"
+        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
+        '
+        'DiachiDataGridViewTextBoxColumn
+        '
+        Me.DiachiDataGridViewTextBoxColumn.DataPropertyName = "diachi"
+        Me.DiachiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ"
+        Me.DiachiDataGridViewTextBoxColumn.Name = "DiachiDataGridViewTextBoxColumn"
+        Me.DiachiDataGridViewTextBoxColumn.Width = 150
+        '
+        'NgaylaptheDataGridViewTextBoxColumn
+        '
+        Me.NgaylaptheDataGridViewTextBoxColumn.DataPropertyName = "ngaylapthe"
+        Me.NgaylaptheDataGridViewTextBoxColumn.HeaderText = "Ngày lập thẻ"
+        Me.NgaylaptheDataGridViewTextBoxColumn.Name = "NgaylaptheDataGridViewTextBoxColumn"
+        '
+        'TblDOCGIABindingSource
+        '
+        Me.TblDOCGIABindingSource.DataMember = "tblDOCGIA"
+        Me.TblDOCGIABindingSource.DataSource = Me.TVDataBsDataSet3
+        '
+        'TVDataBsDataSet3
+        '
+        Me.TVDataBsDataSet3.DataSetName = "TVDataBsDataSet3"
+        Me.TVDataBsDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GroupBox1
         '
@@ -158,6 +214,7 @@ Partial Class frmFindReader
         '
         'cbbFindCategory
         '
+        Me.cbbFindCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbbFindCategory.FormattingEnabled = True
         Me.cbbFindCategory.Items.AddRange(New Object() {"madocgia", "hoten", "loaidocgia", "ngaysinh", "email", "diachi", "ngaylapthe"})
         Me.cbbFindCategory.Location = New System.Drawing.Point(162, 21)
@@ -165,65 +222,9 @@ Partial Class frmFindReader
         Me.cbbFindCategory.Size = New System.Drawing.Size(173, 24)
         Me.cbbFindCategory.TabIndex = 0
         '
-        'TVDataBsDataSet3
-        '
-        Me.TVDataBsDataSet3.DataSetName = "TVDataBsDataSet3"
-        Me.TVDataBsDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TblDOCGIABindingSource
-        '
-        Me.TblDOCGIABindingSource.DataMember = "tblDOCGIA"
-        Me.TblDOCGIABindingSource.DataSource = Me.TVDataBsDataSet3
-        '
         'TblDOCGIATableAdapter
         '
         Me.TblDOCGIATableAdapter.ClearBeforeFill = True
-        '
-        'MadocgiaDataGridViewTextBoxColumn
-        '
-        Me.MadocgiaDataGridViewTextBoxColumn.DataPropertyName = "madocgia"
-        Me.MadocgiaDataGridViewTextBoxColumn.HeaderText = "Mã độc giả"
-        Me.MadocgiaDataGridViewTextBoxColumn.Name = "MadocgiaDataGridViewTextBoxColumn"
-        Me.MadocgiaDataGridViewTextBoxColumn.Width = 120
-        '
-        'HotenDataGridViewTextBoxColumn
-        '
-        Me.HotenDataGridViewTextBoxColumn.DataPropertyName = "hoten"
-        Me.HotenDataGridViewTextBoxColumn.HeaderText = "Họ tên"
-        Me.HotenDataGridViewTextBoxColumn.Name = "HotenDataGridViewTextBoxColumn"
-        Me.HotenDataGridViewTextBoxColumn.Width = 150
-        '
-        'LoaidocgiaDataGridViewTextBoxColumn
-        '
-        Me.LoaidocgiaDataGridViewTextBoxColumn.DataPropertyName = "loaidocgia"
-        Me.LoaidocgiaDataGridViewTextBoxColumn.HeaderText = "Loại độc giả"
-        Me.LoaidocgiaDataGridViewTextBoxColumn.Name = "LoaidocgiaDataGridViewTextBoxColumn"
-        '
-        'NgaysinhDataGridViewTextBoxColumn
-        '
-        Me.NgaysinhDataGridViewTextBoxColumn.DataPropertyName = "ngaysinh"
-        Me.NgaysinhDataGridViewTextBoxColumn.HeaderText = "Ngày sinh"
-        Me.NgaysinhDataGridViewTextBoxColumn.Name = "NgaysinhDataGridViewTextBoxColumn"
-        Me.NgaysinhDataGridViewTextBoxColumn.Width = 120
-        '
-        'EmailDataGridViewTextBoxColumn
-        '
-        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "email"
-        Me.EmailDataGridViewTextBoxColumn.HeaderText = "Email"
-        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
-        '
-        'DiachiDataGridViewTextBoxColumn
-        '
-        Me.DiachiDataGridViewTextBoxColumn.DataPropertyName = "diachi"
-        Me.DiachiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ"
-        Me.DiachiDataGridViewTextBoxColumn.Name = "DiachiDataGridViewTextBoxColumn"
-        Me.DiachiDataGridViewTextBoxColumn.Width = 150
-        '
-        'NgaylaptheDataGridViewTextBoxColumn
-        '
-        Me.NgaylaptheDataGridViewTextBoxColumn.DataPropertyName = "ngaylapthe"
-        Me.NgaylaptheDataGridViewTextBoxColumn.HeaderText = "Ngày lập thẻ"
-        Me.NgaylaptheDataGridViewTextBoxColumn.Name = "NgaylaptheDataGridViewTextBoxColumn"
         '
         'frmFindReader
         '
@@ -232,17 +233,20 @@ Partial Class frmFindReader
         Me.ClientSize = New System.Drawing.Size(959, 646)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "frmFindReader"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Tìm Đọc Giả"
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         CType(Me.dgvReaderInfo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TblDOCGIABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TVDataBsDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.TVDataBsDataSet3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TblDOCGIABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

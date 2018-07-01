@@ -232,6 +232,7 @@ Partial Class frmFindBook
         '
         'cbbFindCategory
         '
+        Me.cbbFindCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbbFindCategory.FormattingEnabled = True
         Me.cbbFindCategory.Items.AddRange(New Object() {"masach", "tensach", "matheloai", "matacgia", "namxuatban", "manhaxuatban", "ngaynhap", "trigia", "matinhtrang", "soluong"})
         Me.cbbFindCategory.Location = New System.Drawing.Point(162, 21)
@@ -250,7 +251,10 @@ Partial Class frmFindBook
         Me.ClientSize = New System.Drawing.Size(959, 691)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "frmFindBook"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Tìm Sách"
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()

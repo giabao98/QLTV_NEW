@@ -28,32 +28,38 @@ Partial Class frmFind
         '
         'btnFindBook
         '
+        Me.btnFindBook.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.btnFindBook.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFindBook.Location = New System.Drawing.Point(43, 35)
         Me.btnFindBook.Name = "btnFindBook"
         Me.btnFindBook.Size = New System.Drawing.Size(249, 125)
         Me.btnFindBook.TabIndex = 0
         Me.btnFindBook.Text = "Tìm kiếm sách"
-        Me.btnFindBook.UseVisualStyleBackColor = True
+        Me.btnFindBook.UseVisualStyleBackColor = False
         '
         'btnFindReader
         '
+        Me.btnFindReader.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.btnFindReader.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFindReader.Location = New System.Drawing.Point(43, 196)
         Me.btnFindReader.Name = "btnFindReader"
         Me.btnFindReader.Size = New System.Drawing.Size(249, 125)
         Me.btnFindReader.TabIndex = 1
         Me.btnFindReader.Text = "Tìm kiếm độc giả"
-        Me.btnFindReader.UseVisualStyleBackColor = True
+        Me.btnFindReader.UseVisualStyleBackColor = False
         '
         'frmFind
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.ClientSize = New System.Drawing.Size(340, 378)
         Me.Controls.Add(Me.btnFindReader)
         Me.Controls.Add(Me.btnFindBook)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "frmFind"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frmFind"
         Me.ResumeLayout(False)
 

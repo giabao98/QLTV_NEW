@@ -107,7 +107,7 @@ Partial Class frmTiepnhanSach
         'btThemSach
         '
         Me.btThemSach.Location = New System.Drawing.Point(1297, 575)
-        Me.btThemSach.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btThemSach.Margin = New System.Windows.Forms.Padding(4)
         Me.btThemSach.Name = "btThemSach"
         Me.btThemSach.Size = New System.Drawing.Size(100, 28)
         Me.btThemSach.TabIndex = 15
@@ -180,9 +180,9 @@ Partial Class frmTiepnhanSach
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox1.Location = New System.Drawing.Point(16, 15)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(1027, 68)
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
@@ -222,9 +222,9 @@ Partial Class frmTiepnhanSach
         Me.GroupBox2.Controls.Add(Me.lbNamXuatBan)
         Me.GroupBox2.Controls.Add(Me.lbMaNhaXuatBan)
         Me.GroupBox2.Location = New System.Drawing.Point(16, 90)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(852, 233)
         Me.GroupBox2.TabIndex = 23
         Me.GroupBox2.TabStop = False
@@ -233,7 +233,7 @@ Partial Class frmTiepnhanSach
         'txtNumbers
         '
         Me.txtNumbers.Location = New System.Drawing.Point(571, 187)
-        Me.txtNumbers.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNumbers.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNumbers.Name = "txtNumbers"
         Me.txtNumbers.Size = New System.Drawing.Size(265, 22)
         Me.txtNumbers.TabIndex = 38
@@ -244,7 +244,7 @@ Partial Class frmTiepnhanSach
         Me.cbStatusID.FormattingEnabled = True
         Me.cbStatusID.Items.AddRange(New Object() {"Mới", "Cũ", "Đã Hỏng"})
         Me.cbStatusID.Location = New System.Drawing.Point(571, 146)
-        Me.cbStatusID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbStatusID.Margin = New System.Windows.Forms.Padding(4)
         Me.cbStatusID.Name = "cbStatusID"
         Me.cbStatusID.Size = New System.Drawing.Size(265, 24)
         Me.cbStatusID.TabIndex = 37
@@ -252,7 +252,7 @@ Partial Class frmTiepnhanSach
         'txbValue
         '
         Me.txbValue.Location = New System.Drawing.Point(571, 107)
-        Me.txbValue.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txbValue.Margin = New System.Windows.Forms.Padding(4)
         Me.txbValue.Name = "txbValue"
         Me.txbValue.Size = New System.Drawing.Size(265, 22)
         Me.txbValue.TabIndex = 36
@@ -260,7 +260,7 @@ Partial Class frmTiepnhanSach
         'dtpReceiptDate
         '
         Me.dtpReceiptDate.Location = New System.Drawing.Point(571, 68)
-        Me.dtpReceiptDate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpReceiptDate.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpReceiptDate.Name = "dtpReceiptDate"
         Me.dtpReceiptDate.Size = New System.Drawing.Size(265, 22)
         Me.dtpReceiptDate.TabIndex = 35
@@ -268,7 +268,7 @@ Partial Class frmTiepnhanSach
         'dtpPublishingYear
         '
         Me.dtpPublishingYear.Location = New System.Drawing.Point(571, 28)
-        Me.dtpPublishingYear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpPublishingYear.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpPublishingYear.Name = "dtpPublishingYear"
         Me.dtpPublishingYear.Size = New System.Drawing.Size(265, 22)
         Me.dtpPublishingYear.TabIndex = 34
@@ -277,7 +277,7 @@ Partial Class frmTiepnhanSach
         '
         Me.cbPublishingHouseID.FormattingEnabled = True
         Me.cbPublishingHouseID.Location = New System.Drawing.Point(141, 187)
-        Me.cbPublishingHouseID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbPublishingHouseID.Margin = New System.Windows.Forms.Padding(4)
         Me.cbPublishingHouseID.Name = "cbPublishingHouseID"
         Me.cbPublishingHouseID.Size = New System.Drawing.Size(265, 24)
         Me.cbPublishingHouseID.TabIndex = 28
@@ -286,7 +286,7 @@ Partial Class frmTiepnhanSach
         '
         Me.cbAuthorID.FormattingEnabled = True
         Me.cbAuthorID.Location = New System.Drawing.Point(141, 146)
-        Me.cbAuthorID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbAuthorID.Margin = New System.Windows.Forms.Padding(4)
         Me.cbAuthorID.Name = "cbAuthorID"
         Me.cbAuthorID.Size = New System.Drawing.Size(265, 24)
         Me.cbAuthorID.TabIndex = 27
@@ -296,7 +296,7 @@ Partial Class frmTiepnhanSach
         Me.cbBookKindID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbBookKindID.FormattingEnabled = True
         Me.cbBookKindID.Location = New System.Drawing.Point(141, 106)
-        Me.cbBookKindID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbBookKindID.Margin = New System.Windows.Forms.Padding(4)
         Me.cbBookKindID.Name = "cbBookKindID"
         Me.cbBookKindID.Size = New System.Drawing.Size(265, 24)
         Me.cbBookKindID.TabIndex = 26
@@ -304,7 +304,7 @@ Partial Class frmTiepnhanSach
         'txbBookName
         '
         Me.txbBookName.Location = New System.Drawing.Point(141, 68)
-        Me.txbBookName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txbBookName.Margin = New System.Windows.Forms.Padding(4)
         Me.txbBookName.Name = "txbBookName"
         Me.txbBookName.Size = New System.Drawing.Size(265, 22)
         Me.txbBookName.TabIndex = 25
@@ -313,7 +313,7 @@ Partial Class frmTiepnhanSach
         '
         Me.cbBookID.FormattingEnabled = True
         Me.cbBookID.Location = New System.Drawing.Point(141, 28)
-        Me.cbBookID.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbBookID.Margin = New System.Windows.Forms.Padding(4)
         Me.cbBookID.Name = "cbBookID"
         Me.cbBookID.Size = New System.Drawing.Size(265, 24)
         Me.cbBookID.TabIndex = 24
@@ -335,9 +335,9 @@ Partial Class frmTiepnhanSach
         Me.GroupBox3.Controls.Add(Me.Update_button)
         Me.GroupBox3.Controls.Add(Me.Add_button)
         Me.GroupBox3.Location = New System.Drawing.Point(876, 90)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Size = New System.Drawing.Size(167, 233)
         Me.GroupBox3.TabIndex = 24
         Me.GroupBox3.TabStop = False
@@ -348,7 +348,7 @@ Partial Class frmTiepnhanSach
         Me.Delete_button.BackColor = System.Drawing.Color.LightCoral
         Me.Delete_button.Image = CType(resources.GetObject("Delete_button.Image"), System.Drawing.Image)
         Me.Delete_button.Location = New System.Drawing.Point(28, 150)
-        Me.Delete_button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Delete_button.Margin = New System.Windows.Forms.Padding(4)
         Me.Delete_button.Name = "Delete_button"
         Me.Delete_button.Size = New System.Drawing.Size(117, 37)
         Me.Delete_button.TabIndex = 2
@@ -361,7 +361,7 @@ Partial Class frmTiepnhanSach
         Me.Update_button.BackColor = System.Drawing.Color.LightGreen
         Me.Update_button.Image = CType(resources.GetObject("Update_button.Image"), System.Drawing.Image)
         Me.Update_button.Location = New System.Drawing.Point(28, 98)
-        Me.Update_button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Update_button.Margin = New System.Windows.Forms.Padding(4)
         Me.Update_button.Name = "Update_button"
         Me.Update_button.Size = New System.Drawing.Size(117, 37)
         Me.Update_button.TabIndex = 1
@@ -374,7 +374,7 @@ Partial Class frmTiepnhanSach
         Me.Add_button.BackColor = System.Drawing.Color.LightGreen
         Me.Add_button.Image = CType(resources.GetObject("Add_button.Image"), System.Drawing.Image)
         Me.Add_button.Location = New System.Drawing.Point(28, 50)
-        Me.Add_button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Add_button.Margin = New System.Windows.Forms.Padding(4)
         Me.Add_button.Name = "Add_button"
         Me.Add_button.Size = New System.Drawing.Size(117, 37)
         Me.Add_button.TabIndex = 0
@@ -391,7 +391,7 @@ Partial Class frmTiepnhanSach
         Me.dgvSach.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MasachDataGridViewTextBoxColumn, Me.TensachDataGridViewTextBoxColumn, Me.MatheloaiDataGridViewTextBoxColumn, Me.MatacgiaDataGridViewTextBoxColumn, Me.NamxuatbanDataGridViewTextBoxColumn, Me.ManhaxuatbanDataGridViewTextBoxColumn, Me.NgaynhapDataGridViewTextBoxColumn, Me.TrigiaDataGridViewTextBoxColumn, Me.MatinhtrangDataGridViewTextBoxColumn, Me.SoluongDataGridViewTextBoxColumn})
         Me.dgvSach.DataSource = Me.TblSACHBindingSource
         Me.dgvSach.Location = New System.Drawing.Point(16, 330)
-        Me.dgvSach.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvSach.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvSach.Name = "dgvSach"
         Me.dgvSach.ReadOnly = True
         Me.dgvSach.Size = New System.Drawing.Size(1027, 278)
@@ -491,7 +491,9 @@ Partial Class frmTiepnhanSach
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btThemSach)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.Name = "frmTiepnhanSach"
         Me.Text = "tiepnhanSach"
         Me.GroupBox1.ResumeLayout(False)

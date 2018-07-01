@@ -26,6 +26,7 @@ Partial Class frmQuyDinhDocGia
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.txbHanSuDung = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txbTuoiToiDa = New System.Windows.Forms.TextBox()
@@ -34,7 +35,6 @@ Partial Class frmQuyDinhDocGia
         Me.lbMaLoaiDocGia = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -85,6 +85,16 @@ Partial Class frmQuyDinhDocGia
         Me.GroupBox2.TabIndex = 40
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Thông tin chi tiết"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(294, 132)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(37, 17)
+        Me.Label3.TabIndex = 24
+        Me.Label3.Text = "Năm"
         '
         'txbHanSuDung
         '
@@ -164,16 +174,6 @@ Partial Class frmQuyDinhDocGia
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Quy định độc giả"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(294, 132)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 17)
-        Me.Label3.TabIndex = 24
-        Me.Label3.Text = "Năm"
-        '
         'frmQuyDinhDocGia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -182,7 +182,10 @@ Partial Class frmQuyDinhDocGia
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "frmQuyDinhDocGia"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frmQuyDinhDoTuoi"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)

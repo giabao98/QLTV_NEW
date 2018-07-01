@@ -67,7 +67,7 @@ Partial Class frmLapthe
         'dtpNgayLapThe
         '
         Me.dtpNgayLapThe.Location = New System.Drawing.Point(553, 102)
-        Me.dtpNgayLapThe.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpNgayLapThe.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpNgayLapThe.Name = "dtpNgayLapThe"
         Me.dtpNgayLapThe.Size = New System.Drawing.Size(265, 22)
         Me.dtpNgayLapThe.TabIndex = 29
@@ -75,7 +75,7 @@ Partial Class frmLapthe
         'dtpNgaySinh
         '
         Me.dtpNgaySinh.Location = New System.Drawing.Point(553, 65)
-        Me.dtpNgaySinh.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dtpNgaySinh.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpNgaySinh.Name = "dtpNgaySinh"
         Me.dtpNgaySinh.Size = New System.Drawing.Size(265, 22)
         Me.dtpNgaySinh.TabIndex = 28
@@ -86,7 +86,7 @@ Partial Class frmLapthe
         Me.cbLoaiDocGia.FormattingEnabled = True
         Me.cbLoaiDocGia.Items.AddRange(New Object() {"X", "Y"})
         Me.cbLoaiDocGia.Location = New System.Drawing.Point(553, 31)
-        Me.cbLoaiDocGia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbLoaiDocGia.Margin = New System.Windows.Forms.Padding(4)
         Me.cbLoaiDocGia.Name = "cbLoaiDocGia"
         Me.cbLoaiDocGia.Size = New System.Drawing.Size(265, 24)
         Me.cbLoaiDocGia.TabIndex = 27
@@ -94,7 +94,7 @@ Partial Class frmLapthe
         'txbEmail
         '
         Me.txbEmail.Location = New System.Drawing.Point(119, 145)
-        Me.txbEmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txbEmail.Margin = New System.Windows.Forms.Padding(4)
         Me.txbEmail.Name = "txbEmail"
         Me.txbEmail.Size = New System.Drawing.Size(265, 22)
         Me.txbEmail.TabIndex = 26
@@ -102,7 +102,7 @@ Partial Class frmLapthe
         'txbDiaChi
         '
         Me.txbDiaChi.Location = New System.Drawing.Point(119, 106)
-        Me.txbDiaChi.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txbDiaChi.Margin = New System.Windows.Forms.Padding(4)
         Me.txbDiaChi.Name = "txbDiaChi"
         Me.txbDiaChi.Size = New System.Drawing.Size(265, 22)
         Me.txbDiaChi.TabIndex = 25
@@ -110,7 +110,7 @@ Partial Class frmLapthe
         'txbTenDocGia
         '
         Me.txbTenDocGia.Location = New System.Drawing.Point(119, 69)
-        Me.txbTenDocGia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txbTenDocGia.Margin = New System.Windows.Forms.Padding(4)
         Me.txbTenDocGia.Name = "txbTenDocGia"
         Me.txbTenDocGia.Size = New System.Drawing.Size(265, 22)
         Me.txbTenDocGia.TabIndex = 24
@@ -118,7 +118,7 @@ Partial Class frmLapthe
         'txbMaDocGia
         '
         Me.txbMaDocGia.Location = New System.Drawing.Point(119, 31)
-        Me.txbMaDocGia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txbMaDocGia.Margin = New System.Windows.Forms.Padding(4)
         Me.txbMaDocGia.Name = "txbMaDocGia"
         Me.txbMaDocGia.Size = New System.Drawing.Size(265, 22)
         Me.txbMaDocGia.TabIndex = 23
@@ -198,9 +198,9 @@ Partial Class frmLapthe
         Me.GroupBox1.BackColor = System.Drawing.Color.LightSeaGreen
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(16, 15)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(1027, 74)
         Me.GroupBox1.TabIndex = 31
         Me.GroupBox1.TabStop = False
@@ -235,9 +235,9 @@ Partial Class frmLapthe
         Me.GroupBox2.Controls.Add(Me.txbDiaChi)
         Me.GroupBox2.Controls.Add(Me.lbLoaiDocGia)
         Me.GroupBox2.Location = New System.Drawing.Point(16, 96)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(837, 185)
         Me.GroupBox2.TabIndex = 32
         Me.GroupBox2.TabStop = False
@@ -250,9 +250,9 @@ Partial Class frmLapthe
         Me.GroupBox3.Controls.Add(Me.Update_button)
         Me.GroupBox3.Controls.Add(Me.Add_button)
         Me.GroupBox3.Location = New System.Drawing.Point(861, 96)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Size = New System.Drawing.Size(181, 185)
         Me.GroupBox3.TabIndex = 33
         Me.GroupBox3.TabStop = False
@@ -263,7 +263,7 @@ Partial Class frmLapthe
         Me.Delete_button.BackColor = System.Drawing.Color.LightCoral
         Me.Delete_button.Image = CType(resources.GetObject("Delete_button.Image"), System.Drawing.Image)
         Me.Delete_button.Location = New System.Drawing.Point(32, 138)
-        Me.Delete_button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Delete_button.Margin = New System.Windows.Forms.Padding(4)
         Me.Delete_button.Name = "Delete_button"
         Me.Delete_button.Size = New System.Drawing.Size(117, 37)
         Me.Delete_button.TabIndex = 33
@@ -277,7 +277,7 @@ Partial Class frmLapthe
         Me.Update_button.BackColor = System.Drawing.Color.LightGreen
         Me.Update_button.Image = CType(resources.GetObject("Update_button.Image"), System.Drawing.Image)
         Me.Update_button.Location = New System.Drawing.Point(32, 89)
-        Me.Update_button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Update_button.Margin = New System.Windows.Forms.Padding(4)
         Me.Update_button.Name = "Update_button"
         Me.Update_button.Size = New System.Drawing.Size(117, 37)
         Me.Update_button.TabIndex = 32
@@ -292,7 +292,7 @@ Partial Class frmLapthe
         Me.Add_button.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Add_button.Image = CType(resources.GetObject("Add_button.Image"), System.Drawing.Image)
         Me.Add_button.Location = New System.Drawing.Point(32, 34)
-        Me.Add_button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Add_button.Margin = New System.Windows.Forms.Padding(4)
         Me.Add_button.Name = "Add_button"
         Me.Add_button.Size = New System.Drawing.Size(117, 37)
         Me.Add_button.TabIndex = 31
@@ -310,7 +310,7 @@ Partial Class frmLapthe
         Me.dgvDocGia.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MadocgiaDataGridViewTextBoxColumn, Me.HotenDataGridViewTextBoxColumn, Me.LoaidocgiaDataGridViewTextBoxColumn, Me.NgaysinhDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.DiachiDataGridViewTextBoxColumn, Me.NgaylaptheDataGridViewTextBoxColumn})
         Me.dgvDocGia.DataSource = Me.TblDOCGIABindingSource
         Me.dgvDocGia.Location = New System.Drawing.Point(16, 288)
-        Me.dgvDocGia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvDocGia.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvDocGia.Name = "dgvDocGia"
         Me.dgvDocGia.ReadOnly = True
         Me.dgvDocGia.Size = New System.Drawing.Size(1027, 251)
@@ -388,8 +388,11 @@ Partial Class frmLapthe
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaximizeBox = False
         Me.Name = "frmLapthe"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "frmLapthe"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

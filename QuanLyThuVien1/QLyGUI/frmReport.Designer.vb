@@ -99,6 +99,8 @@ Partial Class frmReport
         Me.Controls.Add(Me.lbTongSoLuotMuon)
         Me.Controls.Add(Me.dgvBookReport)
         Me.Controls.Add(Me.GroupBox2)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "frmReport"
         Me.Text = "frmReport"
         CType(Me.dgvBookReport, System.ComponentModel.ISupportInitialize).EndInit()
