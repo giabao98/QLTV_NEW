@@ -179,6 +179,7 @@ Partial Class frmTaoTaiKhoan
         '
         'frmTaoTaiKhoan
         '
+        Me.AcceptButton = Me.btnAdd
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(579, 314)
@@ -189,7 +190,7 @@ Partial Class frmTaoTaiKhoan
         Me.MaximizeBox = False
         Me.Name = "frmTaoTaiKhoan"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "frmTaoTaiKhoan"
+        Me.Text = "Tạo Tài Khoản"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()

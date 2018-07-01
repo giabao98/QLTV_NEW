@@ -381,6 +381,7 @@ Partial Class frmLapthe
         '
         'frmLapthe
         '
+        Me.AcceptButton = Me.Update_button
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1061, 554)
@@ -393,7 +394,7 @@ Partial Class frmLapthe
         Me.MaximizeBox = False
         Me.Name = "frmLapthe"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "frmLapthe"
+        Me.Text = "Lập thẻ"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

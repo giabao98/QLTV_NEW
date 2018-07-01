@@ -60,7 +60,7 @@ Partial Class frmFind
         Me.MaximizeBox = False
         Me.Name = "frmFind"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "frmFind"
+        Me.Text = "Loại tìm kiếm"
         Me.ResumeLayout(False)
 
     End Sub

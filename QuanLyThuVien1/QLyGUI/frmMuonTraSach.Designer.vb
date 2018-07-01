@@ -638,7 +638,7 @@ Partial Class frmMuonTraSach
         Me.MaximizeBox = False
         Me.Name = "frmMuonTraSach"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "frmMuonTraSach"
+        Me.Text = "Phiếu mượn trả sách"
         CType(Me.dgvPhieuMuonTra, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblCHITIETPHIEUMUONBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TVDataBsDataSet5, System.ComponentModel.ISupportInitialize).EndInit()

@@ -201,6 +201,7 @@ Partial Class frmDoiMatKhau
         '
         'frmDoiMatKhau
         '
+        Me.AcceptButton = Me.btnUpdate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(580, 340)
@@ -211,7 +212,7 @@ Partial Class frmDoiMatKhau
         Me.MaximizeBox = False
         Me.Name = "frmDoiMatKhau"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "frmDoiMatKhau"
+        Me.Text = "Đổi mật khẩu"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()

@@ -53,6 +53,7 @@ Partial Class frmQuyDinhTheLoaiSach
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TblTHELOAITableAdapter = New QLyGUI.TVDataBsDataSet6TableAdapters.tblTHELOAITableAdapter()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.tabTheLoai.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -281,7 +282,7 @@ Partial Class frmQuyDinhTheLoaiSach
         '
         Me.GroupBox4.BackColor = System.Drawing.Color.AliceBlue
         Me.GroupBox4.Controls.Add(Me.btnUpdateNamXB)
-        Me.GroupBox4.Location = New System.Drawing.Point(397, 85)
+        Me.GroupBox4.Location = New System.Drawing.Point(397, 144)
         Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
@@ -311,7 +312,7 @@ Partial Class frmQuyDinhTheLoaiSach
         Me.GroupBox5.Controls.Add(Me.Label2)
         Me.GroupBox5.Controls.Add(Me.txbKhoangNamXB)
         Me.GroupBox5.Controls.Add(Me.Label7)
-        Me.GroupBox5.Location = New System.Drawing.Point(4, 85)
+        Me.GroupBox5.Location = New System.Drawing.Point(4, 144)
         Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Padding = New System.Windows.Forms.Padding(4)
@@ -322,7 +323,7 @@ Partial Class frmQuyDinhTheLoaiSach
         '
         'txbSoLuong
         '
-        Me.txbSoLuong.Location = New System.Drawing.Point(157, 112)
+        Me.txbSoLuong.Location = New System.Drawing.Point(158, 102)
         Me.txbSoLuong.Margin = New System.Windows.Forms.Padding(4)
         Me.txbSoLuong.Name = "txbSoLuong"
         Me.txbSoLuong.Size = New System.Drawing.Size(205, 22)
@@ -331,7 +332,7 @@ Partial Class frmQuyDinhTheLoaiSach
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(8, 115)
+        Me.Label2.Location = New System.Drawing.Point(9, 105)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(141, 17)
@@ -340,7 +341,7 @@ Partial Class frmQuyDinhTheLoaiSach
         '
         'txbKhoangNamXB
         '
-        Me.txbKhoangNamXB.Location = New System.Drawing.Point(157, 68)
+        Me.txbKhoangNamXB.Location = New System.Drawing.Point(158, 58)
         Me.txbKhoangNamXB.Margin = New System.Windows.Forms.Padding(4)
         Me.txbKhoangNamXB.Name = "txbKhoangNamXB"
         Me.txbKhoangNamXB.Size = New System.Drawing.Size(205, 22)
@@ -349,7 +350,7 @@ Partial Class frmQuyDinhTheLoaiSach
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(8, 71)
+        Me.Label7.Location = New System.Drawing.Point(9, 61)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(62, 17)
@@ -359,12 +360,13 @@ Partial Class frmQuyDinhTheLoaiSach
         'GroupBox6
         '
         Me.GroupBox6.BackColor = System.Drawing.Color.LightSeaGreen
+        Me.GroupBox6.Controls.Add(Me.Label4)
         Me.GroupBox6.Controls.Add(Me.Label3)
         Me.GroupBox6.Location = New System.Drawing.Point(4, 4)
         Me.GroupBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox6.Size = New System.Drawing.Size(553, 74)
+        Me.GroupBox6.Size = New System.Drawing.Size(553, 117)
         Me.GroupBox6.TabIndex = 42
         Me.GroupBox6.TabStop = False
         '
@@ -373,7 +375,7 @@ Partial Class frmQuyDinhTheLoaiSach
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(72, 19)
+        Me.Label3.Location = New System.Drawing.Point(56, 19)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(420, 36)
@@ -384,8 +386,20 @@ Partial Class frmQuyDinhTheLoaiSach
         '
         Me.TblTHELOAITableAdapter.ClearBeforeFill = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label4.Location = New System.Drawing.Point(76, 68)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(384, 36)
+        Me.Label4.TabIndex = 45
+        Me.Label4.Text = "Và Số Lượng Sách Tối Đa"
+        '
         'frmQuyDinhTheLoaiSach
         '
+        Me.AcceptButton = Me.btnUpdateNamXB
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(566, 505)
@@ -395,7 +409,7 @@ Partial Class frmQuyDinhTheLoaiSach
         Me.MaximizeBox = False
         Me.Name = "frmQuyDinhTheLoaiSach"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "frmLoaiDocGia"
+        Me.Text = "Quy định thể loại sách và năm xuất bản"
         Me.TabControl1.ResumeLayout(False)
         Me.tabTheLoai.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
@@ -445,4 +459,5 @@ Partial Class frmQuyDinhTheLoaiSach
     Friend WithEvents TentheloaiDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents txbSoLuong As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label4 As Label
 End Class

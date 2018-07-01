@@ -52,12 +52,15 @@ Public Class frmLogin
         Application.Exit()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        PictureBox1.Visible = False
-        Button1.Visible = False
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
+
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If (CheckBox1.Checked = True) Then
+            txbPassword.PasswordChar = ""
+        Else
+            txbPassword.PasswordChar = "*"
+        End If
     End Sub
 End Class

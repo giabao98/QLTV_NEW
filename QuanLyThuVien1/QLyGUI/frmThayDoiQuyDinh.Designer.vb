@@ -103,7 +103,7 @@ Partial Class frmThayDoiQuyDinh
         Me.MaximizeBox = False
         Me.Name = "frmThayDoiQuyDinh"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "ThayDoiQuyDinh"
+        Me.Text = "Thay Đổi Quy Định"
         Me.gbThayDoiQuyDinh.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()

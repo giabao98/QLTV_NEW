@@ -176,6 +176,7 @@ Partial Class frmQuyDinhDocGia
         '
         'frmQuyDinhDocGia
         '
+        Me.AcceptButton = Me.btnUpdate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(581, 287)
@@ -186,7 +187,7 @@ Partial Class frmQuyDinhDocGia
         Me.MaximizeBox = False
         Me.Name = "frmQuyDinhDocGia"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "frmQuyDinhDoTuoi"
+        Me.Text = "Quy định độ tuổi"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()

@@ -495,7 +495,7 @@ Partial Class frmTiepnhanSach
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmTiepnhanSach"
-        Me.Text = "tiepnhanSach"
+        Me.Text = "Tiếp Nhận Sách"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

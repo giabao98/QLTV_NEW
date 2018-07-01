@@ -228,6 +228,7 @@ Partial Class frmFindReader
         '
         'frmFindReader
         '
+        Me.AcceptButton = Me.btnFind
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(959, 646)

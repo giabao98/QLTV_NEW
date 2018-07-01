@@ -96,7 +96,7 @@ Partial Class frmHeThong
         Me.MaximizeBox = False
         Me.Name = "frmHeThong"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "frmHeThong"
+        Me.Text = "Hệ thống"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()

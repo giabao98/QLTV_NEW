@@ -93,6 +93,7 @@ Partial Class frmReport
         '
         'frmReport
         '
+        Me.AcceptButton = Me.btnReport
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(868, 592)
@@ -102,7 +103,7 @@ Partial Class frmReport
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.Name = "frmReport"
-        Me.Text = "frmReport"
+        Me.Text = "Báo Cáo"
         CType(Me.dgvBookReport, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()

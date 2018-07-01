@@ -142,6 +142,7 @@ Partial Class frmQuyDinhMuonSach
         '
         'frmQuyDinhMuonSach
         '
+        Me.AcceptButton = Me.btnUpdate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(578, 250)
@@ -152,7 +153,7 @@ Partial Class frmQuyDinhMuonSach
         Me.MaximizeBox = False
         Me.Name = "frmQuyDinhMuonSach"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "frmQuy"
+        Me.Text = "Quy định mượn sách"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
