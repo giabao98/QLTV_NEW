@@ -47,6 +47,9 @@ Public Class frmTiepnhanSach
     Private Sub frmTiepnhanSach_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'TVDataBsDataSet2.tblSACH' table. You can move, or remove it, as needed.
         Me.TblSACHTableAdapter.Fill(Me.TVDataBsDataSet2.tblSACH)
+
+
+
         dtpPublishingYear.Format = DateTimePickerFormat.Custom
         dtpPublishingYear.CustomFormat = "dd/MM/yyyy"
         dtpReceiptDate.Format = DateTimePickerFormat.Custom
@@ -54,8 +57,13 @@ Public Class frmTiepnhanSach
 
         Dim tnsDAL As New TiepnhansachDAL
         cbBookKindID.DataSource = tnsDAL.datatable1
-        cbBookKindID.DisplayMember = "matheloai"
-        cbBookKindID.ValueMember = "matheloai"
+        cbBookKindID.DisplayMember = "tentheloai"
+        cbBookKindID.ValueMember = "tentheloai"
+
+        Dim aDAL As New TiepnhansachDAL
+        cbAuthorID.DataSource = aDAL.datatable2
+        cbAuthorID.DisplayMember = "tentacgia"
+        cbAuthorID.DisplayMember = "tentacgia"
 
     End Sub
 
@@ -268,5 +276,9 @@ Public Class frmTiepnhanSach
         End If
         Me.TblSACHTableAdapter.Fill(Me.TVDataBsDataSet2.tblSACH)
         resetData(ts)
+    End Sub
+
+    Private Sub cbStatusID_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbStatusID.SelectedIndexChanged
+
     End Sub
 End Class

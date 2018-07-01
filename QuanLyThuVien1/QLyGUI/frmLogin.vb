@@ -37,7 +37,6 @@ Public Class frmLogin
         End If
 
         If (ValidLogin.CompareAccount(Login)) Then
-            MessageBox.Show("Thanh cong")
             DialogResult = DialogResult.OK
             Me.Close()
         Else
