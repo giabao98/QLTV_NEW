@@ -216,7 +216,7 @@ Partial Class frmFindReader
         '
         Me.cbbFindCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbbFindCategory.FormattingEnabled = True
-        Me.cbbFindCategory.Items.AddRange(New Object() {"madocgia", "hoten", "loaidocgia", "ngaysinh", "email", "diachi", "ngaylapthe"})
+        Me.cbbFindCategory.Items.AddRange(New Object() {"madocgia", "hoten", "loaidocgia", "email", "diachi"})
         Me.cbbFindCategory.Location = New System.Drawing.Point(162, 21)
         Me.cbbFindCategory.Name = "cbbFindCategory"
         Me.cbbFindCategory.Size = New System.Drawing.Size(173, 24)

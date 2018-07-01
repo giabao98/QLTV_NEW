@@ -100,7 +100,7 @@ SELECT madocgia, hoten, loaidocgia, ngaysinh, email, diachi, ngaylapthe FROM tbl
   <xs:element name="TVDataBsDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TVDataBsDataSet3" msprop:Generator_UserDSName="TVDataBsDataSet3">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tblDOCGIA" msprop:Generator_TableClassName="tblDOCGIADataTable" msprop:Generator_TableVarName="tabletblDOCGIA" msprop:Generator_TablePropName="tblDOCGIA" msprop:Generator_RowDeletingName="tblDOCGIARowDeleting" msprop:Generator_RowChangingName="tblDOCGIARowChanging" msprop:Generator_RowEvHandlerName="tblDOCGIARowChangeEventHandler" msprop:Generator_RowDeletedName="tblDOCGIARowDeleted" msprop:Generator_UserTableName="tblDOCGIA" msprop:Generator_RowChangedName="tblDOCGIARowChanged" msprop:Generator_RowEvArgName="tblDOCGIARowChangeEvent" msprop:Generator_RowClassName="tblDOCGIARow">
+        <xs:element name="tblDOCGIA" msprop:Generator_TableClassName="tblDOCGIADataTable" msprop:Generator_TableVarName="tabletblDOCGIA" msprop:Generator_RowChangedName="tblDOCGIARowChanged" msprop:Generator_TablePropName="tblDOCGIA" msprop:Generator_RowDeletingName="tblDOCGIARowDeleting" msprop:Generator_RowChangingName="tblDOCGIARowChanging" msprop:Generator_RowEvHandlerName="tblDOCGIARowChangeEventHandler" msprop:Generator_RowDeletedName="tblDOCGIARowDeleted" msprop:Generator_RowClassName="tblDOCGIARow" msprop:Generator_UserTableName="tblDOCGIA" msprop:Generator_RowEvArgName="tblDOCGIARowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="madocgia" msprop:Generator_ColumnVarNameInTable="columnmadocgia" msprop:Generator_ColumnPropNameInRow="madocgia" msprop:Generator_ColumnPropNameInTable="madocgiaColumn" msprop:Generator_UserColumnName="madocgia">
@@ -117,7 +117,7 @@ SELECT madocgia, hoten, loaidocgia, ngaysinh, email, diachi, ngaylapthe FROM tbl
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="loaidocgia" msprop:Generator_ColumnVarNameInTable="columnloaidocgia" msprop:Generator_ColumnPropNameInRow="loaidocgia" msprop:Generator_ColumnPropNameInTable="loaidocgiaColumn" msprop:Generator_UserColumnName="loaidocgia" type="xs:int" minOccurs="0" />
+              <xs:element name="loaidocgia" msprop:Generator_ColumnVarNameInTable="columnloaidocgia" msprop:Generator_ColumnPropNameInRow="loaidocgia" msprop:Generator_ColumnPropNameInTable="loaidocgiaColumn" msprop:Generator_UserColumnName="loaidocgia" type="xs:string" minOccurs="0" />
               <xs:element name="ngaysinh" msprop:Generator_ColumnVarNameInTable="columnngaysinh" msprop:Generator_ColumnPropNameInRow="ngaysinh" msprop:Generator_ColumnPropNameInTable="ngaysinhColumn" msprop:Generator_UserColumnName="ngaysinh" type="xs:dateTime" minOccurs="0" />
               <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" minOccurs="0">
                 <xs:simpleType>

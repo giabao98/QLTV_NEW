@@ -455,7 +455,7 @@ Partial Public Class TVDataBsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddtblSACHRow(ByVal masach As String, ByVal tensach As String, ByVal matheloai As Integer, ByVal matacgia As Integer, ByVal namxuatban As Date, ByVal manhaxuatban As Integer, ByVal ngaynhap As Date, ByVal trigia As Decimal, ByVal matinhtrang As Integer, ByVal soluong As Integer) As tblSACHRow
+        Public Overloads Function AddtblSACHRow(ByVal masach As String, ByVal tensach As String, ByVal matheloai As String, ByVal matacgia As Integer, ByVal namxuatban As Date, ByVal manhaxuatban As Integer, ByVal ngaynhap As Date, ByVal trigia As Decimal, ByVal matinhtrang As String, ByVal soluong As Integer) As tblSACHRow
             Dim rowtblSACHRow As tblSACHRow = CType(Me.NewRow,tblSACHRow)
             Dim columnValuesArray() As Object = New Object() {masach, tensach, matheloai, matacgia, namxuatban, manhaxuatban, ngaynhap, trigia, matinhtrang, soluong}
             rowtblSACHRow.ItemArray = columnValuesArray
@@ -505,7 +505,7 @@ Partial Public Class TVDataBsDataSet
             MyBase.Columns.Add(Me.columnmasach)
             Me.columntensach = New Global.System.Data.DataColumn("tensach", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntensach)
-            Me.columnmatheloai = New Global.System.Data.DataColumn("matheloai", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnmatheloai = New Global.System.Data.DataColumn("matheloai", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnmatheloai)
             Me.columnmatacgia = New Global.System.Data.DataColumn("matacgia", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnmatacgia)
@@ -517,7 +517,7 @@ Partial Public Class TVDataBsDataSet
             MyBase.Columns.Add(Me.columnngaynhap)
             Me.columntrigia = New Global.System.Data.DataColumn("trigia", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntrigia)
-            Me.columnmatinhtrang = New Global.System.Data.DataColumn("matinhtrang", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnmatinhtrang = New Global.System.Data.DataColumn("matinhtrang", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnmatinhtrang)
             Me.columnsoluong = New Global.System.Data.DataColumn("soluong", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnsoluong)
@@ -698,10 +698,10 @@ Partial Public Class TVDataBsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property matheloai() As Integer
+        Public Property matheloai() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletblSACH.matheloaiColumn),Integer)
+                    Return CType(Me(Me.tabletblSACH.matheloaiColumn),String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'matheloai' in table 'tblSACH' is DBNull.", e)
                 End Try
@@ -788,10 +788,10 @@ Partial Public Class TVDataBsDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property matinhtrang() As Integer
+        Public Property matinhtrang() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletblSACH.matinhtrangColumn),Integer)
+                    Return CType(Me(Me.tabletblSACH.matinhtrangColumn),String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'matinhtrang' in table 'tblSACH' is DBNull.", e)
                 End Try

@@ -425,7 +425,7 @@ Partial Public Class TVDataBsDataSet3
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddtblDOCGIARow(ByVal madocgia As String, ByVal hoten As String, ByVal loaidocgia As Integer, ByVal ngaysinh As Date, ByVal email As String, ByVal diachi As String, ByVal ngaylapthe As Date) As tblDOCGIARow
+        Public Overloads Function AddtblDOCGIARow(ByVal madocgia As String, ByVal hoten As String, ByVal loaidocgia As String, ByVal ngaysinh As Date, ByVal email As String, ByVal diachi As String, ByVal ngaylapthe As Date) As tblDOCGIARow
             Dim rowtblDOCGIARow As tblDOCGIARow = CType(Me.NewRow,tblDOCGIARow)
             Dim columnValuesArray() As Object = New Object() {madocgia, hoten, loaidocgia, ngaysinh, email, diachi, ngaylapthe}
             rowtblDOCGIARow.ItemArray = columnValuesArray
@@ -472,7 +472,7 @@ Partial Public Class TVDataBsDataSet3
             MyBase.Columns.Add(Me.columnmadocgia)
             Me.columnhoten = New Global.System.Data.DataColumn("hoten", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnhoten)
-            Me.columnloaidocgia = New Global.System.Data.DataColumn("loaidocgia", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            Me.columnloaidocgia = New Global.System.Data.DataColumn("loaidocgia", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnloaidocgia)
             Me.columnngaysinh = New Global.System.Data.DataColumn("ngaysinh", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnngaysinh)
@@ -661,10 +661,10 @@ Partial Public Class TVDataBsDataSet3
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property loaidocgia() As Integer
+        Public Property loaidocgia() As String
             Get
                 Try 
-                    Return CType(Me(Me.tabletblDOCGIA.loaidocgiaColumn),Integer)
+                    Return CType(Me(Me.tabletblDOCGIA.loaidocgiaColumn),String)
                 Catch e As Global.System.InvalidCastException
                     Throw New Global.System.Data.StrongTypingException("The value for column 'loaidocgia' in table 'tblDOCGIA' is DBNull.", e)
                 End Try

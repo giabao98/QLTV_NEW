@@ -234,7 +234,7 @@ Partial Class frmFindBook
         '
         Me.cbbFindCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbbFindCategory.FormattingEnabled = True
-        Me.cbbFindCategory.Items.AddRange(New Object() {"masach", "tensach", "matheloai", "matacgia", "namxuatban", "manhaxuatban", "ngaynhap", "trigia", "matinhtrang", "soluong"})
+        Me.cbbFindCategory.Items.AddRange(New Object() {"masach", "tensach", "matheloai", "matacgia", "trigia", "matinhtrang", "soluong"})
         Me.cbbFindCategory.Location = New System.Drawing.Point(162, 21)
         Me.cbbFindCategory.Name = "cbbFindCategory"
         Me.cbbFindCategory.Size = New System.Drawing.Size(173, 24)
