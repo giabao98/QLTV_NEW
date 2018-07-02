@@ -24,6 +24,10 @@ Public Class frmMuonTraSach
         cbMaSach.DataSource = txbTenSach.DataSource
         cbMaSach.DisplayMember = txbTenSach.ValueMember
 
+        txbTacGia.DataSource = txbTenSach.DataSource
+        txbTacGia.ValueMember = txbTacGia.ValueMember
+        txbTacGia.DisplayMember = "matacgia"
+
         txbTenDocGia.DataSource = mtsDAL.datatable3
         txbTenDocGia.DisplayMember = "hoten"
         txbTenDocGia.ValueMember = "madocgia"
