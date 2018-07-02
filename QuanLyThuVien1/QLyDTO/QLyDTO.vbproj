@@ -87,7 +87,6 @@
     </Compile>
     <Compile Include="QuyDinhDocGiaDTO.vb" />
     <Compile Include="QuyDinhMuonSachDTO.vb" />
-    <Compile Include="ReportDTO.vb" />
     <Compile Include="TaoTaiKhoanDTO.vb" />
     <Compile Include="TiepnhansachDTO.vb" />
   </ItemGroup>

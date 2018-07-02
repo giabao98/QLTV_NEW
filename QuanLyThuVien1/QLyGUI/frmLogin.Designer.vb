@@ -42,7 +42,6 @@ Partial Class frmLogin
         Me.txbPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txbPassword.Size = New System.Drawing.Size(318, 33)
         Me.txbPassword.TabIndex = 9
-        Me.txbPassword.Text = "admin"
         '
         'txbUserName
         '
@@ -51,7 +50,6 @@ Partial Class frmLogin
         Me.txbUserName.Name = "txbUserName"
         Me.txbUserName.Size = New System.Drawing.Size(318, 34)
         Me.txbUserName.TabIndex = 8
-        Me.txbUserName.Text = "admin"
         '
         'Label3
         '

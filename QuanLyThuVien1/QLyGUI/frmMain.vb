@@ -43,11 +43,6 @@
         Application.Exit()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim fReport = New frmReport
-        fReport.ShowDialog()
-    End Sub
-
     Private Sub btnHeThong_Click(sender As Object, e As EventArgs) Handles btnHeThong.Click
         Dim fHeThong As New frmHeThong
         fHeThong.ShowDialog()

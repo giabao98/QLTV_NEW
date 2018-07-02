@@ -60,10 +60,10 @@ Public Class frmTiepnhanSach
         cbBookKindID.DisplayMember = "tentheloai"
         cbBookKindID.ValueMember = "tentheloai"
 
-        Dim aDAL As New TiepnhansachDAL
-        cbAuthorID.DataSource = aDAL.datatable2
-        cbAuthorID.DisplayMember = "tentacgia"
-        cbAuthorID.DisplayMember = "tentacgia"
+        'Dim aDAL As New TiepnhansachDAL
+        'cbAuthorID.DataSource = aDAL.datatable2
+        'cbAuthorID.DisplayMember = "tentacgia"
+        'cbAuthorID.DisplayMember = "tentacgia"
 
     End Sub
 
@@ -152,7 +152,7 @@ Public Class frmTiepnhanSach
         If (result = 0) Then
             MessageBox.Show("Thêm sách thành công.")
         Else
-            MessageBox.Show("Thêm sách thất bại, trường dữ liệu TRỊ GIÁ và SỐ LƯỢNG phải là kiểu dữ liệu SỐ!")
+            MessageBox.Show("Thêm sách thất bại, trường dữ liệu TRỊ GIÁ và SỐ LƯỢNG, Mã Sách, Mã Đọc giả, Mã Nhà xuất bản phải là kiểu dữ liệu SỐ!")
         End If
         Me.TblSACHTableAdapter.Fill(Me.TVDataBsDataSet2.tblSACH)
         resetData(ts)

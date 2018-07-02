@@ -87,7 +87,6 @@
     </Compile>
     <Compile Include="QuyDinhDocGiaBUS.vb" />
     <Compile Include="QuyDinhMuonSachBUS.vb" />
-    <Compile Include="ReportBUS.vb" />
     <Compile Include="TaoTaiKhoanBUS.vb" />
     <Compile Include="TiepnhansachBUS.vb" />
   </ItemGroup>

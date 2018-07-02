@@ -17,13 +17,21 @@ Public Class frmMuonTraSach
         cbTheLoai.ValueMember = "matheloai"
         cbTheLoai.DisplayMember = "matheloai"
 
-        cbMaSach.DataSource = mtsDAL.datatable2
-        cbMaSach.ValueMember = "masach"
-        cbMaSach.DisplayMember = "masach"
+        txbTenSach.DataSource = mtsDAL.datatable2
+        txbTenSach.ValueMember = "masach"
+        txbTenSach.DisplayMember = "tensach"
 
-        cbMaDocGia.DataSource = mtsDAL.datatable3
-        cbMaDocGia.DisplayMember = "madocgia"
-        cbMaDocGia.ValueMember = "madocgia"
+        cbMaSach.DataSource = txbTenSach.DataSource
+        cbMaSach.DisplayMember = txbTenSach.ValueMember
+
+        txbTenDocGia.DataSource = mtsDAL.datatable3
+        txbTenDocGia.DisplayMember = "hoten"
+        txbTenDocGia.ValueMember = "madocgia"
+
+        cbMaDocGia.DataSource = txbTenDocGia.DataSource
+        cbMaDocGia.DisplayMember = txbTenDocGia.ValueMember
+
+
 
 
     End Sub

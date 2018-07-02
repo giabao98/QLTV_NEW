@@ -32,7 +32,7 @@ Public Class MuonTraSachDAL
     Public Function datatable1()
         Dim dt As New DataTable
         Dim dtAdap As SqlDataAdapter
-        Dim strFind As String = "select [matheloai] from tblTHELOAI"
+        Dim strFind As String = "select [matheloai], [tentheloai] from tblTHELOAI"
         dt.Clear()
         dtAdap = New SqlDataAdapter(strFind, Con)
         dtAdap.Fill(dt)
@@ -52,7 +52,7 @@ Public Class MuonTraSachDAL
     Public Function datatable3()
         Dim dt As New DataTable
         Dim dtAdap As SqlDataAdapter
-        Dim strFind As String = "select [madocgia] from tblDOCGIA"
+        Dim strFind As String = "select [madocgia], [hoten] from tblDOCGIA"
         dt.Clear()
         dtAdap = New SqlDataAdapter(strFind, Con)
         dtAdap.Fill(dt)

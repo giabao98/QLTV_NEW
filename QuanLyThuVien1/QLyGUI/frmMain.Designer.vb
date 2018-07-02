@@ -32,9 +32,7 @@ Partial Class frmMain
         Me.btnClose = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnBookUpdate = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -101,7 +99,7 @@ Partial Class frmMain
         Me.btnHeThong.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.btnHeThong.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnHeThong.Image = CType(resources.GetObject("btnHeThong.Image"), System.Drawing.Image)
-        Me.btnHeThong.Location = New System.Drawing.Point(403, 314)
+        Me.btnHeThong.Location = New System.Drawing.Point(403, 166)
         Me.btnHeThong.Name = "btnHeThong"
         Me.btnHeThong.Size = New System.Drawing.Size(182, 127)
         Me.btnHeThong.TabIndex = 5
@@ -125,7 +123,7 @@ Partial Class frmMain
         Me.btnClose.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.btnClose.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
-        Me.btnClose.Location = New System.Drawing.Point(403, 465)
+        Me.btnClose.Location = New System.Drawing.Point(403, 314)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(182, 126)
         Me.btnClose.TabIndex = 7
@@ -137,9 +135,9 @@ Partial Class frmMain
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(619, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(609, 12)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(431, 675)
+        Me.PictureBox1.Size = New System.Drawing.Size(384, 597)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
@@ -158,41 +156,17 @@ Partial Class frmMain
         Me.btnBookUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btnBookUpdate.UseVisualStyleBackColor = False
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(403, 166)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(182, 126)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Báo cáo"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'MonthCalendar1
         '
         Me.MonthCalendar1.Location = New System.Drawing.Point(65, 314)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 0
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(14, 526)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(383, 65)
-        Me.TextBox1.TabIndex = 11
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.MonthCalendar1)
         Me.GroupBox1.Controls.Add(Me.btnClose)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.btnHeThong)
-        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.btnBookUpdate)
         Me.GroupBox1.Controls.Add(Me.btnFindBook)
         Me.GroupBox1.Controls.Add(Me.btnReaderManagement)
@@ -200,7 +174,7 @@ Partial Class frmMain
         Me.GroupBox1.Controls.Add(Me.btnAuthorManagement)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 78)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(591, 609)
+        Me.GroupBox1.Size = New System.Drawing.Size(591, 531)
         Me.GroupBox1.TabIndex = 12
         Me.GroupBox1.TabStop = False
         '
@@ -209,7 +183,7 @@ Partial Class frmMain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.ClientSize = New System.Drawing.Size(1062, 697)
+        Me.ClientSize = New System.Drawing.Size(1006, 623)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
@@ -220,7 +194,6 @@ Partial Class frmMain
         Me.Text = "Quản lý thư viện"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -234,8 +207,6 @@ Partial Class frmMain
     Friend WithEvents btnClose As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnBookUpdate As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents MonthCalendar1 As MonthCalendar
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents GroupBox1 As GroupBox
 End Class

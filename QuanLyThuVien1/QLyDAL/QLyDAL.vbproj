@@ -90,7 +90,6 @@
     </Compile>
     <Compile Include="QuyDinhDocGiaDAL.vb" />
     <Compile Include="QuyDinhMuonSachDAL.vb" />
-    <Compile Include="ReportDAL.vb" />
     <Compile Include="TaoTaiKhoanDAL.vb" />
     <Compile Include="TiepnhansachDAL.vb" />
   </ItemGroup>

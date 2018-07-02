@@ -144,12 +144,6 @@
     <Compile Include="frmQuyDinhDocGia.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReport.Designer.vb">
-      <DependentUpon>frmReport.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmReport.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmQuyDinhMuonSach.Designer.vb">
       <DependentUpon>frmQuyDinhMuonSach.vb</DependentUpon>
     </Compile>
@@ -258,9 +252,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuyDinhDocGia.resx">
       <DependentUpon>frmQuyDinhDocGia.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmReport.resx">
-      <DependentUpon>frmReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuyDinhMuonSach.resx">
       <DependentUpon>frmQuyDinhMuonSach.vb</DependentUpon>
